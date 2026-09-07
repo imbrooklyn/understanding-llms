@@ -1,6 +1,6 @@
 # Understanding Large Language Models from the Ground Up
 
-The source repository for 《理解大语言模型》, a web-first bilingual open textbook published at [imbrooklyn.dev/books/understanding-llms/](https://imbrooklyn.dev/books/understanding-llms/).
+The source repository for a web-first bilingual open textbook published at [imbrooklyn.dev/books/understanding-llms/](https://imbrooklyn.dev/books/understanding-llms/).
 
 ## Authoring
 
