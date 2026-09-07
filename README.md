@@ -12,10 +12,10 @@ src/content/docs/
 └── zh-hans/
 ```
 
-Each planned chapter already has a file with final metadata and `draft: true`. To publish a chapter:
+Each planned chapter already has its final route, title, description, and sidebar metadata, plus `draft: true`. To publish a chapter:
 
 1. Replace the placeholder body in both locale files.
-2. Remove `draft: true` from both files.
+2. Remove `draft: true` and add `published: YYYY-MM-DD` to both files.
 3. Run `pnpm ci:build`.
 4. Commit and push this repository.
 5. Manually run the `Deploy to GitHub Pages` workflow in `imbrooklyn/imbrooklyn.github.io`.

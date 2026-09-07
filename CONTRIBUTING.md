@@ -20,6 +20,7 @@ Draft files are visible during `pnpm dev` but excluded from production. A chapte
 
 - have real content in place of the placeholder;
 - no longer contain `draft: true`;
+- contain the same `published: YYYY-MM-DD` release date;
 - use the same chapter identifier;
 - pass `pnpm ci:build`.
 
