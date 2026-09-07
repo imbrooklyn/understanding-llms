@@ -1,6 +1,6 @@
 ---
 title: "Book roadmap"
-description: "The nine parts, 57 chapters, primers, and online extension in Understanding Large Language Models."
+description: "The nine parts, 57 chapters, primers, and online extension in Understanding Large Language Models from the Ground Up."
 sidebar:
   order: 1
 ---

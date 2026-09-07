@@ -14,12 +14,12 @@ export default defineConfig({
   integrations: [
     starlight({
       title: {
-        en: "Understanding Large Language Models",
+        en: "Understanding Large Language Models from the Ground Up",
         "zh-CN": "理解大语言模型",
       },
       description:
         "A bilingual, from-the-ground-up guide to modern large language models and reliable LLM systems.",
-      defaultLocale: "zh-hans",
+      defaultLocale: "en",
       locales: {
         en: {
           label: "English",
@@ -58,7 +58,8 @@ export default defineConfig({
           attrs: {
             rel: "alternate",
             type: "application/rss+xml",
-            title: "Understanding Large Language Models — English",
+            title:
+              "Understanding Large Language Models from the Ground Up — English",
             href: `${BOOK_BASE}/en/rss.xml`,
           },
         },

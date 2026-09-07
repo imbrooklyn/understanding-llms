@@ -3,7 +3,7 @@ title: "Understanding Large Language Models from the Ground Up"
 description: "Start with one token and build a complete mental model of modern LLMs and reliable LLM systems."
 template: splash
 hero:
-  title: "Understanding Large Language Models"
+  title: "Understanding Large Language Models from the Ground Up"
   tagline: "Start with one token, then build a complete path from language modeling and Transformers to RAG, agents, and production systems."
   actions:
     - text: "Explore the roadmap"

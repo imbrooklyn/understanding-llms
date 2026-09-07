@@ -431,6 +431,7 @@ Web Edition 使用 Astro Starlight 构建，以 GitHub Pages 和自有域名作�
 ~~~
 
 每个完整语言页面使用本语言自指 Canonical，并与对应页面双向关联；语言切换保持在当前章节。英文和中文分别生成搜索索引、Sitemap 和 RSS。
+书籍根路径 `/books/understanding-llms/` 固定导向英文版 `/books/understanding-llms/en/`；中文版始终保留独立的 `zh-hans` 永久路由。
 
 ## 9. 质量标准
 
