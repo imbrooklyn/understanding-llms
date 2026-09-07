@@ -1,0 +1,119 @@
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-400-italic.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+@import "@fontsource/ibm-plex-mono/latin-600.css";
+@import "@fontsource/ibm-plex-mono/latin-700.css";
+
+:root {
+  --sl-font: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --sl-font-system: var(--sl-font);
+  --sl-color-accent-low: #dfe7ff;
+  --sl-color-accent: #2854d7;
+  --sl-color-accent-high: #17327f;
+  --sl-color-white: #15171a;
+  --sl-color-gray-1: #292d32;
+  --sl-color-gray-2: #454b52;
+  --sl-color-gray-3: #626870;
+  --sl-color-gray-4: #b5bac1;
+  --sl-color-gray-5: #dfe2e6;
+  --sl-color-gray-6: #f1f2f4;
+  --sl-color-black: #fafafa;
+  --sl-content-width: 52rem;
+}
+
+:root[data-theme="dark"] {
+  --sl-color-accent-low: #1d2a53;
+  --sl-color-accent: #8aa9ff;
+  --sl-color-accent-high: #dbe4ff;
+  --sl-color-white: #f1f2ef;
+  --sl-color-gray-1: #d8dce1;
+  --sl-color-gray-2: #bdc3ca;
+  --sl-color-gray-3: #a4abb4;
+  --sl-color-gray-4: #4b535e;
+  --sl-color-gray-5: #2d333c;
+  --sl-color-gray-6: #1c2027;
+  --sl-color-black: #0f1115;
+}
+
+html {
+  min-width: 20rem;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 0.1875rem solid #b45309;
+  outline-offset: 0.1875rem;
+}
+
+:root[data-theme="dark"] :focus-visible {
+  outline-color: #fbbf24;
+}
+
+.header {
+  background: color-mix(in srgb, var(--sl-color-black) 86%, transparent);
+  backdrop-filter: blur(1rem);
+}
+
+.site-title,
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  letter-spacing: -0.035em;
+}
+
+.sl-markdown-content {
+  line-height: 1.72;
+}
+
+.sl-markdown-content a:not([class]) {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: -3rem -8vw;
+  content: "";
+  background:
+    radial-gradient(ellipse 34rem 28rem at 10% 20%, color-mix(in srgb, var(--sl-color-accent) 18%, transparent), transparent 72%),
+    linear-gradient(color-mix(in srgb, var(--sl-color-white) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--sl-color-white) 6%, transparent) 1px, transparent 1px);
+  background-size: auto, 8rem 8rem, 8rem 8rem;
+  mask-image: radial-gradient(85% 90% at top left, black, transparent);
+}
+
+.hero h1 {
+  max-width: 15ch;
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.hero .tagline {
+  max-width: 50rem;
+  color: var(--sl-color-gray-2);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.card {
+  border-radius: 0.875rem;
+  box-shadow: 0 1.25rem 3.5rem color-mix(in srgb, var(--sl-color-white) 9%, transparent);
+}
+
+@media (max-width: 50rem) {
+  .hero::before {
+    inset-inline: -1.5rem;
+  }
+}

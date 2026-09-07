@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Understanding LLMs">
+  <rect width="64" height="64" rx="12" fill="#15171a"/>
+  <path d="M17 16h9v25h21v8H17z" fill="#8fa8ff"/>
+  <circle cx="43" cy="22" r="7" fill="#fafafa"/>
+</svg>
