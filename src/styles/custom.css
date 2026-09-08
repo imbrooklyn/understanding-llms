@@ -21,6 +21,7 @@
   --sl-color-gray-5: #dfe2e6;
   --sl-color-gray-6: #f1f2f4;
   --sl-color-black: #fafafa;
+  --sl-sidebar-width: 20rem;
   --sl-content-width: 52rem;
 }
 
@@ -62,11 +63,109 @@ body {
   backdrop-filter: blur(1rem);
 }
 
-.site-title,
 .sl-markdown-content h1,
 .sl-markdown-content h2,
 .sl-markdown-content h3 {
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
+}
+
+.site-title {
+  max-width: 15rem;
+  color: var(--sl-color-text-accent);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-title span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-content {
+  padding-top: 1.35rem;
+}
+
+.sidebar-content .top-level > li + li {
+  margin-top: 0.85rem;
+}
+
+.sidebar-content summary {
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.5rem;
+  transition: background-color 160ms ease;
+}
+
+.sidebar-content summary:hover {
+  background: color-mix(in srgb, var(--sl-color-white) 5%, transparent);
+}
+
+.sidebar-content .large {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.sidebar-content details[open] > summary .large {
+  color: var(--sl-color-text-accent);
+}
+
+.sidebar-content details > ul {
+  margin-top: 0.4rem;
+}
+
+.sidebar-content ul ul li {
+  margin-inline-start: 0.7rem;
+  padding-inline-start: 0.7rem;
+}
+
+.sidebar-content ul ul li + li {
+  margin-top: 0.15rem;
+}
+
+.sidebar-content a {
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.45rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.sidebar-content [aria-current="page"],
+.sidebar-content [aria-current="page"]:hover,
+.sidebar-content [aria-current="page"]:focus {
+  color: var(--sl-color-text-accent);
+  background: color-mix(in srgb, var(--sl-color-accent) 11%, transparent);
+  box-shadow: inset 0.1875rem 0 var(--sl-color-accent);
+}
+
+.sidebar-content .caret {
+  opacity: 0.62;
+}
+
+.sidebar-content .top-level > li:last-child {
+  margin-top: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--sl-color-hairline-light);
+}
+
+.right-sidebar-panel {
+  padding-top: 1.5rem;
+}
+
+.right-sidebar-panel h2 {
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+}
+
+.right-sidebar-panel a {
+  padding-block: 0.3rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
 }
 
 .sl-markdown-content {
@@ -98,15 +197,16 @@ body {
 }
 
 .hero h1 {
-  max-width: 15ch;
-  font-size: clamp(2.6rem, 7vw, 5.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.06em;
+  max-width: 18ch;
+  font-size: clamp(2.4rem, 5.25vw, 4.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 :lang(en) .hero h1 {
-  max-width: 22ch;
-  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  max-width: 25ch;
+  font-size: clamp(2.15rem, 4.8vw, 4.3rem);
 }
 
 .hero .tagline {
@@ -124,5 +224,20 @@ body {
 @media (max-width: 50rem) {
   .hero::before {
     inset-inline: -1.5rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .header {
+    grid-template-columns: 20rem minmax(12rem, 1fr) auto;
+  }
+
+  .title-wrapper {
+    width: 20rem;
+  }
+
+  .site-title {
+    width: 100%;
+    max-width: none;
   }
 }

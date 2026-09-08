@@ -31,7 +31,7 @@ pnpm install
 pnpm dev
 ```
 
-The production path is `/books/understanding-llms/`; the Astro development server applies the same base path locally.
+The production path is `/books/understanding-llms/`; the Astro development server applies the same base path locally. Open the local URL printed by Astro because it selects the next available port when `4321` is already in use.
 
 ## Commands
 

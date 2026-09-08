@@ -1,0 +1,13 @@
+---
+const { locale, siteTitle, siteTitleHref } = Astro.locals.starlightRoute;
+const label = locale === "zh-hans" ? "理解大语言模型" : "Understanding LLMs";
+---
+
+<a
+  href={siteTitleHref}
+  class="site-title sl-flex"
+  title={siteTitle}
+  aria-label={siteTitle}
+>
+  <span translate="no">{label}</span>
+</a>
