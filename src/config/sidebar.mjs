@@ -22,7 +22,7 @@ const sidebarPartLabels = {
   "part-9": { "zh-hans": "IX · 生产系统", en: "IX · Production Systems" },
 };
 
-function isPublished(locale, id) {
+export function isPublished(locale, id) {
   const source = readFileSync(`${docsDirectory}/${locale}/${id}.md`, "utf8");
   return !/^draft:\s*true\s*$/mu.test(source);
 }
@@ -37,7 +37,11 @@ export function createSidebar({ includeDrafts = false } = {}) {
       collapsed: true,
       items: part.chapters
         .filter((chapter) => includeEntry(chapter.id))
-        .map((chapter) => ({ slug: chapter.id })),
+        .map((chapter) => ({
+          slug: chapter.id,
+          label: `${Number(chapter.id.slice(3))} · ${chapter.title["zh-hans"]}`,
+          translations: { en: `${Number(chapter.id.slice(3))} · ${chapter.title.en}` },
+        })),
     }))
     .filter((part) => part.items.length > 0);
 

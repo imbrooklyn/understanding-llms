@@ -1,0 +1,98 @@
+{
+  "version": "part-i-v1",
+  "structure": "token-journey",
+  "alt": {
+    "en": "Text is tokenized, mapped to IDs, looked up in an embedding table, processed by a Transformer, scored as logits, normalized, and selected; append the ID and repeat until a stopping condition.",
+    "zh-hans": "文本先分词、转成 ID，再查出嵌入向量。Transformer 计算后给出 Logits，将其归一化成概率，再选出一个 ID。把它加到序列末尾，继续下一轮，直到满足停止条件。"
+  },
+  "caption": {
+    "en": "Figure 2.1 — One selection in a causal text generator; ID append closes the loop.",
+    "zh-hans": "图 2.1——选出一个 Token 后，将其 ID 加回序列，继续生成。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Input and representation",
+        "zh-hans": "输入与表示"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "1. Text → token pieces",
+            "zh-hans": "1. 文本 → Token 片段"
+          }
+        },
+        {
+          "kind": "id",
+          "text": {
+            "en": "2. Token IDs in order",
+            "zh-hans": "2. 按顺序排列 Token ID"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "3. Embedding rows",
+            "zh-hans": "3. 查出嵌入向量"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "4. Transformer + position",
+            "zh-hans": "4. Transformer 结合位置计算"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Data → 1 → 2 → 3 → 4. Parameters supply the table and layer weights.",
+        "zh-hans": "数据按 1 → 2 → 3 → 4 传递。嵌入表和各层权重都属于参数。"
+      }
+    },
+    {
+      "label": {
+        "en": "Prediction and selection",
+        "zh-hans": "预测与选择"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "5. Logits → probabilities",
+            "zh-hans": "5. Logits → 概率"
+          }
+        },
+        {
+          "kind": "id",
+          "text": {
+            "en": "6. Select one next ID",
+            "zh-hans": "6. 选出下一个 Token 的 ID"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "7. Append ID to sequence",
+            "zh-hans": "7. 将 ID 加到序列末尾"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "8. Detokenize text",
+            "zh-hans": "8. 反分词，还原文字"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Data → 5 → 6 → 7 → 8; control ⇢ repeat from 3 with extended IDs, or stop.",
+        "zh-hans": "数据按 5 → 6 → 7 → 8 传递；流程控制 ⇢：用加长后的 ID 序列回到第 3 步，或停止。"
+      }
+    }
+  ]
+}

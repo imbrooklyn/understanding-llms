@@ -1,0 +1,323 @@
+{
+  "version": "part-i-v1",
+  "created": "2026-09-08",
+  "author": "Brooklyn Yu / Understanding LLMs contributors",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original synthetic teaching fixtures; not real model measurements or company records.",
+  "engine": "scripted-fixture-v1",
+  "model": null,
+  "tokenizer": null,
+  "seed": null,
+  "randomness": "No runtime randomness. G2 stores explicit draws. Other outputs are authored alternatives.",
+  "groups": [
+    {
+      "id": "G1",
+      "title": {
+        "en": "Generation and factual accuracy",
+        "zh-hans": "生成与事实正确性"
+      },
+      "records": [
+        {
+          "id": "G1-A",
+          "input": {
+            "en": "The capital of France is ___",
+            "zh-hans": "法国的首都是___"
+          },
+          "output": {
+            "en": "Paris.",
+            "zh-hans": "巴黎。"
+          },
+          "config": {
+            "variant": "authored-correct",
+            "tools": []
+          }
+        },
+        {
+          "id": "G1-B",
+          "input": {
+            "en": "The capital of France is ___",
+            "zh-hans": "法国的首都是___"
+          },
+          "output": {
+            "en": "Lyon.",
+            "zh-hans": "里昂。"
+          },
+          "config": {
+            "variant": "authored-incorrect",
+            "tools": []
+          }
+        }
+      ],
+      "expected": {
+        "en": "Answer Paris; fluency alone does not establish truth.",
+        "zh-hans": "回答巴黎；流畅本身不证明真实。"
+      },
+      "classification": "factual-error",
+      "evaluation_id": "E-G1",
+      "failure_id": "F-G1",
+      "risk_id": "R-G1",
+      "failure": {
+        "en": "G1-B gives the wrong capital.",
+        "zh-hans": "G1-B 给出错误首都。"
+      },
+      "risk": {
+        "en": "A plausible falsehood could be accepted.",
+        "zh-hans": "貌似可信的错误可能被接受。"
+      },
+      "control": {
+        "en": "Check against an independent factual reference.",
+        "zh-hans": "对照独立事实参照。"
+      }
+    },
+    {
+      "id": "G2",
+      "title": {
+        "en": "Variation with a fixed choice rule",
+        "zh-hans": "固定选择规则中的变化"
+      },
+      "records": [
+        {
+          "id": "G2-A",
+          "input": {
+            "en": "Finish: The cat sat on the ___.",
+            "zh-hans": "补全：猫坐在___上。"
+          },
+          "output": {
+            "en": "mat.",
+            "zh-hans": "垫子。"
+          },
+          "config": {
+            "distribution": {
+              "mat": 0.6,
+              "sofa": 0.4
+            },
+            "draw": 0.2
+          }
+        },
+        {
+          "id": "G2-B",
+          "input": {
+            "en": "Finish: The cat sat on the ___.",
+            "zh-hans": "补全：猫坐在___上。"
+          },
+          "output": {
+            "en": "sofa.",
+            "zh-hans": "沙发。"
+          },
+          "config": {
+            "distribution": {
+              "mat": 0.6,
+              "sofa": 0.4
+            },
+            "draw": 0.8
+          }
+        }
+      ],
+      "expected": {
+        "en": "Both endings are acceptable for this unconstrained task.",
+        "zh-hans": "无额外约束时，两种结尾均可接受。"
+      },
+      "classification": "variation",
+      "evaluation_id": "E-G2",
+      "failure_id": "F-G2",
+      "risk_id": "R-G2",
+      "failure": {
+        "en": "No response failure; exact-string grading would falsely reject a valid ending.",
+        "zh-hans": "回答没有失败；唯一字符串评分会误拒合理结尾。"
+      },
+      "risk": {
+        "en": "An overly narrow evaluation can mislabel useful outputs.",
+        "zh-hans": "过窄的标准可能误判有用输出。"
+      },
+      "control": {
+        "en": "Record allowed variation and keep the draw values.",
+        "zh-hans": "记录允许的变化并保存抽样值。"
+      }
+    },
+    {
+      "id": "G3",
+      "title": {
+        "en": "Use a distant clue",
+        "zh-hans": "使用远处线索"
+      },
+      "records": [
+        {
+          "id": "G3-A",
+          "input": {
+            "en": "Mira put a red key in the drawer. The lamp was off. A train passed. Someone closed the window. What color was the key?",
+            "zh-hans": "米拉把一把红色钥匙放进抽屉。灯关着。一列火车经过。有人关上了窗。钥匙是什么颜色？"
+          },
+          "output": {
+            "en": "Red.",
+            "zh-hans": "红色。"
+          },
+          "config": {
+            "clue": "red",
+            "tools": []
+          }
+        },
+        {
+          "id": "G3-B",
+          "input": {
+            "en": "Mira put a blue key in the drawer. The lamp was off. A train passed. Someone closed the window. What color was the key?",
+            "zh-hans": "米拉把一把蓝色钥匙放进抽屉。灯关着。一列火车经过。有人关上了窗。钥匙是什么颜色？"
+          },
+          "output": {
+            "en": "Red.",
+            "zh-hans": "红色。"
+          },
+          "config": {
+            "clue": "blue",
+            "tools": []
+          }
+        }
+      ],
+      "expected": {
+        "en": "A: red; B: blue. Only the clue value changes.",
+        "zh-hans": "A：红色；B：蓝色。只改变线索值。"
+      },
+      "classification": "context-error",
+      "evaluation_id": "E-G3",
+      "failure_id": "F-G3",
+      "risk_id": "R-G3",
+      "failure": {
+        "en": "G3-B contradicts the blue clue.",
+        "zh-hans": "G3-B 与蓝色线索矛盾。"
+      },
+      "risk": {
+        "en": "Relevant information may be present but unused.",
+        "zh-hans": "相关信息存在却可能没有被使用。"
+      },
+      "control": {
+        "en": "Move the clue while preserving its value; inspect the actual input.",
+        "zh-hans": "保持线索值，改变位置，并检查实际输入。"
+      }
+    },
+    {
+      "id": "G4",
+      "title": {
+        "en": "A policy update: 600 → 750",
+        "zh-hans": "制度更新：600 → 750"
+      },
+      "records": [
+        {
+          "id": "G4-A",
+          "input": {
+            "en": "What is the nightly Beijing lodging limit?",
+            "zh-hans": "北京差旅住宿每晚限额是多少？"
+          },
+          "output": {
+            "en": "600 CNY per night.",
+            "zh-hans": "每晚 600 元。"
+          },
+          "config": {
+            "source_in_context": null,
+            "external_source": "travel-v2"
+          }
+        },
+        {
+          "id": "G4-B",
+          "input": {
+            "en": "travel-v2: Beijing lodging limit is 750 CNY per night, replacing travel-v1 (600). What is the nightly Beijing lodging limit?",
+            "zh-hans": "travel-v2：北京住宿每晚限额 750 元，取代 travel-v1（600 元）。北京差旅住宿每晚限额是多少？"
+          },
+          "output": {
+            "en": "750 CNY per night, according to travel-v2.",
+            "zh-hans": "根据 travel-v2，每晚 750 元。"
+          },
+          "config": {
+            "source_in_context": "travel-v2",
+            "external_source": "travel-v2"
+          }
+        }
+      ],
+      "expected": {
+        "en": "Use 750 with travel-v2, or disclose missing current evidence.",
+        "zh-hans": "依据 travel-v2 回答 750 元，否则说明缺少当前证据。"
+      },
+      "classification": "stale-knowledge",
+      "evaluation_id": "E-G4",
+      "failure_id": "F-G4",
+      "risk_id": "R-G4",
+      "failure": {
+        "en": "G4-A answers 600 for a current-policy task.",
+        "zh-hans": "G4-A 在当前制度任务中回答 600 元。"
+      },
+      "risk": {
+        "en": "An outdated limit could mislead an expense decision.",
+        "zh-hans": "过期限额可能误导费用决策。"
+      },
+      "control": {
+        "en": "Require the current source and record its version.",
+        "zh-hans": "要求当前资料并记录版本。"
+      }
+    },
+    {
+      "id": "G5",
+      "title": {
+        "en": "Read-only order status",
+        "zh-hans": "只读订单状态"
+      },
+      "records": [
+        {
+          "id": "G5-A",
+          "input": {
+            "en": "Check the status of order A-104.",
+            "zh-hans": "查询订单 A-104 的状态。"
+          },
+          "output": {
+            "en": "A-104 has shipped.",
+            "zh-hans": "A-104 已发货。"
+          },
+          "config": {
+            "tools": [],
+            "lookup_result": null,
+            "mutations": 0
+          }
+        },
+        {
+          "id": "G5-B",
+          "input": {
+            "en": "Check the status of order A-104. Application supplies order-v1: order_id=A-104, status=processing.",
+            "zh-hans": "查询订单 A-104 的状态。应用提供 order-v1：order_id=A-104，status=processing。"
+          },
+          "output": {
+            "en": "A-104 is processing, according to order-v1.",
+            "zh-hans": "根据 order-v1，A-104 正在处理。"
+          },
+          "config": {
+            "tools": [
+              "read-only-fixture"
+            ],
+            "lookup_result": {
+              "order_id": "A-104",
+              "status": "processing",
+              "source": "order-v1"
+            },
+            "mutations": 0
+          }
+        }
+      ],
+      "expected": {
+        "en": "Report processing with order-v1 or disclose inability to look up; do not mutate the order.",
+        "zh-hans": "依据 order-v1 回答 processing，或说明无法查询；不修改订单。"
+      },
+      "classification": "system-risk",
+      "evaluation_id": "E-G5",
+      "failure_id": "F-G5",
+      "risk_id": "R-G5",
+      "failure": {
+        "en": "G5-A says shipped without evidence of a lookup.",
+        "zh-hans": "G5-A 未经查询就说已发货。"
+      },
+      "risk": {
+        "en": "A cancellation could be attempted without approval.",
+        "zh-hans": "可能在未经审批时尝试取消。"
+      },
+      "control": {
+        "en": "Keep status queries read-only; require approval before cancellation.",
+        "zh-hans": "状态查询保持只读；取消前要求审批。"
+      }
+    }
+  ]
+}

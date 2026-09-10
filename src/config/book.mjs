@@ -29,7 +29,7 @@ export const bookParts = [
       {
         "id": "ch-03",
         "title": {
-          "zh-hans": "文本怎样成为 Token、ID 和 Embedding",
+          "zh-hans": "文本怎样变成 Token、ID 和嵌入向量",
           "en": "How Text Becomes Tokens, IDs, and Embeddings"
         }
       },
@@ -490,3 +490,8 @@ export const bookParts = [
 export const plannedChapters = bookParts.flatMap((part) =>
   part.chapters.map((chapter) => ({ ...chapter, part: part.id })),
 );
+
+export function chapterLabel(id, locale) {
+  const number = Number(id.slice(3));
+  return locale === "zh-hans" ? `第 ${number} 章` : `Chapter ${number}`;
+}

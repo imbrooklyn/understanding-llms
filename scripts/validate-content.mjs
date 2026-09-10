@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { BOOK_LOCALES, plannedChapters } from "../src/config/book.mjs";
+import { BOOK_LOCALES, chapterLabel, plannedChapters } from "../src/config/book.mjs";
 
 const repositoryRoot = fileURLToPath(new URL("../", import.meta.url));
 const docsRoot = `${repositoryRoot}src/content/docs`;
@@ -41,6 +41,13 @@ function readPage(locale, id) {
   const published = /^published:\s*\d{4}-\d{2}-\d{2}\s*$/mu.test(frontmatter);
 
   if (!title) errors.push(`${locale}/${id}.md is missing title.`);
+  const chapter = plannedChapters.find((entry) => entry.id === id);
+  if (chapter && title !== JSON.stringify(`${chapterLabel(id, locale)} ${chapter.title[locale]}`)) {
+    errors.push(`${locale}/${id}.md must use the localized chapter label and configured title.`);
+  }
+  if (/\bCH-\d{2}\b/u.test(body)) {
+    errors.push(`${locale}/${id}.md must use reader-facing chapter names in prose.`);
+  }
   if (!description) errors.push(`${locale}/${id}.md is missing description.`);
   if (/^#\s+/mu.test(body)) {
     errors.push(`${locale}/${id}.md must start body headings at level 2.`);

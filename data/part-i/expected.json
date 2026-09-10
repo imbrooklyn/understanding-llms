@@ -1,0 +1,178 @@
+{
+  "version": "part-i-v1",
+  "license": "CC-BY-SA-4.0",
+  "source": "Original hand calculations in CH-03 and CH-04. Null means undefined.",
+  "tokenizer": [
+    {
+      "version": "toy-longest-v1",
+      "input": "The capital of France is Paris.",
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "decoded": "The capital of France is Paris.",
+      "unknown": 0
+    },
+    {
+      "version": "toy-longest-v1",
+      "input": "法国的首都是巴黎。",
+      "ids": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "decoded": "法国的首都是巴黎。",
+      "unknown": 0
+    },
+    {
+      "version": "toy-longest-v1",
+      "input": "cats",
+      "ids": [
+        16,
+        17
+      ],
+      "decoded": "cats",
+      "unknown": 0
+    },
+    {
+      "version": "toy-longest-v2",
+      "input": "cats",
+      "ids": [
+        18
+      ],
+      "decoded": "cats",
+      "unknown": 0
+    },
+    {
+      "version": "toy-longest-v1",
+      "input": "cat🙂",
+      "ids": [
+        16,
+        0
+      ],
+      "decoded": "cat<unk>",
+      "unknown": 1
+    }
+  ],
+  "cosines": [
+    0.7071067811865475,
+    -1,
+    null
+  ],
+  "bigram_rows": {
+    "BOS": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "a": [
+      0,
+      2,
+      1,
+      0
+    ],
+    "b": [
+      0,
+      0,
+      0,
+      2
+    ],
+    "c": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "held_out": [
+    {
+      "n": 1,
+      "alpha": 0,
+      "ac": 0.012345679012345678,
+      "aa": 0.037037037037037035
+    },
+    {
+      "n": 2,
+      "alpha": 0,
+      "ac": 0.3333333333333333,
+      "aa": 0
+    },
+    {
+      "n": 3,
+      "alpha": 0,
+      "ac": 0.3333333333333333,
+      "aa": 0
+    },
+    {
+      "n": 1,
+      "alpha": 1,
+      "ac": 0.01456531634046427,
+      "aa": 0.02913063268092854
+    },
+    {
+      "n": 2,
+      "alpha": 1,
+      "ac": 0.0653061224489796,
+      "aa": 0.011661807580174927
+    },
+    {
+      "n": 3,
+      "alpha": 1,
+      "ac": 0.0653061224489796,
+      "aa": 0.02040816326530612
+    }
+  ],
+  "generation": {
+    "n": 2,
+    "alpha": 0,
+    "seed": 42,
+    "text": "ab",
+    "tokens": [
+      "a",
+      "b",
+      "EOS"
+    ],
+    "draws": [
+      0.2523451747838408,
+      0.08812504541128874,
+      0.5772811982315034
+    ],
+    "stop": "eos"
+  },
+  "journey_probabilities": [
+    [
+      0.8,
+      0.2
+    ],
+    [
+      0.8,
+      0.2
+    ],
+    [
+      0.1,
+      0.9
+    ],
+    [
+      0.8,
+      0.2
+    ],
+    [
+      0.1,
+      0.9
+    ],
+    [
+      0.3,
+      0.7
+    ]
+  ]
+}

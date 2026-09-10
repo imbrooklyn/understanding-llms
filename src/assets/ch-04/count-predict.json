@@ -1,0 +1,84 @@
+{
+  "version": "part-i-v1",
+  "structure": "count-predict",
+  "alt": {
+    "en": "Three strings ab, ab, ac each start at BOS and end at EOS. Following only arrows after a collects b, b, c: b has two thirds of the three tickets and c one third. The fixed table branches to choosing a next token during generation or scoring a given token during evaluation; neither changes counts.",
+    "zh-hans": "ab、ab、ac 三条字符串各自从 BOS 开始，到 EOS 结束。只看 a 后面，依次是 b、b、c，写成三张纸条，其中两张是 b，一张是 c。计数表训练好后，可以用来选择下一个 Token，也可以查询给定 Token 的概率；两种用法都不修改计数。"
+  },
+  "caption": {
+    "en": "Figure 4.1 — One trained count structure supports two different read operations.",
+    "zh-hans": "图 4.1——同一张计数表，既可用于生成，也可用于评测；两者都只读表。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Fit the counts",
+        "zh-hans": "从训练数据中计数"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "1. ab / ab / ac",
+            "zh-hans": "1. ab / ab / ac"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "2. Count within each sequence",
+            "zh-hans": "2. 在每条序列内计数"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "3. Freeze count table",
+            "zh-hans": "3. 固定计数表"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Training data → 1 → 2; estimate ⇒ 3. Held-out ac/aa does not enter step 2.",
+        "zh-hans": "在第 2 步统计训练数据，得到计数表 3。用于评测的 ac、aa 不在此时计数。"
+      }
+    },
+    {
+      "label": {
+        "en": "Read the model",
+        "zh-hans": "使用训练好的模型"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "4. Context → probability row",
+            "zh-hans": "4. 根据上下文查出概率"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "5a. Generation chooses next token",
+            "zh-hans": "5a. 生成：选出下一个 Token"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "5b. Evaluation scores supplied token",
+            "zh-hans": "5b. 评测：查给定 Token 的概率"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Data: 3 → 4; control ⇢ choose 5a or 5b. Neither path updates 3.",
+        "zh-hans": "第 4 步读取计数表 3，再选择生成或评测。两者都不改动表中的计数。"
+      }
+    }
+  ]
+}

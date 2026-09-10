@@ -1,0 +1,104 @@
+{
+  "version": "part-i-v1",
+  "created": "2026-09-08",
+  "author": "Brooklyn Yu / Understanding LLMs contributors",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original synthetic teaching fixtures; not real model measurements or company records.",
+  "engine": "journey-table-v1",
+  "model": null,
+  "seed": null,
+  "answers": [
+    "600",
+    "750"
+  ],
+  "tables": {
+    "A": {
+      "travel-v1": [
+        0.8,
+        0.2
+      ],
+      "travel-v2": [
+        0.1,
+        0.9
+      ]
+    },
+    "B": {
+      "travel-v1": [
+        0.3,
+        0.7
+      ],
+      "travel-v2": [
+        0.05,
+        0.95
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "id": "old",
+      "label": {
+        "en": "Old input",
+        "zh-hans": "旧输入"
+      },
+      "parameters": "A",
+      "context": "travel-v1",
+      "external": "travel-v1",
+      "state": null
+    },
+    {
+      "id": "file",
+      "label": {
+        "en": "File updated only",
+        "zh-hans": "只更新文件"
+      },
+      "parameters": "A",
+      "context": "travel-v1",
+      "external": "travel-v2",
+      "state": null
+    },
+    {
+      "id": "context",
+      "label": {
+        "en": "New excerpt selected",
+        "zh-hans": "选入新摘录"
+      },
+      "parameters": "A",
+      "context": "travel-v2",
+      "external": "travel-v2",
+      "state": null
+    },
+    {
+      "id": "saved",
+      "label": {
+        "en": "History saved only",
+        "zh-hans": "只保存历史"
+      },
+      "parameters": "A",
+      "context": "travel-v1",
+      "external": "travel-v1",
+      "state": "travel-v2"
+    },
+    {
+      "id": "selected",
+      "label": {
+        "en": "Saved history selected",
+        "zh-hans": "选入已存历史"
+      },
+      "parameters": "A",
+      "context": "travel-v2",
+      "external": "travel-v1",
+      "state": "travel-v2"
+    },
+    {
+      "id": "parameters",
+      "label": {
+        "en": "Different parameters",
+        "zh-hans": "不同参数"
+      },
+      "parameters": "B",
+      "context": "travel-v1",
+      "external": "travel-v1",
+      "state": null
+    }
+  ]
+}

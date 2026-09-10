@@ -1,0 +1,27 @@
+name: Reader feedback
+description: Tell us where an explanation helped or became difficult to follow.
+title: "[Reader feedback] "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or chapter and section
+      placeholder: https://imbrooklyn.dev/books/understanding-llms/zh-hans/ch-01/
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: What helped, or where did you lose the thread?
+      description: Quote a short passage or identify the step. You do not need to know a correction. Feedback in either book language is welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: Relevant reading background (optional)
+      description: For example, familiarity with programming, school mathematics, or earlier chapters.
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would make the explanation easier to follow? (optional)

@@ -1,0 +1,84 @@
+{
+  "version": "part-i-v1",
+  "structure": "model-system",
+  "alt": {
+    "en": "A system selects context, runs a parameterized model, and validates outputs. External documents and order data enter only through application selection. State stores approvals; model text cannot execute an order change.",
+    "zh-hans": "应用选取上下文，交给模型计算，再检查输出。外部文档和订单数据要先经应用选取，才能进入模型。应用保存审批记录，模型生成的文字不能自行修改订单。"
+  },
+  "caption": {
+    "en": "Figure 1.1 — The model is one computation inside the system.",
+    "zh-hans": "图 1.1——模型是整个系统中的一个计算环节。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Request path",
+        "zh-hans": "一次请求怎样处理"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "1. Selected messages and approval state",
+            "zh-hans": "1. 选取的消息和审批状态"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "2. Application builds context",
+            "zh-hans": "2. 应用组织上下文"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "3. Model uses fixed weights",
+            "zh-hans": "3. 模型使用固定权重"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "4. Application checks output",
+            "zh-hans": "4. 应用检查输出"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Data → 1 → 2 → 3 → 4; control ⇢ application decides execution.",
+        "zh-hans": "数据按 1 → 2 → 3 → 4 传递；是否执行操作，由应用控制 ⇢。"
+      }
+    },
+    {
+      "label": {
+        "en": "External evidence",
+        "zh-hans": "从外部查到的依据"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "travel-v2: 750 CNY/night",
+            "zh-hans": "travel-v2：每晚 750 元"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "order-v1: A-104 processing",
+            "zh-hans": "order-v1：A-104 正在处理"
+          }
+        }
+      ],
+      "flow": {
+        "en": "External data → selected context (step 2). A file existing is not a read.",
+        "zh-hans": "外部资料在第 2 步加入上下文。有这份文件，不等于已经读取了它。"
+      }
+    }
+  ]
+}

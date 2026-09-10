@@ -1,0 +1,249 @@
+{
+  "version": "part-i-v1",
+  "created": "2026-09-08",
+  "author": "Brooklyn Yu / Understanding LLMs contributors",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original synthetic teaching fixtures; not real model measurements or company records.",
+  "algorithm": "left-to-right longest exact match; fallback consumes one Unicode code point",
+  "normalization": false,
+  "automatic_special_tokens": false,
+  "model": null,
+  "seed": null,
+  "versions": {
+    "toy-longest-v1": {
+      "pieces": [
+        "<unk>",
+        "The",
+        " capital",
+        " of",
+        " France",
+        " is",
+        " Paris",
+        ".",
+        "法",
+        "国",
+        "的",
+        "首都",
+        "是",
+        "巴黎",
+        "。",
+        " ",
+        "cat",
+        "s"
+      ],
+      "embeddings": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "toy-longest-v2": {
+      "pieces": [
+        "<unk>",
+        "The",
+        " capital",
+        " of",
+        " France",
+        " is",
+        " Paris",
+        ".",
+        "法",
+        "国",
+        "的",
+        "首都",
+        "是",
+        "巴黎",
+        "。",
+        " ",
+        "cat",
+        "s",
+        "cats"
+      ],
+      "embeddings": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "samples": [
+    "The capital of France is Paris.",
+    "法国的首都是巴黎。",
+    "cats",
+    "cat🙂"
+  ],
+  "vector_pairs": [
+    [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  ]
+}

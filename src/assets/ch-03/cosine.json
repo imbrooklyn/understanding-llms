@@ -1,0 +1,30 @@
+{
+  "version": "part-i-v1",
+  "structure": "cosine",
+  "vectors": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "alt": {
+    "en": "Vectors u=[1,0] points right, v=[1,1] points diagonally up and right, and w=[-1,0] points left on shared coordinate axes. The diagonal has length square root of two, while u and w each have length one.",
+    "zh-hans": "三支箭头从同一原点出发：u=[1,0] 朝右，v=[1,1] 朝右上，w=[-1,0] 朝左。v 长根号二，u 和 w 都长一。"
+  },
+  "caption": {
+    "en": "Figure 3.2 — Shared coordinates distinguish length from direction; the zero vector would remain at the origin.",
+    "zh-hans": "图 3.2——在同一坐标系中比较长度和方向。零向量只对应原点，没有方向。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  }
+}

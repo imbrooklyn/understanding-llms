@@ -1,0 +1,58 @@
+{
+  "version": "part-i-v1",
+  "structure": "lookup",
+  "alt": {
+    "en": "Under toy-longest-v1, cats becomes cat and s, IDs 16 and 17, and embedding rows [1,0] and [0,1]. The ID selects a row; its magnitude is not a semantic score.",
+    "zh-hans": "toy-longest-v1 把 cats 分成 cat 和 s，对应 ID 16、17，再查出嵌入向量 [1,0]、[0,1]。ID 只用来查表，编号大小不表示含义的大小。"
+  },
+  "caption": {
+    "en": "Figure 3.1 — Different objects at each step; the parameter table supplies the vectors.",
+    "zh-hans": "图 3.1——先切分文本，再按编号查出参数表中的向量。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Lookup journey",
+        "zh-hans": "查表过程"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "1. cats → [cat][s]",
+            "zh-hans": "1. cats → [cat][s]"
+          }
+        },
+        {
+          "kind": "id",
+          "text": {
+            "en": "2. [16,17]",
+            "zh-hans": "2. [16,17]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "3. E[16], E[17]",
+            "zh-hans": "3. E[16]、E[17]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "4. [[1,0],[0,1]]",
+            "zh-hans": "4. [[1,0],[0,1]]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Data → 1 → 2 → row lookup 3 → 4; no parameter update.",
+        "zh-hans": "先分词、编号，再查出向量：1 → 2 → 3 → 4。查表不修改参数。"
+      }
+    }
+  ]
+}

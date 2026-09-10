@@ -1,3 +1,4 @@
+@import "katex/dist/katex.min.css";
 @import "@fontsource/ibm-plex-mono/latin-400.css";
 @import "@fontsource/ibm-plex-mono/latin-400-italic.css";
 @import "@fontsource/ibm-plex-mono/latin-500.css";
@@ -223,7 +224,7 @@ body {
 
 @media (max-width: 50rem) {
   .hero::before {
-    inset-inline: -1.5rem;
+    inset-inline: -1rem;
   }
 }
 
@@ -241,3 +242,74 @@ body {
     max-width: none;
   }
 }
+
+/* Book mechanisms: labels and border patterns remain meaningful without color. */
+.sl-markdown-content .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: .6rem .2rem;
+}
+.sl-markdown-content table { display: block; max-width: 100%; overflow-x: auto; }
+.book-case-comparison { max-width: 100%; overflow-x: auto; }
+.sl-markdown-content .book-case-comparison table { display: table; width: 100%; min-width: 42rem; }
+.book-case-comparison :is(th, td):first-child { min-width: 5em; }
+.book-figure {
+  display: block;
+  border: 1px solid var(--sl-color-gray-4);
+  border-radius: .75rem;
+  padding: clamp(.8rem, 2vw, 1.4rem);
+  margin-block: 1.75rem;
+  background: var(--sl-color-gray-6);
+  font-size: .95rem;
+  overflow-wrap: anywhere;
+}
+.book-figure .figure-lane + .figure-lane { margin-top: 1.4rem; }
+.book-figure ol { display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; list-style: none; }
+.book-figure li { flex: 1 1 8.5rem; margin: 0; border: 1px solid var(--sl-color-gray-3); border-radius: .4rem; padding: .7rem; background: var(--sl-color-black); }
+.book-figure .node-kind { display: block; font-family: var(--sl-font-mono); font-size: .7rem; font-weight: 600; text-transform: uppercase; margin-bottom: .3rem; }
+.book-figure .kind-parameter { border: 3px double var(--sl-color-gray-3); }
+.book-figure .kind-state { border: 2px dashed var(--sl-color-gray-3); }
+.book-figure .kind-external { border: 2px dotted var(--sl-color-gray-3); }
+.book-figure .kind-vector { border-left: .3rem solid var(--sl-color-text-accent); }
+.book-figure .kind-computation { border-radius: 1rem; }
+.book-figure .figure-flow { font-family: var(--sl-font-mono); font-size: .8rem; }
+.book-figure figcaption { border-top: 1px solid var(--sl-color-gray-4); padding-top: .8rem; }
+.book-figure figcaption small { display: block; }
+.lookup-walk { display: flex; gap: .6rem; align-items: center; margin: 1rem 0; }
+.lookup-walk > div { display: grid; flex: 1; gap: .5rem; padding: .8rem .5rem; border: 1px solid var(--sl-color-gray-3); background: var(--sl-color-black); text-align: center; border-radius: .4rem; }
+.lookup-walk small { font-size: .78rem; }
+.lookup-walk strong { font-family: var(--sl-font-mono); font-size: 1.1rem; }
+.vector-plot { width: min(100%, 25rem); display: block; margin-inline: auto; color: var(--sl-color-text); }
+.vector-plot .plot-grid { stroke: var(--sl-color-gray-4); stroke-width: .5; }
+.vector-plot .plot-axis { stroke: var(--sl-color-gray-2); stroke-width: 1; }
+.vector-plot .vector-u { stroke: var(--sl-color-text-accent); }
+.vector-plot .vector-v { stroke: var(--sl-color-text); }
+.vector-plot .plot-label { fill: currentColor; font: 12px var(--sl-font-mono); }
+@media (max-width: 35rem) {
+  .book-figure ol, .lookup-walk { flex-direction: column; }
+  .book-figure li { flex-basis: auto; }
+  .lookup-walk > div { width: 100%; }
+  .lookup-walk > span { transform: rotate(90deg); }
+}
+.book-figure .lookup-source { display:flex; flex-direction:column; align-items:center; gap:.5rem; font-size:1.3rem; }
+.book-figure .corpus-strips { display: grid; gap: .6rem; }
+.book-figure .corpus-strips > div { display:flex; gap:1rem; align-items:center; padding:.7rem; border:1px solid var(--sl-color-gray-3); border-radius:.4rem; background:var(--sl-color-black); }
+.book-figure .corpus-strips small { flex-shrink:0; }
+.book-figure .corpus-strips span { font-family:var(--sl-font-mono); }
+.book-figure .corpus-strips b { border-bottom:3px solid var(--sl-color-text-accent); }
+.book-figure .ticket-bag { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.7rem; margin:1.5rem 0; }
+.book-figure .ticket-bag b { padding:.5rem 1rem; background:var(--sl-color-black); border:2px solid var(--sl-color-text-accent); border-radius:.3rem; font: 1.3rem var(--sl-font-mono); }
+.book-figure .fraction-choices, .book-figure .diagram-fork { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.book-figure .fraction-choices > div, .book-figure .diagram-fork > div { display:grid; gap:.5rem; padding:.8rem; border:1px solid var(--sl-color-gray-3); background:var(--sl-color-black); border-radius:.4rem; }
+.book-figure .fraction-choices > div > div { display:flex; gap:.3rem; }
+.book-figure .fraction-choices i { flex:1; height:1rem; border:1px solid var(--sl-color-text-accent); background:var(--sl-color-text-accent); }
+.book-figure .fraction-choices i.empty { background:transparent; }
+.book-figure .diagram-fork p { margin:0; }
+@media (max-width:35rem) { .book-figure .diagram-fork { grid-template-columns:1fr; } .book-figure .corpus-strips > div { flex-direction:column; gap:.2rem; align-items:start; } }
+
+/* Starlight's prose sibling spacing must not turn equal tickets into steps. */
+.book-figure :is(.lookup-source, .lookup-walk, .corpus-strips, .ticket-bag, .fraction-choices, .diagram-fork) > *,
+.book-figure .fraction-choices > div > *,
+.book-figure .fraction-choices i { margin: 0; }
+
+.coordinate-figure { display: block; width: min(100%, 32rem); height: auto; margin-inline: auto; color: var(--sl-color-white); }

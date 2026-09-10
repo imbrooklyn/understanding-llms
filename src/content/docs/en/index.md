@@ -1,28 +1,36 @@
 ---
 title: "Understanding Large Language Models from the Ground Up"
-description: "Start with one token and build a complete mental model of modern LLMs and reliable LLM systems."
+description: "A bilingual open textbook. Read Part I to understand language-model behavior, tokens, training, and prediction through complete worked examples."
 template: splash
 hero:
   title: "Understanding Large Language Models from the Ground Up"
-  tagline: "Start with one token, then build a complete path from language modeling and Transformers to RAG, agents, and production systems."
+  tagline: "Start with an everyday question, then follow how text enters a model, how a response is produced, and how the model is trained."
   actions:
-    - text: "Explore the roadmap"
-      link: "/books/understanding-llms/en/roadmap/"
+    - text: "Start reading Part I"
+      link: "/books/understanding-llms/en/ch-01/"
       icon: right-arrow
       variant: primary
-    - text: "GitHub"
-      link: "https://github.com/imbrooklyn/understanding-llms"
-      icon: external
+    - text: "Book roadmap"
+      link: "/books/understanding-llms/en/roadmap/"
+      icon: open-book
+      variant: secondary
 ---
 
-This is a web-first bilingual open textbook for developers. The core understanding path assumes no prior AI, machine-learning, or NLP background; the practical path introduces the required Python, mathematics, and engineering foundations.
+This bilingual open textbook explains how language models work, from observable responses to the calculations behind them. Part I assumes no programming background. Later practical chapters introduce the Python, mathematics, and engineering needed to build models and applications.
 
-## What you will build
+## Part I is available
 
-- Trace a token from text, ID, and embedding through Transformers, logits, and sampling.
-- Separate training, inference, and reasoning, and locate parameters, context, external knowledge, and system state.
-- Derive the Transformer step by step from N-grams, RNNs, and attention.
-- Place prompts, RAG, tools, MCP, skills, workflows, and agents on one reliable-systems map.
-- Turn mechanisms into verifiable engineering outcomes through Mini GPT and a Personal Knowledge Assistant.
+The first public edition of Chapters 1–4 was published on September 10, 2026, in English and Chinese. The examples, diagrams, calculations, and exercise solutions are all available directly on the page.
 
-> The book infrastructure is ready. Chapters will be published progressively following the roadmap.
+- [Chapter 1](./ch-01/): judge a response against the task and its evidence, and distinguish a model from the complete assistant.
+- [Chapter 2](./ch-02/): follow how a response is generated and how training changes the model.
+- [Chapter 3](./ch-03/): turn text into pieces, IDs, and vectors, then examine what those representations preserve.
+- [Chapter 4](./ch-04/): build a small language model by counting, calculate its predictions, and test its limitations.
+
+Later parts will develop neural models and Transformers, then examine retrieval, tools, agents, evaluation, and reliable applications. See the [full roadmap](./roadmap/) for the planned sequence.
+
+## Help improve the next edition
+
+Where did the explanation lose you? Which example helped, and where was a step missing? Share the page and passage through [reader feedback](https://github.com/imbrooklyn/understanding-llms/issues/new?template=reader-feedback.yml). You do not need to know the correction to describe a difficulty.
+
+For a specific error, use the [errata and feedback page](./errata/). Source text and accompanying materials are available on [GitHub](https://github.com/imbrooklyn/understanding-llms).

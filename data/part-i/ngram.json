@@ -1,0 +1,39 @@
+{
+  "version": "part-i-v1",
+  "created": "2026-09-08",
+  "author": "Brooklyn Yu / Understanding LLMs contributors",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original synthetic teaching fixtures; not real model measurements or company records.",
+  "engine": "char-ngram-v1",
+  "tokenizer": "unicode-code-point-v1 restricted to a,b,c",
+  "train": [
+    "ab",
+    "ab",
+    "ac"
+  ],
+  "held_out": [
+    "ac",
+    "aa"
+  ],
+  "held_out_note": "Diagnostic only: ac intentionally duplicates a training string. Not a blind generalization benchmark.",
+  "vocabulary": [
+    "a",
+    "b",
+    "c",
+    "EOS"
+  ],
+  "bos": "BOS",
+  "eos": "EOS",
+  "orders": [
+    1,
+    2,
+    3
+  ],
+  "smoothing": [
+    0,
+    1
+  ],
+  "seed": 42,
+  "prng": "LCG32: state=(1664525*state+1013904223) mod 2^32; u=state/2^32",
+  "max_draws": 12
+}

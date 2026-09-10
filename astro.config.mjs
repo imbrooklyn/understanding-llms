@@ -3,6 +3,10 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import { BOOK_BASE, BOOK_REPOSITORY, BOOK_SITE } from "./src/config/book.mjs";
 import { createSidebar } from "./src/config/sidebar.mjs";
+import { unified } from "@astrojs/markdown-remark";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import remarkBook from "./src/plugins/remark-book.mjs";
 
 const includeDrafts = process.env.NODE_ENV !== "production";
 
@@ -11,6 +15,12 @@ export default defineConfig({
   base: BOOK_BASE,
   output: "static",
   trailingSlash: "always",
+  markdown: {
+    processor: unified({
+      remarkPlugins: [remarkMath, remarkBook],
+      rehypePlugins: [[rehypeKatex, { strict: "error", trust: false }]],
+    }),
+  },
   integrations: [
     starlight({
       title: {
@@ -31,8 +41,10 @@ export default defineConfig({
         },
       },
       customCss: ["./src/styles/custom.css"],
+      expressiveCode: { frames: { showCopyToClipboardButton: false } },
       components: {
         SiteTitle: "./src/components/SiteTitle.astro",
+        PageTitle: "./src/components/PageTitle.astro",
       },
       favicon: "/favicon.svg",
       editLink: {
