@@ -1,0 +1,23 @@
+{
+  "version": "part-iv-evidence-v1",
+  "purpose": "Bind independent fixtures and actual numerical evidence to the checked sources; not a substitute for behavioral verification.",
+  "sha256": {
+    "code/part-iv/mechanisms.py": "f6b703dae93145ac1685bd17c49b2c9e4d4096e976b12664709bb046f1850653",
+    "code/part-iv/reference.py": "43012369f7ed36e8bc04e8d9b35a60287c6d40aa23973c92838828742e2eebb8",
+    "code/part-iv/requirements-tested.txt": "69758caa5530c01e84e4073c47379aede412633a5d1e170670ee716eb5dc02aa",
+    "code/part-iv/requirements.txt": "5f7c70717d8af44dd78a481f9fac45d9525808c0b7543621b1485b3c7a1ee3a2",
+    "code/part-iv/run.py": "c215fd46ac57ff870acd4aa66a97d6402bf3e99a497dcdbf0753e17e40f5fe0b",
+    "code/part-iv/test_mechanisms.py": "636d6cfbb7bb075d3bc42f8a5cc6089ed6cc23ccc5d846c3dfbcd8187983ed84",
+    "code/part-iv/tokenizer_example.py": "184c71489fb7598a047791b85a055b40894c86532cf927d745a54ce9238602d9",
+    "data/mini-gpt/forward.json": "21354cfb6453e1db5ec0ba5ed7150a0915cd6cdb813c3230f96af489093b9d6e",
+    "data/mini-gpt/generation-baseline.json": "a1b8ad0bac130fdeb18ec6c3dd8c565d4d1f309c182b98ef8a38bbe1a8f44f67",
+    "data/mini-gpt/generation.json": "13de8527f7610c63fade443323e812cca484bd43fc3b538cf2b1fbb29af5d8fd",
+    "data/mini-gpt/training-run.json": "5766c3323a8d1af3b67e0e541d02f57f15ed0cc0ba78b413ecc9bf8f136bc6e4",
+    "data/part-iv/architectures.json": "17bdf3021f4e1a9603f12a4af52184f9993f368503aee8931f845b4837cc9808",
+    "data/part-iv/attention.json": "fcc05375a10f53713348fb018600e50a540408730601455607f0aa3d9b96dc3a",
+    "data/part-iv/mask-cases.json": "87e1a15162c19e1fd0fe5e4351acffeb916e757533452ec643a2c0a26872897b",
+    "data/part-iv/numpy-run.json": "021edd47fe1eb4351a47248307e97aa3dd498ec9d7562c83445b680f7602b69b",
+    "data/part-iv/tokenizer-cases.json": "c50f31287448291edc0deb9dd381f0a3ebf28aa22a2f907bb06de951b1c610b8",
+    "data/part-iv/tokenizer-run.json": "08987bf3a03acbde0d48ab82a34a4e2d5458f315e655f8ea15c458f89c7c95ad"
+  }
+}

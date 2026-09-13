@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "source": "Installed distribution metadata and license files in the declared CPU environment. Dependencies are not vendored by this increment; their own terms apply.",
+  "distributions": [
+    {
+      "distribution": "torch",
+      "version": "2.7.0",
+      "declared_license": "BSD-3-Clause",
+      "license_files": {
+        "torch-2.7.0.dist-info/LICENSE": "c73ffeaaa808d6860ef1e6f99a6fd1c6957c570a2a81877468e049e19036b884"
+      }
+    },
+    {
+      "distribution": "numpy",
+      "version": "2.0.2",
+      "declared_license": "BSD-3-Clause for NumPy; the installed wheel also lists separately licensed bundled components",
+      "license_files": {
+        "numpy-2.0.2.dist-info/LICENSE.txt": "279d8a786f5c0011fa62f57d09c9b724bc2391e0d907836a316309c7a3eb6cc4"
+      },
+      "scope": "The complete recorded LICENSE.txt includes OpenBLAS, LAPACK and other notices; its hash identifies the exact text inspected. This entry does not replace those terms."
+    },
+    {
+      "distribution": "nbclient",
+      "version": "0.10.2",
+      "declared_license": "BSD 3-Clause License",
+      "license_files": {
+        "nbclient-0.10.2.dist-info/licenses/LICENSE": "83c56c2de2a2a71227d0a98fd246049e6320c094d03e2d560c7c0c0b3ec576e9"
+      }
+    },
+    {
+      "distribution": "nbformat",
+      "version": "5.10.4",
+      "declared_license": "BSD 3-Clause License",
+      "license_files": {
+        "nbformat-5.10.4.dist-info/licenses/LICENSE": "5ca74e4d2eeb9330b0d129c25f874d3544a13413bc62ae8d367819100d095072"
+      }
+    },
+    {
+      "distribution": "ipykernel",
+      "version": "6.29.5",
+      "declared_license": "BSD 3-Clause License",
+      "license_files": {
+        "ipykernel-6.29.5.dist-info/licenses/LICENSE": "36ec29c871f7a382cde301cba47698191cf327c3f95ff5c240065e95dde80bfd"
+      }
+    }
+  ]
+}

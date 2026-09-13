@@ -1,0 +1,164 @@
+{
+  "version": "architecture-v1",
+  "provenance": "Authored visibility exercise; whole-word tokens, omitted source/classifier/separator boundaries; no trained family models",
+  "models": {
+    "bert": {
+      "input": [
+        "[MASK]",
+        "key",
+        "."
+      ],
+      "targets": [
+        "red",
+        null,
+        null
+      ],
+      "visible": [
+        [
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true
+        ]
+      ]
+    },
+    "gpt": {
+      "input": [
+        "BOS",
+        "red",
+        "key",
+        "."
+      ],
+      "targets": [
+        "red",
+        "key",
+        ".",
+        "EOS"
+      ],
+      "visible": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          true
+        ]
+      ]
+    },
+    "t5": {
+      "source": [
+        "<S0>",
+        "."
+      ],
+      "input": [
+        "BOS",
+        "<S0>",
+        "red",
+        "key",
+        "<S1>"
+      ],
+      "targets": [
+        "<S0>",
+        "red",
+        "key",
+        "<S1>",
+        "EOS"
+      ],
+      "source_visible": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "visible": [
+        [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      ],
+      "cross_visible": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    }
+  }
+}

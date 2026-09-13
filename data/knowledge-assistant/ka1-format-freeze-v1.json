@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-09-13T12:23:33.409374+00:00",
+  "status": "frozen before new execution; inspected development cases",
+  "inputs_sha256": {
+    "code/knowledge-assistant/baselines.py": "837f3978c7393c10e5403e1e9e768cbaefa089977fe0ab6608ef3b582f3e7916",
+    "code/knowledge-assistant/format_adaptation.py": "a3388baea5562cb6c547819a2faec55ebac957351d4f9bd4a4b8d1dbb0758eda",
+    "code/knowledge-assistant/ka1.py": "fdf0c982ad60087ee46fd69543c7442fb5611c5c5a6a6c491ff9f6a260419f97",
+    "code/mini-gpt/generate.py": "7caff6d57d6b63fece3029482110a1885220bfe7790342d29d874fda69314a6f",
+    "code/mini-gpt/model.py": "fd5b2347384330270993cb355829d655a866520ebd64f6df59c1e0f122c64d8a",
+    "code/mini-gpt/tokenizer.py": "b497a4dcdc3dac09668c9b30a4a208e3055a94a0abd3cbfefa8bd96fd1699277",
+    "code/part-iv/requirements-tested.txt": "69758caa5530c01e84e4073c47379aede412633a5d1e170670ee716eb5dc02aa",
+    "code/part-vi/requirements.txt": "65e2b48b511239eff49575ecd6e8d07f67c3807399674614ddb5639a6e0555de",
+    "data/knowledge-assistant/ka0-v1.json": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+    "data/knowledge-assistant/ka1-adjudication-v1.json": "6daf635541a08ef7662f9c5782a696b686f9c1e9c23ec062e18185f93f1e9f60",
+    "data/knowledge-assistant/ka1-contract-v1.json": "00300195c59bf81d81c6c40495b3e02cb44765063e04e927a0a4f15d7058a4b4",
+    "data/knowledge-assistant/ka1-format-adaptation-v1.json": "ffe1b925fb3cc88caf5a1903eff2d83bc6688ff55d764a834a8a7e6f1fe1d151",
+    "data/knowledge-assistant/ka1-run-v1.json": "5e2b34ef4d935b4364dd7a2d47765011426e22047bdf10e6745a65f5129015a6",
+    "data/mini-gpt/config.json": "91f4c37fa02841002ae297e1f577008cb0ae6404ca2d74b7d600db6a5c2ca0a6",
+    "data/mini-gpt/corpus.json": "243a03df408a11a9803577c31626114ce96a183ac03405b7bb6a47d7c698483f",
+    "data/mini-gpt/tokenizer.json": "89c76a1c6dc4a8eda52cf9ecdf97cb667385b8feb9e544d03efde8a23333458e",
+    "data/mini-gpt/weights-final.pt": "a8ffef09fc809cf06330972037169738ebc26730f5a62e22802d073e47b13271",
+    "data/mini-gpt/weights-selected.pt": "02abe42d897c83cc39a2bfb720642a6de8caef4200b3f421a7840fe0429fadfc"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "ch-13/target-timelines",
+  "structure": "lanes",
+  "alt": {
+    "en": "Teacher forcing supplies BOS, red, key, period against targets red, key, period, EOS. Generation supplies BOS, blue, door, period and produces blue, door, period, EOS. The first prediction error changes the second input.",
+    "zh-hans": "教师强制输入 BOS、red、key、句号，对应目标 red、key、句号、EOS。生成输入 BOS、blue、door、句号，输出 blue、door、句号、EOS。第一次预测错误改变第二步输入。"
+  },
+  "caption": {
+    "en": "Figure 13.2 — The same conditional table sees different prefixes.",
+    "zh-hans": "图 13.2 — 同一张条件概率表，收到不同前缀。"
+  },
+  "credit": {
+    "en": "Original teaching diagram and supplied or derived values, CC BY-SA 4.0; no paper figure reproduced.",
+    "zh-hans": "本书原创教学图，数值为给定值或按规则推导值，CC BY-SA 4.0；未复制论文图示。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Training inputs → targets",
+        "zh-hans": "训练输入 → 目标"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "1: BOS → red (p = 0.4)",
+            "zh-hans": "1：BOS → red（概率 0.4）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "2: red → key (p = 0.8)",
+            "zh-hans": "2：red → key（概率 0.8）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "3: key → . (p = 0.9)",
+            "zh-hans": "3：key → .（概率 0.9）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "4: . → EOS (p = 1)",
+            "zh-hans": "4：. → EOS（概率 1）"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The correct red is supplied at step 2 even though step 1 favors blue.",
+        "zh-hans": "第 1 步虽然偏向 blue，第 2 步仍由目标提供正确的 red。"
+      }
+    },
+    {
+      "label": {
+        "en": "Generation inputs → choices",
+        "zh-hans": "生成输入 → 选择"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "1: BOS → blue (p = 0.5)",
+            "zh-hans": "1：BOS → blue（概率 0.5）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "2: blue → door (p = 0.7)",
+            "zh-hans": "2：blue → door（概率 0.7）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "3: door → . (p = 0.9)",
+            "zh-hans": "3：door → .（概率 0.9）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "4: . → EOS (p = 1)",
+            "zh-hans": "4：. → EOS（概率 1）"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The selected token becomes the next input; the period and EOS remain correct in this trace.",
+        "zh-hans": "把选中的 token 作为下一步输入；本条记录中的句号和 EOS 仍然正确。"
+      }
+    }
+  ]
+}

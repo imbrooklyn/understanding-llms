@@ -1,0 +1,117 @@
+{
+  "id": "ch-26/resource-map",
+  "structure": "lanes",
+  "alt": {
+    "en": "Eight query heads remain while KV heads fall from eight to two. The MoE model stores 60 million weights while using 40 million per token. A window containing the current and previous position reduces 21 pairs to 11, removing the direct path from position 1 to position 6.",
+    "zh-hans": "查询头仍为八个，KV 头从八个减至两个。MoE 保存六千万个权重，每个 token 使用其中四千万个。只看当前位置与前一位置的窗口，把 21 个位置对减为 11 个，也删掉了位置 1 到位置 6 的直接通路。"
+  },
+  "caption": {
+    "en": "Figure 26.1 — Three savings leave different obligations.",
+    "zh-hans": "图 26.1：三种节省，留下不同要求。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Share stored context",
+        "zh-hans": "共享保存的上下文"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "8 query heads; 8 KV heads",
+            "zh-hans": "8 个查询头；8 个 KV 头"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Group queries 1–4 and 5–8",
+            "zh-hans": "查询头 1—4、5—8 分成两组"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "2 KV heads: 2 MiB → 0.5 MiB",
+            "zh-hans": "2 个 KV 头：2 MiB → 0.5 MiB"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Distinct queries still compute distinct mixtures.",
+        "zh-hans": "不同查询仍计算各自的混合结果。"
+      }
+    },
+    {
+      "label": {
+        "en": "Route parameters",
+        "zh-hans": "按路由使用参数"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "20M shared + 4 × 10M experts",
+            "zh-hans": "共享 2,000 万 + 4 × 1,000 万专家参数"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "One token selects two experts",
+            "zh-hans": "一个 token 选择两个专家"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "40M active; 60M total",
+            "zh-hans": "活跃 4,000 万；总计 6,000 万"
+          }
+        }
+      ],
+      "flow": {
+        "en": "All loaded experts still occupy 120 MB at two bytes per weight.",
+        "zh-hans": "全部专家加载时，每个权重 2 字节仍需 120 MB。"
+      }
+    },
+    {
+      "label": {
+        "en": "Restrict position pairs",
+        "zh-hans": "限制位置对"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Full causal: 1+2+3+4+5+6 = 21",
+            "zh-hans": "完整因果连接：1+2+3+4+5+6 = 21"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Current + previous: 1+5×2 = 11",
+            "zh-hans": "自己与前一位：1+5×2 = 11"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "At position 6: only positions 5 and 6",
+            "zh-hans": "位置 6：只直接读取位置 5、6"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The clue at position 1 needs a multi-layer path or another connection.",
+        "zh-hans": "位置 1 的线索需要跨层传递或其他连接。"
+      }
+    }
+  ]
+}

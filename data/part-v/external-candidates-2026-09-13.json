@@ -1,0 +1,65 @@
+{
+  "version": "part-v-external-candidates-v1",
+  "as_of": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "evidence_type": "official documentation inspected; no model execution, price quote, weight download or account-access check",
+  "license": "Original source metadata and annotations CC BY-SA 4.0; linked third-party materials retain their own terms.",
+  "candidates": [
+    {
+      "name": "Claude Haiku 4.5",
+      "route": "hosted API",
+      "model_id": "claude-haiku-4-5-20251001",
+      "alias": "claude-haiku-4-5",
+      "context_tokens": 200000,
+      "max_output_tokens": 64000,
+      "listed_status": "Active",
+      "base_usd_per_million_input_tokens": 1,
+      "base_usd_per_million_output_tokens": 5,
+      "scope": "First-party base rates, no cache, batch, tools, taxes, retries or negotiated terms.",
+      "license_or_terms": "Anthropic Commercial Terms of Service, not a downloadable weight license.",
+      "privacy": "Commercial no-training statement and retention are separate: standard API retention within 30 days has exceptions for service/agreement, enforcement and law; feedback/flagged data can persist longer.",
+      "availability": "Region/entity eligibility must be checked; mainland China is not on the inspected commercial API list. No access bypass is proposed.",
+      "quality_language_latency": "Provider claims only; neither language nor latency measured under KA-1.",
+      "sources": [
+        "https://platform.claude.com/docs/en/models/haiku-4-5/overview",
+        "https://platform.claude.com/docs/en/about-claude/pricing",
+        "https://www.anthropic.com/legal/commercial-terms",
+        "https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data",
+        "https://www.anthropic.com/supported-countries"
+      ]
+    },
+    {
+      "name": "Qwen2.5-0.5B-Instruct",
+      "route": "downloadable weights; optional local execution",
+      "model_card_parameters": 490000000,
+      "model_card_non_embedding_parameters": 360000000,
+      "context_tokens": 32768,
+      "model_card_max_output_tokens": 8192,
+      "config_file_last_change": "eaa56b503cc0a8a4d15de1dd8bd2a7e95a716be2",
+      "license_file_introduced": "f0ef055f4ec271c837b6d52bc7a4a94de0789a57",
+      "repository_head": "not pinned; per-file changes above are not a model revision pin",
+      "config_fields": {
+        "hidden_size": 896,
+        "intermediate_size": 4864,
+        "num_hidden_layers": 24,
+        "num_attention_heads": 14,
+        "num_key_value_heads": 2,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 1000000,
+        "torch_dtype": "bfloat16",
+        "transformers_version": "4.43.1"
+      },
+      "license_or_terms": "Inspected Apache-2.0 text and Alibaba Cloud copyright; not an OSI Open Source AI compliance determination.",
+      "privacy": "An offline local engine can avoid external prompt transfer, but logging, integrations, backups and access control still depend on the chosen stack. No stack was installed for this candidate.",
+      "price": "No per-token local license fee stated in Apache-2.0; actual hardware, energy, labor and capacity costs unmeasured.",
+      "quality_language_latency": "Model card includes Chinese/English among family language claims. No KA-1 quality, latency or long-context measurement.",
+      "sources": [
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/main/config.json",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blame/main/LICENSE",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/commit/eaa56b503cc0a8a4d15de1dd8bd2a7e95a716be2",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/commit/f0ef055f4ec271c837b6d52bc7a4a94de0789a57"
+      ]
+    }
+  ]
+}

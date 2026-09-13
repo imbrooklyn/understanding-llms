@@ -5,6 +5,13 @@ sidebar:
   order: 2
 ---
 
+## 2026-09-13 — Parts II–VI and the Python primer
+
+- Published all completed draft chapters: Chapters 5–39 and Primer-PY in English and Chinese, adding 72 reading pages.
+- Included their shared static figures, fixed data, CPU practice, executed notebooks, visible exercises and solutions, and the continuing Mini GPT and knowledge-assistant evidence.
+- Updated the home pages, roadmap, navigation, search and chapter feeds. Chapters 1–4 retain their original publication dates.
+- Chapters 40–57, Primer-HTTP and the multimodal extension remain unpublished placeholders.
+
 ## 2026-09-10 — Part I, first public edition
 
 - Published Chapters 1–4 in English and Chinese, with six shared figures and 35 exercises with visible solutions per language.

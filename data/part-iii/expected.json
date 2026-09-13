@@ -1,0 +1,208 @@
+{
+  "version": "part-iii-exact-v1",
+  "license": "CC-BY-SA-4.0",
+  "method": "Frozen independently from fractions, a closed-form polynomial, and exp(ln(2))=2 before core implementation.",
+  "short_states": [
+    [
+      [
+        1,
+        0
+      ],
+      [
+        0.5,
+        0
+      ],
+      [
+        0.25,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0.5
+      ],
+      [
+        0,
+        0.25
+      ]
+    ]
+  ],
+  "long_states": [
+    [
+      0.00390625,
+      0
+    ],
+    [
+      0,
+      0.00390625
+    ]
+  ],
+  "short_choices": [
+    0,
+    1
+  ],
+  "long_choices": [
+    0,
+    0
+  ],
+  "window_choices": [
+    0,
+    0
+  ],
+  "state_gradients": [
+    -0.1875,
+    -0.375,
+    -0.75
+  ],
+  "weight_contributions": [
+    0,
+    -0.375,
+    -0.375
+  ],
+  "weight_gradient": -0.75,
+  "loss": 0.28125,
+  "updated_weight": 0.575,
+  "updated_last_state": 0.330625,
+  "updated_loss": 0.2240314453125,
+  "encoder_states_in_units_of_ln2": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "contrast_states_in_units_of_ln2": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "teacher_inputs": [
+    "BOS",
+    "red",
+    "key",
+    "."
+  ],
+  "teacher_targets": [
+    "red",
+    "key",
+    ".",
+    "EOS"
+  ],
+  "teacher_probabilities": [
+    0.4,
+    0.8,
+    0.9,
+    1
+  ],
+  "sequence_probability": 0.288,
+  "generated_inputs": [
+    "BOS",
+    "blue",
+    "door",
+    "."
+  ],
+  "generated_outputs": [
+    "blue",
+    "door",
+    ".",
+    "EOS"
+  ],
+  "attention_weights": [
+    [
+      0.5,
+      0.25,
+      0.25
+    ],
+    [
+      0.25,
+      0.5,
+      0.25
+    ]
+  ],
+  "contexts_in_units_of_ln2": [
+    [
+      0.5,
+      0.25
+    ],
+    [
+      0.25,
+      0.5
+    ]
+  ],
+  "slot_weights": [
+    [
+      0,
+      0.5,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0,
+      0.3333333333333333
+    ],
+    [
+      0.6666666666666666,
+      0.3333333333333333,
+      0
+    ]
+  ],
+  "slot_contexts_in_units_of_ln2": [
+    [
+      0,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0
+    ],
+    [
+      0.6666666666666666,
+      0.3333333333333333
+    ]
+  ],
+  "slot_readouts_in_units_of_ln2": [
+    1,
+    0.6666666666666666,
+    1.3333333333333333
+  ],
+  "source_contexts_in_units_of_ln2": [
+    [
+      0,
+      0.5
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0.6666666666666666,
+      0.3333333333333333
+    ]
+  ],
+  "source_readouts_in_units_of_ln2": [
+    1,
+    1,
+    1.3333333333333333
+  ]
+}

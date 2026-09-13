@@ -1,0 +1,22 @@
+{
+  "version": "mini-gpt-data-card-v2",
+  "as_of": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "source": "data/mini-gpt/corpus.json",
+  "source_sha256": "243a03df408a11a9803577c31626114ce96a183ac03405b7bb6a47d7c698483f",
+  "acquisition": "Original fictional authored records; no web acquisition or real accounts",
+  "robots": "not applicable to locally authored source",
+  "terms": "no third-party service used to acquire data",
+  "redistribution": "Original material offered under CC BY-SA 4.0; implementation separately Apache-2.0",
+  "parsing": "UTF-8 JSON, preserve raw text and ordered records",
+  "normalization": "None for Mini GPT; KA search-key-v1 only for lexical indexing, raw bodies retained",
+  "filtering": "Original baseline unchanged; separate part-v pipeline exercise retains both failing and revised rules",
+  "deduplication": "Baseline templates intentionally retained; exact identity scan cannot rule out semantic overlap",
+  "pii": "Fictional orders and policy text; synthetic contact exercise separately uses example.invalid; no real PII claimed",
+  "mixture": "Mini GPT 22 English + 2 Chinese training records, sampled equally by record; this is not a balanced token mixture",
+  "splits": "24 train / 8 validation, whole records before tokenization; related templates, no independent product test",
+  "contamination": "Public teaching examples and related templates; report overlap and retain old versions, do not claim held-out generalization",
+  "updates": "New processing rules/data require a separate version; v2 is expanded documentation of unchanged source bytes",
+  "limitations": "Tiny synthetic corpus; not evidence of population language quality, legal clearance for other data, or safety of a live system"
+}

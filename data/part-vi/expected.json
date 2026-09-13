@@ -1,0 +1,40 @@
+{
+  "version": "part-vi-expected-v1",
+  "license": "CC BY-SA 4.0",
+  "provenance": "Written before implementation. Integer arrays/counts are independently enumerated; decimals evaluate the displayed symbolic expressions.",
+  "sft": {
+    "ids": [0, 1, 2, 3, 4, 5, 3, 6, 7, 8, 3],
+    "inputs": [0, 1, 2, 3, 4, 5, 3, 6, 7, 8],
+    "targets": [1, 2, 3, 4, 5, 3, 6, 7, 8, 3],
+    "mask": [0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+    "scored": 3,
+    "loss_expression": "ln(16)/3",
+    "loss": 0.9241962407465937,
+    "changed_loss_expression": "ln(8)/3",
+    "changed_loss": 0.6931471805599453
+  },
+  "preference": {
+    "kl_expression": "0.75*ln(1.5)+0.25*ln(0.5)",
+    "kl": 0.13081203594113697,
+    "reverse_kl": 0.14384103622589045,
+    "dpo_margin_expression": "ln(3)",
+    "dpo_margin": 1.0986122886681098,
+    "dpo_loss_expression": "-ln(0.75)",
+    "dpo_loss": 0.2876820724517809,
+    "reward_beta1": 0.619187964058863,
+    "reward_beta2": 0.48837592811772607
+  },
+  "reimbursement": {"nightly_allowed": [680, 750], "total": 1430, "pooled_wrong": 1500, "new_cap_700_total": 1380},
+  "lora": {
+    "delta": [[2, 0, -1], [0, 0, 0], [-2, 0, 1], [4, 0, -2]],
+    "base_output": [1, 2, 3, 3],
+    "adapter_output": [-1, 0, 1, -2],
+    "combined_output": [0, 2, 4, 1],
+    "base_parameters": 12,
+    "rank1_parameters": 7,
+    "rank2_parameters": 14,
+    "large_base_parameters": 16777216,
+    "large_rank8_parameters": 65536,
+    "large_trainable_fraction": 0.00390625
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "id":"ch-09/reweight-ranking", "structure":"lanes",
+ "alt":{"en":"For Beijing processing, keyword overlap ties A B C D at one and selects A. Count cosine favors rail card C with 0.670820 over status D at 0.5. TF-IDF gives processing a larger weight than Beijing and ranks D at 0.646660 over C at 0.498157.","zh-hans":"查询北京处理中时，关键词重合让 A、B、C、D 都得一分，按顺序选 A。计数余弦让铁路卡 C 的 0.670820 高于状态卡 D 的 0.5。TF-IDF 给处理中比北京更高的权重，D 以 0.646660 排在 C 的 0.498157 前面。"},
+ "caption":{"en":"Figure 9.1 — The same query changes rank when common and rare terms receive different weights.","zh-hans":"图 9.1 — 常见词与稀有词采用不同权重，同一个查询的排序随之改变。"},
+ "credit":{"en":"Original corpus, calculation and diagram, CC BY-SA 4.0; reproduced by KA-0.","zh-hans":"本书原创数据、计算与图示，CC BY-SA 4.0；由 KA-0 复现。"},
+ "lanes":[
+  {"label":{"en":"Keyword: count distinct matches","zh-hans":"关键词：数共有的不同词"},"nodes":[
+   {"kind":"token","text":{"en":"Query: Beijing processing","zh-hans":"查询：北京 处理中"}},
+   {"kind":"vector","text":{"en":"A=1, B=1, C=1, D=1, E=0 → A","zh-hans":"A=1、B=1、C=1、D=1、E=0 → A"}}],"flow":{"en":"The tie rule sees candidate order, not the reader's status intent.","zh-hans":"同分规则依据候选顺序，不会识别读者在问状态。"}},
+  {"label":{"en":"Count: compare count directions","zh-hans":"词袋计数：比较计数向量方向"},"nodes":[
+   {"kind":"vector","text":{"en":"C has Beijing three times: cosine 0.670820","zh-hans":"C 中北京出现三次：余弦 0.670820"}},
+   {"kind":"vector","text":{"en":"D has processing once: cosine 0.500000","zh-hans":"D 中处理中出现一次：余弦 0.500000"}}],"flow":{"en":"C wins even though it is about rail travel.","zh-hans":"C 排在前面，但它讲的是铁路差旅。"}},
+  {"label":{"en":"TF-IDF: reweight before cosine","zh-hans":"TF-IDF：先改权重，再算余弦"},"nodes":[
+   {"kind":"computation","text":{"en":"IDF Beijing=1.405465; processing=2.098612","zh-hans":"IDF：北京=1.405465；处理中=2.098612"}},
+   {"kind":"vector","text":{"en":"D=0.646660 > C=0.498157 → D","zh-hans":"D=0.646660 > C=0.498157 → D"}}],"flow":{"en":"A relevant status document rises. Dates and synonymy remain outside this weighting rule.","zh-hans":"相关的状态文档上升了；日期和同义关系仍不在这条加权规则中。"}}
+ ]
+}

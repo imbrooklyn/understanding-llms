@@ -1,0 +1,267 @@
+{
+  "version": "budget-v1",
+  "as_of": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "evidence_kind": "author-assigned full candidate pool, deterministic controller replay; no generated model answers",
+  "model": "none",
+  "tokenizer": {
+    "id": "part-vi-audit-lexer-v1",
+    "regex": "[A-Za-z_]+|[0-9]+|[^\\s]",
+    "scope": "Counts only the explicitly stored ASCII request/candidate/decision strings, not language-model tokens. One request has 9 tokens, a direct answer 1 and a step answer 5."
+  },
+  "budget": {
+    "axis": "maximum charged calls per question",
+    "generation_call": 1,
+    "verification_call": 1,
+    "maxima": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "token_accounting": "Every call reads the full 9-token request; generation emits candidate text; verification also reads candidate text and emits one accept/reject token. No reuse or free rejected candidates.",
+    "stopping": "direct and steps use one call; vote uses up to three candidates and breaks ties by earliest occurrence; search reserves a generation/check pair, stops at first accepted final amount, otherwise abstains at cap or pool exhaustion."
+  },
+  "orders": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "B",
+      "A",
+      "C"
+    ],
+    [
+      "C",
+      "B",
+      "A"
+    ]
+  ],
+  "cases": [
+    {
+      "id": "two-night",
+      "costs": [
+        680,
+        820
+      ],
+      "cap": 750,
+      "answer": 1430,
+      "direct": "1500",
+      "candidates": [
+        {
+          "id": "A",
+          "allowances": [
+            680,
+            820
+          ],
+          "total": 1500,
+          "text": "680 + 820 = 1500"
+        },
+        {
+          "id": "B",
+          "allowances": [
+            680,
+            750
+          ],
+          "total": 1430,
+          "text": "680 + 750 = 1430"
+        },
+        {
+          "id": "C",
+          "allowances": [
+            680,
+            750
+          ],
+          "total": 1430,
+          "text": "680 + 750 = 1430"
+        }
+      ]
+    },
+    {
+      "id": "below-cap",
+      "costs": [
+        400,
+        300
+      ],
+      "cap": 750,
+      "answer": 700,
+      "direct": "700",
+      "candidates": [
+        {
+          "id": "A",
+          "allowances": [
+            400,
+            300
+          ],
+          "total": 700,
+          "text": "400 + 300 = 700"
+        },
+        {
+          "id": "B",
+          "allowances": [
+            400,
+            300
+          ],
+          "total": 700,
+          "text": "400 + 300 = 700"
+        },
+        {
+          "id": "C",
+          "allowances": [
+            400,
+            300
+          ],
+          "total": 700,
+          "text": "400 + 300 = 700"
+        }
+      ]
+    },
+    {
+      "id": "both-above",
+      "costs": [
+        800,
+        900
+      ],
+      "cap": 750,
+      "answer": 1500,
+      "direct": "1500",
+      "candidates": [
+        {
+          "id": "A",
+          "allowances": [
+            750,
+            750
+          ],
+          "total": 1500,
+          "text": "750 + 750 = 1500"
+        },
+        {
+          "id": "B",
+          "allowances": [
+            800,
+            900
+          ],
+          "total": 1700,
+          "text": "800 + 900 = 1700"
+        },
+        {
+          "id": "C",
+          "allowances": [
+            800,
+            900
+          ],
+          "total": 1700,
+          "text": "800 + 900 = 1700"
+        }
+      ]
+    },
+    {
+      "id": "uneven",
+      "costs": [
+        600,
+        900
+      ],
+      "cap": 750,
+      "answer": 1350,
+      "direct": "1500",
+      "candidates": [
+        {
+          "id": "A",
+          "allowances": [
+            600,
+            750
+          ],
+          "total": 1350,
+          "text": "600 + 750 = 1350"
+        },
+        {
+          "id": "B",
+          "allowances": [
+            600,
+            900
+          ],
+          "total": 1500,
+          "text": "600 + 900 = 1500"
+        },
+        {
+          "id": "C",
+          "allowances": [
+            600,
+            900
+          ],
+          "total": 1500,
+          "text": "600 + 900 = 1500"
+        }
+      ]
+    }
+  ],
+  "independent_expected": {
+    "primary_correct": {
+      "direct": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "steps": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vote": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "search": [
+        0,
+        3,
+        3,
+        4,
+        4
+      ]
+    },
+    "budget4": {
+      "direct": {
+        "calls": 4,
+        "tokens": 40,
+        "correct": 2
+      },
+      "steps": {
+        "calls": 4,
+        "tokens": 56,
+        "correct": 3
+      },
+      "vote": {
+        "calls": 12,
+        "tokens": 168,
+        "correct": 2
+      },
+      "search": {
+        "calls": 10,
+        "tokens": 145,
+        "correct": 4
+      }
+    },
+    "repeat_budget4": {
+      "vote": [
+        2,
+        2,
+        2
+      ],
+      "search": [
+        4,
+        4,
+        2
+      ]
+    }
+  }
+}

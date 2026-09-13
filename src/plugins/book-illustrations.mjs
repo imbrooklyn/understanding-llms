@@ -1,9 +1,14 @@
 // SPDX-License-Identifier: Apache-2.0
 import { readFileSync } from 'node:fs';
+import { trainingCurve } from './book-curves.mjs';
+import { budgetCurve } from './book-budget-curve.mjs';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const data = (name) => JSON.parse(readFileSync(new URL(`../../data/part-i/${name}.json`,import.meta.url),'utf8'));
 
 export function workedIllustration(structure,locale,figure = {}) {
+  if (structure === 'budget-curve') return budgetCurve(figure, locale);
+  const curve = trainingCurve(figure, locale);
+  if (curve) return curve;
   const t = (en,zh) => locale === 'en' ? en : zh;
   if (structure === 'cosine') {
     const vectors = figure.vectors;

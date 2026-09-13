@@ -1,0 +1,16 @@
+{
+ "id":"ch-10/window-lm", "structure":"lanes",
+ "alt":{"en":"Two context IDs 0,1 retrieve embedding rows 1,0 and 0,1, shape 1 by 2 by 2. Concatenation yields 1,0,0,1. A supplied hidden matrix yields 1,1. Output logits are 0,0,ln 3,0; target 750 receives probability one half and loss ln 2.","zh-hans":"两个上下文 ID 0、1 查得向量 1、0 与 0、1，形状为 1×2×2。拼接得到 1、0、0、1，经过给定隐藏矩阵得到 1、1。输出分数为 0、0、ln 3、0；目标 750 的概率为二分之一，损失为 ln 2。"},
+ "caption":{"en":"Figure 10.1 — A fixed window preserves the order of its two rows by concatenation.","zh-hans":"图 10.1 — 固定窗口通过拼接，保留其中两行的先后顺序。"},
+ "credit":{"en":"Original hand-assigned snapshot, CC BY-SA 4.0; separate from the measured trained model.","zh-hans":"本书原创手工参数快照，CC BY-SA 4.0；与实测训练模型分开记录。"},
+ "lanes":[
+  {"label":{"en":"Lookup and combine","zh-hans":"查表与组合"},"nodes":[
+   {"kind":"id","text":{"en":"beijing, lodging → IDs [0,1], shape [1,2]","zh-hans":"beijing、lodging → ID [0,1]，形状 [1,2]"}},
+   {"kind":"parameter","text":{"en":"E[0]=[1,0]; E[1]=[0,1] → [1,2,2]","zh-hans":"E[0]=[1,0]；E[1]=[0,1] → [1,2,2]"}},
+   {"kind":"vector","text":{"en":"Concatenate → [1,0,0,1], shape [1,4]","zh-hans":"拼接 → [1,0,0,1]，形状 [1,4]"}}],"flow":{"en":"Reversing the context changes this concatenation, even though its average would be unchanged.","zh-hans":"调换上下文顺序会改变拼接结果，即使平均向量不变。"}},
+  {"label":{"en":"Predict and score","zh-hans":"预测与计分"},"nodes":[
+   {"kind":"computation","text":{"en":"ReLU(xH+b) → [1,1], shape [1,2]","zh-hans":"ReLU(xH+b) → [1,1]，形状 [1,2]"}},
+   {"kind":"vector","text":{"en":"hU+d → [0,0,ln 3,0], shape [1,4]","zh-hans":"hU+d → [0,0,ln 3,0]，形状 [1,4]"}},
+   {"kind":"computation","text":{"en":"Target ID 2: p=3/6=1/2; loss=ln 2","zh-hans":"目标 ID 2：p=3/6=1/2；损失=ln 2"}}],"flow":{"en":"The full model can update E, H, U and biases through the same loss. The paper values are supplied, not learned.","zh-hans":"完整模型可以用同一个损失更新 E、H、U 和偏置；本图数值由作者给定，并非训练所得。"}}
+ ]
+}

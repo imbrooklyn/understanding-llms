@@ -1,0 +1,124 @@
+{
+  "id": "ch-29/sampling",
+  "structure": "lanes",
+  "alt": {
+    "en": "Weights 4, 2, 1, 1 normalize by their sum 8. Top-p 0.8 keeps the first three candidates, whose original mass is 0.875, and gives probabilities 4/7, 2/7, 1/7, 0. Draw 0.60 selects Lyon without filtering, but Paris under top-k 2.",
+    "zh-hans": "权重 4、2、1、1 除以总和 8。Top-p 0.8 保留前三个候选，原概率之和为 0.875，重新归一化后为 4/7、2/7、1/7、0。抽样值 0.60 在未筛选时选择 Lyon，在 Top-k 2 下却选择 Paris。"
+  },
+  "caption": {
+    "en": "Figure 29.1 — Filtering changes probability intervals.",
+    "zh-hans": "图 29.1：筛选改变了概率区间。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Normalize four weights",
+        "zh-hans": "四个权重归一化"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Paris 4 | Lyon 2 | red 1 | EOS 1",
+            "zh-hans": "Paris 4 | Lyon 2 | red 1 | EOS 1"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Divide each by 8",
+            "zh-hans": "各项除以 8"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "0.5 | 0.25 | 0.125 | 0.125",
+            "zh-hans": "0.5 | 0.25 | 0.125 | 0.125"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Paris ends at .5; the draw .60 lies in Lyon.",
+        "zh-hans": "Paris 的区间到 .5 为止，.60 落在 Lyon。"
+      }
+    },
+    {
+      "label": {
+        "en": "Top-p = .8",
+        "zh-hans": "Top-p = .8"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Cumulative .5 → .75 → .875: stop",
+            "zh-hans": "累计 .5 → .75 → .875：停止"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Keep Paris, Lyon, red; exclude EOS",
+            "zh-hans": "保留 Paris、Lyon、red；排除 EOS"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Weights 4+2+1 = 7",
+            "zh-hans": "权重 4+2+1 = 7"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "4/7 | 2/7 | 1/7 | 0",
+            "zh-hans": "4/7 | 2/7 | 1/7 | 0"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The retained mass exceeds .8; token probability is not split to hit the threshold.",
+        "zh-hans": "保留质量超过 .8，不拆分 token 概率来凑阈值。"
+      }
+    },
+    {
+      "label": {
+        "en": "Top-k = 2",
+        "zh-hans": "Top-k = 2"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Weights 4,2 → 2/3,1/3",
+            "zh-hans": "权重 4、2 → 2/3、1/3"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Paris interval [0,2/3)",
+            "zh-hans": "Paris 区间 [0,2/3)"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Draw .60 → Paris",
+            "zh-hans": "抽样 .60 → Paris"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Same supplied draw, different decision after renormalization.",
+        "zh-hans": "同一个给定抽样值，重归一化后选择不同。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+$ node scripts/validate-part-v.mjs
+Validated all twelve Part V draft pairs, bilingual math/anchors/answers, twelve rendered figure sources, independent numeric evidence, 180 measured generation attempts and fresh notebook provenance.

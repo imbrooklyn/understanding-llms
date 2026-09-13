@@ -1,0 +1,60 @@
+{
+  "version": "ka-static-authored-v1",
+  "license": "CC-BY-SA-4.0",
+  "status": "hand-assigned diagnostic; never described as trained Word2Vec or GloVe",
+  "dimension": 3,
+  "axes": "deliberately assigned lodging/location, order, rail components; no claim that learned coordinates have these meanings",
+  "pooling": "arithmetic mean of all token vectors including zero for unassigned terms; zero query gives abstention; same KA-0 ranking rule",
+  "vectors": {
+    "beijing": [
+      1,
+      0,
+      0
+    ],
+    "lodging": [
+      1,
+      0,
+      0
+    ],
+    "600": [
+      0,
+      0,
+      0
+    ],
+    "750": [
+      0,
+      0,
+      0
+    ],
+    "train": [
+      0,
+      0,
+      1
+    ],
+    "order": [
+      0,
+      1,
+      0
+    ],
+    "processing": [
+      0,
+      1,
+      0
+    ],
+    "approval": [
+      0,
+      1,
+      0
+    ],
+    "hotel": [
+      1,
+      0,
+      0
+    ],
+    "allowance": [
+      1,
+      0,
+      0
+    ]
+  }
+}

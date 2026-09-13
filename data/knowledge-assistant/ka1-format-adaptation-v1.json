@@ -1,0 +1,38 @@
+{
+  "version": "ka1-format-adaptation-v1",
+  "as_of": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "inherits": "data/knowledge-assistant/ka1-contract-v1.json",
+  "status": "development diagnostic chosen after inspecting the existing KA-1 failures; frozen before this new run",
+  "intervention": {
+    "location": "runtime displayed-response postprocessing",
+    "name": "integer-terminal-period-v1",
+    "amount_cases": [
+      "current-limit",
+      "stale-premise",
+      "historical-limit"
+    ],
+    "pattern": "([0-9]+)\\.",
+    "rule": "Only on an amount case and valid UTF-8, fullmatch the trimmed response against ASCII digits followed by one period; return those exact digits. Otherwise preserve the response byte-for-byte as decoded. No prompt, generated ID, parameter, answer digit, policy or acceptance criterion is changed.",
+    "non_goals": [
+      "No semantic fact correction",
+      "No retriever or tool interface",
+      "No general schema enforcement",
+      "No SFT or PEFT training"
+    ]
+  },
+  "comparison": {
+    "arms": [
+      "raw",
+      "normalized"
+    ],
+    "pairing": "One actual generation per original candidate/case/locale/policy/seed; both display conditions use that same output. Time generation and immediately following normalization separately; normalized total is their measured sum. No best-of seed selection.",
+    "cases": "All original six bilingual cases, both checkpoints, both policies and all three repeats, including failures.",
+    "semantics": "Require exact reproduction of each existing output before reusing its disclosed author semantic judgment. Repair only a terminal sentence period in an integer-amount response; preserve semantic score and state why. An unseen output must stop for new adjudication.",
+    "gate": "Original six robust semantic cases in each language and original hard failures, unchanged; strict-format gains cannot override them.",
+    "repetitions": "Greedy repeats are timing/stability repeats, not independent questions; stress policy remains separate."
+  },
+  "retention": "Retain raw KA-1 contracts/runs/adjudication and all nine KA-0 queries with Keyword, BoW Count and TF-IDF results. No facts are added, no order is operated.",
+  "expected_from_prior_evidence": "English selected-50 literal format can improve while historical 750 remains wrong; bilingual semantic gate is expected to remain failed. This expectation is disclosed, not a blind test prediction."
+}

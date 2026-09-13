@@ -1,0 +1,21 @@
+{
+  "version": "sft-v1",
+  "as_of": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "evidence_kind": "author-assigned toy vocabulary, dialogue and probabilities; not MG-2 tokens or measured model probabilities",
+  "vocabulary": ["<bos>", "<system>", "brief", "<eot>", "<user>", "France?", "<assistant>", "Paris", ".", "<pad>"],
+  "messages": [
+    {"role": "system", "content": ["brief"]},
+    {"role": "user", "content": ["France?"]},
+    {"role": "assistant", "content": ["Paris", "."]}
+  ],
+  "rule": "Exactly system/user/assistant for this exercise; BOS once; each role header then content then EOT; assistant content and its EOT are scored as shifted targets; role headers, other content and padding are unscored.",
+  "target_probabilities": [null, null, null, null, null, null, null, 0.5, 0.25, 0.5],
+  "invalid_cases": [
+    {"id": "unknown-role", "operation": "replace_user_role", "value": "customer", "error": "unsupported role sequence"},
+    {"id": "empty-answer", "operation": "empty_assistant", "error": "empty message"},
+    {"id": "missing-end", "operation": "truncate_last", "error": "serialized sequence mismatch"},
+    {"id": "wrong-mask", "operation": "shift_mask_right", "error": "shifted target mask mismatch"},
+    {"id": "injected-marker", "operation": "insert_control_in_content", "error": "control token in content"}
+  ]
+}

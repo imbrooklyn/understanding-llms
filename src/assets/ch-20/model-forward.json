@@ -1,0 +1,216 @@
+{
+  "id": "ch-20/model-forward",
+  "structure": "lanes",
+  "alt": {
+    "en": "Six connected stages map raw records to IDs, embeddings, two causal heads, a residual FFN block, vocabulary scores and an event-averaged loss.",
+    "zh-hans": "六个相接的阶段把原始记录对应到 ID、嵌入、两个因果注意力头、带残差的 FFN 块、词表分数和按事件平均的损失。"
+  },
+  "caption": {
+    "en": "Figure 20.1 — From two text records to 32 scored events",
+    "zh-hans": "图 20.1 — 从两条文本记录到 32 个评分事件"
+  },
+  "credit": {
+    "en": "Original teaching diagram, CC BY-SA 4.0. Values and rules are declared in the chapter and shared data.",
+    "zh-hans": "本书原创教学图，CC BY-SA 4.0。数值与规则见正文及共享数据。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "1 · batch_records",
+        "zh-hans": "1 · batch_records"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "2 complete records",
+            "zh-hans": "2 条完整记录"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Frozen byte BPE + one target shift",
+            "zh-hans": "固定字节 BPE，目标错开一位"
+          }
+        },
+        {
+          "kind": "id",
+          "text": {
+            "en": "ids / valid / targets [2, 64]",
+            "zh-hans": "ids / valid / targets [2, 64]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "15 + 17 valid targets; padding contributes no loss.",
+        "zh-hans": "15 + 17 个有效目标；填充不计入损失。"
+      }
+    },
+    {
+      "label": {
+        "en": "2 · MiniGPT.forward",
+        "zh-hans": "2 · MiniGPT.forward"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Token table [291, 16]",
+            "zh-hans": "Token 表 [291, 16]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Position table [64, 16]",
+            "zh-hans": "位置表 [64, 16]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Lookup + position → X [2, 64, 16]",
+            "zh-hans": "查表 + 位置 → X [2, 64, 16]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Integer IDs choose rows; addition happens between coordinate vectors.",
+        "zh-hans": "整数 ID 用于选行，相加的是坐标向量。"
+      }
+    },
+    {
+      "label": {
+        "en": "3 · Block.forward: communication",
+        "zh-hans": "3 · Block.forward：位置间联系"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "RowNorm → Q/K/V [2, 2, 64, 8]",
+            "zh-hans": "RowNorm → Q/K/V [2, 2, 64, 8]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "QKᵀ / √8 + visible keys → A [2, 2, 64, 64]",
+            "zh-hans": "QKᵀ / √8 + 可见键 → A [2, 2, 64, 64]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "AV → join → output [2, 64, 16]",
+            "zh-hans": "AV → 拼接 → 输出 [2, 64, 16]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Only earlier/current valid keys contribute. Softmax normalizes the last source-position axis.",
+        "zh-hans": "只混合此前及当前的有效键，Softmax 沿最后的来源位置轴归一化。"
+      }
+    },
+    {
+      "label": {
+        "en": "4 · Block.forward: preserve and transform",
+        "zh-hans": "4 · Block.forward：保留与变换"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "R = X + attention [2, 64, 16]",
+            "zh-hans": "R = X + 注意力输出 [2, 64, 16]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "RowNorm → FFN 16 → 64 → 16",
+            "zh-hans": "RowNorm → FFN 16 → 64 → 16"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Y = R + FFN [2, 64, 16]",
+            "zh-hans": "Y = R + FFN [2, 64, 16]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Both residual additions preserve shape. ReLU lies between the two position-wise FFN matrices.",
+        "zh-hans": "两次残差相加都保持 shape；逐位置 FFN 的两次矩阵变换之间有 ReLU。"
+      }
+    },
+    {
+      "label": {
+        "en": "5 · MiniGPT.forward: score candidates",
+        "zh-hans": "5 · MiniGPT.forward：给候选评分"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Final RowNorm [2, 64, 16]",
+            "zh-hans": "最后的 RowNorm [2, 64, 16]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "LM matrix [16, 291] + bias [291]",
+            "zh-hans": "LM 矩阵 [16, 291] + 偏置 [291]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Raw logits [2, 64, 291]",
+            "zh-hans": "原始 logits [2, 64, 291]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Every column has the frozen vocabulary ID meaning; this axis is not the attention key axis.",
+        "zh-hans": "每列对应固定词表 ID 的含义，这条轴不同于注意力的键位置轴。"
+      }
+    },
+    {
+      "label": {
+        "en": "6 · Cross-entropy",
+        "zh-hans": "6 · 交叉熵"
+      },
+      "nodes": [
+        {
+          "kind": "id",
+          "text": {
+            "en": "32 real next-token IDs",
+            "zh-hans": "32 个真实的下一 token ID"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Sum 32 negative log probabilities / 32",
+            "zh-hans": "32 项负对数概率求和，再除以 32"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Initial mean loss = 5.670999",
+            "zh-hans": "初始平均损失 = 5.670999"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Ignore targets marked −100. The diagram reaches a score; the training loop must still update parameters.",
+        "zh-hans": "忽略标为 −100 的目标。图到这里算出了分数，更新参数还要靠训练循环。"
+      }
+    }
+  ]
+}

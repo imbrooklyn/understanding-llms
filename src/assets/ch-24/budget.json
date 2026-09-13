@@ -1,0 +1,84 @@
+{
+  "id": "ch-24/budget",
+  "structure": "lanes",
+  "alt": {
+    "en": "A uses 100 million parameters and 2 billion tokens; B uses 200 million and 1 billion; C uses 50 million and 4 billion. All have 1.2e18 approximate training FLOPs. Ten billion later output tokens add different work.",
+    "zh-hans": "A 为一亿参数、二十亿 token；B 为二亿参数、十亿 token；C 为五千万参数、四十亿 token。估计训练计算量都为 1.2e18 FLOPs，后续一百亿输出 token 带来的计算却不同。"
+  },
+  "caption": {
+    "en": "Figure 24.1 — Equal products do not imply equal quality or serving cost.",
+    "zh-hans": "图 24.1：乘积相等，不表示质量或服务成本相等。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Fixed training budget",
+        "zh-hans": "固定训练预算"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "A: N = 100M; D = 2B",
+            "zh-hans": "A： N = 100M； D = 2B"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "B: N = 200M; D = 1B",
+            "zh-hans": "B： N = 200M； D = 1B"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "C: N = 50M; D = 4B",
+            "zh-hans": "C： N = 50M； D = 4B"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Each candidate has 6ND = 1.2 × 10¹⁸ FLOPs; the product supplies no quality result.",
+        "zh-hans": "三个候选的 6ND 都为 1.2 × 10¹⁸ FLOPs；乘积不会给出质量结论。"
+      }
+    },
+    {
+      "label": {
+        "en": "Later generation",
+        "zh-hans": "后续生成"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "A: add 2 × 10¹⁸ FLOPs",
+            "zh-hans": "A：再加 2 × 10¹⁸ FLOPs"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "B: add 4 × 10¹⁸ FLOPs",
+            "zh-hans": "B：再加 4 × 10¹⁸ FLOPs"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "C: add 1 × 10¹⁸ FLOPs",
+            "zh-hans": "C：再加 1 × 10¹⁸ FLOPs"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Assigned approximation: 2NS, S = 10B output tokens; attention, prompt work and utilization remain outside it.",
+        "zh-hans": "给定近似为 2NS，S 为一百亿输出 token；尚未计入注意力、提示处理及利用率。"
+      }
+    }
+  ]
+}

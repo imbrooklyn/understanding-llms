@@ -1,0 +1,117 @@
+{
+  "id": "ch-31/workload",
+  "structure": "lanes",
+  "alt": {
+    "en": "Assigned serial emissions are A: 100, 140, 180 ms; B: 260, 300 ms; C: 360 ms. Continuous emissions are A: 100, 150, 200 ms; B: 150, 200 ms; C: 180 ms. The drain window shrinks from 360 to 200 ms while A’s gaps grow from 40 to 50 ms. Over a fixed 400 ms window both rates equal 15 output tokens per second.",
+    "zh-hans": "给定串行时间中，A 在 100、140、180 ms 发出输出，B 在 260、300 ms，C 在 360 ms；连续调度中，A 在 100、150、200 ms，B 在 150、200 ms，C 在 180 ms。完成窗口从 360 ms 缩为 200 ms，A 的间隔却从 40 ms 增为 50 ms。固定 400 ms 窗口内，两者吞吐都是每秒 15 个输出 token。"
+  },
+  "caption": {
+    "en": "Figure 31.1 — A shorter queue can coexist with slower token spacing.",
+    "zh-hans": "图 31.1：队列缩短，单请求后续 token 仍可能变慢。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Same arrivals and lengths",
+        "zh-hans": "到达与长度相同"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "A: 0 ms, 4 inputs / 3 outputs",
+            "zh-hans": "A：0 ms，输入 4／输出 3"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "B: 20 ms, 4 inputs / 2 outputs",
+            "zh-hans": "B：20 ms，输入 4／输出 2"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "C: 40 ms, 2 inputs / 1 output",
+            "zh-hans": "C：40 ms，输入 2／输出 1"
+          }
+        }
+      ],
+      "flow": {
+        "en": "All times are assigned scenario values, not framework benchmarks.",
+        "zh-hans": "时间均为给定场景，不是框架实测。"
+      }
+    },
+    {
+      "label": {
+        "en": "Serial completion",
+        "zh-hans": "串行完成"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "A: 100 → 140 → 180",
+            "zh-hans": "A：100 → 140 → 180"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "B: 260 → 300",
+            "zh-hans": "B：260 → 300"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "C: 360",
+            "zh-hans": "C：360"
+          }
+        }
+      ],
+      "flow": {
+        "en": "6 / .360 ≈ 16.667 output tokens/s; A later gaps 40 ms.",
+        "zh-hans": "6 / .360 ≈ 16.667 输出 token/秒；A 后续间隔 40 ms。"
+      }
+    },
+    {
+      "label": {
+        "en": "Continuous completion",
+        "zh-hans": "连续完成"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "A: 100 → 150 → 200",
+            "zh-hans": "A：100 → 150 → 200"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "B: 150 → 200",
+            "zh-hans": "B：150 → 200"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "C: 180",
+            "zh-hans": "C：180"
+          }
+        }
+      ],
+      "flow": {
+        "en": "6 / .200 = 30 output tokens/s; A later gaps 50 ms. In a common .400 s window, both rates are 15.",
+        "zh-hans": "6 / .200 = 30 输出 token/秒；A 后续间隔 50 ms。共同 .400 秒窗口中，两者均为 15。"
+      }
+    }
+  ]
+}

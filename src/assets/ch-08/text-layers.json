@@ -1,0 +1,14 @@
+{
+ "id":"ch-08/text-layers", "structure":"lanes",
+ "alt":{"en":"The displayed accented e can be U+00E9, encoded as C3 A9, or U+0065 followed by U+0301, encoded as 65 CC 81. NFC merges these into the composed form. In cafe plus combining accent then space 750, the number begins at code-point index 6 before normalization and 5 after it.","zh-hans":"屏幕上的带重音字母 e 可以是 U+00E9，对应字节 C3 A9；也可以是 U+0065 后接 U+0301，对应 65 CC 81。NFC 把两者统一为预组合形式。在 cafe 后接组合重音、空格和 750 的文本中，数字在规范化前从码点下标 6 开始，规范化后从 5 开始。"},
+ "caption":{"en":"Figure 8.1 — Canonical matching can improve while original offsets stop matching.","zh-hans":"图 8.1 — 规范化可以改善匹配，却让原文位置不再对应。"},
+ "credit":{"en":"Original examples and diagram, CC BY-SA 4.0; Unicode conventions referenced in the chapter.","zh-hans":"本书原创样例与图示，CC BY-SA 4.0；Unicode 约定见正文所引规范。"},
+ "lanes":[
+  {"label":{"en":"Two encodings of an accented letter","zh-hans":"同一个重音字母的两种表示"},"nodes":[
+   {"kind":"token","text":{"en":"é: U+00E9 → C3 A9 (2 bytes)","zh-hans":"é：U+00E9 → C3 A9（2 字节）"}},
+   {"kind":"token","text":{"en":"e + ◌́: U+0065 U+0301 → 65 CC 81 (3 bytes)","zh-hans":"e + ◌́：U+0065 U+0301 → 65 CC 81（3 字节）"}}],"flow":{"en":"NFC gives U+00E9 for both. It does not recover which original representation was used.","zh-hans":"两者经 NFC 都得到 U+00E9，却无法据此还原最初用了哪种表示。"}},
+  {"label":{"en":"An extraction offset is tied to a representation","zh-hans":"抽取位置依赖具体表示"},"nodes":[
+   {"kind":"state","text":{"en":"Raw: c a f e ◌́ ␠ 7 5 0; 750 starts at 6","zh-hans":"原文：c a f e ◌́ ␠ 7 5 0；750 从 6 开始"}},
+   {"kind":"computation","text":{"en":"NFC: c a f é ␠ 7 5 0; 750 starts at 5","zh-hans":"NFC 后：c a f é ␠ 7 5 0；750 从 5 开始"}}],"flow":{"en":"Keep raw text and a position mapping if results must quote the original span.","zh-hans":"若结果要引用原文片段，必须保留原文及位置映射。"}}
+ ]
+}

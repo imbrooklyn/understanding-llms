@@ -1,0 +1,117 @@
+{
+  "id": "ch-23/pipeline",
+  "structure": "lanes",
+  "alt": {
+    "en": "Eight original records become seven after boilerplate filtering, six after exact deduplication, six after synthetic contact redaction and five after quarantining an evaluation overlap. A digit filter instead removes the new 750 policy.",
+    "zh-hans": "八条原创记录，去导航后七条，精确去重后六条，替换虚构联系地址后仍六条，隔离评测重叠后五条。数字比例过滤却会误删新的 750 元制度。"
+  },
+  "caption": {
+    "en": "Figure 23.1 — Counts alone hide which information was removed.",
+    "zh-hans": "图 23.1：只看数量，会漏掉被删掉的是什么。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "A failed shortcut",
+        "zh-hans": "一条失败的捷径"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Beijing: 750 → 3 digits / 12 code points",
+            "zh-hans": "Beijing: 750 → 3 个数字／12 个码点"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "0.25 ≥ 0.20 → reject",
+            "zh-hans": "0.25 ≥ 0.20 → 删除"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Current limit disappears",
+            "zh-hans": "当前限额消失"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A smaller file is not evidence that the retained corpus is better.",
+        "zh-hans": "文件变小，不代表保留下来的语料更好。"
+      }
+    },
+    {
+      "label": {
+        "en": "Revised processing",
+        "zh-hans": "修订后的处理"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "8 records → remove 1 menu → 7",
+            "zh-hans": "8 条 → 删除 1 条导航 → 7 条"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Exact duplicate: copy → new; 6 remain",
+            "zh-hans": "精确重复：copy 指向 new；剩 6 条"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Synthetic contact → [CONTACT]; still 6",
+            "zh-hans": "虚构联系地址 → [CONTACT]；仍 6 条"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Keep source IDs, rule versions and the reason for every removal.",
+        "zh-hans": "保留来源 ID、规则版本及每次删除的理由。"
+      }
+    },
+    {
+      "label": {
+        "en": "Split-aware check",
+        "zh-hans": "结合划分检查"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Compare with the fixed validation texts",
+            "zh-hans": "与固定验证文本逐条比较"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Quarantine 1 exact overlap → 5",
+            "zh-hans": "隔离 1 条精确重叠 → 5 条"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Old 600 and new 750 both remain",
+            "zh-hans": "旧值 600 与新值 750 都保留"
+          }
+        }
+      ],
+      "flow": {
+        "en": "This separate exercise never overwrites MG-2 or KA-0.",
+        "zh-hans": "这项独立练习不会覆盖 MG-2 或 KA-0。"
+      }
+    }
+  ]
+}

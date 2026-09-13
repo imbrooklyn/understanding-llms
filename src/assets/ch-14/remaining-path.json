@@ -1,0 +1,103 @@
+{
+  "id": "ch-14/remaining-path",
+  "structure": "lanes",
+  "alt": {
+    "en": "Source states h1, h2, h3 still depend on their predecessors. With a known decoder query, three source comparisons can run together. Their context updates the decoder; only then can the next query be computed.",
+    "zh-hans": "源状态 h1、h2、h3 仍依次依赖前一步。已知解码查询后，可以同时比较三个源状态；上下文用于更新解码器之后，才能得到下一个查询。"
+  },
+  "caption": {
+    "en": "Figure 14.2 — Parallel comparisons sit inside a sequential recurrent calculation.",
+    "zh-hans": "图 14.2 — 比较可以并行，外层递归仍要依次计算。"
+  },
+  "credit": {
+    "en": "Original computed teaching diagram, CC BY-SA 4.0. Queries are supplied probes; source states are calculated from the declared encoder.",
+    "zh-hans": "本书原创教学计算图，CC BY-SA 4.0。查询为给定探查值，源状态由声明的编码器计算。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Source dependency",
+        "zh-hans": "源序列依赖"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "h₀ → h₁ → h₂ → h₃",
+            "zh-hans": "h₀ → h₁ → h₂ → h₃"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Save all three states",
+            "zh-hans": "保存三个状态"
+          }
+        }
+      ],
+      "flow": {
+        "en": "An early saved state has a direct route to the read, without passing through the remaining encoder updates.",
+        "zh-hans": "较早保存的状态可以直接进入读取，不必再经过后面的编码更新。"
+      }
+    },
+    {
+      "label": {
+        "en": "Known query",
+        "zh-hans": "查询已知"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "qₜ = sₜ₋₁",
+            "zh-hans": "qₜ = sₜ₋₁"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "qₜ·h₁, qₜ·h₂, qₜ·h₃",
+            "zh-hans": "qₜ·h₁、qₜ·h₂、qₜ·h₃"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Normalize and sum → cₜ",
+            "zh-hans": "归一化并求和 → cₜ"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The three comparisons may run in parallel; they all require the current query first.",
+        "zh-hans": "三次比较可以并行，但都要先拿到当前查询。"
+      }
+    },
+    {
+      "label": {
+        "en": "Target dependency",
+        "zh-hans": "目标序列依赖"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Old state + previous token + cₜ → sₜ",
+            "zh-hans": "旧状态 + 前一个 token + cₜ → sₜ"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Next query uses sₜ",
+            "zh-hans": "下一个查询使用 sₜ"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Teacher forcing supplies tokens, not future hidden states. During generation, the next input token must also be selected.",
+        "zh-hans": "教师强制提供 token，不提供未来隐藏状态；生成时还要先选出下一步输入 token。"
+      }
+    }
+  ]
+}

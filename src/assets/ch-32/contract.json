@@ -1,0 +1,110 @@
+{
+  "id": "ch-32/contract",
+  "structure": "lanes",
+  "alt": {
+    "en": "Six bilingual answer-case pairs and all nine KA-0 retrieval pairs are frozen before candidate execution. Every attempt retains raw output and separate format and semantic decisions. Two current-amount cases accept 750 with a period semantically despite exact-match failure; the historical case rejects the same answer.",
+    "zh-hans": "六组双语回答题和全部九组 KA-0 检索题在候选执行前冻结。每次尝试保留原输出，分别记录格式和语义判断。两道现行金额题接受带句点的 750，虽然它未通过精确匹配；历史题却必须拒绝同一个答案。"
+  },
+  "caption": {
+    "en": "Figure 32.1 — Freeze first; preserve disagreement between scoring rules.",
+    "zh-hans": "图 32.1：先冻结，再保留评分规则之间的分歧。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Before execution",
+        "zh-hans": "执行前"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Scenario + evidence + six case pairs",
+            "zh-hans": "场景 + 证据 + 六组题"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Rubric + gates + repeat rules",
+            "zh-hans": "评分准则 + 门槛 + 重复规则"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Hash contract and existing model inputs",
+            "zh-hans": "为契约和既有模型输入计算哈希"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Changing a rule later requires a new version and the same comparison for all candidates.",
+        "zh-hans": "后来改规则，须另立版本并对全部候选作相同比较。"
+      }
+    },
+    {
+      "label": {
+        "en": "After execution",
+        "zh-hans": "执行后"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Raw completion: 750.",
+            "zh-hans": "原始下文：750."
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Strict 750 match: fail",
+            "zh-hans": "严格匹配 750：失败"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Current-amount semantic review: pass",
+            "zh-hans": "现行金额语义复核：通过"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The same 750. fails when the question asks for historical 600.",
+        "zh-hans": "当题目问历史 600 时，同一个 750. 仍然错误。"
+      }
+    },
+    {
+      "label": {
+        "en": "Aggregate by the declared unit",
+        "zh-hans": "按约定单位汇总"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "2 cases × 3 successful repeats = 6 attempts",
+            "zh-hans": "2 题 × 3 次成功重复 = 6 次尝试"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Robust case count: 2 of 6",
+            "zh-hans": "稳健通过题数：6 题中 2 题"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Three repetitions do not turn one scenario into three independent scenarios.",
+        "zh-hans": "同一场景重复三次，不会变成三个独立场景。"
+      }
+    }
+  ]
+}

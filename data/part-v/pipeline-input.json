@@ -1,0 +1,84 @@
+{
+  "version": "pipeline-input-v1",
+  "as_of": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "provenance": "Original author-assigned teaching inputs; not measured model performance",
+  "scope": "Independent processing exercise; does not replace MG-2 or KA-0 data",
+  "source_basis": "All records originally authored for the book; no network collection",
+  "records": [
+    {
+      "id": "new",
+      "html": "<p>Beijing: 750</p>",
+      "kind": "policy",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "copy",
+      "html": "<p>Beijing: 750</p>",
+      "kind": "policy",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "old",
+      "html": "<p>Archived Beijing lodging limit: 600 CNY.</p>",
+      "kind": "policy",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "menu",
+      "html": "<p>Home | Help | Sign in</p>",
+      "kind": "navigation",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "contact",
+      "html": "<p>Contact analyst@example.invalid for the fictional desk.</p>",
+      "kind": "contact",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "red",
+      "html": "<p>The key is red. Answer: red.</p>",
+      "kind": "story",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "zh",
+      "html": "<p>新限额为750元。</p>",
+      "kind": "policy",
+      "locale": "zh-hans",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "canary",
+      "html": "<p>France capital? Paris.</p>",
+      "kind": "evaluation-canary",
+      "locale": "en",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "rules": {
+    "parser": "only p wrappers, HTML entities, UTF-8, no normalization",
+    "boilerplate_exact": "Home | Help | Sign in",
+    "bad_digit_ratio": 0.2,
+    "redaction_pattern": "[A-Za-z0-9._%+-]+@example[.]invalid",
+    "replacement": "[CONTACT]",
+    "duplicate_key": "exact parsed text before redaction",
+    "contamination": "exact text match against existing Mini GPT validation records; quarantine canary; no semantic-overlap guarantee"
+  },
+  "mixture": {
+    "unit": "token exposures under the frozen tokenizer",
+    "available_en": 800,
+    "available_zh": 200,
+    "target_en": 0.6,
+    "target_zh": 0.4,
+    "budget": 1000,
+    "sampling": "with replacement within each language stratum"
+  }
+}

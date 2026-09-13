@@ -1,0 +1,17 @@
+{
+  "id": "ch-05/batch-matmul", "structure": "lanes",
+  "alt": {"en": "Two samples each contain two rows of two coordinates. Multiplying each row by the same 2 by 3 matrix yields two rows of three scores per sample. The first row produces 2, 1, minus 1.", "zh-hans": "两个样本各有两行，每行两个坐标。每一行都乘同一张二行三列矩阵，每个样本得到两行三项分数。第一行的结果是 2、1、负 1。"},
+  "caption": {"en": "Figure 5.1 — One shared matrix changes coordinates into score channels; samples and positions stay separate.", "zh-hans": "图 5.1 — 同一张矩阵把坐标变成分数通道；样本与位置仍各自保留。"},
+  "credit": {"en": "Original diagram and teaching values, CC BY-SA 4.0.", "zh-hans": "本书原创图示与教学数值，CC BY-SA 4.0。"},
+  "lanes": [
+    {"label": {"en": "Input X: [B,T,C] = [2,2,2]", "zh-hans": "输入 X：[B,T,C] = [2,2,2]"}, "nodes": [
+      {"kind": "vector", "text": {"en": "Sample 0: [2,1]; [1,−1]", "zh-hans": "样本 0：[2,1]；[1,−1]"}},
+      {"kind": "vector", "text": {"en": "Sample 1: [2,2]; [0,−1]", "zh-hans": "样本 1：[2,2]；[0,−1]"}}], "flow": {"en": "Choose a sample, then a position, then a coordinate.", "zh-hans": "先选样本，再选位置，最后选坐标。"}},
+    {"label": {"en": "Shared W: [C,K] = [2,3]", "zh-hans": "共享 W：[C,K] = [2,3]"}, "nodes": [
+      {"kind": "parameter", "text": {"en": "Rows: [1,0,−1]; [0,1,1]", "zh-hans": "各行：[1,0,−1]；[0,1,1]"}},
+      {"kind": "computation", "text": {"en": "First row: 2×[1,0,−1] + 1×[0,1,1]", "zh-hans": "第一行：2×[1,0,−1] + 1×[0,1,1]"}}], "flow": {"en": "Sum over C only. Do not combine samples or positions.", "zh-hans": "只沿 C 维相乘求和，不把不同样本或位置混在一起。"}},
+    {"label": {"en": "Output Z: [B,T,K] = [2,2,3]", "zh-hans": "输出 Z：[B,T,K] = [2,2,3]"}, "nodes": [
+      {"kind": "vector", "text": {"en": "Sample 0: [2,1,−1]; [1,−1,−2]", "zh-hans": "样本 0：[2,1,−1]；[1,−1,−2]"}},
+      {"kind": "vector", "text": {"en": "Sample 1: [2,2,0]; [0,−1,−1]", "zh-hans": "样本 1：[2,2,0]；[0,−1,−1]"}}], "flow": {"en": "K names the ordered candidates Paris, Lyon, other. These scores are not probabilities.", "zh-hans": "K 对应有固定顺序的候选：巴黎、里昂、其他。这些分数还不是概率。"}}
+  ]
+}

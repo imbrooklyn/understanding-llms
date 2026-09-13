@@ -1,0 +1,15 @@
+{
+ "id":"ch-07/one-update", "structure":"lanes",
+ "alt":{"en":"With input 1,2 and target 1, zero weights and bias give score 0, probability one half and loss ln 2. The backward sensitivities minus 2 and one quarter give score gradient minus one half. Weight gradients are minus one half and minus one; a 0.1 update yields weights 0.05,0.1 and bias 0.05.","zh-hans":"输入为 1、2，目标为 1。零权重和零偏置给出分数 0、概率二分之一、损失 ln 2。反向局部变化率负 2 与四分之一相乘，得到分数梯度负二分之一；权重梯度为负二分之一、负 1。以 0.1 更新后，权重为 0.05、0.1，偏置为 0.05。"},
+ "caption":{"en":"Figure 7.1 — Forward computes values, backward computes sensitivities, update changes parameters.","zh-hans":"图 7.1 — 前向计算数值，反向计算变化率，更新才真正改变参数。"},
+ "credit":{"en":"Original hand-derived computation graph, CC BY-SA 4.0.","zh-hans":"本书原创手算计算图，CC BY-SA 4.0。"},
+ "lanes":[
+  {"label":{"en":"Forward → loss","zh-hans":"前向 → 损失"},"nodes":[
+   {"kind":"parameter","text":{"en":"w=[0,0], b=0; x=[1,2]","zh-hans":"w=[0,0]，b=0；x=[1,2]"}},
+   {"kind":"computation","text":{"en":"z=x·w+b=0 → p=1/2","zh-hans":"z=x·w+b=0 → p=1/2"}},
+   {"kind":"computation","text":{"en":"Target 1: L=−ln p=ln 2","zh-hans":"目标为 1：L=−ln p=ln 2"}}],"flow":{"en":"Read parameters without changing them.","zh-hans":"读取参数，此时还不改动参数。"}},
+  {"label":{"en":"Backward → update","zh-hans":"反向 → 更新"},"nodes":[
+   {"kind":"computation","text":{"en":"(−2)×(1/4)=−1/2; gradients w=[−1/2,−1], b=−1/2","zh-hans":"(−2)×(1/4)=−1/2；梯度 w=[−1/2,−1]，b=−1/2"}},
+   {"kind":"parameter","text":{"en":"Subtract 0.1×gradient: w=[0.05,0.1], b=0.05","zh-hans":"减去 0.1×梯度：w=[0.05,0.1]，b=0.05"}}],"flow":{"en":"New forward: z=0.3, p≈0.574443, L≈0.554355. Return to forward for another step.","zh-hans":"重新前向：z=0.3，p≈0.574443，L≈0.554355。下一步还要从前向开始。"}}
+ ]
+}

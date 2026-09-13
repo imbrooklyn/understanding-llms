@@ -1,0 +1,138 @@
+{
+  "id": "ch-11/unrolled",
+  "structure": "lanes",
+  "alt": {
+    "en": "Three time steps reuse the same parameters. Red enters state [1,0], key halves it to [0.5,0], and is halves it to [0.25,0]. Each new state becomes the next old state.",
+    "zh-hans": "三个时间步复用同一套参数。red 产生状态 [1,0]，key 使它减半为 [0.5,0]，is 再使它减半为 [0.25,0]。每步的新状态成为下一步的旧状态。"
+  },
+  "caption": {
+    "en": "Figure 11.1 — Three uses of one recurrent update; the numerical state crosses time.",
+    "zh-hans": "图 11.1 — 同一个递归更新用三次，数值状态沿时间传递。"
+  },
+  "credit": {
+    "en": "Original computed teaching example, CC BY-SA 4.0. Double borders mark shared parameters.",
+    "zh-hans": "本书原创教学算例，CC BY-SA 4.0。双边框标出共享参数。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Reading 1",
+        "zh-hans": "第 1 次读取"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Input: red",
+            "zh-hans": "输入：red"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Old h: [0, 0]",
+            "zh-hans": "旧状态 h：[0, 0]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Same Wₓ, Wₕ, bₕ",
+            "zh-hans": "同一组 Wₓ、Wₕ、bₕ"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "New h: [1, 0]",
+            "zh-hans": "新状态 h：[1, 0]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Input + old state → update → new state → next reading.",
+        "zh-hans": "输入 + 旧状态 → 更新 → 新状态 → 下一次读取。"
+      }
+    },
+    {
+      "label": {
+        "en": "Reading 2",
+        "zh-hans": "第 2 次读取"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Input: key",
+            "zh-hans": "输入：key"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Old h: [1, 0]",
+            "zh-hans": "旧状态 h：[1, 0]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Same Wₓ, Wₕ, bₕ",
+            "zh-hans": "同一组 Wₓ、Wₕ、bₕ"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "New h: [0.5, 0]",
+            "zh-hans": "新状态 h：[0.5, 0]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Input + old state → update → new state → next reading.",
+        "zh-hans": "输入 + 旧状态 → 更新 → 新状态 → 下一次读取。"
+      }
+    },
+    {
+      "label": {
+        "en": "Reading 3",
+        "zh-hans": "第 3 次读取"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Input: is",
+            "zh-hans": "输入：is"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Old h: [0.5, 0]",
+            "zh-hans": "旧状态 h：[0.5, 0]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Same Wₓ, Wₕ, bₕ",
+            "zh-hans": "同一组 Wₓ、Wₕ、bₕ"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "New h: [0.25, 0]",
+            "zh-hans": "新状态 h：[0.25, 0]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Input + old state → update → new state → next reading.",
+        "zh-hans": "输入 + 旧状态 → 更新 → 新状态 → 下一次读取。"
+      }
+    }
+  ]
+}

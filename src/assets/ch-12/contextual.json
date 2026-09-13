@@ -1,0 +1,110 @@
+{
+  "id": "ch-12/contextual",
+  "structure": "lanes",
+  "alt": {
+    "en": "Static lookup gives train the same row. Forward and backward recurrent layers use left and right sentence context. A frozen pretrained language model supplies sentence-dependent features to a trainable task layer mixture and predictor.",
+    "zh-hans": "静态查表为 train 返回同一行。正反向递归层分别使用句子的左右上下文。冻结的预训练语言模型产生随句子变化的特征，任务再学习层混合与预测器。"
+  },
+  "caption": {
+    "en": "Figure 12.2 — The same token has one embedding row but can have different sentence features; task parameters train separately.",
+    "zh-hans": "图 12.2 — 同一个词的嵌入行相同，结合句子后表示可以不同；任务参数另行训练。"
+  },
+  "credit": {
+    "en": "Original teaching diagram and supplied or derived values, CC BY-SA 4.0; no paper figure reproduced.",
+    "zh-hans": "本书原创教学图，数值为给定值或按规则推导值，CC BY-SA 4.0；未复制论文图示。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Static-lookup baseline",
+        "zh-hans": "静态查表基线"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "the train arrived / we train models",
+            "zh-hans": "the train arrived / we train models"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "train → same lookup row",
+            "zh-hans": "train → 同一嵌入行"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Lookup alone cannot distinguish these occurrences.",
+        "zh-hans": "仅凭查表，不能区分这两次出现。"
+      }
+    },
+    {
+      "label": {
+        "en": "Pretraining",
+        "zh-hans": "预训练"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Forward: left context → next token",
+            "zh-hans": "前向：左侧上下文 → 下一个 token"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Backward: right context → previous token",
+            "zh-hans": "反向：右侧上下文 → 前一个 token"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Learn recurrent language-model weights",
+            "zh-hans": "学习递归语言模型权重"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Two directional objectives; each keeps its own prediction target out of its input.",
+        "zh-hans": "两个方向各有预测目标，都不把自己的目标放进输入。"
+      }
+    },
+    {
+      "label": {
+        "en": "Task use",
+        "zh-hans": "任务使用"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Freeze pretrained weights",
+            "zh-hans": "冻结预训练权重"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Combine directional states at each layer",
+            "zh-hans": "在每层组合正反向状态"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Learn layer weights, scale, task predictor",
+            "zh-hans": "学习层权重、缩放量和任务预测器"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The complete supplied sentence changes the features; task training changes the mixture and predictor.",
+        "zh-hans": "完整输入句子改变特征；任务训练改变混合方式与预测器。"
+      }
+    }
+  ]
+}

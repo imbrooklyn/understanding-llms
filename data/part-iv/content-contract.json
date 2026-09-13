@@ -1,0 +1,78 @@
+{
+  "version": "part-iv-content-v1",
+  "headings": {
+    "en": {
+      "exercises": "Exercises",
+      "answers": "Reference answers",
+      "references": "References"
+    },
+    "zh-hans": {
+      "exercises": "习题",
+      "answers": "参考解答",
+      "references": "参考文献"
+    }
+  },
+  "captions": {
+    "en": {
+      "example": "Example",
+      "table": "Table",
+      "separator": " — "
+    },
+    "zh-hans": {
+      "example": "例",
+      "table": "表",
+      "separator": "："
+    }
+  },
+  "evidence": {
+    "ch-15": [
+      "0.401112",
+      "1.401112",
+      "1.197776"
+    ],
+    "ch-16": [
+      "0.995",
+      "0.5",
+      "[B,H,T,d]"
+    ],
+    "ch-17": [
+      "0.00001",
+      "2.999940",
+      "[3,2]"
+    ],
+    "ch-18": [
+      "BOS",
+      "EOS",
+      "<S0>",
+      "<S1>"
+    ],
+    "ch-19": [
+      "291",
+      "259",
+      "258",
+      "32"
+    ],
+    "ch-20": [
+      "5.670998865509144",
+      "13875",
+      "[2,64,291]",
+      "236.07843517556194",
+      "0.046154914"
+    ],
+    "ch-21": [
+      "2.405571",
+      "4.068374",
+      "966540",
+      "0.17280904760175986",
+      "shipedwion: old."
+    ]
+  },
+  "static_labels": {
+    "en": {
+      "checkpoint": "Part IV checkpoint: connect the evidence to the claim"
+    },
+    "zh-hans": {
+      "checkpoint": "Part IV 概念检查点：让证据接住结论"
+    }
+  }
+}

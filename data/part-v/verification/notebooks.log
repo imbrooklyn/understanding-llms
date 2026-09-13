@@ -1,0 +1,4 @@
+$ node scripts/run-part-v-notebooks.mjs
+{"notebook": "notebooks/part-v/01-resources-and-mechanisms.ipynb", "code_sha256": "2dc19e34d266df486fe6200087673277e58b7ec027a2386c4c9b5652323e5a11", "code_cells": 4, "elapsed_seconds": 0.7409, "status": "passed"}
+{"notebook": "notebooks/part-v/02-generation-matrix.ipynb", "code_sha256": "e7c121abd94a254917f92674c7354ff7978457006ea70ba59af2c07f261a9ebd", "code_cells": 2, "elapsed_seconds": 1.2202, "status": "passed"}
+{"notebook": "notebooks/part-v/03-ka1-comparison.ipynb", "code_sha256": "7cb5c50159dbc427b27cf911ac12f7ff84adfce59502b00e4ecc5588c583ad23", "code_cells": 3, "elapsed_seconds": 1.214, "status": "passed"}

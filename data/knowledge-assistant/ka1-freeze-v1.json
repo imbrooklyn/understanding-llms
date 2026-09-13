@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-09-13T04:35:44.060022+00:00",
+  "stage": "before any KA-1 model execution",
+  "inputs_sha256": {
+    "data/knowledge-assistant/ka1-contract-v1.json": "00300195c59bf81d81c6c40495b3e02cb44765063e04e927a0a4f15d7058a4b4",
+    "data/knowledge-assistant/ka0-v1.json": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+    "data/mini-gpt/config.json": "91f4c37fa02841002ae297e1f577008cb0ae6404ca2d74b7d600db6a5c2ca0a6",
+    "data/mini-gpt/tokenizer.json": "89c76a1c6dc4a8eda52cf9ecdf97cb667385b8feb9e544d03efde8a23333458e",
+    "data/mini-gpt/corpus.json": "243a03df408a11a9803577c31626114ce96a183ac03405b7bb6a47d7c698483f",
+    "data/mini-gpt/weights-selected.pt": "02abe42d897c83cc39a2bfb720642a6de8caef4200b3f421a7840fe0429fadfc",
+    "data/mini-gpt/weights-final.pt": "a8ffef09fc809cf06330972037169738ebc26730f5a62e22802d073e47b13271"
+  }
+}

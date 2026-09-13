@@ -1,0 +1,139 @@
+{
+  "version": "ka0-v1-independent-expectations",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Count entries and selected score formulas independently enumerated before baseline code was run",
+  "count_matrix": [
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "document_frequency": [
+    3,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1
+  ],
+  "query_current_counts": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "current_count_scores_rules": [
+    "2/sqrt(6)",
+    "3/sqrt(12)",
+    "3/sqrt(20)",
+    "0",
+    "0"
+  ],
+  "geographic_count_scores_rules": [
+    "1/sqrt(6)",
+    "1/sqrt(12)",
+    "3/sqrt(20)",
+    "1/2",
+    "0"
+  ],
+  "keyword_predictions": [
+    "travel-v1",
+    "travel-v1",
+    "travel-v2",
+    null,
+    "travel-v1",
+    "status-faq-v1",
+    "approval-faq-v1",
+    "travel-v1",
+    null
+  ],
+  "count_predictions": [
+    "travel-v2",
+    "rail-faq-v1",
+    "travel-v2",
+    null,
+    "travel-v1",
+    "status-faq-v1",
+    "approval-faq-v1",
+    "travel-v1",
+    null
+  ],
+  "tfidf_predictions": [
+    "travel-v2",
+    "status-faq-v1",
+    "travel-v2",
+    null,
+    "travel-v1",
+    "status-faq-v1",
+    "approval-faq-v1",
+    "travel-v1",
+    null
+  ],
+  "tfidf_current_scores": [
+    0.7236575068051736,
+    0.8292698296067982,
+    0.5717991227530961,
+    0.0,
+    0.0
+  ],
+  "tfidf_geographic_scores": [
+    0.25719571764394594,
+    0.18512716549060695,
+    0.49815664681052113,
+    0.6466602973341435,
+    0
+  ],
+  "tfidf_reference_derivation": "Independent scalar expansion: a=1+ln(6/4), b=1+ln(6/3), c=1+ln(6/2); explicit five numerators and norms, without tokenizer, vector builder or cosine helper."
+}

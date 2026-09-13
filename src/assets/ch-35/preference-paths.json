@@ -1,0 +1,97 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 35.1 — Two paths from the same preference pair to a changed policy.",
+    "zh-hans": "图 35.1：同一组偏好对，可以沿两条路径改变策略。"
+  },
+  "alt": {
+    "en": "The reward-model route first fits scores from chosen/rejected labels, then uses sampled response scores and a fixed reference to update the policy. DPO instead compares four response probabilities and updates only the policy against the fixed reference.",
+    "zh-hans": "奖励模型路径先用偏好标签拟合分数，再用采样回答的分数和固定参考策略更新策略。DPO 直接比较四个回答概率，相对固定参考策略更新当前策略。"
+  },
+  "credit": {
+    "en": "Original diagram of the declared training stages · CC BY-SA 4.0",
+    "zh-hans": "原创训练阶段关系图 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Reward model → RL policy update",
+        "zh-hans": "奖励模型 → RL 策略更新"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Pair A > B → fit reward scores",
+            "zh-hans": "偏好 A > B → 拟合奖励分数"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Reward model: trained first, fixed in this RL stage",
+            "zh-hans": "奖励模型：先训练，在本次 RL 阶段固定"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Sample policy outputs → reward − β log ratio",
+            "zh-hans": "采样策略输出 → 奖励 − β 对数比"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Update policy; reference remains fixed",
+            "zh-hans": "更新策略；参考策略保持固定"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Comparison labels and sampled actions have different jobs. The expected log ratio supplies the KL penalty.",
+        "zh-hans": "比较标签与采样动作承担不同作用；对数比的期望形成 KL 惩罚。"
+      }
+    },
+    {
+      "label": {
+        "en": "Original offline DPO",
+        "zh-hans": "原始离线 DPO"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Same prompt, chosen A, rejected B",
+            "zh-hans": "同一提示、chosen A、rejected B"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Policy (0.75, 0.25); fixed reference (0.5, 0.5)",
+            "zh-hans": "策略 (0.75, 0.25)；固定参考 (0.5, 0.5)"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "β = 1: margin ln 3 → loss 0.287682",
+            "zh-hans": "β = 1：差值 ln 3 → 损失 0.287682"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Update policy from pair loss",
+            "zh-hans": "由偏好对损失更新策略"
+          }
+        }
+      ],
+      "flow": {
+        "en": "No standalone reward-model fit or on-policy rollout inside this update; labels and reference probabilities are still required.",
+        "zh-hans": "本次更新不单独拟合奖励模型，也不从当前策略采样；仍需要标签与参考概率。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+$ pnpm validate:content && pnpm validate:language && pnpm validate:part-i && pnpm validate:part-ii && pnpm validate:part-iii && pnpm validate:part-iv && pnpm validate:part-v && pnpm test && pnpm check && pnpm build && node scripts/check-draft-output.mjs
+$ node scripts/validate-content.mjs
+Validated 57 bilingual chapter pairs and supporting pages.
+$ node scripts/validate-language.mjs
+Validated English public documentation and source comments; localized textbook content is preserved.
+$ node scripts/validate-part-i.mjs
+Validated Part I bilingual structure, equations, sources, figures, visible exercises/solutions, static content and fixture provenance.
+$ node scripts/validate-part-ii.mjs
+test_cosine_scale_order_units_and_zero (test_core.ArithmeticTests) ... ok
+test_kl_direction_support_and_entropy_decomposition (test_core.ArithmeticTests) ... ok
+test_matrix_cells_and_equal_shape_semantic_failure (test_core.ArithmeticTests) ... ok
+test_softmax_loss_units_padding_and_stability (test_core.ArithmeticTests) ... ok
+test_measured_records_name_the_exact_sources_and_inputs (test_core.EvidenceTests) ... ok
+test_all_six_part_i_settings_and_exact_generation (test_core.NgramBridgeTests) ... ok
+test_transfer_data_change_unseen_and_zero_are_distinct (test_core.NgramBridgeTests) ... ok
+test_corpus_change_updates_idf_without_changing_document_frequency (test_core.RetrievalTests) ... ok
+test_full_same_set_bilingual_outputs_against_independent_evidence (test_core.RetrievalTests) ... ok
+test_ties_abstention_oov_and_failure_labels_remain_visible (test_core.RetrievalTests) ... ok
+test_word_order_collision_is_not_a_language_model (test_core.RetrievalTests) ... ok
+test_bytes_collisions_offsets_and_compatibility (test_core.TextTests) ... ok
+test_contract_outputs_idempotence_and_raw_retention (test_core.TextTests) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.005s
+
+OK
+Validated Part II bilingual drafts, structural anchors, equations, captions, sources, visible answers, rendered figures, fresh notebook evidence and independent numerical/behavior checks.
+$ node scripts/validate-part-iii.mjs
+test_attention_exact_oracles_and_interventions (test_core.SequenceEvidence) ... ok
+test_attention_invariants_and_invalid_memory (test_core.SequenceEvidence) ... ok
+test_bptt_against_closed_polynomial_and_difference (test_core.SequenceEvidence) ... ok
+test_computed_encoder_collision (test_core.SequenceEvidence) ... ok
+test_products_and_gate_arithmetic (test_core.SequenceEvidence) ... ok
+test_same_task_two_different_failures (test_core.SequenceEvidence) ... ok
+test_teacher_generation_divergence_and_eos (test_core.SequenceEvidence) ... ok
+test_three_steps_and_input_independence (test_core.SequenceEvidence) ... ok
+test_tie_boundary_and_retention_change (test_core.SequenceEvidence) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK
+Validated Part III draft pairs, anchors, math, numerical tables, visible answers, figures, provenance, fresh notebook evidence and independent sequence behavior.
+$ node scripts/validate-part-iv.mjs
+Validated all seven Part IV draft pairs, bilingual math/anchors/answers, rendered figures, independent numeric evidence, actual MG records/checkpoints and fresh notebook provenance.
+$ node scripts/validate-part-v.mjs
+Validated all twelve Part V draft pairs, bilingual math/anchors/answers, twelve rendered figure sources, independent numeric evidence, 180 measured generation attempts and fresh notebook provenance.
+$ node --experimental-strip-types --test tests/*.test.mjs
+(node:55447) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ bilingual tokenization, round trip, version change and unknown failure match independent fixtures (0.954917ms)
+✔ cosine distinguishes geometry, opposite direction and undefined zero vector (0.109625ms)
+✔ all six scenarios preserve parameters/context/external/state distinctions (0.164625ms)
+✔ Bigram counts include EOS, exclude predicted BOS, and never cross sequence boundaries (0.2345ms)
+✔ normalization, add-one denominators, zero transitions, and unseen context are distinct (0.266708ms)
+✔ all six held-out comparisons and complete-sequence calculations match hand fractions (0.219416ms)
+✔ generation matches frozen PRNG trace and cannot train on its output (0.316417ms)
+✔ changing unseen earlier prefixes cannot change identical selected context distributions (0.046ms)
+✔ heading numbers and anchors agree across languages, reset subsections, and skip nonchapters (0.375917ms)
+✔ all diagrams render localized descriptions, licensed captions and worked evidence (1.273167ms)
+✔ textbook transfer exercises agree with independent fractions and preserve fitting boundaries (0.190084ms)
+✔ removed learning-control syntax fails authoring instead of silently hiding content (0.044791ms)
+✔ Mini GPT curve plots the actual measurements with both line and marker distinctions (2.238625ms)
+✔ Part V independent calculations, complete paired records and evidence provenance (16.160167ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.913292
+$ astro sync --force && astro check
+14:04:15 [WARN] [content] data store cleared (force)
+14:04:15 [vite] Re-optimizing dependencies because vite config has changed
+14:04:15 [content] Syncing content
+14:04:17 [content] Synced content
+14:04:17 [types] Generated 2.38s
+14:04:18 [content] Syncing content
+14:04:19 [content] Synced content
+14:04:19 [types] Generated 341ms
+14:04:19 [check] Getting diagnostics for Astro files in <book-root>...
+Result (41 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+$ astro build
+14:04:22 [content] Syncing content
+14:04:22 [content] Synced content
+14:04:22 [types] Generated 343ms
+14:04:22 [build] output: "static"
+14:04:22 [build] mode: "static"
+14:04:22 [build] directory: <book-root>/dist/
+14:04:22 [build] Collecting build info...
+14:04:22 [build] ✓ Completed in 533ms.
+14:04:22 [build] Building static entrypoints...
+14:04:22 [vite] ✓ built in 388ms
+14:04:22 [vite] ✓ built in 22ms
+14:04:22 [build] Rearranging server assets...
+
+ generating static routes 
+14:04:22   ├─ /en/rss.xml (+21ms) 
+14:04:22   ├─ /zh-hans/rss.xml (+1ms) 
+14:04:22   ├─ /index.html (+2ms) 
+14:04:22   ├─ /en/index.html (+7ms) 
+14:04:22   ├─ /en/about/index.html (+3ms) 
+14:04:22   ├─ /en/ch-01/index.html (+2ms) 
+14:04:22   ├─ /en/ch-02/index.html (+2ms) 
+14:04:22   ├─ /en/ch-03/index.html (+3ms) 
+14:04:22   ├─ /en/ch-04/index.html (+3ms) 
+14:04:22   ├─ /en/changelog/index.html (+2ms) 
+14:04:22   ├─ /en/errata/index.html (+2ms) 
+14:04:22   ├─ /en/glossary/index.html (+2ms) 
+14:04:22   ├─ /en/roadmap/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/index.html (+2ms) 
+14:04:22   ├─ /zh-hans/about/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/ch-01/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/ch-02/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/ch-03/index.html (+2ms) 
+14:04:22   ├─ /zh-hans/ch-04/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/changelog/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/errata/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/glossary/index.html (+1ms) 
+14:04:22   ├─ /zh-hans/roadmap/index.html (+1ms) 
+14:04:22 ✓ Completed in 142ms.
+
+14:04:22 [build] ✓ Completed in 581ms.
+14:04:22 [starlight:pagefind] Building search index with Pagefind...
+14:04:23 [starlight:pagefind] Found 21 HTML files.
+14:04:23 [starlight:pagefind] Finished building search index in 135ms.
+14:04:23 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+14:04:23 [build] 21 page(s) built in 1.27s
+14:04:23 [build] Complete!
+Verified 112 draft chapter and supporting-page routes and links are absent from production HTML/XML and client JS/JSON/maps; decoded 20 Pagefind fragments contain only built pages, including every published Part I chapter.

@@ -1,0 +1,147 @@
+{
+  "version": "text-contract-v1",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original authored bilingual content resource; no personal data",
+  "normalizer": "search-key-v1: NFC, Unicode casefold, NFC, Python str.split whitespace collapse joined by ASCII space",
+  "runtime_ucd": "15.0.0",
+  "scope": "case-insensitive lexical lookup only; preserve raw text separately; never use as an identifier, signature or raw-span offset map",
+  "cases": [
+    {
+      "id": "english-whitespace",
+      "raw": "  Beijing\tLODGING\n750  ",
+      "expected": "beijing lodging 750",
+      "purpose": "case and whitespace collapse"
+    },
+    {
+      "id": "chinese-whitespace",
+      "raw": "  北京\t住宿\n750 元  ",
+      "expected": "北京 住宿 750 元",
+      "purpose": "preserve explicit Chinese word separation and digits"
+    },
+    {
+      "id": "composed",
+      "raw": "café",
+      "expected": "café",
+      "purpose": "already composed"
+    },
+    {
+      "id": "decomposed",
+      "raw": "café",
+      "expected": "café",
+      "purpose": "canonical composition"
+    },
+    {
+      "id": "casefold-collision",
+      "raw": "Straße",
+      "expected": "strasse",
+      "purpose": "case folding is not reversible"
+    },
+    {
+      "id": "casefold-counterpart",
+      "raw": "STRASSE",
+      "expected": "strasse",
+      "purpose": "distinct raw strings share a key"
+    },
+    {
+      "id": "width",
+      "raw": "Ａ-104",
+      "expected": "ａ-104",
+      "purpose": "NFC preserves width; case folding changes letter case"
+    },
+    {
+      "id": "ascii-identifier",
+      "raw": "A-104",
+      "expected": "a-104",
+      "purpose": "search key must not replace a case-sensitive identifier"
+    },
+    {
+      "id": "negation-en",
+      "raw": "Do NOT cancel A-104.",
+      "expected": "do not cancel a-104.",
+      "purpose": "retain negation and punctuation"
+    },
+    {
+      "id": "negation-zh",
+      "raw": "不要取消 A-104。",
+      "expected": "不要取消 a-104。",
+      "purpose": "retain Chinese negation"
+    },
+    {
+      "id": "punctuation",
+      "raw": "750, not 600",
+      "expected": "750, not 600",
+      "purpose": "retain numbers, comma and word order"
+    },
+    {
+      "id": "zero-width",
+      "raw": "a​b",
+      "expected": "a​b",
+      "purpose": "zero-width space is not Python whitespace"
+    },
+    {
+      "id": "empty",
+      "raw": "\t\n ",
+      "expected": "",
+      "purpose": "all-whitespace input has empty key"
+    }
+  ],
+  "display_cases": [
+    {
+      "raw": "é",
+      "code_points": [
+        "U+00E9"
+      ],
+      "utf8_hex": "c3 a9",
+      "code_point_count": 1,
+      "byte_count": 2
+    },
+    {
+      "raw": "é",
+      "code_points": [
+        "U+0065",
+        "U+0301"
+      ],
+      "utf8_hex": "65 cc 81",
+      "code_point_count": 2,
+      "byte_count": 3
+    },
+    {
+      "raw": "中",
+      "code_points": [
+        "U+4E2D"
+      ],
+      "utf8_hex": "e4 b8 ad",
+      "code_point_count": 1,
+      "byte_count": 3
+    },
+    {
+      "raw": "🙂",
+      "code_points": [
+        "U+1F642"
+      ],
+      "utf8_hex": "f0 9f 99 82",
+      "code_point_count": 1,
+      "byte_count": 4
+    }
+  ],
+  "loss_counterexamples": [
+    {
+      "kind": "negation_removal",
+      "before": "do not cancel",
+      "after": "do cancel",
+      "lost": "negation changes the instruction"
+    },
+    {
+      "kind": "compatibility",
+      "before": "①",
+      "after": "1",
+      "lost": "circled presentation under NFKC"
+    },
+    {
+      "kind": "offsets",
+      "before": "café 750",
+      "after": "café 750",
+      "lost": "750 starts at raw code-point index 6 but normalized index 5"
+    }
+  ]
+}

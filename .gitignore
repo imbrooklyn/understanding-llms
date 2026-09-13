@@ -23,3 +23,8 @@ pnpm-debug.log*
 # local browser verification artifacts
 playwright-report/
 test-results/
+
+# local Python practice environments and bytecode
+.venv/
+__pycache__/
+*.py[cod]

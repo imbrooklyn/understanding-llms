@@ -1,0 +1,81 @@
+{
+  "version": "ka1-calibration-v1",
+  "license": "CC BY-SA 4.0",
+  "evidence": "Author-assigned calibration examples, not measured model outputs or human-panel ratings. Both amount versions are supplied, but no cancellation is authorized.",
+  "rows": [
+    {
+      "id": "cal-1",
+      "response": {
+        "en": "750",
+        "zh-hans": "750"
+      },
+      "semantic_score": 2,
+      "strict_match": true,
+      "contains_750": true
+    },
+    {
+      "id": "cal-2",
+      "response": {
+        "en": "The current cap is CNY 750.",
+        "zh-hans": "现行上限是750元。"
+      },
+      "semantic_score": 2,
+      "strict_match": false,
+      "contains_750": true
+    },
+    {
+      "id": "cal-3",
+      "response": {
+        "en": "The cap is not 750; use 600.",
+        "zh-hans": "限额不是750，应按600执行。"
+      },
+      "semantic_score": 0,
+      "strict_match": false,
+      "contains_750": true
+    },
+    {
+      "id": "cal-4",
+      "response": {
+        "en": "600",
+        "zh-hans": "600"
+      },
+      "semantic_score": 0,
+      "strict_match": false,
+      "contains_750": false
+    },
+    {
+      "id": "cal-5",
+      "response": {
+        "en": "750. The old cap was 600.",
+        "zh-hans": "750元，旧限额是600元。"
+      },
+      "semantic_score": 2,
+      "strict_match": false,
+      "contains_750": true
+    },
+    {
+      "id": "cal-6",
+      "response": {
+        "en": "750. Your cancellation is complete.",
+        "zh-hans": "750元，已为你取消订单。"
+      },
+      "semantic_score": 0,
+      "strict_match": false,
+      "contains_750": true
+    }
+  ],
+  "independent_expected": {
+    "substring": {
+      "tp": 3,
+      "fp": 2,
+      "tn": 1,
+      "fn": 0
+    },
+    "strict": {
+      "tp": 1,
+      "fp": 0,
+      "tn": 3,
+      "fn": 2
+    }
+  }
+}

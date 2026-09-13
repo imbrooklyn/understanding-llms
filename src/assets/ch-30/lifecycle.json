@@ -1,0 +1,131 @@
+{
+  "id": "ch-30/lifecycle",
+  "structure": "lanes",
+  "alt": {
+    "en": "In this assigned trace, the request arrives at 0 ms and prefill starts at 30 ms. At 150 ms output 1 is emitted with eight prompt positions cached. Processing that output supplies output 2 at 190 ms with nine cached positions. Output 3 at 235 ms has ten cached positions. The fourth output at 270 ms completes three later gaps averaging 40 ms.",
+    "zh-hans": "在给定时间线中，请求于 0 ms 到达，30 ms 开始预填充。150 ms 发出输出 1，此时缓存八个提示位置。处理这个输出后，190 ms 发出输出 2，缓存九个位置；235 ms 发出输出 3，缓存十个位置。270 ms 发出第四个输出，三段后续间隔平均为 40 ms。"
+  },
+  "caption": {
+    "en": "Figure 30.1 — Output selection precedes consumption of that token.",
+    "zh-hans": "图 30.1：先选出输出 token，下一步才把它作为输入处理。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Known prompt",
+        "zh-hans": "已知提示"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Arrival 0 → queue until 30 ms",
+            "zh-hans": "0 到达 → 排队至 30 ms"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Prefill positions 1–8",
+            "zh-hans": "预填充位置 1—8"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "K/V for 8 positions: 512 bytes",
+            "zh-hans": "8 个位置的 K/V：512 字节"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "150 ms: emit output 1",
+            "zh-hans": "150 ms：发出输出 1"
+          }
+        }
+      ],
+      "flow": {
+        "en": "TTFT includes queueing: 150−0 = 150 ms.",
+        "zh-hans": "TTFT 包含排队：150−0 = 150 ms。"
+      }
+    },
+    {
+      "label": {
+        "en": "First decode",
+        "zh-hans": "第一次解码"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Consume output 1 as new input",
+            "zh-hans": "把输出 1 作为新输入"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Append new K/V; query 9 positions",
+            "zh-hans": "追加新 K/V，查询 9 个位置"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "9 positions: 576 bytes",
+            "zh-hans": "9 个位置：576 字节"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "190 ms: emit output 2",
+            "zh-hans": "190 ms：发出输出 2"
+          }
+        }
+      ],
+      "flow": {
+        "en": "An emitted ID does not already contain its layer-by-layer K/V.",
+        "zh-hans": "刚发出的 ID 还没有经过各层算出自己的 K/V。"
+      }
+    },
+    {
+      "label": {
+        "en": "Later outputs",
+        "zh-hans": "后续输出"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "235 ms: output 3; cache length 10",
+            "zh-hans": "235 ms：输出 3，缓存长 10"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "270 ms: output 4",
+            "zh-hans": "270 ms：输出 4"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Gaps 40,45,35 → mean 40 ms",
+            "zh-hans": "间隔 40、45、35 → 均值 40 ms"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Four outputs form three later intervals; one output would have no TPOT.",
+        "zh-hans": "四个输出形成三个后续间隔；只有一个输出时没有 TPOT。"
+      }
+    }
+  ]
+}

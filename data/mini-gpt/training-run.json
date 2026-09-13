@@ -1,0 +1,8596 @@
+{
+  "curve": [
+    {
+      "step": 0,
+      "train_loss": 5.674426629050179,
+      "validation_loss": 5.669803297874319
+    },
+    {
+      "step": 50,
+      "train_loss": 1.2694209776589775,
+      "validation_loss": 2.405571231866604
+    },
+    {
+      "step": 100,
+      "train_loss": 0.36875937932816544,
+      "validation_loss": 2.70305284990864
+    },
+    {
+      "step": 150,
+      "train_loss": 0.2163515724970035,
+      "validation_loss": 2.993821681869046
+    },
+    {
+      "step": 200,
+      "train_loss": 0.17665242747723808,
+      "validation_loss": 3.3247100575925836
+    },
+    {
+      "step": 250,
+      "train_loss": 0.1754224894809983,
+      "validation_loss": 3.5228849937366404
+    },
+    {
+      "step": 300,
+      "train_loss": 0.1680241568647308,
+      "validation_loss": 3.5958033289935996
+    },
+    {
+      "step": 350,
+      "train_loss": 0.16676187952231675,
+      "validation_loss": 3.748807172738595
+    },
+    {
+      "step": 400,
+      "train_loss": 0.17021733244369439,
+      "validation_loss": 3.7414314832464113
+    },
+    {
+      "step": 450,
+      "train_loss": 0.15997322391086738,
+      "validation_loss": 3.8963602696290565
+    },
+    {
+      "step": 500,
+      "train_loss": 0.1647601117943489,
+      "validation_loss": 3.9011037869838554
+    },
+    {
+      "step": 550,
+      "train_loss": 0.15581415439141091,
+      "validation_loss": 4.009695363851582
+    },
+    {
+      "step": 600,
+      "train_loss": 0.15959935516353005,
+      "validation_loss": 4.068374448042549
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "batch_indices": [
+        15,
+        19,
+        1,
+        22,
+        7,
+        15,
+        5,
+        3
+      ],
+      "batch_loss_before_update": 5.672425134737334
+    },
+    {
+      "step": 2,
+      "batch_indices": [
+        15,
+        9,
+        13,
+        8,
+        4,
+        15,
+        16,
+        5
+      ],
+      "batch_loss_before_update": 5.55967768286649
+    },
+    {
+      "step": 3,
+      "batch_indices": [
+        20,
+        12,
+        16,
+        22,
+        21,
+        4,
+        21,
+        16
+      ],
+      "batch_loss_before_update": 5.411994232093701
+    },
+    {
+      "step": 4,
+      "batch_indices": [
+        1,
+        11,
+        7,
+        2,
+        8,
+        11,
+        21,
+        3
+      ],
+      "batch_loss_before_update": 5.232515150988578
+    },
+    {
+      "step": 5,
+      "batch_indices": [
+        3,
+        2,
+        12,
+        8,
+        17,
+        11,
+        22,
+        18
+      ],
+      "batch_loss_before_update": 5.091422024372142
+    },
+    {
+      "step": 6,
+      "batch_indices": [
+        12,
+        15,
+        19,
+        23,
+        8,
+        17,
+        23,
+        9
+      ],
+      "batch_loss_before_update": 5.042597426129214
+    },
+    {
+      "step": 7,
+      "batch_indices": [
+        15,
+        8,
+        22,
+        12,
+        3,
+        19,
+        12,
+        7
+      ],
+      "batch_loss_before_update": 4.777087264048891
+    },
+    {
+      "step": 8,
+      "batch_indices": [
+        7,
+        18,
+        20,
+        0,
+        15,
+        6,
+        6,
+        9
+      ],
+      "batch_loss_before_update": 4.593366115936925
+    },
+    {
+      "step": 9,
+      "batch_indices": [
+        12,
+        2,
+        7,
+        7,
+        15,
+        15,
+        20,
+        16
+      ],
+      "batch_loss_before_update": 4.437262806472113
+    },
+    {
+      "step": 10,
+      "batch_indices": [
+        4,
+        10,
+        12,
+        9,
+        16,
+        3,
+        19,
+        23
+      ],
+      "batch_loss_before_update": 4.4038025200933575
+    },
+    {
+      "step": 11,
+      "batch_indices": [
+        17,
+        13,
+        16,
+        4,
+        4,
+        23,
+        11,
+        2
+      ],
+      "batch_loss_before_update": 4.303624915038963
+    },
+    {
+      "step": 12,
+      "batch_indices": [
+        3,
+        14,
+        2,
+        19,
+        20,
+        15,
+        4,
+        3
+      ],
+      "batch_loss_before_update": 4.1527333969494995
+    },
+    {
+      "step": 13,
+      "batch_indices": [
+        16,
+        6,
+        10,
+        2,
+        11,
+        23,
+        14,
+        7
+      ],
+      "batch_loss_before_update": 4.114235525284948
+    },
+    {
+      "step": 14,
+      "batch_indices": [
+        22,
+        5,
+        22,
+        17,
+        21,
+        21,
+        18,
+        18
+      ],
+      "batch_loss_before_update": 4.226968170869296
+    },
+    {
+      "step": 15,
+      "batch_indices": [
+        2,
+        23,
+        12,
+        19,
+        19,
+        18,
+        1,
+        22
+      ],
+      "batch_loss_before_update": 3.9951029888481395
+    },
+    {
+      "step": 16,
+      "batch_indices": [
+        3,
+        4,
+        3,
+        3,
+        20,
+        15,
+        14,
+        18
+      ],
+      "batch_loss_before_update": 3.7588038081472352
+    },
+    {
+      "step": 17,
+      "batch_indices": [
+        5,
+        9,
+        12,
+        5,
+        16,
+        19,
+        22,
+        8
+      ],
+      "batch_loss_before_update": 3.643380061094584
+    },
+    {
+      "step": 18,
+      "batch_indices": [
+        23,
+        3,
+        5,
+        22,
+        23,
+        5,
+        12,
+        20
+      ],
+      "batch_loss_before_update": 3.8687366219772126
+    },
+    {
+      "step": 19,
+      "batch_indices": [
+        7,
+        19,
+        7,
+        2,
+        3,
+        10,
+        1,
+        5
+      ],
+      "batch_loss_before_update": 3.448687027424551
+    },
+    {
+      "step": 20,
+      "batch_indices": [
+        14,
+        11,
+        6,
+        4,
+        13,
+        22,
+        21,
+        14
+      ],
+      "batch_loss_before_update": 3.5365899064668467
+    },
+    {
+      "step": 21,
+      "batch_indices": [
+        5,
+        18,
+        21,
+        9,
+        7,
+        3,
+        22,
+        15
+      ],
+      "batch_loss_before_update": 3.3383796521020743
+    },
+    {
+      "step": 22,
+      "batch_indices": [
+        6,
+        12,
+        15,
+        12,
+        19,
+        19,
+        5,
+        1
+      ],
+      "batch_loss_before_update": 3.0869019103053428
+    },
+    {
+      "step": 23,
+      "batch_indices": [
+        6,
+        17,
+        23,
+        2,
+        21,
+        6,
+        3,
+        0
+      ],
+      "batch_loss_before_update": 3.2521742739506214
+    },
+    {
+      "step": 24,
+      "batch_indices": [
+        23,
+        6,
+        23,
+        9,
+        15,
+        12,
+        13,
+        13
+      ],
+      "batch_loss_before_update": 3.159317173179514
+    },
+    {
+      "step": 25,
+      "batch_indices": [
+        15,
+        17,
+        0,
+        12,
+        0,
+        20,
+        12,
+        23
+      ],
+      "batch_loss_before_update": 3.0666439136122343
+    },
+    {
+      "step": 26,
+      "batch_indices": [
+        18,
+        21,
+        12,
+        5,
+        19,
+        0,
+        3,
+        13
+      ],
+      "batch_loss_before_update": 2.7244438661315553
+    },
+    {
+      "step": 27,
+      "batch_indices": [
+        17,
+        8,
+        20,
+        6,
+        22,
+        1,
+        5,
+        4
+      ],
+      "batch_loss_before_update": 2.9149109134297007
+    },
+    {
+      "step": 28,
+      "batch_indices": [
+        19,
+        19,
+        17,
+        15,
+        12,
+        20,
+        4,
+        21
+      ],
+      "batch_loss_before_update": 2.6473258135491706
+    },
+    {
+      "step": 29,
+      "batch_indices": [
+        2,
+        19,
+        6,
+        12,
+        9,
+        23,
+        22,
+        4
+      ],
+      "batch_loss_before_update": 2.6518010373836702
+    },
+    {
+      "step": 30,
+      "batch_indices": [
+        16,
+        6,
+        23,
+        20,
+        18,
+        14,
+        10,
+        0
+      ],
+      "batch_loss_before_update": 2.8034569031601375
+    },
+    {
+      "step": 31,
+      "batch_indices": [
+        15,
+        18,
+        19,
+        18,
+        23,
+        21,
+        1,
+        15
+      ],
+      "batch_loss_before_update": 2.4626737977584066
+    },
+    {
+      "step": 32,
+      "batch_indices": [
+        6,
+        21,
+        10,
+        4,
+        2,
+        8,
+        22,
+        1
+      ],
+      "batch_loss_before_update": 2.5912041881158308
+    },
+    {
+      "step": 33,
+      "batch_indices": [
+        1,
+        1,
+        1,
+        18,
+        0,
+        2,
+        2,
+        16
+      ],
+      "batch_loss_before_update": 2.415331826895942
+    },
+    {
+      "step": 34,
+      "batch_indices": [
+        7,
+        9,
+        21,
+        14,
+        4,
+        10,
+        22,
+        17
+      ],
+      "batch_loss_before_update": 2.4224736793786326
+    },
+    {
+      "step": 35,
+      "batch_indices": [
+        4,
+        16,
+        20,
+        17,
+        7,
+        9,
+        14,
+        6
+      ],
+      "batch_loss_before_update": 2.2793973748418295
+    },
+    {
+      "step": 36,
+      "batch_indices": [
+        7,
+        19,
+        16,
+        16,
+        13,
+        16,
+        20,
+        15
+      ],
+      "batch_loss_before_update": 2.1410098935051427
+    },
+    {
+      "step": 37,
+      "batch_indices": [
+        16,
+        7,
+        8,
+        14,
+        13,
+        7,
+        15,
+        12
+      ],
+      "batch_loss_before_update": 1.9760133263319444
+    },
+    {
+      "step": 38,
+      "batch_indices": [
+        3,
+        9,
+        7,
+        19,
+        16,
+        19,
+        12,
+        23
+      ],
+      "batch_loss_before_update": 1.8487912432739295
+    },
+    {
+      "step": 39,
+      "batch_indices": [
+        9,
+        11,
+        2,
+        15,
+        22,
+        13,
+        19,
+        18
+      ],
+      "batch_loss_before_update": 1.964086637567652
+    },
+    {
+      "step": 40,
+      "batch_indices": [
+        22,
+        18,
+        18,
+        1,
+        10,
+        5,
+        9,
+        3
+      ],
+      "batch_loss_before_update": 1.9426629865306495
+    },
+    {
+      "step": 41,
+      "batch_indices": [
+        2,
+        11,
+        13,
+        20,
+        2,
+        20,
+        17,
+        15
+      ],
+      "batch_loss_before_update": 2.04011088270006
+    },
+    {
+      "step": 42,
+      "batch_indices": [
+        7,
+        5,
+        3,
+        7,
+        9,
+        5,
+        22,
+        19
+      ],
+      "batch_loss_before_update": 1.6805723634006864
+    },
+    {
+      "step": 43,
+      "batch_indices": [
+        16,
+        6,
+        8,
+        14,
+        23,
+        6,
+        21,
+        1
+      ],
+      "batch_loss_before_update": 1.7448588528206475
+    },
+    {
+      "step": 44,
+      "batch_indices": [
+        13,
+        15,
+        20,
+        1,
+        18,
+        12,
+        19,
+        2
+      ],
+      "batch_loss_before_update": 1.5138503637202214
+    },
+    {
+      "step": 45,
+      "batch_indices": [
+        15,
+        3,
+        12,
+        10,
+        3,
+        4,
+        15,
+        6
+      ],
+      "batch_loss_before_update": 1.5248524500170058
+    },
+    {
+      "step": 46,
+      "batch_indices": [
+        1,
+        15,
+        20,
+        5,
+        21,
+        9,
+        11,
+        10
+      ],
+      "batch_loss_before_update": 1.7846893511580626
+    },
+    {
+      "step": 47,
+      "batch_indices": [
+        6,
+        5,
+        19,
+        21,
+        0,
+        17,
+        14,
+        4
+      ],
+      "batch_loss_before_update": 1.3687336500154232
+    },
+    {
+      "step": 48,
+      "batch_indices": [
+        2,
+        11,
+        1,
+        17,
+        3,
+        4,
+        18,
+        22
+      ],
+      "batch_loss_before_update": 1.4454701526410905
+    },
+    {
+      "step": 49,
+      "batch_indices": [
+        3,
+        22,
+        5,
+        23,
+        0,
+        5,
+        11,
+        1
+      ],
+      "batch_loss_before_update": 1.4606622238334832
+    },
+    {
+      "step": 50,
+      "batch_indices": [
+        15,
+        1,
+        22,
+        22,
+        6,
+        17,
+        13,
+        13
+      ],
+      "batch_loss_before_update": 1.2973804326432758
+    },
+    {
+      "step": 51,
+      "batch_indices": [
+        14,
+        6,
+        15,
+        7,
+        12,
+        14,
+        19,
+        17
+      ],
+      "batch_loss_before_update": 1.147553180778323
+    },
+    {
+      "step": 52,
+      "batch_indices": [
+        13,
+        12,
+        10,
+        23,
+        4,
+        0,
+        7,
+        14
+      ],
+      "batch_loss_before_update": 1.230275686940013
+    },
+    {
+      "step": 53,
+      "batch_indices": [
+        16,
+        6,
+        13,
+        2,
+        22,
+        16,
+        12,
+        9
+      ],
+      "batch_loss_before_update": 1.148970263243483
+    },
+    {
+      "step": 54,
+      "batch_indices": [
+        14,
+        9,
+        5,
+        16,
+        16,
+        2,
+        7,
+        1
+      ],
+      "batch_loss_before_update": 1.1521018743485125
+    },
+    {
+      "step": 55,
+      "batch_indices": [
+        10,
+        23,
+        15,
+        14,
+        14,
+        6,
+        14,
+        15
+      ],
+      "batch_loss_before_update": 1.135991808104582
+    },
+    {
+      "step": 56,
+      "batch_indices": [
+        23,
+        0,
+        1,
+        12,
+        15,
+        8,
+        15,
+        23
+      ],
+      "batch_loss_before_update": 1.072148520778628
+    },
+    {
+      "step": 57,
+      "batch_indices": [
+        14,
+        16,
+        3,
+        20,
+        22,
+        15,
+        17,
+        23
+      ],
+      "batch_loss_before_update": 1.2102385952636414
+    },
+    {
+      "step": 58,
+      "batch_indices": [
+        2,
+        23,
+        15,
+        1,
+        15,
+        8,
+        22,
+        8
+      ],
+      "batch_loss_before_update": 1.0348214042744457
+    },
+    {
+      "step": 59,
+      "batch_indices": [
+        4,
+        13,
+        3,
+        7,
+        15,
+        7,
+        20,
+        5
+      ],
+      "batch_loss_before_update": 1.0123371765136766
+    },
+    {
+      "step": 60,
+      "batch_indices": [
+        13,
+        3,
+        4,
+        7,
+        0,
+        2,
+        1,
+        17
+      ],
+      "batch_loss_before_update": 0.8481504127460162
+    },
+    {
+      "step": 61,
+      "batch_indices": [
+        6,
+        22,
+        17,
+        17,
+        22,
+        9,
+        9,
+        16
+      ],
+      "batch_loss_before_update": 0.800604087161979
+    },
+    {
+      "step": 62,
+      "batch_indices": [
+        17,
+        4,
+        8,
+        3,
+        18,
+        9,
+        15,
+        2
+      ],
+      "batch_loss_before_update": 0.8802201105632185
+    },
+    {
+      "step": 63,
+      "batch_indices": [
+        0,
+        3,
+        23,
+        21,
+        6,
+        23,
+        4,
+        10
+      ],
+      "batch_loss_before_update": 1.0273258386968422
+    },
+    {
+      "step": 64,
+      "batch_indices": [
+        6,
+        0,
+        17,
+        16,
+        20,
+        18,
+        2,
+        8
+      ],
+      "batch_loss_before_update": 0.9226164022936669
+    },
+    {
+      "step": 65,
+      "batch_indices": [
+        5,
+        6,
+        3,
+        3,
+        18,
+        20,
+        7,
+        3
+      ],
+      "batch_loss_before_update": 0.8977284201222154
+    },
+    {
+      "step": 66,
+      "batch_indices": [
+        11,
+        12,
+        17,
+        3,
+        8,
+        0,
+        17,
+        4
+      ],
+      "batch_loss_before_update": 0.760070644408342
+    },
+    {
+      "step": 67,
+      "batch_indices": [
+        12,
+        11,
+        9,
+        2,
+        18,
+        13,
+        8,
+        5
+      ],
+      "batch_loss_before_update": 0.7832107944892089
+    },
+    {
+      "step": 68,
+      "batch_indices": [
+        21,
+        1,
+        21,
+        13,
+        23,
+        16,
+        3,
+        23
+      ],
+      "batch_loss_before_update": 0.817705785325048
+    },
+    {
+      "step": 69,
+      "batch_indices": [
+        8,
+        18,
+        15,
+        13,
+        6,
+        7,
+        3,
+        9
+      ],
+      "batch_loss_before_update": 0.5966969299555137
+    },
+    {
+      "step": 70,
+      "batch_indices": [
+        1,
+        12,
+        3,
+        19,
+        2,
+        9,
+        11,
+        7
+      ],
+      "batch_loss_before_update": 0.7314691480228247
+    },
+    {
+      "step": 71,
+      "batch_indices": [
+        22,
+        17,
+        3,
+        0,
+        0,
+        19,
+        11,
+        5
+      ],
+      "batch_loss_before_update": 0.7068635785816136
+    },
+    {
+      "step": 72,
+      "batch_indices": [
+        20,
+        5,
+        4,
+        12,
+        1,
+        23,
+        17,
+        1
+      ],
+      "batch_loss_before_update": 0.7309688083748189
+    },
+    {
+      "step": 73,
+      "batch_indices": [
+        21,
+        9,
+        11,
+        11,
+        14,
+        5,
+        5,
+        22
+      ],
+      "batch_loss_before_update": 0.881476827714705
+    },
+    {
+      "step": 74,
+      "batch_indices": [
+        7,
+        7,
+        18,
+        12,
+        21,
+        0,
+        3,
+        0
+      ],
+      "batch_loss_before_update": 0.5470993753099821
+    },
+    {
+      "step": 75,
+      "batch_indices": [
+        8,
+        7,
+        1,
+        16,
+        17,
+        11,
+        13,
+        20
+      ],
+      "batch_loss_before_update": 0.6656273239458883
+    },
+    {
+      "step": 76,
+      "batch_indices": [
+        7,
+        3,
+        8,
+        5,
+        2,
+        18,
+        21,
+        10
+      ],
+      "batch_loss_before_update": 0.6363703911113625
+    },
+    {
+      "step": 77,
+      "batch_indices": [
+        14,
+        18,
+        8,
+        6,
+        6,
+        5,
+        14,
+        6
+      ],
+      "batch_loss_before_update": 0.5995673117639166
+    },
+    {
+      "step": 78,
+      "batch_indices": [
+        3,
+        4,
+        5,
+        14,
+        18,
+        14,
+        12,
+        0
+      ],
+      "batch_loss_before_update": 0.517177823309763
+    },
+    {
+      "step": 79,
+      "batch_indices": [
+        15,
+        16,
+        1,
+        13,
+        14,
+        13,
+        15,
+        2
+      ],
+      "batch_loss_before_update": 0.5396525313662486
+    },
+    {
+      "step": 80,
+      "batch_indices": [
+        0,
+        20,
+        1,
+        9,
+        3,
+        17,
+        14,
+        9
+      ],
+      "batch_loss_before_update": 0.6000730612617908
+    },
+    {
+      "step": 81,
+      "batch_indices": [
+        16,
+        5,
+        10,
+        15,
+        17,
+        20,
+        9,
+        3
+      ],
+      "batch_loss_before_update": 0.6036638265334011
+    },
+    {
+      "step": 82,
+      "batch_indices": [
+        22,
+        9,
+        19,
+        20,
+        0,
+        1,
+        23,
+        17
+      ],
+      "batch_loss_before_update": 0.5642674357346915
+    },
+    {
+      "step": 83,
+      "batch_indices": [
+        2,
+        3,
+        22,
+        23,
+        23,
+        11,
+        11,
+        5
+      ],
+      "batch_loss_before_update": 0.6321555361137642
+    },
+    {
+      "step": 84,
+      "batch_indices": [
+        9,
+        5,
+        23,
+        16,
+        7,
+        20,
+        22,
+        21
+      ],
+      "batch_loss_before_update": 0.5796912355627927
+    },
+    {
+      "step": 85,
+      "batch_indices": [
+        11,
+        17,
+        4,
+        15,
+        22,
+        10,
+        16,
+        13
+      ],
+      "batch_loss_before_update": 0.5364661137501193
+    },
+    {
+      "step": 86,
+      "batch_indices": [
+        7,
+        10,
+        11,
+        16,
+        16,
+        23,
+        17,
+        8
+      ],
+      "batch_loss_before_update": 0.44783751902171176
+    },
+    {
+      "step": 87,
+      "batch_indices": [
+        12,
+        23,
+        19,
+        16,
+        19,
+        22,
+        6,
+        13
+      ],
+      "batch_loss_before_update": 0.5310650302263992
+    },
+    {
+      "step": 88,
+      "batch_indices": [
+        7,
+        0,
+        17,
+        1,
+        17,
+        6,
+        23,
+        13
+      ],
+      "batch_loss_before_update": 0.40276500968792944
+    },
+    {
+      "step": 89,
+      "batch_indices": [
+        11,
+        1,
+        12,
+        15,
+        7,
+        2,
+        1,
+        18
+      ],
+      "batch_loss_before_update": 0.5048948445048224
+    },
+    {
+      "step": 90,
+      "batch_indices": [
+        6,
+        6,
+        20,
+        14,
+        1,
+        3,
+        16,
+        6
+      ],
+      "batch_loss_before_update": 0.45902145597953276
+    },
+    {
+      "step": 91,
+      "batch_indices": [
+        12,
+        4,
+        4,
+        5,
+        0,
+        12,
+        4,
+        18
+      ],
+      "batch_loss_before_update": 0.43635434190769046
+    },
+    {
+      "step": 92,
+      "batch_indices": [
+        2,
+        15,
+        13,
+        20,
+        6,
+        17,
+        4,
+        18
+      ],
+      "batch_loss_before_update": 0.3895658473996997
+    },
+    {
+      "step": 93,
+      "batch_indices": [
+        11,
+        16,
+        19,
+        19,
+        7,
+        2,
+        2,
+        1
+      ],
+      "batch_loss_before_update": 0.4335963687344441
+    },
+    {
+      "step": 94,
+      "batch_indices": [
+        5,
+        10,
+        10,
+        14,
+        7,
+        3,
+        14,
+        6
+      ],
+      "batch_loss_before_update": 0.4775612512891692
+    },
+    {
+      "step": 95,
+      "batch_indices": [
+        4,
+        2,
+        6,
+        11,
+        14,
+        6,
+        12,
+        7
+      ],
+      "batch_loss_before_update": 0.3502099170417015
+    },
+    {
+      "step": 96,
+      "batch_indices": [
+        1,
+        18,
+        21,
+        5,
+        18,
+        7,
+        0,
+        10
+      ],
+      "batch_loss_before_update": 0.4079516950182753
+    },
+    {
+      "step": 97,
+      "batch_indices": [
+        1,
+        4,
+        17,
+        15,
+        23,
+        8,
+        21,
+        6
+      ],
+      "batch_loss_before_update": 0.45448533531502094
+    },
+    {
+      "step": 98,
+      "batch_indices": [
+        15,
+        8,
+        14,
+        23,
+        12,
+        16,
+        20,
+        14
+      ],
+      "batch_loss_before_update": 0.4278268203511737
+    },
+    {
+      "step": 99,
+      "batch_indices": [
+        21,
+        13,
+        16,
+        3,
+        10,
+        9,
+        4,
+        14
+      ],
+      "batch_loss_before_update": 0.4316977971622587
+    },
+    {
+      "step": 100,
+      "batch_indices": [
+        15,
+        10,
+        12,
+        6,
+        13,
+        1,
+        18,
+        6
+      ],
+      "batch_loss_before_update": 0.26965943213409815
+    },
+    {
+      "step": 101,
+      "batch_indices": [
+        19,
+        8,
+        21,
+        7,
+        14,
+        15,
+        5,
+        21
+      ],
+      "batch_loss_before_update": 0.45526543214522364
+    },
+    {
+      "step": 102,
+      "batch_indices": [
+        0,
+        0,
+        10,
+        20,
+        22,
+        13,
+        2,
+        8
+      ],
+      "batch_loss_before_update": 0.3986193311476646
+    },
+    {
+      "step": 103,
+      "batch_indices": [
+        11,
+        20,
+        2,
+        21,
+        12,
+        15,
+        21,
+        10
+      ],
+      "batch_loss_before_update": 0.3540167241418389
+    },
+    {
+      "step": 104,
+      "batch_indices": [
+        4,
+        22,
+        23,
+        14,
+        19,
+        17,
+        6,
+        14
+      ],
+      "batch_loss_before_update": 0.3826371794035184
+    },
+    {
+      "step": 105,
+      "batch_indices": [
+        10,
+        0,
+        23,
+        3,
+        0,
+        13,
+        8,
+        5
+      ],
+      "batch_loss_before_update": 0.3241599505486655
+    },
+    {
+      "step": 106,
+      "batch_indices": [
+        2,
+        15,
+        17,
+        16,
+        0,
+        16,
+        6,
+        11
+      ],
+      "batch_loss_before_update": 0.34745513083669444
+    },
+    {
+      "step": 107,
+      "batch_indices": [
+        13,
+        10,
+        14,
+        6,
+        5,
+        8,
+        4,
+        17
+      ],
+      "batch_loss_before_update": 0.2962030058160865
+    },
+    {
+      "step": 108,
+      "batch_indices": [
+        6,
+        7,
+        2,
+        21,
+        16,
+        2,
+        18,
+        7
+      ],
+      "batch_loss_before_update": 0.33285522658978545
+    },
+    {
+      "step": 109,
+      "batch_indices": [
+        10,
+        22,
+        6,
+        16,
+        4,
+        14,
+        13,
+        2
+      ],
+      "batch_loss_before_update": 0.26364706295570983
+    },
+    {
+      "step": 110,
+      "batch_indices": [
+        23,
+        10,
+        20,
+        14,
+        4,
+        10,
+        18,
+        15
+      ],
+      "batch_loss_before_update": 0.29841376937110153
+    },
+    {
+      "step": 111,
+      "batch_indices": [
+        7,
+        15,
+        13,
+        13,
+        20,
+        8,
+        14,
+        9
+      ],
+      "batch_loss_before_update": 0.2982577497173225
+    },
+    {
+      "step": 112,
+      "batch_indices": [
+        15,
+        13,
+        12,
+        17,
+        11,
+        18,
+        3,
+        16
+      ],
+      "batch_loss_before_update": 0.2888054299561755
+    },
+    {
+      "step": 113,
+      "batch_indices": [
+        3,
+        9,
+        10,
+        6,
+        18,
+        14,
+        20,
+        1
+      ],
+      "batch_loss_before_update": 0.3254682191430322
+    },
+    {
+      "step": 114,
+      "batch_indices": [
+        12,
+        7,
+        10,
+        7,
+        11,
+        1,
+        18,
+        21
+      ],
+      "batch_loss_before_update": 0.3217873859736869
+    },
+    {
+      "step": 115,
+      "batch_indices": [
+        13,
+        12,
+        2,
+        23,
+        17,
+        21,
+        3,
+        4
+      ],
+      "batch_loss_before_update": 0.28636427583999313
+    },
+    {
+      "step": 116,
+      "batch_indices": [
+        10,
+        19,
+        18,
+        11,
+        11,
+        14,
+        12,
+        8
+      ],
+      "batch_loss_before_update": 0.27371518481751866
+    },
+    {
+      "step": 117,
+      "batch_indices": [
+        20,
+        7,
+        21,
+        18,
+        12,
+        12,
+        9,
+        6
+      ],
+      "batch_loss_before_update": 0.23206294902374439
+    },
+    {
+      "step": 118,
+      "batch_indices": [
+        16,
+        23,
+        2,
+        10,
+        3,
+        3,
+        12,
+        3
+      ],
+      "batch_loss_before_update": 0.22509291179106633
+    },
+    {
+      "step": 119,
+      "batch_indices": [
+        4,
+        16,
+        17,
+        8,
+        1,
+        11,
+        18,
+        1
+      ],
+      "batch_loss_before_update": 0.2621474731648992
+    },
+    {
+      "step": 120,
+      "batch_indices": [
+        13,
+        9,
+        0,
+        12,
+        9,
+        16,
+        5,
+        5
+      ],
+      "batch_loss_before_update": 0.2874980725987646
+    },
+    {
+      "step": 121,
+      "batch_indices": [
+        1,
+        17,
+        12,
+        20,
+        6,
+        21,
+        8,
+        5
+      ],
+      "batch_loss_before_update": 0.24737010096448359
+    },
+    {
+      "step": 122,
+      "batch_indices": [
+        12,
+        19,
+        17,
+        2,
+        20,
+        0,
+        9,
+        5
+      ],
+      "batch_loss_before_update": 0.26430163454572503
+    },
+    {
+      "step": 123,
+      "batch_indices": [
+        12,
+        14,
+        5,
+        6,
+        19,
+        20,
+        6,
+        12
+      ],
+      "batch_loss_before_update": 0.22685074757272433
+    },
+    {
+      "step": 124,
+      "batch_indices": [
+        3,
+        15,
+        5,
+        8,
+        18,
+        1,
+        7,
+        19
+      ],
+      "batch_loss_before_update": 0.2645388291906092
+    },
+    {
+      "step": 125,
+      "batch_indices": [
+        14,
+        15,
+        4,
+        18,
+        6,
+        1,
+        21,
+        2
+      ],
+      "batch_loss_before_update": 0.3148675045682085
+    },
+    {
+      "step": 126,
+      "batch_indices": [
+        19,
+        22,
+        14,
+        19,
+        11,
+        9,
+        8,
+        8
+      ],
+      "batch_loss_before_update": 0.28567989797227306
+    },
+    {
+      "step": 127,
+      "batch_indices": [
+        2,
+        21,
+        19,
+        14,
+        12,
+        19,
+        9,
+        14
+      ],
+      "batch_loss_before_update": 0.20926185826872307
+    },
+    {
+      "step": 128,
+      "batch_indices": [
+        10,
+        17,
+        5,
+        13,
+        4,
+        13,
+        9,
+        5
+      ],
+      "batch_loss_before_update": 0.31114756246115016
+    },
+    {
+      "step": 129,
+      "batch_indices": [
+        9,
+        4,
+        22,
+        6,
+        21,
+        14,
+        2,
+        9
+      ],
+      "batch_loss_before_update": 0.29673613857125913
+    },
+    {
+      "step": 130,
+      "batch_indices": [
+        21,
+        16,
+        10,
+        16,
+        16,
+        1,
+        4,
+        2
+      ],
+      "batch_loss_before_update": 0.38422494628059894
+    },
+    {
+      "step": 131,
+      "batch_indices": [
+        5,
+        4,
+        21,
+        22,
+        14,
+        7,
+        17,
+        18
+      ],
+      "batch_loss_before_update": 0.27688753419496065
+    },
+    {
+      "step": 132,
+      "batch_indices": [
+        11,
+        16,
+        14,
+        21,
+        22,
+        20,
+        2,
+        16
+      ],
+      "batch_loss_before_update": 0.26494782313185516
+    },
+    {
+      "step": 133,
+      "batch_indices": [
+        3,
+        5,
+        20,
+        14,
+        21,
+        14,
+        19,
+        12
+      ],
+      "batch_loss_before_update": 0.26864240113365956
+    },
+    {
+      "step": 134,
+      "batch_indices": [
+        14,
+        17,
+        1,
+        23,
+        7,
+        10,
+        22,
+        13
+      ],
+      "batch_loss_before_update": 0.27383024740527295
+    },
+    {
+      "step": 135,
+      "batch_indices": [
+        5,
+        15,
+        23,
+        6,
+        6,
+        0,
+        16,
+        9
+      ],
+      "batch_loss_before_update": 0.2861675179459594
+    },
+    {
+      "step": 136,
+      "batch_indices": [
+        21,
+        0,
+        7,
+        11,
+        18,
+        22,
+        3,
+        7
+      ],
+      "batch_loss_before_update": 0.29094867960674814
+    },
+    {
+      "step": 137,
+      "batch_indices": [
+        13,
+        8,
+        5,
+        20,
+        7,
+        20,
+        19,
+        22
+      ],
+      "batch_loss_before_update": 0.21111487557825576
+    },
+    {
+      "step": 138,
+      "batch_indices": [
+        12,
+        4,
+        21,
+        5,
+        21,
+        6,
+        3,
+        4
+      ],
+      "batch_loss_before_update": 0.25187197797973027
+    },
+    {
+      "step": 139,
+      "batch_indices": [
+        4,
+        6,
+        5,
+        6,
+        0,
+        3,
+        15,
+        11
+      ],
+      "batch_loss_before_update": 0.2643109328125127
+    },
+    {
+      "step": 140,
+      "batch_indices": [
+        11,
+        1,
+        17,
+        11,
+        16,
+        20,
+        11,
+        7
+      ],
+      "batch_loss_before_update": 0.24921463005971034
+    },
+    {
+      "step": 141,
+      "batch_indices": [
+        11,
+        5,
+        19,
+        7,
+        6,
+        5,
+        14,
+        16
+      ],
+      "batch_loss_before_update": 0.23322546214310416
+    },
+    {
+      "step": 142,
+      "batch_indices": [
+        11,
+        10,
+        11,
+        8,
+        14,
+        0,
+        1,
+        5
+      ],
+      "batch_loss_before_update": 0.25903643108964014
+    },
+    {
+      "step": 143,
+      "batch_indices": [
+        7,
+        19,
+        3,
+        8,
+        7,
+        13,
+        17,
+        7
+      ],
+      "batch_loss_before_update": 0.2201421344363668
+    },
+    {
+      "step": 144,
+      "batch_indices": [
+        5,
+        7,
+        22,
+        9,
+        2,
+        20,
+        17,
+        4
+      ],
+      "batch_loss_before_update": 0.22819310268221485
+    },
+    {
+      "step": 145,
+      "batch_indices": [
+        11,
+        6,
+        14,
+        20,
+        23,
+        2,
+        20,
+        13
+      ],
+      "batch_loss_before_update": 0.21862029361446475
+    },
+    {
+      "step": 146,
+      "batch_indices": [
+        1,
+        9,
+        14,
+        7,
+        3,
+        3,
+        3,
+        0
+      ],
+      "batch_loss_before_update": 0.22495666438621725
+    },
+    {
+      "step": 147,
+      "batch_indices": [
+        15,
+        0,
+        10,
+        4,
+        8,
+        8,
+        1,
+        8
+      ],
+      "batch_loss_before_update": 0.2964613419442388
+    },
+    {
+      "step": 148,
+      "batch_indices": [
+        8,
+        18,
+        6,
+        22,
+        9,
+        2,
+        9,
+        16
+      ],
+      "batch_loss_before_update": 0.2628810472263406
+    },
+    {
+      "step": 149,
+      "batch_indices": [
+        14,
+        13,
+        12,
+        8,
+        17,
+        14,
+        3,
+        1
+      ],
+      "batch_loss_before_update": 0.20656114537357548
+    },
+    {
+      "step": 150,
+      "batch_indices": [
+        22,
+        19,
+        5,
+        1,
+        8,
+        20,
+        0,
+        12
+      ],
+      "batch_loss_before_update": 0.20137708799272722
+    },
+    {
+      "step": 151,
+      "batch_indices": [
+        6,
+        12,
+        23,
+        11,
+        22,
+        16,
+        20,
+        5
+      ],
+      "batch_loss_before_update": 0.21176219846068114
+    },
+    {
+      "step": 152,
+      "batch_indices": [
+        16,
+        18,
+        4,
+        14,
+        3,
+        20,
+        9,
+        7
+      ],
+      "batch_loss_before_update": 0.21466962625266756
+    },
+    {
+      "step": 153,
+      "batch_indices": [
+        18,
+        6,
+        14,
+        10,
+        18,
+        18,
+        9,
+        9
+      ],
+      "batch_loss_before_update": 0.21009739765504495
+    },
+    {
+      "step": 154,
+      "batch_indices": [
+        12,
+        22,
+        16,
+        14,
+        21,
+        7,
+        14,
+        2
+      ],
+      "batch_loss_before_update": 0.22207167906459363
+    },
+    {
+      "step": 155,
+      "batch_indices": [
+        19,
+        12,
+        1,
+        13,
+        12,
+        2,
+        1,
+        23
+      ],
+      "batch_loss_before_update": 0.20325421350936226
+    },
+    {
+      "step": 156,
+      "batch_indices": [
+        19,
+        6,
+        17,
+        18,
+        22,
+        15,
+        2,
+        19
+      ],
+      "batch_loss_before_update": 0.2178271897385995
+    },
+    {
+      "step": 157,
+      "batch_indices": [
+        8,
+        17,
+        11,
+        19,
+        15,
+        22,
+        23,
+        8
+      ],
+      "batch_loss_before_update": 0.2217817798473876
+    },
+    {
+      "step": 158,
+      "batch_indices": [
+        16,
+        22,
+        9,
+        22,
+        22,
+        10,
+        18,
+        16
+      ],
+      "batch_loss_before_update": 0.18627268729228266
+    },
+    {
+      "step": 159,
+      "batch_indices": [
+        6,
+        17,
+        14,
+        12,
+        8,
+        14,
+        11,
+        22
+      ],
+      "batch_loss_before_update": 0.18168697157312436
+    },
+    {
+      "step": 160,
+      "batch_indices": [
+        7,
+        7,
+        3,
+        3,
+        1,
+        9,
+        15,
+        23
+      ],
+      "batch_loss_before_update": 0.28998031606425073
+    },
+    {
+      "step": 161,
+      "batch_indices": [
+        15,
+        15,
+        5,
+        10,
+        16,
+        4,
+        7,
+        2
+      ],
+      "batch_loss_before_update": 0.24472893174055924
+    },
+    {
+      "step": 162,
+      "batch_indices": [
+        20,
+        12,
+        7,
+        16,
+        7,
+        13,
+        13,
+        6
+      ],
+      "batch_loss_before_update": 0.20002977979774053
+    },
+    {
+      "step": 163,
+      "batch_indices": [
+        16,
+        6,
+        22,
+        22,
+        6,
+        10,
+        20,
+        5
+      ],
+      "batch_loss_before_update": 0.1784869224176522
+    },
+    {
+      "step": 164,
+      "batch_indices": [
+        23,
+        23,
+        18,
+        15,
+        0,
+        23,
+        10,
+        2
+      ],
+      "batch_loss_before_update": 0.22219890272657855
+    },
+    {
+      "step": 165,
+      "batch_indices": [
+        15,
+        14,
+        2,
+        9,
+        14,
+        21,
+        10,
+        18
+      ],
+      "batch_loss_before_update": 0.3355703084697306
+    },
+    {
+      "step": 166,
+      "batch_indices": [
+        19,
+        17,
+        22,
+        10,
+        7,
+        21,
+        23,
+        14
+      ],
+      "batch_loss_before_update": 0.205487832136517
+    },
+    {
+      "step": 167,
+      "batch_indices": [
+        20,
+        6,
+        10,
+        9,
+        2,
+        6,
+        23,
+        21
+      ],
+      "batch_loss_before_update": 0.20749481275223575
+    },
+    {
+      "step": 168,
+      "batch_indices": [
+        11,
+        0,
+        12,
+        8,
+        5,
+        20,
+        18,
+        4
+      ],
+      "batch_loss_before_update": 0.21801091376887924
+    },
+    {
+      "step": 169,
+      "batch_indices": [
+        15,
+        6,
+        4,
+        17,
+        18,
+        8,
+        22,
+        9
+      ],
+      "batch_loss_before_update": 0.22100960803462244
+    },
+    {
+      "step": 170,
+      "batch_indices": [
+        15,
+        13,
+        6,
+        17,
+        15,
+        2,
+        8,
+        23
+      ],
+      "batch_loss_before_update": 0.18884884117287684
+    },
+    {
+      "step": 171,
+      "batch_indices": [
+        7,
+        23,
+        14,
+        7,
+        6,
+        13,
+        23,
+        20
+      ],
+      "batch_loss_before_update": 0.20033209188101825
+    },
+    {
+      "step": 172,
+      "batch_indices": [
+        1,
+        23,
+        23,
+        1,
+        8,
+        18,
+        21,
+        6
+      ],
+      "batch_loss_before_update": 0.23045481279578095
+    },
+    {
+      "step": 173,
+      "batch_indices": [
+        10,
+        13,
+        7,
+        16,
+        15,
+        19,
+        13,
+        17
+      ],
+      "batch_loss_before_update": 0.1710487641282047
+    },
+    {
+      "step": 174,
+      "batch_indices": [
+        3,
+        8,
+        7,
+        12,
+        7,
+        21,
+        17,
+        18
+      ],
+      "batch_loss_before_update": 0.21389110601462155
+    },
+    {
+      "step": 175,
+      "batch_indices": [
+        0,
+        7,
+        22,
+        23,
+        17,
+        8,
+        2,
+        1
+      ],
+      "batch_loss_before_update": 0.21984446023434237
+    },
+    {
+      "step": 176,
+      "batch_indices": [
+        8,
+        23,
+        10,
+        8,
+        21,
+        7,
+        10,
+        12
+      ],
+      "batch_loss_before_update": 0.18463571922607924
+    },
+    {
+      "step": 177,
+      "batch_indices": [
+        14,
+        8,
+        2,
+        10,
+        19,
+        12,
+        13,
+        18
+      ],
+      "batch_loss_before_update": 0.1860839350855892
+    },
+    {
+      "step": 178,
+      "batch_indices": [
+        20,
+        15,
+        20,
+        21,
+        4,
+        13,
+        9,
+        9
+      ],
+      "batch_loss_before_update": 0.20777227889222533
+    },
+    {
+      "step": 179,
+      "batch_indices": [
+        8,
+        22,
+        10,
+        4,
+        21,
+        7,
+        18,
+        18
+      ],
+      "batch_loss_before_update": 0.2056743940023896
+    },
+    {
+      "step": 180,
+      "batch_indices": [
+        11,
+        23,
+        10,
+        18,
+        5,
+        0,
+        13,
+        18
+      ],
+      "batch_loss_before_update": 0.23463101243117426
+    },
+    {
+      "step": 181,
+      "batch_indices": [
+        16,
+        23,
+        19,
+        17,
+        22,
+        10,
+        13,
+        12
+      ],
+      "batch_loss_before_update": 0.16255579028397119
+    },
+    {
+      "step": 182,
+      "batch_indices": [
+        7,
+        2,
+        21,
+        6,
+        17,
+        5,
+        18,
+        18
+      ],
+      "batch_loss_before_update": 0.22025731570213147
+    },
+    {
+      "step": 183,
+      "batch_indices": [
+        16,
+        19,
+        5,
+        9,
+        19,
+        15,
+        20,
+        22
+      ],
+      "batch_loss_before_update": 0.19529854084444187
+    },
+    {
+      "step": 184,
+      "batch_indices": [
+        20,
+        11,
+        16,
+        16,
+        11,
+        18,
+        2,
+        3
+      ],
+      "batch_loss_before_update": 0.2020923063114847
+    },
+    {
+      "step": 185,
+      "batch_indices": [
+        14,
+        12,
+        22,
+        16,
+        7,
+        15,
+        10,
+        22
+      ],
+      "batch_loss_before_update": 0.18825082498196316
+    },
+    {
+      "step": 186,
+      "batch_indices": [
+        21,
+        19,
+        6,
+        0,
+        8,
+        15,
+        18,
+        17
+      ],
+      "batch_loss_before_update": 0.20454081747673591
+    },
+    {
+      "step": 187,
+      "batch_indices": [
+        21,
+        2,
+        5,
+        13,
+        21,
+        7,
+        5,
+        1
+      ],
+      "batch_loss_before_update": 0.2153498139381344
+    },
+    {
+      "step": 188,
+      "batch_indices": [
+        20,
+        10,
+        16,
+        17,
+        4,
+        14,
+        1,
+        0
+      ],
+      "batch_loss_before_update": 0.22301531220643422
+    },
+    {
+      "step": 189,
+      "batch_indices": [
+        4,
+        10,
+        10,
+        10,
+        23,
+        7,
+        17,
+        18
+      ],
+      "batch_loss_before_update": 0.16640705979689127
+    },
+    {
+      "step": 190,
+      "batch_indices": [
+        22,
+        21,
+        14,
+        6,
+        11,
+        10,
+        1,
+        9
+      ],
+      "batch_loss_before_update": 0.20698813884649478
+    },
+    {
+      "step": 191,
+      "batch_indices": [
+        12,
+        15,
+        4,
+        15,
+        2,
+        12,
+        14,
+        5
+      ],
+      "batch_loss_before_update": 0.20976680039653983
+    },
+    {
+      "step": 192,
+      "batch_indices": [
+        13,
+        14,
+        9,
+        20,
+        9,
+        17,
+        21,
+        4
+      ],
+      "batch_loss_before_update": 0.19476498278989643
+    },
+    {
+      "step": 193,
+      "batch_indices": [
+        13,
+        8,
+        21,
+        17,
+        19,
+        16,
+        23,
+        13
+      ],
+      "batch_loss_before_update": 0.17960739132668668
+    },
+    {
+      "step": 194,
+      "batch_indices": [
+        23,
+        15,
+        11,
+        12,
+        13,
+        7,
+        14,
+        9
+      ],
+      "batch_loss_before_update": 0.18639455643306888
+    },
+    {
+      "step": 195,
+      "batch_indices": [
+        13,
+        16,
+        6,
+        22,
+        5,
+        12,
+        15,
+        20
+      ],
+      "batch_loss_before_update": 0.15935604611989998
+    },
+    {
+      "step": 196,
+      "batch_indices": [
+        7,
+        11,
+        22,
+        14,
+        8,
+        21,
+        17,
+        9
+      ],
+      "batch_loss_before_update": 0.19001917536266644
+    },
+    {
+      "step": 197,
+      "batch_indices": [
+        18,
+        23,
+        15,
+        23,
+        10,
+        0,
+        22,
+        4
+      ],
+      "batch_loss_before_update": 0.20116328098226463
+    },
+    {
+      "step": 198,
+      "batch_indices": [
+        4,
+        23,
+        12,
+        0,
+        9,
+        10,
+        6,
+        9
+      ],
+      "batch_loss_before_update": 0.18544702035581187
+    },
+    {
+      "step": 199,
+      "batch_indices": [
+        1,
+        9,
+        23,
+        2,
+        7,
+        16,
+        7,
+        1
+      ],
+      "batch_loss_before_update": 0.20305406897490955
+    },
+    {
+      "step": 200,
+      "batch_indices": [
+        14,
+        19,
+        11,
+        10,
+        1,
+        15,
+        3,
+        8
+      ],
+      "batch_loss_before_update": 0.1935443615549792
+    },
+    {
+      "step": 201,
+      "batch_indices": [
+        7,
+        21,
+        16,
+        17,
+        6,
+        15,
+        5,
+        6
+      ],
+      "batch_loss_before_update": 0.20637084514629436
+    },
+    {
+      "step": 202,
+      "batch_indices": [
+        19,
+        16,
+        3,
+        6,
+        13,
+        5,
+        22,
+        19
+      ],
+      "batch_loss_before_update": 0.18434866796010557
+    },
+    {
+      "step": 203,
+      "batch_indices": [
+        20,
+        12,
+        1,
+        17,
+        13,
+        11,
+        23,
+        20
+      ],
+      "batch_loss_before_update": 0.14490595410414328
+    },
+    {
+      "step": 204,
+      "batch_indices": [
+        13,
+        22,
+        15,
+        19,
+        10,
+        23,
+        20,
+        9
+      ],
+      "batch_loss_before_update": 0.15716465436780558
+    },
+    {
+      "step": 205,
+      "batch_indices": [
+        15,
+        12,
+        6,
+        19,
+        16,
+        8,
+        14,
+        18
+      ],
+      "batch_loss_before_update": 0.17197543251488273
+    },
+    {
+      "step": 206,
+      "batch_indices": [
+        3,
+        23,
+        3,
+        16,
+        2,
+        16,
+        19,
+        20
+      ],
+      "batch_loss_before_update": 0.18015576449001047
+    },
+    {
+      "step": 207,
+      "batch_indices": [
+        11,
+        6,
+        20,
+        17,
+        16,
+        22,
+        21,
+        8
+      ],
+      "batch_loss_before_update": 0.1737263265341154
+    },
+    {
+      "step": 208,
+      "batch_indices": [
+        23,
+        8,
+        6,
+        17,
+        2,
+        7,
+        6,
+        7
+      ],
+      "batch_loss_before_update": 0.18081164773443167
+    },
+    {
+      "step": 209,
+      "batch_indices": [
+        13,
+        18,
+        10,
+        14,
+        6,
+        21,
+        17,
+        13
+      ],
+      "batch_loss_before_update": 0.16000493990571266
+    },
+    {
+      "step": 210,
+      "batch_indices": [
+        7,
+        16,
+        1,
+        15,
+        2,
+        21,
+        2,
+        23
+      ],
+      "batch_loss_before_update": 0.20747789782303105
+    },
+    {
+      "step": 211,
+      "batch_indices": [
+        1,
+        4,
+        14,
+        7,
+        16,
+        13,
+        9,
+        17
+      ],
+      "batch_loss_before_update": 0.175370573608988
+    },
+    {
+      "step": 212,
+      "batch_indices": [
+        7,
+        1,
+        1,
+        2,
+        16,
+        14,
+        0,
+        20
+      ],
+      "batch_loss_before_update": 0.2024991984075098
+    },
+    {
+      "step": 213,
+      "batch_indices": [
+        17,
+        8,
+        3,
+        9,
+        16,
+        3,
+        1,
+        13
+      ],
+      "batch_loss_before_update": 0.16276457365780284
+    },
+    {
+      "step": 214,
+      "batch_indices": [
+        5,
+        5,
+        13,
+        0,
+        2,
+        6,
+        10,
+        8
+      ],
+      "batch_loss_before_update": 0.1982926318907975
+    },
+    {
+      "step": 215,
+      "batch_indices": [
+        23,
+        14,
+        22,
+        20,
+        0,
+        3,
+        0,
+        9
+      ],
+      "batch_loss_before_update": 0.18732138785468955
+    },
+    {
+      "step": 216,
+      "batch_indices": [
+        22,
+        21,
+        5,
+        9,
+        7,
+        16,
+        20,
+        23
+      ],
+      "batch_loss_before_update": 0.1730530250150804
+    },
+    {
+      "step": 217,
+      "batch_indices": [
+        5,
+        15,
+        0,
+        16,
+        21,
+        18,
+        3,
+        23
+      ],
+      "batch_loss_before_update": 0.1924486246413413
+    },
+    {
+      "step": 218,
+      "batch_indices": [
+        13,
+        11,
+        10,
+        9,
+        23,
+        23,
+        4,
+        0
+      ],
+      "batch_loss_before_update": 0.16753920377853693
+    },
+    {
+      "step": 219,
+      "batch_indices": [
+        23,
+        7,
+        16,
+        17,
+        7,
+        0,
+        9,
+        0
+      ],
+      "batch_loss_before_update": 0.15475877959138998
+    },
+    {
+      "step": 220,
+      "batch_indices": [
+        21,
+        3,
+        23,
+        17,
+        13,
+        19,
+        3,
+        7
+      ],
+      "batch_loss_before_update": 0.1585413637718255
+    },
+    {
+      "step": 221,
+      "batch_indices": [
+        15,
+        15,
+        18,
+        19,
+        18,
+        13,
+        7,
+        6
+      ],
+      "batch_loss_before_update": 0.2042722154513821
+    },
+    {
+      "step": 222,
+      "batch_indices": [
+        0,
+        15,
+        1,
+        17,
+        22,
+        23,
+        4,
+        11
+      ],
+      "batch_loss_before_update": 0.18423683141628291
+    },
+    {
+      "step": 223,
+      "batch_indices": [
+        10,
+        4,
+        21,
+        7,
+        10,
+        6,
+        12,
+        15
+      ],
+      "batch_loss_before_update": 0.2142218389603777
+    },
+    {
+      "step": 224,
+      "batch_indices": [
+        14,
+        3,
+        1,
+        15,
+        14,
+        15,
+        9,
+        0
+      ],
+      "batch_loss_before_update": 0.21776579541044916
+    },
+    {
+      "step": 225,
+      "batch_indices": [
+        12,
+        20,
+        6,
+        7,
+        16,
+        1,
+        2,
+        2
+      ],
+      "batch_loss_before_update": 0.1872363212491794
+    },
+    {
+      "step": 226,
+      "batch_indices": [
+        18,
+        17,
+        15,
+        22,
+        22,
+        20,
+        5,
+        18
+      ],
+      "batch_loss_before_update": 0.15396865769810597
+    },
+    {
+      "step": 227,
+      "batch_indices": [
+        2,
+        14,
+        23,
+        7,
+        1,
+        13,
+        21,
+        20
+      ],
+      "batch_loss_before_update": 0.17331198387624855
+    },
+    {
+      "step": 228,
+      "batch_indices": [
+        17,
+        15,
+        11,
+        11,
+        21,
+        9,
+        1,
+        13
+      ],
+      "batch_loss_before_update": 0.17579749731197591
+    },
+    {
+      "step": 229,
+      "batch_indices": [
+        11,
+        5,
+        23,
+        21,
+        5,
+        13,
+        5,
+        13
+      ],
+      "batch_loss_before_update": 0.16767036533898513
+    },
+    {
+      "step": 230,
+      "batch_indices": [
+        20,
+        21,
+        23,
+        0,
+        22,
+        16,
+        17,
+        3
+      ],
+      "batch_loss_before_update": 0.20130130199210294
+    },
+    {
+      "step": 231,
+      "batch_indices": [
+        16,
+        23,
+        12,
+        15,
+        18,
+        9,
+        19,
+        8
+      ],
+      "batch_loss_before_update": 0.1577000670551392
+    },
+    {
+      "step": 232,
+      "batch_indices": [
+        21,
+        18,
+        23,
+        17,
+        7,
+        22,
+        16,
+        11
+      ],
+      "batch_loss_before_update": 0.15574349152519396
+    },
+    {
+      "step": 233,
+      "batch_indices": [
+        5,
+        5,
+        22,
+        16,
+        2,
+        21,
+        0,
+        2
+      ],
+      "batch_loss_before_update": 0.1906695306503359
+    },
+    {
+      "step": 234,
+      "batch_indices": [
+        23,
+        12,
+        13,
+        15,
+        11,
+        13,
+        9,
+        21
+      ],
+      "batch_loss_before_update": 0.13255191741640224
+    },
+    {
+      "step": 235,
+      "batch_indices": [
+        10,
+        2,
+        5,
+        9,
+        19,
+        9,
+        5,
+        10
+      ],
+      "batch_loss_before_update": 0.1858021238241362
+    },
+    {
+      "step": 236,
+      "batch_indices": [
+        6,
+        20,
+        18,
+        8,
+        3,
+        17,
+        12,
+        12
+      ],
+      "batch_loss_before_update": 0.16096843159901564
+    },
+    {
+      "step": 237,
+      "batch_indices": [
+        3,
+        19,
+        5,
+        11,
+        11,
+        11,
+        8,
+        2
+      ],
+      "batch_loss_before_update": 0.1623135401950232
+    },
+    {
+      "step": 238,
+      "batch_indices": [
+        0,
+        10,
+        0,
+        10,
+        11,
+        11,
+        0,
+        7
+      ],
+      "batch_loss_before_update": 0.16709505005193862
+    },
+    {
+      "step": 239,
+      "batch_indices": [
+        14,
+        22,
+        19,
+        20,
+        19,
+        21,
+        10,
+        11
+      ],
+      "batch_loss_before_update": 0.15606018597740565
+    },
+    {
+      "step": 240,
+      "batch_indices": [
+        14,
+        18,
+        11,
+        8,
+        10,
+        20,
+        13,
+        4
+      ],
+      "batch_loss_before_update": 0.17943800674858681
+    },
+    {
+      "step": 241,
+      "batch_indices": [
+        16,
+        4,
+        6,
+        6,
+        15,
+        12,
+        12,
+        22
+      ],
+      "batch_loss_before_update": 0.18647920771355656
+    },
+    {
+      "step": 242,
+      "batch_indices": [
+        19,
+        14,
+        19,
+        16,
+        20,
+        1,
+        8,
+        12
+      ],
+      "batch_loss_before_update": 0.18534646123708257
+    },
+    {
+      "step": 243,
+      "batch_indices": [
+        4,
+        19,
+        9,
+        18,
+        14,
+        7,
+        10,
+        8
+      ],
+      "batch_loss_before_update": 0.19451203512228976
+    },
+    {
+      "step": 244,
+      "batch_indices": [
+        21,
+        6,
+        19,
+        21,
+        3,
+        5,
+        10,
+        8
+      ],
+      "batch_loss_before_update": 0.17261961775313808
+    },
+    {
+      "step": 245,
+      "batch_indices": [
+        4,
+        3,
+        8,
+        23,
+        21,
+        9,
+        0,
+        23
+      ],
+      "batch_loss_before_update": 0.20392603210637508
+    },
+    {
+      "step": 246,
+      "batch_indices": [
+        0,
+        18,
+        5,
+        12,
+        20,
+        9,
+        16,
+        11
+      ],
+      "batch_loss_before_update": 0.15306356386922093
+    },
+    {
+      "step": 247,
+      "batch_indices": [
+        0,
+        0,
+        10,
+        5,
+        22,
+        19,
+        7,
+        23
+      ],
+      "batch_loss_before_update": 0.17527521183783065
+    },
+    {
+      "step": 248,
+      "batch_indices": [
+        20,
+        20,
+        21,
+        16,
+        20,
+        12,
+        8,
+        13
+      ],
+      "batch_loss_before_update": 0.12939167524505266
+    },
+    {
+      "step": 249,
+      "batch_indices": [
+        2,
+        14,
+        17,
+        2,
+        21,
+        2,
+        8,
+        15
+      ],
+      "batch_loss_before_update": 0.21297257907248202
+    },
+    {
+      "step": 250,
+      "batch_indices": [
+        6,
+        16,
+        21,
+        21,
+        19,
+        14,
+        19,
+        18
+      ],
+      "batch_loss_before_update": 0.15678609688386771
+    },
+    {
+      "step": 251,
+      "batch_indices": [
+        8,
+        19,
+        13,
+        14,
+        20,
+        23,
+        13,
+        16
+      ],
+      "batch_loss_before_update": 0.14132791287455385
+    },
+    {
+      "step": 252,
+      "batch_indices": [
+        16,
+        19,
+        17,
+        3,
+        22,
+        5,
+        10,
+        18
+      ],
+      "batch_loss_before_update": 0.16375135122138137
+    },
+    {
+      "step": 253,
+      "batch_indices": [
+        2,
+        3,
+        2,
+        20,
+        20,
+        15,
+        5,
+        20
+      ],
+      "batch_loss_before_update": 0.1753116136906783
+    },
+    {
+      "step": 254,
+      "batch_indices": [
+        4,
+        7,
+        3,
+        1,
+        1,
+        6,
+        4,
+        9
+      ],
+      "batch_loss_before_update": 0.24953334462075086
+    },
+    {
+      "step": 255,
+      "batch_indices": [
+        22,
+        16,
+        17,
+        19,
+        13,
+        9,
+        7,
+        15
+      ],
+      "batch_loss_before_update": 0.1695104725211966
+    },
+    {
+      "step": 256,
+      "batch_indices": [
+        2,
+        3,
+        23,
+        11,
+        21,
+        23,
+        1,
+        14
+      ],
+      "batch_loss_before_update": 0.19968604633645834
+    },
+    {
+      "step": 257,
+      "batch_indices": [
+        15,
+        22,
+        9,
+        20,
+        21,
+        20,
+        7,
+        15
+      ],
+      "batch_loss_before_update": 0.1812242283729981
+    },
+    {
+      "step": 258,
+      "batch_indices": [
+        21,
+        18,
+        19,
+        3,
+        9,
+        5,
+        14,
+        22
+      ],
+      "batch_loss_before_update": 0.15996375227886026
+    },
+    {
+      "step": 259,
+      "batch_indices": [
+        0,
+        0,
+        5,
+        8,
+        3,
+        11,
+        18,
+        17
+      ],
+      "batch_loss_before_update": 0.20343204956024397
+    },
+    {
+      "step": 260,
+      "batch_indices": [
+        4,
+        20,
+        8,
+        6,
+        17,
+        3,
+        23,
+        21
+      ],
+      "batch_loss_before_update": 0.18453320394754397
+    },
+    {
+      "step": 261,
+      "batch_indices": [
+        14,
+        21,
+        16,
+        1,
+        7,
+        23,
+        17,
+        6
+      ],
+      "batch_loss_before_update": 0.18383822077916154
+    },
+    {
+      "step": 262,
+      "batch_indices": [
+        4,
+        5,
+        23,
+        8,
+        0,
+        15,
+        1,
+        9
+      ],
+      "batch_loss_before_update": 0.20327632400178866
+    },
+    {
+      "step": 263,
+      "batch_indices": [
+        23,
+        23,
+        20,
+        13,
+        19,
+        23,
+        20,
+        10
+      ],
+      "batch_loss_before_update": 0.14297290115918607
+    },
+    {
+      "step": 264,
+      "batch_indices": [
+        20,
+        5,
+        8,
+        19,
+        0,
+        6,
+        17,
+        21
+      ],
+      "batch_loss_before_update": 0.17344975288482448
+    },
+    {
+      "step": 265,
+      "batch_indices": [
+        2,
+        17,
+        19,
+        2,
+        8,
+        9,
+        12,
+        5
+      ],
+      "batch_loss_before_update": 0.1836513688319067
+    },
+    {
+      "step": 266,
+      "batch_indices": [
+        10,
+        21,
+        8,
+        15,
+        22,
+        2,
+        0,
+        14
+      ],
+      "batch_loss_before_update": 0.19554639858407902
+    },
+    {
+      "step": 267,
+      "batch_indices": [
+        4,
+        5,
+        19,
+        14,
+        9,
+        12,
+        18,
+        13
+      ],
+      "batch_loss_before_update": 0.17903754577860717
+    },
+    {
+      "step": 268,
+      "batch_indices": [
+        19,
+        18,
+        7,
+        12,
+        14,
+        6,
+        21,
+        0
+      ],
+      "batch_loss_before_update": 0.18141330688966426
+    },
+    {
+      "step": 269,
+      "batch_indices": [
+        22,
+        19,
+        19,
+        17,
+        23,
+        21,
+        0,
+        20
+      ],
+      "batch_loss_before_update": 0.12626559240341256
+    },
+    {
+      "step": 270,
+      "batch_indices": [
+        11,
+        0,
+        0,
+        8,
+        11,
+        13,
+        7,
+        11
+      ],
+      "batch_loss_before_update": 0.17736188071327186
+    },
+    {
+      "step": 271,
+      "batch_indices": [
+        15,
+        14,
+        18,
+        1,
+        16,
+        12,
+        6,
+        16
+      ],
+      "batch_loss_before_update": 0.18741246735454994
+    },
+    {
+      "step": 272,
+      "batch_indices": [
+        8,
+        5,
+        0,
+        18,
+        1,
+        12,
+        21,
+        11
+      ],
+      "batch_loss_before_update": 0.17190617934856753
+    },
+    {
+      "step": 273,
+      "batch_indices": [
+        3,
+        2,
+        5,
+        13,
+        3,
+        8,
+        3,
+        23
+      ],
+      "batch_loss_before_update": 0.23567723167620752
+    },
+    {
+      "step": 274,
+      "batch_indices": [
+        15,
+        14,
+        6,
+        16,
+        15,
+        14,
+        0,
+        10
+      ],
+      "batch_loss_before_update": 0.1819059087799284
+    },
+    {
+      "step": 275,
+      "batch_indices": [
+        10,
+        7,
+        7,
+        0,
+        5,
+        3,
+        13,
+        19
+      ],
+      "batch_loss_before_update": 0.17694056634427305
+    },
+    {
+      "step": 276,
+      "batch_indices": [
+        22,
+        3,
+        17,
+        2,
+        7,
+        5,
+        21,
+        3
+      ],
+      "batch_loss_before_update": 0.21085194372023314
+    },
+    {
+      "step": 277,
+      "batch_indices": [
+        7,
+        23,
+        1,
+        18,
+        17,
+        19,
+        3,
+        7
+      ],
+      "batch_loss_before_update": 0.16080174410892453
+    },
+    {
+      "step": 278,
+      "batch_indices": [
+        9,
+        3,
+        6,
+        4,
+        18,
+        21,
+        5,
+        7
+      ],
+      "batch_loss_before_update": 0.17777964809627866
+    },
+    {
+      "step": 279,
+      "batch_indices": [
+        4,
+        19,
+        23,
+        18,
+        16,
+        17,
+        18,
+        4
+      ],
+      "batch_loss_before_update": 0.18194541516545598
+    },
+    {
+      "step": 280,
+      "batch_indices": [
+        10,
+        21,
+        1,
+        17,
+        22,
+        6,
+        5,
+        18
+      ],
+      "batch_loss_before_update": 0.18042974366273734
+    },
+    {
+      "step": 281,
+      "batch_indices": [
+        15,
+        16,
+        6,
+        15,
+        4,
+        12,
+        2,
+        22
+      ],
+      "batch_loss_before_update": 0.17171423687234036
+    },
+    {
+      "step": 282,
+      "batch_indices": [
+        11,
+        5,
+        2,
+        0,
+        15,
+        13,
+        20,
+        9
+      ],
+      "batch_loss_before_update": 0.18504968513382503
+    },
+    {
+      "step": 283,
+      "batch_indices": [
+        3,
+        0,
+        3,
+        8,
+        12,
+        10,
+        20,
+        0
+      ],
+      "batch_loss_before_update": 0.1762224091105748
+    },
+    {
+      "step": 284,
+      "batch_indices": [
+        14,
+        20,
+        12,
+        6,
+        16,
+        19,
+        18,
+        9
+      ],
+      "batch_loss_before_update": 0.16630757523877493
+    },
+    {
+      "step": 285,
+      "batch_indices": [
+        0,
+        7,
+        13,
+        10,
+        9,
+        20,
+        15,
+        22
+      ],
+      "batch_loss_before_update": 0.181455211269052
+    },
+    {
+      "step": 286,
+      "batch_indices": [
+        22,
+        12,
+        8,
+        22,
+        15,
+        1,
+        2,
+        7
+      ],
+      "batch_loss_before_update": 0.17383231038328614
+    },
+    {
+      "step": 287,
+      "batch_indices": [
+        8,
+        10,
+        7,
+        22,
+        4,
+        6,
+        11,
+        20
+      ],
+      "batch_loss_before_update": 0.16378172394195548
+    },
+    {
+      "step": 288,
+      "batch_indices": [
+        20,
+        13,
+        1,
+        6,
+        5,
+        5,
+        17,
+        18
+      ],
+      "batch_loss_before_update": 0.14695735664051573
+    },
+    {
+      "step": 289,
+      "batch_indices": [
+        22,
+        14,
+        21,
+        23,
+        20,
+        9,
+        4,
+        18
+      ],
+      "batch_loss_before_update": 0.18727353062238764
+    },
+    {
+      "step": 290,
+      "batch_indices": [
+        20,
+        20,
+        14,
+        6,
+        5,
+        20,
+        13,
+        4
+      ],
+      "batch_loss_before_update": 0.14896912299391982
+    },
+    {
+      "step": 291,
+      "batch_indices": [
+        5,
+        18,
+        7,
+        6,
+        4,
+        16,
+        7,
+        19
+      ],
+      "batch_loss_before_update": 0.1532058011845685
+    },
+    {
+      "step": 292,
+      "batch_indices": [
+        10,
+        2,
+        16,
+        12,
+        3,
+        14,
+        14,
+        0
+      ],
+      "batch_loss_before_update": 0.18421498128714392
+    },
+    {
+      "step": 293,
+      "batch_indices": [
+        4,
+        4,
+        14,
+        10,
+        22,
+        4,
+        16,
+        19
+      ],
+      "batch_loss_before_update": 0.16501427194022503
+    },
+    {
+      "step": 294,
+      "batch_indices": [
+        13,
+        16,
+        23,
+        9,
+        3,
+        4,
+        9,
+        7
+      ],
+      "batch_loss_before_update": 0.1735541187811829
+    },
+    {
+      "step": 295,
+      "batch_indices": [
+        5,
+        5,
+        13,
+        12,
+        3,
+        21,
+        10,
+        22
+      ],
+      "batch_loss_before_update": 0.1639203650835841
+    },
+    {
+      "step": 296,
+      "batch_indices": [
+        5,
+        6,
+        10,
+        11,
+        7,
+        20,
+        8,
+        9
+      ],
+      "batch_loss_before_update": 0.16227789906808796
+    },
+    {
+      "step": 297,
+      "batch_indices": [
+        13,
+        3,
+        8,
+        14,
+        9,
+        2,
+        7,
+        6
+      ],
+      "batch_loss_before_update": 0.1723301435898031
+    },
+    {
+      "step": 298,
+      "batch_indices": [
+        6,
+        14,
+        13,
+        11,
+        18,
+        11,
+        22,
+        18
+      ],
+      "batch_loss_before_update": 0.13806076485595953
+    },
+    {
+      "step": 299,
+      "batch_indices": [
+        3,
+        2,
+        18,
+        18,
+        23,
+        22,
+        2,
+        1
+      ],
+      "batch_loss_before_update": 0.17649926031213461
+    },
+    {
+      "step": 300,
+      "batch_indices": [
+        11,
+        21,
+        9,
+        21,
+        17,
+        15,
+        1,
+        20
+      ],
+      "batch_loss_before_update": 0.20068208907609675
+    },
+    {
+      "step": 301,
+      "batch_indices": [
+        12,
+        16,
+        9,
+        15,
+        22,
+        6,
+        3,
+        1
+      ],
+      "batch_loss_before_update": 0.17280904760175986
+    },
+    {
+      "step": 302,
+      "batch_indices": [
+        22,
+        21,
+        15,
+        11,
+        17,
+        18,
+        8,
+        12
+      ],
+      "batch_loss_before_update": 0.16800985747101663
+    },
+    {
+      "step": 303,
+      "batch_indices": [
+        17,
+        7,
+        18,
+        4,
+        3,
+        16,
+        11,
+        1
+      ],
+      "batch_loss_before_update": 0.17147198529315946
+    },
+    {
+      "step": 304,
+      "batch_indices": [
+        18,
+        5,
+        16,
+        6,
+        9,
+        1,
+        23,
+        3
+      ],
+      "batch_loss_before_update": 0.1666912463970035
+    },
+    {
+      "step": 305,
+      "batch_indices": [
+        19,
+        7,
+        8,
+        20,
+        13,
+        15,
+        17,
+        1
+      ],
+      "batch_loss_before_update": 0.16438494349422803
+    },
+    {
+      "step": 306,
+      "batch_indices": [
+        15,
+        22,
+        16,
+        3,
+        17,
+        21,
+        0,
+        8
+      ],
+      "batch_loss_before_update": 0.1802676444098338
+    },
+    {
+      "step": 307,
+      "batch_indices": [
+        12,
+        8,
+        1,
+        21,
+        14,
+        11,
+        19,
+        5
+      ],
+      "batch_loss_before_update": 0.15566922364198915
+    },
+    {
+      "step": 308,
+      "batch_indices": [
+        19,
+        23,
+        5,
+        13,
+        23,
+        22,
+        16,
+        8
+      ],
+      "batch_loss_before_update": 0.16750759875155677
+    },
+    {
+      "step": 309,
+      "batch_indices": [
+        21,
+        6,
+        15,
+        14,
+        19,
+        17,
+        23,
+        0
+      ],
+      "batch_loss_before_update": 0.1957067680372577
+    },
+    {
+      "step": 310,
+      "batch_indices": [
+        11,
+        7,
+        21,
+        23,
+        21,
+        11,
+        19,
+        11
+      ],
+      "batch_loss_before_update": 0.1468148240386306
+    },
+    {
+      "step": 311,
+      "batch_indices": [
+        21,
+        12,
+        14,
+        19,
+        19,
+        2,
+        4,
+        18
+      ],
+      "batch_loss_before_update": 0.1632926474030096
+    },
+    {
+      "step": 312,
+      "batch_indices": [
+        19,
+        3,
+        4,
+        9,
+        3,
+        13,
+        2,
+        4
+      ],
+      "batch_loss_before_update": 0.1805234292895464
+    },
+    {
+      "step": 313,
+      "batch_indices": [
+        9,
+        12,
+        22,
+        16,
+        11,
+        8,
+        20,
+        3
+      ],
+      "batch_loss_before_update": 0.16029529923675548
+    },
+    {
+      "step": 314,
+      "batch_indices": [
+        6,
+        2,
+        10,
+        10,
+        0,
+        7,
+        5,
+        15
+      ],
+      "batch_loss_before_update": 0.21300327884905504
+    },
+    {
+      "step": 315,
+      "batch_indices": [
+        5,
+        8,
+        18,
+        3,
+        20,
+        23,
+        22,
+        4
+      ],
+      "batch_loss_before_update": 0.1779024661744472
+    },
+    {
+      "step": 316,
+      "batch_indices": [
+        7,
+        8,
+        2,
+        13,
+        16,
+        0,
+        0,
+        5
+      ],
+      "batch_loss_before_update": 0.1913921637916061
+    },
+    {
+      "step": 317,
+      "batch_indices": [
+        3,
+        9,
+        21,
+        11,
+        10,
+        14,
+        22,
+        17
+      ],
+      "batch_loss_before_update": 0.1738020328740638
+    },
+    {
+      "step": 318,
+      "batch_indices": [
+        20,
+        12,
+        16,
+        7,
+        9,
+        20,
+        11,
+        7
+      ],
+      "batch_loss_before_update": 0.17662146518764657
+    },
+    {
+      "step": 319,
+      "batch_indices": [
+        20,
+        21,
+        19,
+        14,
+        6,
+        9,
+        19,
+        22
+      ],
+      "batch_loss_before_update": 0.16867605099032196
+    },
+    {
+      "step": 320,
+      "batch_indices": [
+        4,
+        1,
+        9,
+        21,
+        19,
+        14,
+        7,
+        12
+      ],
+      "batch_loss_before_update": 0.2050135027694661
+    },
+    {
+      "step": 321,
+      "batch_indices": [
+        13,
+        2,
+        14,
+        22,
+        8,
+        19,
+        14,
+        17
+      ],
+      "batch_loss_before_update": 0.1622017538679326
+    },
+    {
+      "step": 322,
+      "batch_indices": [
+        15,
+        12,
+        2,
+        23,
+        10,
+        17,
+        12,
+        17
+      ],
+      "batch_loss_before_update": 0.14539311743001004
+    },
+    {
+      "step": 323,
+      "batch_indices": [
+        8,
+        0,
+        7,
+        16,
+        7,
+        12,
+        17,
+        1
+      ],
+      "batch_loss_before_update": 0.16857883863645556
+    },
+    {
+      "step": 324,
+      "batch_indices": [
+        11,
+        17,
+        0,
+        13,
+        7,
+        17,
+        8,
+        10
+      ],
+      "batch_loss_before_update": 0.1407648704427681
+    },
+    {
+      "step": 325,
+      "batch_indices": [
+        3,
+        9,
+        5,
+        18,
+        14,
+        1,
+        5,
+        13
+      ],
+      "batch_loss_before_update": 0.1881666697221484
+    },
+    {
+      "step": 326,
+      "batch_indices": [
+        4,
+        23,
+        3,
+        12,
+        21,
+        1,
+        9,
+        20
+      ],
+      "batch_loss_before_update": 0.1808540390138876
+    },
+    {
+      "step": 327,
+      "batch_indices": [
+        0,
+        23,
+        22,
+        11,
+        5,
+        11,
+        5,
+        3
+      ],
+      "batch_loss_before_update": 0.17205669849570893
+    },
+    {
+      "step": 328,
+      "batch_indices": [
+        0,
+        10,
+        8,
+        10,
+        11,
+        11,
+        16,
+        4
+      ],
+      "batch_loss_before_update": 0.16887254231298188
+    },
+    {
+      "step": 329,
+      "batch_indices": [
+        0,
+        19,
+        7,
+        9,
+        20,
+        6,
+        13,
+        4
+      ],
+      "batch_loss_before_update": 0.16208671250940493
+    },
+    {
+      "step": 330,
+      "batch_indices": [
+        11,
+        22,
+        23,
+        10,
+        5,
+        1,
+        16,
+        4
+      ],
+      "batch_loss_before_update": 0.16634416846959862
+    },
+    {
+      "step": 331,
+      "batch_indices": [
+        1,
+        3,
+        15,
+        8,
+        1,
+        14,
+        2,
+        23
+      ],
+      "batch_loss_before_update": 0.19125460529280408
+    },
+    {
+      "step": 332,
+      "batch_indices": [
+        16,
+        20,
+        1,
+        14,
+        6,
+        6,
+        20,
+        22
+      ],
+      "batch_loss_before_update": 0.17290248395068675
+    },
+    {
+      "step": 333,
+      "batch_indices": [
+        17,
+        10,
+        0,
+        20,
+        16,
+        0,
+        13,
+        20
+      ],
+      "batch_loss_before_update": 0.15528479560664943
+    },
+    {
+      "step": 334,
+      "batch_indices": [
+        5,
+        6,
+        18,
+        11,
+        0,
+        11,
+        16,
+        3
+      ],
+      "batch_loss_before_update": 0.1682763500428628
+    },
+    {
+      "step": 335,
+      "batch_indices": [
+        21,
+        23,
+        15,
+        0,
+        12,
+        12,
+        19,
+        16
+      ],
+      "batch_loss_before_update": 0.18147603268298373
+    },
+    {
+      "step": 336,
+      "batch_indices": [
+        19,
+        17,
+        11,
+        3,
+        20,
+        14,
+        2,
+        2
+      ],
+      "batch_loss_before_update": 0.16652201823265325
+    },
+    {
+      "step": 337,
+      "batch_indices": [
+        2,
+        15,
+        15,
+        15,
+        10,
+        3,
+        23,
+        11
+      ],
+      "batch_loss_before_update": 0.19043751879695722
+    },
+    {
+      "step": 338,
+      "batch_indices": [
+        17,
+        0,
+        18,
+        6,
+        7,
+        6,
+        19,
+        23
+      ],
+      "batch_loss_before_update": 0.170037455459612
+    },
+    {
+      "step": 339,
+      "batch_indices": [
+        2,
+        22,
+        23,
+        18,
+        0,
+        18,
+        20,
+        21
+      ],
+      "batch_loss_before_update": 0.17210093197971899
+    },
+    {
+      "step": 340,
+      "batch_indices": [
+        18,
+        3,
+        20,
+        20,
+        2,
+        16,
+        22,
+        15
+      ],
+      "batch_loss_before_update": 0.15153171695549955
+    },
+    {
+      "step": 341,
+      "batch_indices": [
+        1,
+        6,
+        17,
+        4,
+        1,
+        18,
+        13,
+        17
+      ],
+      "batch_loss_before_update": 0.1546381494401851
+    },
+    {
+      "step": 342,
+      "batch_indices": [
+        5,
+        8,
+        6,
+        22,
+        2,
+        22,
+        12,
+        1
+      ],
+      "batch_loss_before_update": 0.16966528759264768
+    },
+    {
+      "step": 343,
+      "batch_indices": [
+        10,
+        10,
+        9,
+        15,
+        18,
+        7,
+        3,
+        21
+      ],
+      "batch_loss_before_update": 0.1809515309472784
+    },
+    {
+      "step": 344,
+      "batch_indices": [
+        4,
+        21,
+        6,
+        6,
+        18,
+        11,
+        4,
+        5
+      ],
+      "batch_loss_before_update": 0.18635511542342056
+    },
+    {
+      "step": 345,
+      "batch_indices": [
+        8,
+        21,
+        10,
+        10,
+        11,
+        22,
+        17,
+        10
+      ],
+      "batch_loss_before_update": 0.15027105348274328
+    },
+    {
+      "step": 346,
+      "batch_indices": [
+        8,
+        13,
+        20,
+        0,
+        9,
+        15,
+        8,
+        14
+      ],
+      "batch_loss_before_update": 0.19350588401315208
+    },
+    {
+      "step": 347,
+      "batch_indices": [
+        19,
+        0,
+        11,
+        23,
+        20,
+        11,
+        12,
+        7
+      ],
+      "batch_loss_before_update": 0.14203767701469214
+    },
+    {
+      "step": 348,
+      "batch_indices": [
+        10,
+        20,
+        20,
+        10,
+        18,
+        2,
+        21,
+        17
+      ],
+      "batch_loss_before_update": 0.127587923689801
+    },
+    {
+      "step": 349,
+      "batch_indices": [
+        16,
+        4,
+        7,
+        4,
+        6,
+        3,
+        21,
+        11
+      ],
+      "batch_loss_before_update": 0.17070106364796148
+    },
+    {
+      "step": 350,
+      "batch_indices": [
+        6,
+        9,
+        22,
+        3,
+        12,
+        0,
+        15,
+        9
+      ],
+      "batch_loss_before_update": 0.17460933165642187
+    },
+    {
+      "step": 351,
+      "batch_indices": [
+        23,
+        4,
+        0,
+        8,
+        11,
+        11,
+        1,
+        21
+      ],
+      "batch_loss_before_update": 0.18485114120229498
+    },
+    {
+      "step": 352,
+      "batch_indices": [
+        6,
+        13,
+        21,
+        15,
+        20,
+        6,
+        19,
+        7
+      ],
+      "batch_loss_before_update": 0.14138559371504728
+    },
+    {
+      "step": 353,
+      "batch_indices": [
+        18,
+        22,
+        17,
+        9,
+        3,
+        3,
+        17,
+        2
+      ],
+      "batch_loss_before_update": 0.15541537884763745
+    },
+    {
+      "step": 354,
+      "batch_indices": [
+        20,
+        9,
+        21,
+        8,
+        1,
+        7,
+        16,
+        17
+      ],
+      "batch_loss_before_update": 0.17697376492582131
+    },
+    {
+      "step": 355,
+      "batch_indices": [
+        1,
+        18,
+        5,
+        21,
+        2,
+        9,
+        15,
+        19
+      ],
+      "batch_loss_before_update": 0.18185129042765186
+    },
+    {
+      "step": 356,
+      "batch_indices": [
+        15,
+        19,
+        17,
+        15,
+        16,
+        7,
+        0,
+        18
+      ],
+      "batch_loss_before_update": 0.15335662065770436
+    },
+    {
+      "step": 357,
+      "batch_indices": [
+        21,
+        2,
+        3,
+        5,
+        4,
+        0,
+        5,
+        6
+      ],
+      "batch_loss_before_update": 0.19983999387537754
+    },
+    {
+      "step": 358,
+      "batch_indices": [
+        21,
+        23,
+        16,
+        6,
+        20,
+        1,
+        1,
+        9
+      ],
+      "batch_loss_before_update": 0.17759566469269308
+    },
+    {
+      "step": 359,
+      "batch_indices": [
+        6,
+        7,
+        23,
+        11,
+        15,
+        1,
+        7,
+        7
+      ],
+      "batch_loss_before_update": 0.1666469367405551
+    },
+    {
+      "step": 360,
+      "batch_indices": [
+        11,
+        0,
+        11,
+        11,
+        12,
+        7,
+        16,
+        19
+      ],
+      "batch_loss_before_update": 0.13345035011328646
+    },
+    {
+      "step": 361,
+      "batch_indices": [
+        10,
+        4,
+        18,
+        8,
+        8,
+        10,
+        6,
+        8
+      ],
+      "batch_loss_before_update": 0.22229816027293378
+    },
+    {
+      "step": 362,
+      "batch_indices": [
+        7,
+        17,
+        17,
+        18,
+        20,
+        2,
+        16,
+        19
+      ],
+      "batch_loss_before_update": 0.1380434907003936
+    },
+    {
+      "step": 363,
+      "batch_indices": [
+        14,
+        21,
+        7,
+        0,
+        12,
+        21,
+        8,
+        11
+      ],
+      "batch_loss_before_update": 0.1934897358216499
+    },
+    {
+      "step": 364,
+      "batch_indices": [
+        13,
+        9,
+        5,
+        16,
+        4,
+        18,
+        18,
+        7
+      ],
+      "batch_loss_before_update": 0.14622003833984684
+    },
+    {
+      "step": 365,
+      "batch_indices": [
+        17,
+        18,
+        8,
+        2,
+        10,
+        16,
+        14,
+        5
+      ],
+      "batch_loss_before_update": 0.17586907757104475
+    },
+    {
+      "step": 366,
+      "batch_indices": [
+        3,
+        6,
+        1,
+        22,
+        4,
+        23,
+        12,
+        22
+      ],
+      "batch_loss_before_update": 0.16715664171255415
+    },
+    {
+      "step": 367,
+      "batch_indices": [
+        12,
+        17,
+        7,
+        18,
+        23,
+        5,
+        4,
+        14
+      ],
+      "batch_loss_before_update": 0.1583485897807453
+    },
+    {
+      "step": 368,
+      "batch_indices": [
+        1,
+        9,
+        5,
+        23,
+        13,
+        2,
+        1,
+        21
+      ],
+      "batch_loss_before_update": 0.1892947531031632
+    },
+    {
+      "step": 369,
+      "batch_indices": [
+        13,
+        19,
+        12,
+        20,
+        3,
+        0,
+        9,
+        1
+      ],
+      "batch_loss_before_update": 0.16086527479534488
+    },
+    {
+      "step": 370,
+      "batch_indices": [
+        18,
+        22,
+        5,
+        7,
+        1,
+        19,
+        15,
+        1
+      ],
+      "batch_loss_before_update": 0.15392551406686678
+    },
+    {
+      "step": 371,
+      "batch_indices": [
+        10,
+        0,
+        17,
+        4,
+        4,
+        22,
+        17,
+        10
+      ],
+      "batch_loss_before_update": 0.15334094682573962
+    },
+    {
+      "step": 372,
+      "batch_indices": [
+        5,
+        7,
+        0,
+        17,
+        10,
+        17,
+        16,
+        16
+      ],
+      "batch_loss_before_update": 0.14831749788266194
+    },
+    {
+      "step": 373,
+      "batch_indices": [
+        15,
+        21,
+        8,
+        9,
+        7,
+        12,
+        6,
+        14
+      ],
+      "batch_loss_before_update": 0.19376637105353972
+    },
+    {
+      "step": 374,
+      "batch_indices": [
+        0,
+        8,
+        2,
+        19,
+        3,
+        23,
+        1,
+        5
+      ],
+      "batch_loss_before_update": 0.164100735885795
+    },
+    {
+      "step": 375,
+      "batch_indices": [
+        17,
+        18,
+        5,
+        20,
+        14,
+        1,
+        15,
+        0
+      ],
+      "batch_loss_before_update": 0.1610824728142507
+    },
+    {
+      "step": 376,
+      "batch_indices": [
+        0,
+        7,
+        15,
+        6,
+        15,
+        5,
+        12,
+        10
+      ],
+      "batch_loss_before_update": 0.17416616410852528
+    },
+    {
+      "step": 377,
+      "batch_indices": [
+        6,
+        11,
+        17,
+        6,
+        17,
+        14,
+        7,
+        11
+      ],
+      "batch_loss_before_update": 0.16480807609986575
+    },
+    {
+      "step": 378,
+      "batch_indices": [
+        20,
+        8,
+        1,
+        22,
+        2,
+        1,
+        23,
+        21
+      ],
+      "batch_loss_before_update": 0.17191659636250287
+    },
+    {
+      "step": 379,
+      "batch_indices": [
+        3,
+        17,
+        9,
+        2,
+        13,
+        21,
+        19,
+        15
+      ],
+      "batch_loss_before_update": 0.1635062213890001
+    },
+    {
+      "step": 380,
+      "batch_indices": [
+        0,
+        12,
+        6,
+        20,
+        22,
+        6,
+        12,
+        3
+      ],
+      "batch_loss_before_update": 0.13856836280891213
+    },
+    {
+      "step": 381,
+      "batch_indices": [
+        9,
+        1,
+        2,
+        7,
+        15,
+        23,
+        9,
+        6
+      ],
+      "batch_loss_before_update": 0.18683853836495148
+    },
+    {
+      "step": 382,
+      "batch_indices": [
+        20,
+        18,
+        15,
+        8,
+        19,
+        6,
+        22,
+        5
+      ],
+      "batch_loss_before_update": 0.16985060059132512
+    },
+    {
+      "step": 383,
+      "batch_indices": [
+        20,
+        0,
+        5,
+        23,
+        1,
+        10,
+        7,
+        11
+      ],
+      "batch_loss_before_update": 0.1587839627019807
+    },
+    {
+      "step": 384,
+      "batch_indices": [
+        18,
+        18,
+        0,
+        17,
+        21,
+        17,
+        19,
+        15
+      ],
+      "batch_loss_before_update": 0.15456829612266687
+    },
+    {
+      "step": 385,
+      "batch_indices": [
+        6,
+        4,
+        10,
+        7,
+        4,
+        7,
+        2,
+        9
+      ],
+      "batch_loss_before_update": 0.20291334253479595
+    },
+    {
+      "step": 386,
+      "batch_indices": [
+        11,
+        7,
+        20,
+        11,
+        1,
+        2,
+        22,
+        4
+      ],
+      "batch_loss_before_update": 0.1684010017495995
+    },
+    {
+      "step": 387,
+      "batch_indices": [
+        0,
+        13,
+        9,
+        4,
+        0,
+        16,
+        6,
+        1
+      ],
+      "batch_loss_before_update": 0.16973571657083972
+    },
+    {
+      "step": 388,
+      "batch_indices": [
+        10,
+        15,
+        18,
+        22,
+        20,
+        21,
+        17,
+        7
+      ],
+      "batch_loss_before_update": 0.15185596266571794
+    },
+    {
+      "step": 389,
+      "batch_indices": [
+        16,
+        3,
+        4,
+        16,
+        19,
+        21,
+        14,
+        5
+      ],
+      "batch_loss_before_update": 0.20880643694982715
+    },
+    {
+      "step": 390,
+      "batch_indices": [
+        18,
+        18,
+        14,
+        21,
+        23,
+        0,
+        4,
+        19
+      ],
+      "batch_loss_before_update": 0.18036675138850697
+    },
+    {
+      "step": 391,
+      "batch_indices": [
+        1,
+        17,
+        10,
+        3,
+        17,
+        17,
+        6,
+        19
+      ],
+      "batch_loss_before_update": 0.15828656602734476
+    },
+    {
+      "step": 392,
+      "batch_indices": [
+        11,
+        17,
+        10,
+        4,
+        4,
+        1,
+        16,
+        2
+      ],
+      "batch_loss_before_update": 0.1549269588186974
+    },
+    {
+      "step": 393,
+      "batch_indices": [
+        9,
+        15,
+        9,
+        11,
+        0,
+        23,
+        19,
+        4
+      ],
+      "batch_loss_before_update": 0.16802986637049155
+    },
+    {
+      "step": 394,
+      "batch_indices": [
+        12,
+        22,
+        11,
+        17,
+        14,
+        22,
+        12,
+        22
+      ],
+      "batch_loss_before_update": 0.14310061289986764
+    },
+    {
+      "step": 395,
+      "batch_indices": [
+        22,
+        5,
+        6,
+        22,
+        3,
+        2,
+        23,
+        12
+      ],
+      "batch_loss_before_update": 0.16656402035250725
+    },
+    {
+      "step": 396,
+      "batch_indices": [
+        22,
+        5,
+        1,
+        22,
+        10,
+        8,
+        10,
+        6
+      ],
+      "batch_loss_before_update": 0.15581414169105448
+    },
+    {
+      "step": 397,
+      "batch_indices": [
+        7,
+        5,
+        2,
+        5,
+        7,
+        17,
+        16,
+        5
+      ],
+      "batch_loss_before_update": 0.1994650272171404
+    },
+    {
+      "step": 398,
+      "batch_indices": [
+        2,
+        10,
+        7,
+        0,
+        5,
+        1,
+        9,
+        1
+      ],
+      "batch_loss_before_update": 0.19537847622324447
+    },
+    {
+      "step": 399,
+      "batch_indices": [
+        12,
+        9,
+        9,
+        12,
+        1,
+        17,
+        0,
+        11
+      ],
+      "batch_loss_before_update": 0.15021706157900727
+    },
+    {
+      "step": 400,
+      "batch_indices": [
+        3,
+        13,
+        11,
+        7,
+        16,
+        20,
+        1,
+        1
+      ],
+      "batch_loss_before_update": 0.16236369110009227
+    },
+    {
+      "step": 401,
+      "batch_indices": [
+        5,
+        9,
+        23,
+        20,
+        9,
+        8,
+        12,
+        9
+      ],
+      "batch_loss_before_update": 0.17447616856300882
+    },
+    {
+      "step": 402,
+      "batch_indices": [
+        12,
+        1,
+        15,
+        19,
+        13,
+        7,
+        18,
+        1
+      ],
+      "batch_loss_before_update": 0.15416823024581974
+    },
+    {
+      "step": 403,
+      "batch_indices": [
+        1,
+        4,
+        8,
+        3,
+        1,
+        23,
+        23,
+        9
+      ],
+      "batch_loss_before_update": 0.19490630144025448
+    },
+    {
+      "step": 404,
+      "batch_indices": [
+        8,
+        13,
+        15,
+        16,
+        2,
+        14,
+        6,
+        7
+      ],
+      "batch_loss_before_update": 0.21486125405158632
+    },
+    {
+      "step": 405,
+      "batch_indices": [
+        18,
+        12,
+        8,
+        10,
+        1,
+        23,
+        14,
+        6
+      ],
+      "batch_loss_before_update": 0.1809658979703875
+    },
+    {
+      "step": 406,
+      "batch_indices": [
+        13,
+        9,
+        0,
+        6,
+        19,
+        9,
+        16,
+        1
+      ],
+      "batch_loss_before_update": 0.14911824446476532
+    },
+    {
+      "step": 407,
+      "batch_indices": [
+        5,
+        20,
+        3,
+        8,
+        17,
+        0,
+        23,
+        10
+      ],
+      "batch_loss_before_update": 0.16329509799688596
+    },
+    {
+      "step": 408,
+      "batch_indices": [
+        0,
+        20,
+        17,
+        12,
+        4,
+        19,
+        10,
+        3
+      ],
+      "batch_loss_before_update": 0.15685273191429636
+    },
+    {
+      "step": 409,
+      "batch_indices": [
+        18,
+        23,
+        2,
+        5,
+        8,
+        10,
+        9,
+        0
+      ],
+      "batch_loss_before_update": 0.16720299875067307
+    },
+    {
+      "step": 410,
+      "batch_indices": [
+        10,
+        7,
+        0,
+        14,
+        3,
+        3,
+        11,
+        11
+      ],
+      "batch_loss_before_update": 0.17069165744733733
+    },
+    {
+      "step": 411,
+      "batch_indices": [
+        15,
+        2,
+        23,
+        19,
+        20,
+        4,
+        15,
+        1
+      ],
+      "batch_loss_before_update": 0.19139034017070958
+    },
+    {
+      "step": 412,
+      "batch_indices": [
+        9,
+        14,
+        0,
+        15,
+        11,
+        22,
+        18,
+        17
+      ],
+      "batch_loss_before_update": 0.1814947358286028
+    },
+    {
+      "step": 413,
+      "batch_indices": [
+        7,
+        0,
+        23,
+        0,
+        22,
+        3,
+        18,
+        14
+      ],
+      "batch_loss_before_update": 0.1722675396155573
+    },
+    {
+      "step": 414,
+      "batch_indices": [
+        23,
+        18,
+        13,
+        21,
+        11,
+        0,
+        23,
+        4
+      ],
+      "batch_loss_before_update": 0.18481042624040595
+    },
+    {
+      "step": 415,
+      "batch_indices": [
+        8,
+        3,
+        4,
+        18,
+        11,
+        14,
+        7,
+        17
+      ],
+      "batch_loss_before_update": 0.17164908196483972
+    },
+    {
+      "step": 416,
+      "batch_indices": [
+        9,
+        15,
+        16,
+        22,
+        19,
+        7,
+        10,
+        2
+      ],
+      "batch_loss_before_update": 0.17513861951370321
+    },
+    {
+      "step": 417,
+      "batch_indices": [
+        23,
+        23,
+        8,
+        14,
+        13,
+        19,
+        3,
+        3
+      ],
+      "batch_loss_before_update": 0.13651378020860416
+    },
+    {
+      "step": 418,
+      "batch_indices": [
+        5,
+        0,
+        0,
+        7,
+        10,
+        22,
+        17,
+        13
+      ],
+      "batch_loss_before_update": 0.15245667044438968
+    },
+    {
+      "step": 419,
+      "batch_indices": [
+        11,
+        12,
+        16,
+        4,
+        2,
+        19,
+        9,
+        14
+      ],
+      "batch_loss_before_update": 0.1677618145918947
+    },
+    {
+      "step": 420,
+      "batch_indices": [
+        8,
+        10,
+        14,
+        10,
+        0,
+        20,
+        9,
+        15
+      ],
+      "batch_loss_before_update": 0.15846680496538865
+    },
+    {
+      "step": 421,
+      "batch_indices": [
+        7,
+        16,
+        20,
+        8,
+        16,
+        20,
+        21,
+        0
+      ],
+      "batch_loss_before_update": 0.19904486065021657
+    },
+    {
+      "step": 422,
+      "batch_indices": [
+        19,
+        9,
+        3,
+        23,
+        12,
+        9,
+        2,
+        7
+      ],
+      "batch_loss_before_update": 0.1558078697041552
+    },
+    {
+      "step": 423,
+      "batch_indices": [
+        19,
+        14,
+        4,
+        23,
+        1,
+        13,
+        13,
+        17
+      ],
+      "batch_loss_before_update": 0.14271887560749716
+    },
+    {
+      "step": 424,
+      "batch_indices": [
+        16,
+        4,
+        2,
+        15,
+        23,
+        15,
+        18,
+        21
+      ],
+      "batch_loss_before_update": 0.20380456153637413
+    },
+    {
+      "step": 425,
+      "batch_indices": [
+        9,
+        20,
+        9,
+        12,
+        12,
+        15,
+        10,
+        22
+      ],
+      "batch_loss_before_update": 0.1431821942489227
+    },
+    {
+      "step": 426,
+      "batch_indices": [
+        9,
+        20,
+        12,
+        10,
+        23,
+        2,
+        10,
+        8
+      ],
+      "batch_loss_before_update": 0.14583666262813297
+    },
+    {
+      "step": 427,
+      "batch_indices": [
+        1,
+        8,
+        1,
+        4,
+        15,
+        20,
+        14,
+        14
+      ],
+      "batch_loss_before_update": 0.19967275477446364
+    },
+    {
+      "step": 428,
+      "batch_indices": [
+        7,
+        4,
+        1,
+        17,
+        18,
+        1,
+        18,
+        3
+      ],
+      "batch_loss_before_update": 0.15949270881846275
+    },
+    {
+      "step": 429,
+      "batch_indices": [
+        19,
+        22,
+        2,
+        13,
+        18,
+        1,
+        20,
+        1
+      ],
+      "batch_loss_before_update": 0.15565632850430053
+    },
+    {
+      "step": 430,
+      "batch_indices": [
+        10,
+        2,
+        1,
+        13,
+        3,
+        1,
+        13,
+        22
+      ],
+      "batch_loss_before_update": 0.16440111408256441
+    },
+    {
+      "step": 431,
+      "batch_indices": [
+        17,
+        21,
+        20,
+        2,
+        23,
+        18,
+        21,
+        22
+      ],
+      "batch_loss_before_update": 0.16678713962336408
+    },
+    {
+      "step": 432,
+      "batch_indices": [
+        8,
+        12,
+        0,
+        17,
+        6,
+        4,
+        2,
+        4
+      ],
+      "batch_loss_before_update": 0.17404803842451821
+    },
+    {
+      "step": 433,
+      "batch_indices": [
+        7,
+        11,
+        21,
+        23,
+        4,
+        16,
+        10,
+        4
+      ],
+      "batch_loss_before_update": 0.16514412079942692
+    },
+    {
+      "step": 434,
+      "batch_indices": [
+        1,
+        16,
+        18,
+        16,
+        4,
+        12,
+        14,
+        13
+      ],
+      "batch_loss_before_update": 0.13614155380803725
+    },
+    {
+      "step": 435,
+      "batch_indices": [
+        15,
+        22,
+        13,
+        21,
+        10,
+        15,
+        20,
+        14
+      ],
+      "batch_loss_before_update": 0.1539937646929966
+    },
+    {
+      "step": 436,
+      "batch_indices": [
+        1,
+        1,
+        13,
+        8,
+        11,
+        17,
+        6,
+        15
+      ],
+      "batch_loss_before_update": 0.16280678028785772
+    },
+    {
+      "step": 437,
+      "batch_indices": [
+        15,
+        0,
+        5,
+        17,
+        10,
+        23,
+        0,
+        17
+      ],
+      "batch_loss_before_update": 0.21036351297889203
+    },
+    {
+      "step": 438,
+      "batch_indices": [
+        8,
+        18,
+        8,
+        1,
+        17,
+        14,
+        9,
+        21
+      ],
+      "batch_loss_before_update": 0.17009266004283416
+    },
+    {
+      "step": 439,
+      "batch_indices": [
+        10,
+        3,
+        19,
+        19,
+        17,
+        13,
+        17,
+        15
+      ],
+      "batch_loss_before_update": 0.14445439360851847
+    },
+    {
+      "step": 440,
+      "batch_indices": [
+        16,
+        2,
+        14,
+        6,
+        6,
+        17,
+        14,
+        17
+      ],
+      "batch_loss_before_update": 0.1788613746163223
+    },
+    {
+      "step": 441,
+      "batch_indices": [
+        23,
+        13,
+        12,
+        5,
+        22,
+        0,
+        14,
+        16
+      ],
+      "batch_loss_before_update": 0.16992903197767306
+    },
+    {
+      "step": 442,
+      "batch_indices": [
+        8,
+        20,
+        12,
+        17,
+        11,
+        5,
+        4,
+        11
+      ],
+      "batch_loss_before_update": 0.17395236671578654
+    },
+    {
+      "step": 443,
+      "batch_indices": [
+        15,
+        2,
+        6,
+        13,
+        19,
+        0,
+        10,
+        15
+      ],
+      "batch_loss_before_update": 0.15817877093130794
+    },
+    {
+      "step": 444,
+      "batch_indices": [
+        19,
+        7,
+        17,
+        13,
+        12,
+        2,
+        9,
+        2
+      ],
+      "batch_loss_before_update": 0.15868740335070244
+    },
+    {
+      "step": 445,
+      "batch_indices": [
+        8,
+        18,
+        12,
+        5,
+        17,
+        3,
+        18,
+        21
+      ],
+      "batch_loss_before_update": 0.18150455942261506
+    },
+    {
+      "step": 446,
+      "batch_indices": [
+        5,
+        1,
+        6,
+        4,
+        18,
+        12,
+        11,
+        3
+      ],
+      "batch_loss_before_update": 0.1906338055708609
+    },
+    {
+      "step": 447,
+      "batch_indices": [
+        13,
+        13,
+        20,
+        19,
+        13,
+        2,
+        14,
+        8
+      ],
+      "batch_loss_before_update": 0.12036028053068358
+    },
+    {
+      "step": 448,
+      "batch_indices": [
+        8,
+        16,
+        16,
+        19,
+        9,
+        12,
+        2,
+        11
+      ],
+      "batch_loss_before_update": 0.14893433592675806
+    },
+    {
+      "step": 449,
+      "batch_indices": [
+        6,
+        4,
+        16,
+        13,
+        19,
+        0,
+        23,
+        19
+      ],
+      "batch_loss_before_update": 0.1488460633507702
+    },
+    {
+      "step": 450,
+      "batch_indices": [
+        0,
+        4,
+        9,
+        16,
+        20,
+        3,
+        10,
+        4
+      ],
+      "batch_loss_before_update": 0.18076779226297685
+    },
+    {
+      "step": 451,
+      "batch_indices": [
+        15,
+        21,
+        5,
+        8,
+        15,
+        21,
+        22,
+        3
+      ],
+      "batch_loss_before_update": 0.2084233801417372
+    },
+    {
+      "step": 452,
+      "batch_indices": [
+        20,
+        20,
+        9,
+        19,
+        0,
+        22,
+        20,
+        17
+      ],
+      "batch_loss_before_update": 0.14261984002818098
+    },
+    {
+      "step": 453,
+      "batch_indices": [
+        22,
+        4,
+        2,
+        8,
+        14,
+        9,
+        15,
+        1
+      ],
+      "batch_loss_before_update": 0.18936869615087754
+    },
+    {
+      "step": 454,
+      "batch_indices": [
+        21,
+        10,
+        13,
+        22,
+        6,
+        21,
+        6,
+        9
+      ],
+      "batch_loss_before_update": 0.1685206392292558
+    },
+    {
+      "step": 455,
+      "batch_indices": [
+        2,
+        6,
+        16,
+        17,
+        12,
+        13,
+        14,
+        18
+      ],
+      "batch_loss_before_update": 0.14254671648220707
+    },
+    {
+      "step": 456,
+      "batch_indices": [
+        9,
+        5,
+        3,
+        2,
+        6,
+        8,
+        10,
+        15
+      ],
+      "batch_loss_before_update": 0.15945053251260066
+    },
+    {
+      "step": 457,
+      "batch_indices": [
+        18,
+        23,
+        11,
+        0,
+        13,
+        3,
+        4,
+        18
+      ],
+      "batch_loss_before_update": 0.14441977383054108
+    },
+    {
+      "step": 458,
+      "batch_indices": [
+        15,
+        18,
+        19,
+        20,
+        4,
+        6,
+        12,
+        22
+      ],
+      "batch_loss_before_update": 0.14201243491466334
+    },
+    {
+      "step": 459,
+      "batch_indices": [
+        9,
+        13,
+        19,
+        12,
+        6,
+        19,
+        19,
+        9
+      ],
+      "batch_loss_before_update": 0.1383616774086753
+    },
+    {
+      "step": 460,
+      "batch_indices": [
+        23,
+        12,
+        18,
+        2,
+        8,
+        22,
+        19,
+        5
+      ],
+      "batch_loss_before_update": 0.1428636923758518
+    },
+    {
+      "step": 461,
+      "batch_indices": [
+        6,
+        9,
+        1,
+        12,
+        11,
+        2,
+        6,
+        10
+      ],
+      "batch_loss_before_update": 0.1518681620690848
+    },
+    {
+      "step": 462,
+      "batch_indices": [
+        15,
+        9,
+        15,
+        5,
+        8,
+        4,
+        2,
+        19
+      ],
+      "batch_loss_before_update": 0.16074449649660547
+    },
+    {
+      "step": 463,
+      "batch_indices": [
+        15,
+        4,
+        23,
+        0,
+        21,
+        20,
+        0,
+        7
+      ],
+      "batch_loss_before_update": 0.20851343254589028
+    },
+    {
+      "step": 464,
+      "batch_indices": [
+        14,
+        11,
+        3,
+        20,
+        16,
+        14,
+        1,
+        8
+      ],
+      "batch_loss_before_update": 0.19887115821341153
+    },
+    {
+      "step": 465,
+      "batch_indices": [
+        23,
+        1,
+        5,
+        9,
+        14,
+        9,
+        21,
+        15
+      ],
+      "batch_loss_before_update": 0.19642178149105188
+    },
+    {
+      "step": 466,
+      "batch_indices": [
+        18,
+        6,
+        20,
+        1,
+        17,
+        13,
+        17,
+        12
+      ],
+      "batch_loss_before_update": 0.14111090614303431
+    },
+    {
+      "step": 467,
+      "batch_indices": [
+        14,
+        18,
+        19,
+        13,
+        11,
+        13,
+        0,
+        1
+      ],
+      "batch_loss_before_update": 0.13951647216709168
+    },
+    {
+      "step": 468,
+      "batch_indices": [
+        12,
+        1,
+        17,
+        11,
+        13,
+        21,
+        16,
+        20
+      ],
+      "batch_loss_before_update": 0.14922115730988192
+    },
+    {
+      "step": 469,
+      "batch_indices": [
+        11,
+        23,
+        16,
+        8,
+        12,
+        3,
+        17,
+        2
+      ],
+      "batch_loss_before_update": 0.17567134035821605
+    },
+    {
+      "step": 470,
+      "batch_indices": [
+        19,
+        2,
+        11,
+        11,
+        6,
+        9,
+        6,
+        21
+      ],
+      "batch_loss_before_update": 0.150349358383144
+    },
+    {
+      "step": 471,
+      "batch_indices": [
+        9,
+        18,
+        6,
+        5,
+        7,
+        0,
+        10,
+        8
+      ],
+      "batch_loss_before_update": 0.169834157218739
+    },
+    {
+      "step": 472,
+      "batch_indices": [
+        6,
+        3,
+        8,
+        6,
+        0,
+        13,
+        11,
+        15
+      ],
+      "batch_loss_before_update": 0.15995750020081584
+    },
+    {
+      "step": 473,
+      "batch_indices": [
+        21,
+        14,
+        2,
+        9,
+        9,
+        7,
+        11,
+        0
+      ],
+      "batch_loss_before_update": 0.17753627147927026
+    },
+    {
+      "step": 474,
+      "batch_indices": [
+        18,
+        20,
+        11,
+        7,
+        14,
+        7,
+        23,
+        10
+      ],
+      "batch_loss_before_update": 0.1570584061120559
+    },
+    {
+      "step": 475,
+      "batch_indices": [
+        19,
+        0,
+        2,
+        18,
+        21,
+        6,
+        14,
+        21
+      ],
+      "batch_loss_before_update": 0.16614441266846564
+    },
+    {
+      "step": 476,
+      "batch_indices": [
+        10,
+        9,
+        23,
+        6,
+        16,
+        4,
+        13,
+        5
+      ],
+      "batch_loss_before_update": 0.17575518743587
+    },
+    {
+      "step": 477,
+      "batch_indices": [
+        15,
+        10,
+        0,
+        8,
+        2,
+        13,
+        5,
+        3
+      ],
+      "batch_loss_before_update": 0.17838618545111604
+    },
+    {
+      "step": 478,
+      "batch_indices": [
+        11,
+        17,
+        13,
+        10,
+        15,
+        16,
+        19,
+        15
+      ],
+      "batch_loss_before_update": 0.1382570576542203
+    },
+    {
+      "step": 479,
+      "batch_indices": [
+        21,
+        22,
+        7,
+        8,
+        23,
+        6,
+        6,
+        9
+      ],
+      "batch_loss_before_update": 0.17155481353755786
+    },
+    {
+      "step": 480,
+      "batch_indices": [
+        8,
+        11,
+        18,
+        13,
+        2,
+        6,
+        3,
+        1
+      ],
+      "batch_loss_before_update": 0.14910298133685165
+    },
+    {
+      "step": 481,
+      "batch_indices": [
+        20,
+        21,
+        2,
+        8,
+        15,
+        5,
+        1,
+        9
+      ],
+      "batch_loss_before_update": 0.1894830751576331
+    },
+    {
+      "step": 482,
+      "batch_indices": [
+        12,
+        4,
+        3,
+        10,
+        9,
+        11,
+        13,
+        0
+      ],
+      "batch_loss_before_update": 0.14729290666692915
+    },
+    {
+      "step": 483,
+      "batch_indices": [
+        7,
+        17,
+        4,
+        2,
+        19,
+        2,
+        23,
+        10
+      ],
+      "batch_loss_before_update": 0.1658281539702554
+    },
+    {
+      "step": 484,
+      "batch_indices": [
+        10,
+        3,
+        16,
+        21,
+        9,
+        1,
+        15,
+        1
+      ],
+      "batch_loss_before_update": 0.17425438564996878
+    },
+    {
+      "step": 485,
+      "batch_indices": [
+        14,
+        7,
+        22,
+        19,
+        17,
+        11,
+        2,
+        8
+      ],
+      "batch_loss_before_update": 0.17312042038802122
+    },
+    {
+      "step": 486,
+      "batch_indices": [
+        19,
+        8,
+        20,
+        18,
+        13,
+        9,
+        6,
+        18
+      ],
+      "batch_loss_before_update": 0.1443349926908222
+    },
+    {
+      "step": 487,
+      "batch_indices": [
+        16,
+        19,
+        4,
+        17,
+        9,
+        6,
+        1,
+        18
+      ],
+      "batch_loss_before_update": 0.16213248416296377
+    },
+    {
+      "step": 488,
+      "batch_indices": [
+        7,
+        10,
+        5,
+        21,
+        5,
+        11,
+        21,
+        3
+      ],
+      "batch_loss_before_update": 0.1711397939862177
+    },
+    {
+      "step": 489,
+      "batch_indices": [
+        16,
+        4,
+        22,
+        6,
+        2,
+        21,
+        18,
+        13
+      ],
+      "batch_loss_before_update": 0.15810162342306877
+    },
+    {
+      "step": 490,
+      "batch_indices": [
+        5,
+        5,
+        16,
+        19,
+        17,
+        13,
+        15,
+        12
+      ],
+      "batch_loss_before_update": 0.15041010996978113
+    },
+    {
+      "step": 491,
+      "batch_indices": [
+        19,
+        9,
+        17,
+        20,
+        18,
+        15,
+        20,
+        14
+      ],
+      "batch_loss_before_update": 0.15517647903631085
+    },
+    {
+      "step": 492,
+      "batch_indices": [
+        18,
+        14,
+        5,
+        17,
+        23,
+        12,
+        16,
+        16
+      ],
+      "batch_loss_before_update": 0.15633624312572483
+    },
+    {
+      "step": 493,
+      "batch_indices": [
+        11,
+        15,
+        18,
+        2,
+        11,
+        5,
+        12,
+        2
+      ],
+      "batch_loss_before_update": 0.14991144900113118
+    },
+    {
+      "step": 494,
+      "batch_indices": [
+        3,
+        4,
+        10,
+        15,
+        4,
+        6,
+        18,
+        11
+      ],
+      "batch_loss_before_update": 0.17311840252784075
+    },
+    {
+      "step": 495,
+      "batch_indices": [
+        9,
+        4,
+        17,
+        17,
+        8,
+        14,
+        7,
+        22
+      ],
+      "batch_loss_before_update": 0.16526932390268773
+    },
+    {
+      "step": 496,
+      "batch_indices": [
+        11,
+        2,
+        22,
+        12,
+        1,
+        7,
+        7,
+        5
+      ],
+      "batch_loss_before_update": 0.15140020298483034
+    },
+    {
+      "step": 497,
+      "batch_indices": [
+        23,
+        18,
+        12,
+        3,
+        5,
+        12,
+        23,
+        3
+      ],
+      "batch_loss_before_update": 0.14995865214704454
+    },
+    {
+      "step": 498,
+      "batch_indices": [
+        10,
+        6,
+        2,
+        13,
+        9,
+        21,
+        12,
+        11
+      ],
+      "batch_loss_before_update": 0.1556299817562944
+    },
+    {
+      "step": 499,
+      "batch_indices": [
+        20,
+        7,
+        7,
+        12,
+        6,
+        14,
+        22,
+        2
+      ],
+      "batch_loss_before_update": 0.14949736070486414
+    },
+    {
+      "step": 500,
+      "batch_indices": [
+        18,
+        22,
+        23,
+        8,
+        9,
+        16,
+        17,
+        1
+      ],
+      "batch_loss_before_update": 0.15516138754057393
+    },
+    {
+      "step": 501,
+      "batch_indices": [
+        20,
+        16,
+        10,
+        11,
+        5,
+        5,
+        14,
+        9
+      ],
+      "batch_loss_before_update": 0.15434837625423156
+    },
+    {
+      "step": 502,
+      "batch_indices": [
+        16,
+        1,
+        16,
+        14,
+        11,
+        6,
+        23,
+        0
+      ],
+      "batch_loss_before_update": 0.17923437216813506
+    },
+    {
+      "step": 503,
+      "batch_indices": [
+        6,
+        1,
+        22,
+        5,
+        4,
+        23,
+        6,
+        1
+      ],
+      "batch_loss_before_update": 0.17444484848429265
+    },
+    {
+      "step": 504,
+      "batch_indices": [
+        15,
+        0,
+        6,
+        8,
+        14,
+        16,
+        19,
+        3
+      ],
+      "batch_loss_before_update": 0.19768883377437843
+    },
+    {
+      "step": 505,
+      "batch_indices": [
+        11,
+        19,
+        19,
+        5,
+        6,
+        11,
+        0,
+        4
+      ],
+      "batch_loss_before_update": 0.1634171349367859
+    },
+    {
+      "step": 506,
+      "batch_indices": [
+        17,
+        1,
+        7,
+        14,
+        6,
+        10,
+        1,
+        11
+      ],
+      "batch_loss_before_update": 0.1568891588692878
+    },
+    {
+      "step": 507,
+      "batch_indices": [
+        12,
+        2,
+        21,
+        18,
+        23,
+        2,
+        10,
+        5
+      ],
+      "batch_loss_before_update": 0.15800183262481413
+    },
+    {
+      "step": 508,
+      "batch_indices": [
+        19,
+        6,
+        8,
+        9,
+        3,
+        21,
+        11,
+        7
+      ],
+      "batch_loss_before_update": 0.17698566577178665
+    },
+    {
+      "step": 509,
+      "batch_indices": [
+        0,
+        2,
+        0,
+        13,
+        18,
+        4,
+        10,
+        22
+      ],
+      "batch_loss_before_update": 0.17414100864440937
+    },
+    {
+      "step": 510,
+      "batch_indices": [
+        21,
+        15,
+        10,
+        13,
+        4,
+        9,
+        7,
+        11
+      ],
+      "batch_loss_before_update": 0.19042266959799237
+    },
+    {
+      "step": 511,
+      "batch_indices": [
+        0,
+        18,
+        15,
+        11,
+        15,
+        14,
+        0,
+        1
+      ],
+      "batch_loss_before_update": 0.16566980031351053
+    },
+    {
+      "step": 512,
+      "batch_indices": [
+        23,
+        22,
+        13,
+        17,
+        1,
+        21,
+        20,
+        3
+      ],
+      "batch_loss_before_update": 0.16669149497715702
+    },
+    {
+      "step": 513,
+      "batch_indices": [
+        15,
+        0,
+        2,
+        7,
+        23,
+        6,
+        17,
+        1
+      ],
+      "batch_loss_before_update": 0.1779184267941874
+    },
+    {
+      "step": 514,
+      "batch_indices": [
+        11,
+        15,
+        1,
+        21,
+        20,
+        1,
+        2,
+        1
+      ],
+      "batch_loss_before_update": 0.14837564674964732
+    },
+    {
+      "step": 515,
+      "batch_indices": [
+        17,
+        10,
+        23,
+        8,
+        8,
+        10,
+        0,
+        14
+      ],
+      "batch_loss_before_update": 0.16134501462060255
+    },
+    {
+      "step": 516,
+      "batch_indices": [
+        18,
+        16,
+        4,
+        13,
+        5,
+        0,
+        22,
+        2
+      ],
+      "batch_loss_before_update": 0.19640277557654495
+    },
+    {
+      "step": 517,
+      "batch_indices": [
+        2,
+        10,
+        1,
+        6,
+        13,
+        3,
+        14,
+        23
+      ],
+      "batch_loss_before_update": 0.15127327873466428
+    },
+    {
+      "step": 518,
+      "batch_indices": [
+        1,
+        1,
+        10,
+        20,
+        22,
+        8,
+        13,
+        21
+      ],
+      "batch_loss_before_update": 0.13558846679633443
+    },
+    {
+      "step": 519,
+      "batch_indices": [
+        19,
+        17,
+        2,
+        6,
+        6,
+        23,
+        8,
+        14
+      ],
+      "batch_loss_before_update": 0.17283800337427022
+    },
+    {
+      "step": 520,
+      "batch_indices": [
+        10,
+        14,
+        12,
+        1,
+        6,
+        8,
+        12,
+        1
+      ],
+      "batch_loss_before_update": 0.14805322992647546
+    },
+    {
+      "step": 521,
+      "batch_indices": [
+        21,
+        1,
+        17,
+        16,
+        5,
+        22,
+        16,
+        0
+      ],
+      "batch_loss_before_update": 0.1817279698500415
+    },
+    {
+      "step": 522,
+      "batch_indices": [
+        1,
+        8,
+        21,
+        11,
+        4,
+        2,
+        3,
+        22
+      ],
+      "batch_loss_before_update": 0.17862382769924887
+    },
+    {
+      "step": 523,
+      "batch_indices": [
+        18,
+        15,
+        19,
+        21,
+        10,
+        0,
+        12,
+        22
+      ],
+      "batch_loss_before_update": 0.1455953755749176
+    },
+    {
+      "step": 524,
+      "batch_indices": [
+        19,
+        20,
+        15,
+        5,
+        6,
+        22,
+        16,
+        13
+      ],
+      "batch_loss_before_update": 0.16199500886666984
+    },
+    {
+      "step": 525,
+      "batch_indices": [
+        12,
+        12,
+        19,
+        11,
+        13,
+        17,
+        14,
+        11
+      ],
+      "batch_loss_before_update": 0.1478507978284374
+    },
+    {
+      "step": 526,
+      "batch_indices": [
+        8,
+        0,
+        6,
+        15,
+        14,
+        20,
+        5,
+        20
+      ],
+      "batch_loss_before_update": 0.1792727637877853
+    },
+    {
+      "step": 527,
+      "batch_indices": [
+        12,
+        23,
+        22,
+        20,
+        5,
+        10,
+        2,
+        11
+      ],
+      "batch_loss_before_update": 0.15586059880733547
+    },
+    {
+      "step": 528,
+      "batch_indices": [
+        9,
+        11,
+        13,
+        19,
+        1,
+        9,
+        22,
+        0
+      ],
+      "batch_loss_before_update": 0.15774949736340244
+    },
+    {
+      "step": 529,
+      "batch_indices": [
+        16,
+        16,
+        22,
+        16,
+        0,
+        10,
+        7,
+        10
+      ],
+      "batch_loss_before_update": 0.1441996537367956
+    },
+    {
+      "step": 530,
+      "batch_indices": [
+        0,
+        5,
+        7,
+        0,
+        17,
+        1,
+        4,
+        0
+      ],
+      "batch_loss_before_update": 0.17954363455099961
+    },
+    {
+      "step": 531,
+      "batch_indices": [
+        22,
+        20,
+        9,
+        13,
+        1,
+        4,
+        5,
+        15
+      ],
+      "batch_loss_before_update": 0.15840125523721574
+    },
+    {
+      "step": 532,
+      "batch_indices": [
+        5,
+        12,
+        5,
+        4,
+        17,
+        11,
+        0,
+        15
+      ],
+      "batch_loss_before_update": 0.14829992843063972
+    },
+    {
+      "step": 533,
+      "batch_indices": [
+        21,
+        5,
+        10,
+        7,
+        21,
+        22,
+        14,
+        3
+      ],
+      "batch_loss_before_update": 0.191742517841913
+    },
+    {
+      "step": 534,
+      "batch_indices": [
+        8,
+        3,
+        6,
+        21,
+        2,
+        2,
+        9,
+        14
+      ],
+      "batch_loss_before_update": 0.21251653241981
+    },
+    {
+      "step": 535,
+      "batch_indices": [
+        13,
+        16,
+        19,
+        13,
+        16,
+        17,
+        7,
+        2
+      ],
+      "batch_loss_before_update": 0.13333196999876376
+    },
+    {
+      "step": 536,
+      "batch_indices": [
+        15,
+        3,
+        22,
+        19,
+        11,
+        0,
+        22,
+        2
+      ],
+      "batch_loss_before_update": 0.15168749088792657
+    },
+    {
+      "step": 537,
+      "batch_indices": [
+        12,
+        19,
+        20,
+        3,
+        14,
+        14,
+        21,
+        5
+      ],
+      "batch_loss_before_update": 0.15185290364474868
+    },
+    {
+      "step": 538,
+      "batch_indices": [
+        15,
+        11,
+        18,
+        20,
+        8,
+        19,
+        19,
+        22
+      ],
+      "batch_loss_before_update": 0.14501469019346203
+    },
+    {
+      "step": 539,
+      "batch_indices": [
+        21,
+        23,
+        22,
+        6,
+        15,
+        10,
+        16,
+        16
+      ],
+      "batch_loss_before_update": 0.1879362216539165
+    },
+    {
+      "step": 540,
+      "batch_indices": [
+        5,
+        19,
+        3,
+        17,
+        12,
+        19,
+        10,
+        5
+      ],
+      "batch_loss_before_update": 0.13351052391557627
+    },
+    {
+      "step": 541,
+      "batch_indices": [
+        19,
+        19,
+        1,
+        14,
+        7,
+        6,
+        0,
+        20
+      ],
+      "batch_loss_before_update": 0.17230115902744897
+    },
+    {
+      "step": 542,
+      "batch_indices": [
+        12,
+        6,
+        23,
+        15,
+        10,
+        10,
+        3,
+        0
+      ],
+      "batch_loss_before_update": 0.17860142210392102
+    },
+    {
+      "step": 543,
+      "batch_indices": [
+        4,
+        9,
+        4,
+        19,
+        18,
+        23,
+        2,
+        18
+      ],
+      "batch_loss_before_update": 0.18664992508156542
+    },
+    {
+      "step": 544,
+      "batch_indices": [
+        22,
+        7,
+        20,
+        2,
+        4,
+        13,
+        4,
+        7
+      ],
+      "batch_loss_before_update": 0.16351486067602686
+    },
+    {
+      "step": 545,
+      "batch_indices": [
+        17,
+        3,
+        17,
+        23,
+        23,
+        8,
+        7,
+        14
+      ],
+      "batch_loss_before_update": 0.1829792158448986
+    },
+    {
+      "step": 546,
+      "batch_indices": [
+        11,
+        16,
+        9,
+        15,
+        18,
+        4,
+        18,
+        18
+      ],
+      "batch_loss_before_update": 0.15351224358865403
+    },
+    {
+      "step": 547,
+      "batch_indices": [
+        0,
+        1,
+        20,
+        3,
+        14,
+        6,
+        22,
+        9
+      ],
+      "batch_loss_before_update": 0.17704581805202185
+    },
+    {
+      "step": 548,
+      "batch_indices": [
+        23,
+        9,
+        16,
+        21,
+        22,
+        11,
+        9,
+        13
+      ],
+      "batch_loss_before_update": 0.15691132005065594
+    },
+    {
+      "step": 549,
+      "batch_indices": [
+        23,
+        12,
+        3,
+        13,
+        14,
+        0,
+        8,
+        1
+      ],
+      "batch_loss_before_update": 0.16324776062392904
+    },
+    {
+      "step": 550,
+      "batch_indices": [
+        11,
+        0,
+        0,
+        21,
+        13,
+        12,
+        6,
+        1
+      ],
+      "batch_loss_before_update": 0.16426918682947178
+    },
+    {
+      "step": 551,
+      "batch_indices": [
+        14,
+        11,
+        8,
+        23,
+        16,
+        0,
+        22,
+        14
+      ],
+      "batch_loss_before_update": 0.16012169153267566
+    },
+    {
+      "step": 552,
+      "batch_indices": [
+        7,
+        16,
+        8,
+        15,
+        14,
+        0,
+        6,
+        2
+      ],
+      "batch_loss_before_update": 0.1767318122655709
+    },
+    {
+      "step": 553,
+      "batch_indices": [
+        11,
+        10,
+        10,
+        11,
+        22,
+        20,
+        17,
+        4
+      ],
+      "batch_loss_before_update": 0.15496283526943805
+    },
+    {
+      "step": 554,
+      "batch_indices": [
+        20,
+        19,
+        4,
+        1,
+        10,
+        7,
+        19,
+        18
+      ],
+      "batch_loss_before_update": 0.1492535180788006
+    },
+    {
+      "step": 555,
+      "batch_indices": [
+        1,
+        21,
+        5,
+        1,
+        4,
+        7,
+        7,
+        16
+      ],
+      "batch_loss_before_update": 0.211172249415916
+    },
+    {
+      "step": 556,
+      "batch_indices": [
+        2,
+        23,
+        19,
+        14,
+        13,
+        14,
+        8,
+        5
+      ],
+      "batch_loss_before_update": 0.1694757018106848
+    },
+    {
+      "step": 557,
+      "batch_indices": [
+        20,
+        1,
+        16,
+        19,
+        23,
+        8,
+        1,
+        6
+      ],
+      "batch_loss_before_update": 0.13968058375997053
+    },
+    {
+      "step": 558,
+      "batch_indices": [
+        20,
+        18,
+        18,
+        2,
+        15,
+        18,
+        6,
+        7
+      ],
+      "batch_loss_before_update": 0.13974650101399386
+    },
+    {
+      "step": 559,
+      "batch_indices": [
+        9,
+        2,
+        4,
+        23,
+        21,
+        18,
+        10,
+        4
+      ],
+      "batch_loss_before_update": 0.18118021195484119
+    },
+    {
+      "step": 560,
+      "batch_indices": [
+        17,
+        4,
+        18,
+        12,
+        11,
+        16,
+        19,
+        13
+      ],
+      "batch_loss_before_update": 0.13411350091763422
+    },
+    {
+      "step": 561,
+      "batch_indices": [
+        10,
+        22,
+        14,
+        8,
+        6,
+        7,
+        12,
+        9
+      ],
+      "batch_loss_before_update": 0.15876375415491428
+    },
+    {
+      "step": 562,
+      "batch_indices": [
+        12,
+        22,
+        4,
+        12,
+        1,
+        5,
+        15,
+        11
+      ],
+      "batch_loss_before_update": 0.15658544067555877
+    },
+    {
+      "step": 563,
+      "batch_indices": [
+        21,
+        9,
+        4,
+        13,
+        5,
+        7,
+        17,
+        16
+      ],
+      "batch_loss_before_update": 0.1713476189711418
+    },
+    {
+      "step": 564,
+      "batch_indices": [
+        22,
+        4,
+        7,
+        12,
+        5,
+        2,
+        17,
+        0
+      ],
+      "batch_loss_before_update": 0.16677506621681024
+    },
+    {
+      "step": 565,
+      "batch_indices": [
+        8,
+        0,
+        2,
+        2,
+        10,
+        8,
+        17,
+        11
+      ],
+      "batch_loss_before_update": 0.17098225167601136
+    },
+    {
+      "step": 566,
+      "batch_indices": [
+        6,
+        19,
+        7,
+        12,
+        11,
+        5,
+        18,
+        16
+      ],
+      "batch_loss_before_update": 0.12702476411290722
+    },
+    {
+      "step": 567,
+      "batch_indices": [
+        14,
+        2,
+        7,
+        9,
+        20,
+        9,
+        0,
+        20
+      ],
+      "batch_loss_before_update": 0.17602073851324382
+    },
+    {
+      "step": 568,
+      "batch_indices": [
+        9,
+        10,
+        6,
+        10,
+        16,
+        18,
+        15,
+        18
+      ],
+      "batch_loss_before_update": 0.15591949813121525
+    },
+    {
+      "step": 569,
+      "batch_indices": [
+        14,
+        19,
+        9,
+        20,
+        3,
+        6,
+        20,
+        13
+      ],
+      "batch_loss_before_update": 0.17181665656497336
+    },
+    {
+      "step": 570,
+      "batch_indices": [
+        3,
+        1,
+        16,
+        14,
+        1,
+        2,
+        23,
+        5
+      ],
+      "batch_loss_before_update": 0.19430717041745244
+    },
+    {
+      "step": 571,
+      "batch_indices": [
+        7,
+        0,
+        17,
+        1,
+        22,
+        23,
+        5,
+        3
+      ],
+      "batch_loss_before_update": 0.18199469672848723
+    },
+    {
+      "step": 572,
+      "batch_indices": [
+        14,
+        7,
+        17,
+        1,
+        2,
+        10,
+        15,
+        6
+      ],
+      "batch_loss_before_update": 0.17172988652718024
+    },
+    {
+      "step": 573,
+      "batch_indices": [
+        16,
+        2,
+        8,
+        11,
+        0,
+        18,
+        1,
+        2
+      ],
+      "batch_loss_before_update": 0.15537527524705863
+    },
+    {
+      "step": 574,
+      "batch_indices": [
+        13,
+        11,
+        13,
+        1,
+        18,
+        18,
+        7,
+        12
+      ],
+      "batch_loss_before_update": 0.1317876963481113
+    },
+    {
+      "step": 575,
+      "batch_indices": [
+        20,
+        1,
+        2,
+        2,
+        14,
+        22,
+        13,
+        16
+      ],
+      "batch_loss_before_update": 0.1494035573380653
+    },
+    {
+      "step": 576,
+      "batch_indices": [
+        3,
+        13,
+        13,
+        0,
+        12,
+        18,
+        10,
+        18
+      ],
+      "batch_loss_before_update": 0.1367104006859161
+    },
+    {
+      "step": 577,
+      "batch_indices": [
+        12,
+        8,
+        15,
+        21,
+        6,
+        1,
+        2,
+        12
+      ],
+      "batch_loss_before_update": 0.16248333175122073
+    },
+    {
+      "step": 578,
+      "batch_indices": [
+        18,
+        11,
+        13,
+        22,
+        23,
+        12,
+        11,
+        16
+      ],
+      "batch_loss_before_update": 0.12774193467752684
+    },
+    {
+      "step": 579,
+      "batch_indices": [
+        10,
+        15,
+        4,
+        8,
+        20,
+        1,
+        0,
+        10
+      ],
+      "batch_loss_before_update": 0.17092814485186322
+    },
+    {
+      "step": 580,
+      "batch_indices": [
+        17,
+        6,
+        13,
+        15,
+        22,
+        17,
+        22,
+        6
+      ],
+      "batch_loss_before_update": 0.1654214451895466
+    },
+    {
+      "step": 581,
+      "batch_indices": [
+        19,
+        16,
+        22,
+        13,
+        16,
+        22,
+        12,
+        4
+      ],
+      "batch_loss_before_update": 0.14020475743875674
+    },
+    {
+      "step": 582,
+      "batch_indices": [
+        23,
+        9,
+        3,
+        22,
+        19,
+        15,
+        8,
+        12
+      ],
+      "batch_loss_before_update": 0.1676062140922939
+    },
+    {
+      "step": 583,
+      "batch_indices": [
+        12,
+        4,
+        2,
+        23,
+        4,
+        9,
+        18,
+        11
+      ],
+      "batch_loss_before_update": 0.16968721059560882
+    },
+    {
+      "step": 584,
+      "batch_indices": [
+        0,
+        18,
+        5,
+        11,
+        13,
+        1,
+        11,
+        20
+      ],
+      "batch_loss_before_update": 0.13747720834165467
+    },
+    {
+      "step": 585,
+      "batch_indices": [
+        12,
+        0,
+        4,
+        12,
+        9,
+        12,
+        19,
+        7
+      ],
+      "batch_loss_before_update": 0.14270880008577363
+    },
+    {
+      "step": 586,
+      "batch_indices": [
+        9,
+        6,
+        12,
+        13,
+        22,
+        16,
+        5,
+        8
+      ],
+      "batch_loss_before_update": 0.1377732507497116
+    },
+    {
+      "step": 587,
+      "batch_indices": [
+        17,
+        2,
+        23,
+        10,
+        6,
+        13,
+        22,
+        4
+      ],
+      "batch_loss_before_update": 0.1400848467668383
+    },
+    {
+      "step": 588,
+      "batch_indices": [
+        18,
+        9,
+        18,
+        7,
+        16,
+        1,
+        0,
+        1
+      ],
+      "batch_loss_before_update": 0.15626518294155375
+    },
+    {
+      "step": 589,
+      "batch_indices": [
+        18,
+        10,
+        9,
+        21,
+        8,
+        14,
+        9,
+        22
+      ],
+      "batch_loss_before_update": 0.17740124079222228
+    },
+    {
+      "step": 590,
+      "batch_indices": [
+        13,
+        19,
+        14,
+        11,
+        13,
+        20,
+        22,
+        19
+      ],
+      "batch_loss_before_update": 0.1250565686698413
+    },
+    {
+      "step": 591,
+      "batch_indices": [
+        8,
+        6,
+        10,
+        13,
+        13,
+        2,
+        0,
+        19
+      ],
+      "batch_loss_before_update": 0.13659432433190302
+    },
+    {
+      "step": 592,
+      "batch_indices": [
+        23,
+        23,
+        14,
+        2,
+        2,
+        19,
+        21,
+        8
+      ],
+      "batch_loss_before_update": 0.19159586255592673
+    },
+    {
+      "step": 593,
+      "batch_indices": [
+        6,
+        6,
+        9,
+        10,
+        19,
+        22,
+        9,
+        3
+      ],
+      "batch_loss_before_update": 0.1523106033919101
+    },
+    {
+      "step": 594,
+      "batch_indices": [
+        2,
+        18,
+        15,
+        18,
+        18,
+        18,
+        19,
+        8
+      ],
+      "batch_loss_before_update": 0.13128744237619078
+    },
+    {
+      "step": 595,
+      "batch_indices": [
+        5,
+        16,
+        20,
+        11,
+        6,
+        8,
+        9,
+        22
+      ],
+      "batch_loss_before_update": 0.15039652960785982
+    },
+    {
+      "step": 596,
+      "batch_indices": [
+        0,
+        0,
+        5,
+        20,
+        10,
+        16,
+        5,
+        23
+      ],
+      "batch_loss_before_update": 0.17661405709379083
+    },
+    {
+      "step": 597,
+      "batch_indices": [
+        8,
+        12,
+        22,
+        10,
+        17,
+        8,
+        19,
+        16
+      ],
+      "batch_loss_before_update": 0.12752293096235826
+    },
+    {
+      "step": 598,
+      "batch_indices": [
+        10,
+        19,
+        23,
+        16,
+        1,
+        19,
+        3,
+        6
+      ],
+      "batch_loss_before_update": 0.15279981188619912
+    },
+    {
+      "step": 599,
+      "batch_indices": [
+        13,
+        17,
+        10,
+        13,
+        5,
+        13,
+        21,
+        10
+      ],
+      "batch_loss_before_update": 0.13858522996381686
+    },
+    {
+      "step": 600,
+      "batch_indices": [
+        3,
+        9,
+        20,
+        6,
+        6,
+        15,
+        2,
+        21
+      ],
+      "batch_loss_before_update": 0.19127545105078675
+    }
+  ],
+  "selected_step": 50,
+  "selected_validation_loss": 2.405571231866604,
+  "parameter_sha256": "6de30d8677afce8e39691f446344d4bd67ae0eda5136743e1894152b78c54c01",
+  "optimizer_sha256": "07173375501c2d66e78d35f754953f4f779fcf83ef2b0211b5b62076215cc69f",
+  "batch_rng_sha256": "c95c8942e4742fd677c442ad6b9b5029ae4a75512705db5bbc65b1e894c00b9e",
+  "torch_rng_sha256": "2f930974c943edf4d0666961b9b1e1958ee12335912c1cde1fd07b32ba4f3fa4",
+  "next_batch_indices": [
+    15,
+    21,
+    7,
+    2,
+    23,
+    16,
+    7,
+    16
+  ],
+  "train_events": 521,
+  "validation_events": 178,
+  "elapsed_seconds": 1.716514500323683,
+  "milestone": "MG-2",
+  "recorded_at": "2026-09-12T16:46:59.173889+00:00",
+  "config": {
+    "version": "mini-gpt-v1",
+    "vocab_size": 291,
+    "context_length": 64,
+    "width": 16,
+    "heads": 2,
+    "ffn_width": 64,
+    "layers": 1,
+    "norm": "pre-layernorm",
+    "epsilon": 1e-05,
+    "activation": "relu",
+    "position": "learned-absolute",
+    "dropout": 0.0,
+    "tied_embeddings": false,
+    "dtype": "float64",
+    "device": "cpu",
+    "threads": 1,
+    "init_seed": 1729,
+    "batch_seed": 101,
+    "sampling_seed": 31415,
+    "init_std": 0.02,
+    "batch_size": 8,
+    "steps": 600,
+    "eval_every": 50,
+    "resume_step": 300,
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "selection": "first minimum validation loss among steps 0,50,...,600",
+    "max_new_tokens": 24
+  },
+  "identities": {
+    "config": "ebd4c3a1190ae8161bf95d2c3aa60849c2f32dc8378f06e8a6c3986bb8c27899",
+    "tokenizer": "9bb146ce375bda3aa518a48a60d9f69611b8d0afde9df9a8298eae9dfa9dd354",
+    "corpus": "e9b56ae8657cec98e9cd80fd28185ac6bab3fdc8363cd49e374edc9ac66f125d"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.7.0",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float64",
+    "threads": 1,
+    "deterministic_algorithms": true
+  },
+  "resumed_checks": {
+    "parameter_sha256": true,
+    "optimizer_sha256": true,
+    "batch_rng_sha256": true,
+    "torch_rng_sha256": true,
+    "next_batch_indices": true,
+    "steps_301_to_600": true,
+    "curve_300_to_600": true
+  },
+  "fresh_process_checks": {
+    "curve": true,
+    "steps": true,
+    "selected_step": true,
+    "parameter_sha256": true,
+    "optimizer_sha256": true,
+    "batch_rng_sha256": true,
+    "torch_rng_sha256": true,
+    "next_batch_indices": true
+  },
+  "resume_elapsed_seconds": 0.7022572499699891,
+  "fresh_elapsed_seconds": 1.7269503329880536,
+  "total_elapsed_seconds": 4.767545832786709,
+  "checkpoints": {
+    "resume-final.pt": {
+      "bytes": 365845,
+      "sha256": "e2a1dd474b7bac034a51ecef91074a62b26fe3c9b0623788783dccc4a3fdd764"
+    },
+    "resume-step300.pt": {
+      "bytes": 366005,
+      "sha256": "013e7e6abf66579acf15e451db1841be7b5950d52f398089f7d43d71e00cac85"
+    },
+    "weights-final.pt": {
+      "bytes": 117309,
+      "sha256": "a8ffef09fc809cf06330972037169738ebc26730f5a62e22802d073e47b13271"
+    },
+    "weights-selected.pt": {
+      "bytes": 117381,
+      "sha256": "02abe42d897c83cc39a2bfb720642a6de8caef4200b3f421a7840fe0429fadfc"
+    }
+  },
+  "source_sha256": {
+    "data/mini-gpt/corpus.json": "243a03df408a11a9803577c31626114ce96a183ac03405b7bb6a47d7c698483f",
+    "data/mini-gpt/config.json": "91f4c37fa02841002ae297e1f577008cb0ae6404ca2d74b7d600db6a5c2ca0a6",
+    "data/mini-gpt/tokenizer.json": "89c76a1c6dc4a8eda52cf9ecdf97cb667385b8feb9e544d03efde8a23333458e",
+    "data/mini-gpt/generation-probes.json": "93a0a86f017068a8664b4c0848c81561750460117e471a0ef267a4827491258e",
+    "code/mini-gpt/model.py": "fd5b2347384330270993cb355829d655a866520ebd64f6df59c1e0f122c64d8a",
+    "code/mini-gpt/tokenizer.py": "b497a4dcdc3dac09668c9b30a4a208e3055a94a0abd3cbfefa8bd96fd1699277",
+    "code/mini-gpt/forward.py": "d7cae06f39fe015c4e73b5a0af846279c4d9a68e649dde187ba2bd31a02b626d",
+    "code/mini-gpt/generate.py": "7caff6d57d6b63fece3029482110a1885220bfe7790342d29d874fda69314a6f",
+    "code/mini-gpt/run.py": "18847aae517f34268532beb600ddaa7e4b92f2a49ec56f9f62f1b5c64f99a1e6",
+    "code/part-iv/requirements.txt": "5f7c70717d8af44dd78a481f9fac45d9525808c0b7543621b1485b3c7a1ee3a2",
+    "code/part-iv/requirements-tested.txt": "69758caa5530c01e84e4073c47379aede412633a5d1e170670ee716eb5dc02aa"
+  }
+}

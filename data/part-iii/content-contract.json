@@ -1,0 +1,70 @@
+{
+  "version": "part-iii-content-v1",
+  "headings": {
+    "en": {
+      "summary": "Summary",
+      "exercises": "Exercises",
+      "answers": "Reference answers",
+      "references": "References"
+    },
+    "zh-hans": {
+      "summary": "本章小结",
+      "exercises": "习题",
+      "answers": "参考解答",
+      "references": "参考文献"
+    }
+  },
+  "captions": {
+    "en": {
+      "example": "Example",
+      "table": "Table"
+    },
+    "zh-hans": {
+      "example": "例",
+      "table": "表"
+    }
+  },
+  "evidence": {
+    "ch-11": [
+      "0.754915",
+      "0.651355",
+      "0.592667",
+      "0.532182",
+      "0.530236",
+      "1/256",
+      "0.125"
+    ],
+    "ch-12": [
+      "−0.1875",
+      "−0.375",
+      "−0.75",
+      "0.2240314453125",
+      "0.43046721",
+      "0.366032",
+      "0.506302",
+      "0.739738"
+    ],
+    "ch-13": [
+      "0.288",
+      "0.311199",
+      "blue door . EOS",
+      "red key . EOS",
+      "[0,a]"
+    ],
+    "ch-14": [
+      "0.346574",
+      "0.173287",
+      "[2a/3,0]",
+      "[a,0]",
+      "[2/5,2/5,1/5]"
+    ]
+  },
+  "static_labels": {
+    "en": {
+      "checkpoint": "Part III checkpoint: identify the path before proposing a fix"
+    },
+    "zh-hans": {
+      "checkpoint": "第三部分检查点：先认清路径，再提出修复"
+    }
+  }
+}

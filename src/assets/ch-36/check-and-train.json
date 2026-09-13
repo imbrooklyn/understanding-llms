@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 36.1 — Checking a result becomes training only when feedback changes parameters.",
+    "zh-hans": "图 36.1：检查结果之后，只有反馈用于改变参数，才构成训练。"
+  },
+  "alt": {
+    "en": "Given costs 680 and 820 and a cap of 750, a generator proposes 1430. A verifier recomputes 680 plus 750 and accepts the amount. Runtime selection returns it without changing weights; an RL training loop can instead use the reward to update generator parameters.",
+    "zh-hans": "输入费用 680、820 和限额 750，生成器提出 1430。核验器重算 680 加 750 后接受金额。运行时可以直接选出它而不改权重，也可以在 RL 训练循环中用奖励更新生成器参数。"
+  },
+  "credit": {
+    "en": "Original rule and process diagram · CC BY-SA 4.0",
+    "zh-hans": "原创规则与流程图 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Generate and check",
+        "zh-hans": "生成与检查"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Given: costs 680, 820; cap 750 per night",
+            "zh-hans": "已知：费用 680、820；每晚限额 750"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Candidate amount: 1430",
+            "zh-hans": "候选金额：1430"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Verifier: min(680,750) + min(820,750) = 1430",
+            "zh-hans": "核验器：min(680,750) + min(820,750) = 1430"
+          }
+        }
+      ],
+      "flow": {
+        "en": "An amount check accepts A and lucky C. It has not verified C's steps.",
+        "zh-hans": "金额检查会接受 A，也会接受碰巧答对的 C；它没有核验 C 的步骤。"
+      }
+    },
+    {
+      "label": {
+        "en": "Two uses of acceptance",
+        "zh-hans": "接受结果的两种用途"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Runtime: select a candidate; no update",
+            "zh-hans": "运行时：选出候选；不更新参数"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Training: accepted amount → assigned reward 1",
+            "zh-hans": "训练时：金额合格 → 指定奖励 1"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "RL optimizer may update generator parameters",
+            "zh-hans": "RL 优化器可以更新生成器参数"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Supervised step/outcome labels can train a verifier separately. Neither checking nor selecting alone trains the generator.",
+        "zh-hans": "过程或结果标签也可以单独训练核验器。只检查或只选择，都没有训练生成器。"
+      }
+    }
+  ]
+}

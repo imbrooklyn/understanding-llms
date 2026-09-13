@@ -1,0 +1,124 @@
+{
+  "id": "ch-18/three-visibility-patterns",
+  "structure": "lanes",
+  "alt": {
+    "en": "BERT predicts red from all three corrupted slots. GPT predicts red from BOS only. T5 predicts red from two source slots and decoder prefix BOS,S0, with separate encoder, decoder and cross-attention matrices.",
+    "zh-hans": "BERT 从三个替换后槽位预测 red；GPT 只从 BOS 预测 red；T5 使用两个源槽位和解码前缀 BOS、S0 预测 red，编码、自注意力和交叉注意力分别计算。"
+  },
+  "caption": {
+    "en": "Figure 18.1 — The same target has three different evidence sets.",
+    "zh-hans": "图 18.1 — 同一个目标，三套不同的可用证据。"
+  },
+  "credit": {
+    "en": "Original teaching diagram, CC BY-SA 4.0. Values and rules are declared in the chapter and shared data.",
+    "zh-hans": "本书原创教学图，CC BY-SA 4.0。数值与规则见正文及共享数据。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "BERT-style: selected missing slot",
+        "zh-hans": "BERT 式：选中的缺失位置"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Input: [MASK] | key | .",
+            "zh-hans": "输入：[MASK] | key | ."
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Each query → keys 1,2,3 (9 pairs)",
+            "zh-hans": "每条查询 → 键 1、2、3（9 对）"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Score slot 1 → red",
+            "zh-hans": "评分槽位 1 → red"
+          }
+        }
+      ],
+      "flow": {
+        "en": "All input slots are visible, but red has been replaced.",
+        "zh-hans": "所有输入槽位可见，但 red 已被替换。"
+      }
+    },
+    {
+      "label": {
+        "en": "GPT-style: next token at every step",
+        "zh-hans": "GPT 式：逐位置预测下一 token"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Input: BOS | red | key | .",
+            "zh-hans": "输入：BOS | red | key | ."
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Allowed keys: 1; 1,2; 1,2,3; 1,2,3,4",
+            "zh-hans": "允许键：1；1、2；1、2、3；1、2、3、4"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Targets: red | key | . | EOS",
+            "zh-hans": "目标：red | key | . | EOS"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The first red prediction has only BOS as evidence (10 causal pairs in total).",
+        "zh-hans": "首次预测 red 时只有 BOS 可用；整张表共 10 对因果连接。"
+      }
+    },
+    {
+      "label": {
+        "en": "T5-style: recover a removed span",
+        "zh-hans": "T5 式：恢复移除的片段"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Source: <S0> | .",
+            "zh-hans": "源序列：<S0> | ."
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Encoder 2×2: all 4 pairs; decoder 5×5: 15 causal pairs",
+            "zh-hans": "编码器 2×2：全 4 对；解码器 5×5：15 对因果连接"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Cross-attention 5×2: all 10 source pairs",
+            "zh-hans": "交叉注意力 5×2：10 对源连接全部允许"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Decoder prefix BOS | <S0> → red",
+            "zh-hans": "解码前缀 BOS | <S0> → red"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The source is fully readable; future target tokens remain hidden.",
+        "zh-hans": "完整源序列可读，未来目标仍不可见。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+$ node scripts/validate-language.mjs
+Validated English public documentation and source comments; localized textbook content is preserved.

@@ -1,0 +1,20 @@
+{
+  "version": "attention-v1",
+  "provenance": "Author-chosen dimensionless teaching values; no training",
+  "positions": ["red", "key", "."],
+  "X": [[1, 0], [0, 1], [1, 1]],
+  "WQ": [[1, 0], [0, 1]],
+  "WK": [[1, 1], [0, 1]],
+  "WV": [[1, 0], [1, 2]],
+  "expected": {
+    "Q": [[1, 0], [0, 1], [1, 1]],
+    "K": [[1, 1], [0, 1], [1, 2]],
+    "V": [[1, 0], [1, 2], [2, 2]],
+    "dots": [[1, 0, 1], [1, 1, 2], [2, 1, 3]],
+    "weights": [[0.4011120926797859, 0.1977758146404282, 0.4011120926797859], [0.24825507825772308, 0.24825507825772308, 0.5034898434845538], [0.28399540974126003, 0.14002924504337802, 0.575975345215362]],
+    "output": [[1.401112092679786, 1.1977758146404283], [1.5034898434845538, 1.5034898434845538], [1.575975345215362, 1.43200918051748]]
+  },
+  "derivation": "With r=exp(1/sqrt(2)), weight rows are [r,1,r]/(2r+1), [1,1,r]/(2+r), [r,1,r*r]/(r+1+r*r). Output row is [a1+a2+2*a3,2*(a2+a3)]. Integers were expanded by hand; decimal evaluation used scalar Python math independently of the NumPy implementation.",
+  "tolerance": 1e-12,
+  "display_decimals": 6
+}

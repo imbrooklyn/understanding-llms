@@ -1,0 +1,84 @@
+{
+  "id": "ch-13/encoder-decoder",
+  "structure": "lanes",
+  "alt": {
+    "en": "The source has three readings: color state [a,0], key state [0,a], and punctuation state [0,0]. Only the final context reaches the baseline decoder, which makes four target predictions, ending with EOS.",
+    "zh-hans": "源序列读三步：颜色状态 [a,0]、钥匙状态 [0,a]、句号状态 [0,0]。基线解码器只接收最终上下文，再预测四个目标 token，以 EOS 结束。"
+  },
+  "caption": {
+    "en": "Figure 13.1 — Three source readings feed one summary into four target predictions.",
+    "zh-hans": "图 13.1 — 源序列读三步，交出一个摘要，目标序列预测四步。"
+  },
+  "credit": {
+    "en": "Original teaching diagram and supplied or derived values, CC BY-SA 4.0; no paper figure reproduced.",
+    "zh-hans": "本书原创教学图，数值为给定值或按规则推导值，CC BY-SA 4.0；未复制论文图示。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Encode j = 1, 2, 3",
+        "zh-hans": "编码 j = 1、2、3"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Red → [a, 0]",
+            "zh-hans": "红色 → [a, 0]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Key → [0, a]",
+            "zh-hans": "钥匙 → [0, a]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Full stop → c = [0, 0]",
+            "zh-hans": "句号 → c = [0, 0]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "ReLU recurrence; a = ln(2). Earlier states are not handed to the baseline writer.",
+        "zh-hans": "ReLU 递归，a = ln(2)。基线写出过程拿不到较早的状态。"
+      }
+    },
+    {
+      "label": {
+        "en": "Decode t = 1, 2, 3, 4",
+        "zh-hans": "解码 t = 1、2、3、4"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "s₀ receives c",
+            "zh-hans": "s₀ 接收 c"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "BOS → red → key → . → EOS",
+            "zh-hans": "BOS → red → key → . → EOS"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Separate decoder parameters, shared in time",
+            "zh-hans": "解码器参数独立，沿时间共享"
+          }
+        }
+      ],
+      "flow": {
+        "en": "This row shows the required target path, not a measured prediction trace. Stop after predicting EOS.",
+        "zh-hans": "本行画的是要求的目标路径，不是实测预测轨迹。预测 EOS 后停止。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "as_of": "2026-09-13T12:48:38.210510+00:00",
+  "python": "3.12.10",
+  "condition": "fresh kernel per notebook; CPU; no allowed errors; all cells executed in order",
+  "inputs_sha256": {
+    "code/knowledge-assistant/baselines.py": "837f3978c7393c10e5403e1e9e768cbaefa089977fe0ab6608ef3b582f3e7916",
+    "code/knowledge-assistant/format_adaptation.py": "a3388baea5562cb6c547819a2faec55ebac957351d4f9bd4a4b8d1dbb0758eda",
+    "code/knowledge-assistant/ka1.py": "fdf0c982ad60087ee46fd69543c7442fb5611c5c5a6a6c491ff9f6a260419f97",
+    "code/mini-gpt/generate.py": "7caff6d57d6b63fece3029482110a1885220bfe7790342d29d874fda69314a6f",
+    "code/mini-gpt/model.py": "fd5b2347384330270993cb355829d655a866520ebd64f6df59c1e0f122c64d8a",
+    "code/mini-gpt/tokenizer.py": "b497a4dcdc3dac09668c9b30a4a208e3055a94a0abd3cbfefa8bd96fd1699277",
+    "code/part-iv/requirements-tested.txt": "69758caa5530c01e84e4073c47379aede412633a5d1e170670ee716eb5dc02aa",
+    "code/part-vi/core.py": "1a9e56da4d1dd91ef296c3ef33c8e8e9834c796ff131f934f9ce0f20c320235d",
+    "code/part-vi/requirements.txt": "65e2b48b511239eff49575ecd6e8d07f67c3807399674614ddb5639a6e0555de",
+    "code/part-vi/run.py": "69ce91b95dc049b1e775c44382e7150c74a3767218f79cf056dcab73b89a290e",
+    "code/part-vi/run_notebooks.py": "26d1c2ece708caa825da99e6fa80f65adcf805dc76568a5708f57516da1937a1",
+    "data/knowledge-assistant/ka0-v1.json": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+    "data/knowledge-assistant/ka1-adjudication-v1.json": "6daf635541a08ef7662f9c5782a696b686f9c1e9c23ec062e18185f93f1e9f60",
+    "data/knowledge-assistant/ka1-contract-v1.json": "00300195c59bf81d81c6c40495b3e02cb44765063e04e927a0a4f15d7058a4b4",
+    "data/knowledge-assistant/ka1-format-adaptation-v1.json": "ffe1b925fb3cc88caf5a1903eff2d83bc6688ff55d764a834a8a7e6f1fe1d151",
+    "data/knowledge-assistant/ka1-format-run-v1.json": "509d33f91dc6eb19768b2859905a041406b2ec3e3a0c0ad3b33e11e1046ad6c1",
+    "data/knowledge-assistant/ka1-run-v1.json": "5e2b34ef4d935b4364dd7a2d47765011426e22047bdf10e6745a65f5129015a6",
+    "data/mini-gpt/config.json": "91f4c37fa02841002ae297e1f577008cb0ae6404ca2d74b7d600db6a5c2ca0a6",
+    "data/mini-gpt/corpus.json": "243a03df408a11a9803577c31626114ce96a183ac03405b7bb6a47d7c698483f",
+    "data/mini-gpt/tokenizer.json": "89c76a1c6dc4a8eda52cf9ecdf97cb667385b8feb9e544d03efde8a23333458e",
+    "data/mini-gpt/weights-final.pt": "a8ffef09fc809cf06330972037169738ebc26730f5a62e22802d073e47b13271",
+    "data/mini-gpt/weights-selected.pt": "02abe42d897c83cc39a2bfb720642a6de8caef4200b3f421a7840fe0429fadfc",
+    "data/part-vi/budget-v1.json": "45bf0886a2d65880bd91faa30255e6a9a43e691a6a435a0eb638ae01944a9455",
+    "data/part-vi/expected.json": "68d6185f5de8e8961785f8f386042d446af685a338ec9963acd3d0c662bca222",
+    "data/part-vi/low-rank-v1.json": "6955cb9d1d425a3786354b36cbd146fd2946231779be986e79292074a4bf2680",
+    "data/part-vi/mechanism-run-v1.json": "ca3010053a9b08267b4801af5d4c0e26eb7cb4b6e390de36bcf68bd0ad805ade",
+    "data/part-vi/preferences-v1.json": "fea68c75c624f6e0472f96613940edfce7f60ff175c6ae7093435e3d1f509bab",
+    "data/part-vi/reasoning-v1.json": "4f975d91c65ac0e63fe9d528d3cfc9c0ce008398aedc4face39f98dceed04d38",
+    "data/part-vi/sft-v1.json": "880a9e69b0a1eec3cdbdcb5eb372f99d80106954afcfbf14b2ff8b7e4121d369"
+  },
+  "executions": [
+    {
+      "notebook": "notebooks/part-vi/01-objectives-and-checkers.ipynb",
+      "code_sha256": "cf7c0770ebd283d5c73ceb2ea73c302387eefbfc8ef4edb84436086bfc729c8d",
+      "artifact_sha256": "323c92872b19709716fd76051290709599a5eba5dc61efab9aebf2eca4dd47a5",
+      "code_cells": 4,
+      "elapsed_seconds": 1.041097,
+      "status": "passed"
+    },
+    {
+      "notebook": "notebooks/part-vi/02-ka1-and-low-rank.ipynb",
+      "code_sha256": "b1c921b59b2324cb2f39e3adf8bf1d3fa75852f08b41fece09a1b59d4765afe7",
+      "artifact_sha256": "55ebf5c67a0536e903301f153e9e0983c6e8942d2732854100f9185a0ee8cd86",
+      "code_cells": 4,
+      "elapsed_seconds": 1.222037,
+      "status": "passed"
+    }
+  ]
+}

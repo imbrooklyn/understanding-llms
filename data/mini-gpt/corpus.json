@@ -1,0 +1,159 @@
+{
+  "version": "mini-gpt-corpus-v1",
+  "license": "CC BY-SA 4.0",
+  "provenance": "Original synthetic teaching records; fictional policy and orders; no external actions",
+  "train": [
+    {
+      "id": "train-01",
+      "text": "The capital of France is Paris."
+    },
+    {
+      "id": "train-02",
+      "text": "France has a capital: Paris."
+    },
+    {
+      "id": "train-03",
+      "text": "Paris is the capital of France."
+    },
+    {
+      "id": "train-04",
+      "text": "Q: Capital of France? A: Paris."
+    },
+    {
+      "id": "train-05",
+      "text": "The key is red. Answer: red."
+    },
+    {
+      "id": "train-06",
+      "text": "The key is blue. Answer: blue."
+    },
+    {
+      "id": "train-07",
+      "text": "A red key opens the red door."
+    },
+    {
+      "id": "train-08",
+      "text": "A blue key opens the blue door."
+    },
+    {
+      "id": "train-09",
+      "text": "Keep the red key. Use the red key."
+    },
+    {
+      "id": "train-10",
+      "text": "Keep the blue key. Use the blue key."
+    },
+    {
+      "id": "train-11",
+      "text": "Color: red. Object: key. Answer: red."
+    },
+    {
+      "id": "train-12",
+      "text": "Color: blue. Object: key. Answer: blue."
+    },
+    {
+      "id": "train-13",
+      "text": "Beijing hotel limit: 600 yuan. Version: old."
+    },
+    {
+      "id": "train-14",
+      "text": "Beijing hotel limit: 750 yuan. Version: new."
+    },
+    {
+      "id": "train-15",
+      "text": "Old limit: 600. New limit: 750."
+    },
+    {
+      "id": "train-16",
+      "text": "Use the new limit: 750 yuan."
+    },
+    {
+      "id": "train-17",
+      "text": "Order A101 status: shipped."
+    },
+    {
+      "id": "train-18",
+      "text": "Order B202 status: pending."
+    },
+    {
+      "id": "train-19",
+      "text": "Query order A101. Result: shipped."
+    },
+    {
+      "id": "train-20",
+      "text": "Query order B202. Result: pending."
+    },
+    {
+      "id": "train-21",
+      "text": "No order was changed by this text."
+    },
+    {
+      "id": "train-22",
+      "text": "France: Paris. Key: red. Limit: 750."
+    },
+    {
+      "id": "train-23",
+      "text": "法国首都是巴黎。"
+    },
+    {
+      "id": "train-24",
+      "text": "新限额为750元。"
+    }
+  ],
+  "validation": [
+    {
+      "id": "validation-01",
+      "text": "France capital? Paris."
+    },
+    {
+      "id": "validation-02",
+      "text": "The red key is here. Answer: red."
+    },
+    {
+      "id": "validation-03",
+      "text": "The blue key is here. Answer: blue."
+    },
+    {
+      "id": "validation-04",
+      "text": "New Beijing hotel limit: 750 yuan."
+    },
+    {
+      "id": "validation-05",
+      "text": "Old Beijing hotel limit: 600 yuan."
+    },
+    {
+      "id": "validation-06",
+      "text": "Order C303 status: pending."
+    },
+    {
+      "id": "validation-07",
+      "text": "Query order D404. Result: shipped."
+    },
+    {
+      "id": "validation-08",
+      "text": "旧限额为600元。"
+    }
+  ],
+  "diagnostics": [
+    {
+      "prompt": "The key is red. Answer:",
+      "expected_suffix": " red.",
+      "purpose": "training-template prompt"
+    },
+    {
+      "prompt": "The key is blue. Answer:",
+      "expected_suffix": " blue.",
+      "purpose": "paired training-template prompt"
+    },
+    {
+      "prompt": "The key was red. Now blue. Answer:",
+      "expected_suffix": " blue.",
+      "purpose": "untrained rule change, not used for selection"
+    },
+    {
+      "prompt": "Old limit: 750. New limit:",
+      "expected_suffix": " 600.",
+      "purpose": "counterfactual update, not used for selection"
+    }
+  ]
+}

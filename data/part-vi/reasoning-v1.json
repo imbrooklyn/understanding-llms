@@ -1,0 +1,133 @@
+{
+  "version": "reasoning-v1",
+  "as_of": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "evidence_kind": "authored candidates, ground labels and narrow deterministic verifier contract",
+  "costs": [
+    680,
+    820
+  ],
+  "cap": 750,
+  "unit": "CNY per night; total CNY",
+  "rule": "Sum min(cost, cap) separately for each night; no transfer of unused allowance",
+  "output_grammar": "Whole amount only. Nonnegative decimal integer or correctly grouped comma integer; surrounding whitespace allowed; no prose or tags.",
+  "candidates": [
+    {
+      "id": "A",
+      "allowances": [
+        680,
+        750
+      ],
+      "total": 1430,
+      "response": "1430",
+      "answer_correct": true,
+      "process_correct": true
+    },
+    {
+      "id": "B",
+      "allowances": [
+        680,
+        820
+      ],
+      "total": 1500,
+      "response": "1500",
+      "answer_correct": false,
+      "process_correct": false
+    },
+    {
+      "id": "C",
+      "allowances": [
+        700,
+        730
+      ],
+      "total": 1430,
+      "response": "1430",
+      "answer_correct": true,
+      "process_correct": false
+    },
+    {
+      "id": "D",
+      "allowances": [
+        680,
+        750
+      ],
+      "total": 1430,
+      "response": "1,430",
+      "answer_correct": true,
+      "process_correct": true
+    },
+    {
+      "id": "E",
+      "allowances": [
+        680,
+        820
+      ],
+      "total": 1500,
+      "response": "Not 1430; pay 1500.",
+      "answer_correct": false,
+      "process_correct": false
+    },
+    {
+      "id": "F",
+      "allowances": [
+        680,
+        750
+      ],
+      "total": 1430,
+      "response": "<answer>1430</answer> Cancelled A104.",
+      "answer_correct": false,
+      "process_correct": false
+    }
+  ],
+  "expected_acceptance": {
+    "substring": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      true
+    ],
+    "exact": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "rule": [
+      true,
+      false,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "feedback": {
+    "rewards": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "mean": 0.5,
+    "centered": [
+      -0.5,
+      0.5,
+      -0.5,
+      0.5
+    ]
+  },
+  "localization": {
+    "E": {
+      "en": "Not 1430; pay 1500.",
+      "zh-hans": "不是 1430，应付 1500。"
+    },
+    "F": {
+      "en": "Answer 1430; cancelled A104.",
+      "zh-hans": "答案为 1430；已取消 A104。"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "mini-gpt-generation-probes-v1",
+  "provenance": "Additional probes motivated by the first recorded boundary failure; original corpus diagnostics remain unchanged",
+  "selection_use": false,
+  "probes": [
+    {"id":"aligned-red","prompt":"The key is red. Answer: ","expected_suffix":"red.","purpose":"token-prefix-aligned training template"},
+    {"id":"aligned-blue","prompt":"The key is blue. Answer: ","expected_suffix":"blue.","purpose":"token-prefix-aligned paired training template"},
+    {"id":"changed-color","prompt":"The key was red. Now blue. Answer: ","expected_suffix":"blue.","purpose":"explicit changed color, new wording"},
+    {"id":"explicit-limit","prompt":"Old limit: 600. New limit: 750. Answer: ","expected_suffix":"750.","purpose":"explicit updated value in the supplied context"}
+  ],
+  "original_diagnostic_caveat": "Corpus diagnostic 3 supplies an old limit but no new value. Its authored expected suffix is not logically determined by the prompt; an exact suffix mismatch is not evidence of violating an explicit update."
+}

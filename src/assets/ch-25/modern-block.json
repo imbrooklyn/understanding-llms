@@ -1,0 +1,91 @@
+{
+  "id": "ch-25/modern-block",
+  "structure": "lanes",
+  "alt": {
+    "en": "X has shape [B,T,12]. RMSNorm precedes Q/K/V projections; only Q/K pairs rotate. Causal attention and an output projection are followed by adding X to form R. A second RMSNorm precedes two width-32 FFN branches. Their gated product projects back to width 12, then adds R.",
+    "zh-hans": "X 的形状为 [B,T,12]。先做 RMSNorm，再投影出 Q/K/V，只旋转 Q/K 坐标对。因果注意力和输出投影完成后，加 X 得到 R。第二次 RMSNorm 后，两条 FFN 支路各有 32 个坐标；门控乘积投影回 12 个坐标，再加 R。"
+  },
+  "caption": {
+    "en": "Figure 25.1 — Three changes occupy three different places.",
+    "zh-hans": "图 25.1：三项改动分别落在三个位置。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Position acts on projected Q and K",
+        "zh-hans": "位置作用在投影后的 Q、K 上"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "X [B, T, 12] → RMSNorm over 12",
+            "zh-hans": "X [B, T, 12] → 沿 12 个坐标做 RMSNorm"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Project Q/K/V → 3 heads × 4 coordinates",
+            "zh-hans": "投影 Q/K/V → 3 个头 × 4 个坐标"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Rotate Q/K pairs; keep V unrotated",
+            "zh-hans": "旋转 Q/K 坐标对；V 不旋转"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Causal attention → join → output projection [B, T, 12]; add the original X to obtain R.",
+        "zh-hans": "因果注意力 → 拼接 → 输出投影 [B, T, 12]；加上原来的 X 得到 R。"
+      }
+    },
+    {
+      "label": {
+        "en": "Gated FFN returns to residual width",
+        "zh-hans": "门控 FFN 回到残差宽度"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "R → second RMSNorm",
+            "zh-hans": "R → 第二次 RMSNorm"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Gate [12, 32] and up [12, 32]",
+            "zh-hans": "门控矩阵 [12, 32] 与上投影 [12, 32]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "SiLU(gate) × up, element by element",
+            "zh-hans": "SiLU(门控支路) × 上投影支路，逐项相乘"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Down [32, 12] → add R",
+            "zh-hans": "下投影 [32, 12] → 加 R"
+          }
+        }
+      ],
+      "flow": {
+        "en": "R bypasses the FFN as well. This config replaces mechanisms; it cannot load MG-2 weights unchanged.",
+        "zh-hans": "R 另有一路绕过 FFN。此配置更换了机制，不能直接加载原有 MG-2 权重。"
+      }
+    }
+  ]
+}

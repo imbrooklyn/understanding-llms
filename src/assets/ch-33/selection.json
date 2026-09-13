@@ -1,0 +1,117 @@
+{
+  "id": "ch-33/selection",
+  "structure": "lanes",
+  "alt": {
+    "en": "Candidate A at step 50 passes two of six English cases and no Chinese case. Candidate B at step 600 passes none in either language. Both meet the small warm-CPU timing gate but fail quality. Preserve the records, reject both for assistant use, and retain A for its existing teaching role.",
+    "zh-hans": "候选 A 在第 50 步的检查点通过六道英文题中的两道，中文没有通过；候选 B 在第 600 步，两种语言都没有通过。两者虽达到小型预热 CPU 计时门槛，却未达到质量要求。因此保留记录，否决两者的助手用途，A 继续用于原有教学。"
+  },
+  "caption": {
+    "en": "Figure 33.1 — Hard quality gates decide before cost preferences.",
+    "zh-hans": "图 33.1：先过质量硬门槛，再谈成本偏好。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Measured candidate A",
+        "zh-hans": "实测候选 A"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Step 50; 13,875 parameters",
+            "zh-hans": "第 50 步；13,875 参数"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "English 2/6; Chinese 0/6",
+            "zh-hans": "英文 2/6；中文 0/6"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Quality gate failed → reject assistant use",
+            "zh-hans": "质量未过 → 否决助手用途"
+          }
+        }
+      ],
+      "flow": {
+        "en": "750. is correct for current scope and wrong for historical scope.",
+        "zh-hans": "750. 对现行范围正确，对历史范围错误。"
+      }
+    },
+    {
+      "label": {
+        "en": "Measured candidate B",
+        "zh-hans": "实测候选 B"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Step 600; same architecture",
+            "zh-hans": "第 600 步；相同架构"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "English 0/6; Chinese 0/6",
+            "zh-hans": "英文 0/6；中文 0/6"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Quality gate failed → reject assistant use",
+            "zh-hans": "质量未过 → 否决助手用途"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Low training loss and short calls do not establish acceptable answers.",
+        "zh-hans": "训练损失低、调用耗时短，都不能证明答案合格。"
+      }
+    },
+    {
+      "label": {
+        "en": "Evidence retained for a new comparison",
+        "zh-hans": "保留证据，供新一轮比较"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Contract + hashes + 144 raw attempts",
+            "zh-hans": "契约 + 哈希 + 144 次原始尝试"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Review reasons + unchanged KA0 baselines",
+            "zh-hans": "复核理由 + 未改变的 KA0 基线"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "New candidate → same or explicitly versioned contract",
+            "zh-hans": "新候选 → 相同或明确升版的契约"
+          }
+        }
+      ],
+      "flow": {
+        "en": "API and larger local candidates have dated documentation only; no substituted benchmark.",
+        "zh-hans": "API 与较大本地候选仅有带日期文档核验，不能替代实测。"
+      }
+    }
+  ]
+}

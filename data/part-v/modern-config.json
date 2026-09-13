@@ -1,0 +1,16 @@
+{
+  "version": "teaching-dense-config-v1",
+  "schema": "Original teaching fields, not a framework compatibility claim",
+  "hidden_size": 12,
+  "query_heads": 3,
+  "head_dim": 4,
+  "ffn_hidden_size": 32,
+  "activation": "swiglu",
+  "norm": "rmsnorm",
+  "norm_epsilon": 1e-06,
+  "position": "rope",
+  "rope_theta": 10000,
+  "max_sequence_slots": 2048,
+  "bias": false,
+  "pre_norm": true
+}

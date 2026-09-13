@@ -1,0 +1,98 @@
+{
+  "id": "ch-14/two-reads",
+  "structure": "lanes",
+  "alt": {
+    "en": "Both reads use source states [a,0], [0,a], [0,0], where a is ln(2). Query [1,0] gives weights one half, one quarter, one quarter and context [a/2,a/4]. Query [0,1] exchanges the first two weights and context coordinates.",
+    "zh-hans": "两次读取都使用 [a,0]、[0,a]、[0,0]，其中 a 为 ln(2)。查询 [1,0] 得到权重二分之一、四分之一、四分之一，上下文为 [a/2,a/4]。查询 [0,1] 则交换前两个权重和上下文坐标。"
+  },
+  "caption": {
+    "en": "Figure 14.1 — Change the query; keep every source state fixed.",
+    "zh-hans": "图 14.1 — 源状态都不变，只换查询。"
+  },
+  "credit": {
+    "en": "Original computed teaching diagram, CC BY-SA 4.0. Queries are supplied probes; source states are calculated from the declared encoder.",
+    "zh-hans": "本书原创教学计算图，CC BY-SA 4.0。查询为给定探查值，源状态由声明的编码器计算。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Read 1: q = [1,0]",
+        "zh-hans": "读取 1：q = [1,0]"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Color [a,0] × 1/2",
+            "zh-hans": "颜色 [a,0] × 1/2"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Key [0,a] × 1/4",
+            "zh-hans": "钥匙 [0,a] × 1/4"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Full stop [0,0] × 1/4",
+            "zh-hans": "句号 [0,0] × 1/4"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Sum → [a/2, a/4]",
+            "zh-hans": "求和 → [a/2, a/4]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Scores [a,0,0] → exponentials [2,1,1] → divide by 4.",
+        "zh-hans": "分数 [a,0,0] → 指数值 [2,1,1] → 除以 4。"
+      }
+    },
+    {
+      "label": {
+        "en": "Read 2: q = [0,1]",
+        "zh-hans": "读取 2：q = [0,1]"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Color [a,0] × 1/4",
+            "zh-hans": "颜色 [a,0] × 1/4"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Key [0,a] × 1/2",
+            "zh-hans": "钥匙 [0,a] × 1/2"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Full stop [0,0] × 1/4",
+            "zh-hans": "句号 [0,0] × 1/4"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Sum → [a/4, a/2]",
+            "zh-hans": "求和 → [a/4, a/2]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Scores [0,a,0] → exponentials [1,2,1] → divide by 4.",
+        "zh-hans": "分数 [0,a,0] → 指数值 [1,2,1] → 除以 4。"
+      }
+    }
+  ]
+}

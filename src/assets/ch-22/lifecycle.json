@@ -1,0 +1,117 @@
+{
+  "id": "ch-22/lifecycle",
+  "structure": "lanes",
+  "alt": {
+    "en": "Broad text trains B1; instruction data updates B1 to I1. Loading I1 into an engine does not update it; an application supplies the 750 policy as input without granting cancellation authority.",
+    "zh-hans": "广泛文本训练出 B1；指令数据把 B1 更新为 I1。引擎加载 I1 时不更新它；应用把 750 元制度放进输入，也不会因此获得取消权限。"
+  },
+  "caption": {
+    "en": "Figure 22.1 — Training changes parameters; serving reads a snapshot.",
+    "zh-hans": "图 22.1：训练改变参数，服务读取快照。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Parameter-changing path",
+        "zh-hans": "改变参数的路径"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Selected text → token sequences",
+            "zh-hans": "选定文本 → token 序列"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Next-token updates → B1",
+            "zh-hans": "下一个 token 训练 → B1"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Additional training → I1",
+            "zh-hans": "新增训练 → I1"
+          }
+        }
+      ],
+      "flow": {
+        "en": "B1 and I1 have the same shapes; their stored values can differ.",
+        "zh-hans": "B1 与 I1 的形状相同，保存的数值可以不同。"
+      }
+    },
+    {
+      "label": {
+        "en": "Parameter-reading path",
+        "zh-hans": "读取参数的路径"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Load I1 + tokenizer T1",
+            "zh-hans": "加载 I1 与 tokenizer T1"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Engine E1 computes logits",
+            "zh-hans": "引擎 E1 计算 logits"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Server S1 schedules requests",
+            "zh-hans": "服务进程 S1 调度请求"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A new server or window does not establish a new training stage.",
+        "zh-hans": "换服务进程或窗口，不能证明发生过新一轮训练。"
+      }
+    },
+    {
+      "label": {
+        "en": "One application request",
+        "zh-hans": "一次应用请求"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Context includes new limit: 750",
+            "zh-hans": "上下文含新限额：750"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Read frozen weights → select tokens",
+            "zh-hans": "读取固定权重 → 选择 token"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Display answer; no order is changed",
+            "zh-hans": "显示答案；没有改动订单"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Context may change the output while parameter identity stays fixed.",
+        "zh-hans": "参数身份不变，上下文也可能使输出改变。"
+      }
+    }
+  ]
+}

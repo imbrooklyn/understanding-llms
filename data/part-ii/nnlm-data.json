@@ -1,0 +1,166 @@
+{
+  "version": "ka-window-lm-v1",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original fixed token-sequence diagnostic; train strings are the same KA-0 index cards; validation/test variants declared before fitting",
+  "window": 2,
+  "input_vocabulary": [
+    "EOS",
+    "beijing",
+    "lodging",
+    "600",
+    "750",
+    "train",
+    "order",
+    "processing",
+    "approval",
+    "BOS"
+  ],
+  "output_vocabulary": [
+    "EOS",
+    "beijing",
+    "lodging",
+    "600",
+    "750",
+    "train",
+    "order",
+    "processing",
+    "approval"
+  ],
+  "train": [
+    [
+      "beijing",
+      "lodging",
+      "600"
+    ],
+    [
+      "beijing",
+      "lodging",
+      "lodging",
+      "750"
+    ],
+    [
+      "beijing",
+      "beijing",
+      "beijing",
+      "train"
+    ],
+    [
+      "order",
+      "processing"
+    ],
+    [
+      "order",
+      "approval"
+    ]
+  ],
+  "validation": [
+    [
+      "beijing",
+      "lodging",
+      "750"
+    ],
+    [
+      "order",
+      "order",
+      "processing"
+    ]
+  ],
+  "test": [
+    [
+      "beijing",
+      "lodging",
+      "lodging",
+      "600"
+    ],
+    [
+      "beijing",
+      "train"
+    ]
+  ],
+  "event_policy": "two BOS input symbols per sequence; score all supplied tokens and one EOS; no cross-sequence contexts; no padding in scored events",
+  "count_baseline": "order-3 token LM, add-one smoothing over nine output candidates, fitted on the same train sequences",
+  "test_count_target_fractions": [
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      1,
+      5
+    ]
+  ],
+  "test_fraction_derivation": "First sequence: BOS/BOS -> beijing 4/14; BOS/beijing -> lodging 3/12; beijing/lodging -> lodging 2/11; lodging/lodging -> 600 1/10; lodging/600 -> EOS 2/10. Second: 4/14, 1/12, 2/10.",
+  "window_collision": {
+    "vocabulary": [
+      "red",
+      "blue",
+      "filler",
+      "key",
+      "is"
+    ],
+    "prefix_ids": [
+      [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ]
+    ],
+    "target_ids": [
+      0,
+      1
+    ],
+    "window": 2,
+    "expected_contexts": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "status": "authored representational impossibility; not an inference run of the trained KA vocabulary"
+  }
+}

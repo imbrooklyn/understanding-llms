@@ -1,0 +1,22 @@
+{
+  "version": "ka-data-card-v2",
+  "as_of": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "source": "data/knowledge-assistant/ka0-v1.json",
+  "source_sha256": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+  "acquisition": "Original fictional authored records; no web acquisition or real accounts",
+  "robots": "not applicable to locally authored source",
+  "terms": "no third-party service used to acquire data",
+  "redistribution": "Original material offered under CC BY-SA 4.0; implementation separately Apache-2.0",
+  "parsing": "UTF-8 JSON, preserve raw text and ordered records",
+  "normalization": "None for Mini GPT; KA search-key-v1 only for lexical indexing, raw bodies retained",
+  "filtering": "Original baseline unchanged; separate part-v pipeline exercise retains both failing and revised rules",
+  "deduplication": "Baseline templates intentionally retained; exact identity scan cannot rule out semantic overlap",
+  "pii": "Fictional orders and policy text; synthetic contact exercise separately uses example.invalid; no real PII claimed",
+  "mixture": "Five parallel English/Chinese authored documents; locales evaluated separately",
+  "splits": "Five documents, nine frozen KA-0 diagnostics; relevance labels are evaluation inputs, not retrieval features",
+  "contamination": "Public teaching examples and related templates; report overlap and retain old versions, do not claim held-out generalization",
+  "updates": "New processing rules/data require a separate version; v2 is expanded documentation of unchanged source bytes",
+  "limitations": "Tiny synthetic corpus; not evidence of population language quality, legal clearance for other data, or safety of a live system"
+}

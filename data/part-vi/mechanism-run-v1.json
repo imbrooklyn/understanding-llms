@@ -1,0 +1,7714 @@
+{
+  "version": "mechanism-run-v1",
+  "recorded_at": "2026-09-13T12:43:10.289275+00:00",
+  "evidence_kind": "executed CPU controller and arithmetic replay, no model generation or training",
+  "environment": {
+    "python": "3.12.10",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "processor": "arm64",
+    "device": "cpu",
+    "random_seed": null,
+    "precision": "Python binary64 float; exact integer arithmetic before scale"
+  },
+  "source_sha256": {
+    "data/part-vi/budget-v1.json": "45bf0886a2d65880bd91faa30255e6a9a43e691a6a435a0eb638ae01944a9455",
+    "data/part-vi/low-rank-v1.json": "6955cb9d1d425a3786354b36cbd146fd2946231779be986e79292074a4bf2680",
+    "data/part-vi/preferences-v1.json": "fea68c75c624f6e0472f96613940edfce7f60ff175c6ae7093435e3d1f509bab",
+    "data/part-vi/reasoning-v1.json": "4f975d91c65ac0e63fe9d528d3cfc9c0ce008398aedc4face39f98dceed04d38",
+    "data/part-vi/sft-v1.json": "880a9e69b0a1eec3cdbdcb5eb372f99d80106954afcfbf14b2ff8b7e4121d369",
+    "data/part-vi/expected.json": "68d6185f5de8e8961785f8f386042d446af685a338ec9963acd3d0c662bca222",
+    "code/part-vi/run.py": "69ce91b95dc049b1e775c44382e7150c74a3767218f79cf056dcab73b89a290e",
+    "code/part-vi/core.py": "1a9e56da4d1dd91ef296c3ef33c8e8e9834c796ff131f934f9ce0f20c320235d"
+  },
+  "sft": {
+    "ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      3,
+      6,
+      7,
+      8,
+      3
+    ],
+    "inputs": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      3,
+      6,
+      7,
+      8
+    ],
+    "targets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      3,
+      6,
+      7,
+      8,
+      3
+    ],
+    "mask": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "loss": 0.9241962407465937,
+    "audits": [
+      {
+        "id": "unknown-role",
+        "error": "unsupported role sequence"
+      },
+      {
+        "id": "empty-answer",
+        "error": "empty message"
+      },
+      {
+        "id": "missing-end",
+        "error": "serialized sequence mismatch"
+      },
+      {
+        "id": "wrong-mask",
+        "error": "shifted target mask mismatch"
+      },
+      {
+        "id": "injected-marker",
+        "error": "control token in content"
+      }
+    ]
+  },
+  "preference": {
+    "audits": [
+      "keep",
+      "reverse",
+      "quarantine",
+      "tie"
+    ],
+    "kl": 0.13081203594113697,
+    "reverse_kl": 0.14384103622589042,
+    "dpo": {
+      "margin": 1.0986122886681096,
+      "probability": 0.75,
+      "loss": 0.28768207245178096
+    }
+  },
+  "verifier": [
+    {
+      "id": "A",
+      "substring": true,
+      "exact": true,
+      "rule": {
+        "accepted": true,
+        "parsed": 1430,
+        "reason": "correct amount"
+      },
+      "process": true
+    },
+    {
+      "id": "B",
+      "substring": false,
+      "exact": false,
+      "rule": {
+        "accepted": false,
+        "parsed": 1500,
+        "reason": "wrong amount"
+      },
+      "process": false
+    },
+    {
+      "id": "C",
+      "substring": true,
+      "exact": true,
+      "rule": {
+        "accepted": true,
+        "parsed": 1430,
+        "reason": "correct amount"
+      },
+      "process": false
+    },
+    {
+      "id": "D",
+      "substring": false,
+      "exact": false,
+      "rule": {
+        "accepted": true,
+        "parsed": 1430,
+        "reason": "correct amount"
+      },
+      "process": true
+    },
+    {
+      "id": "E",
+      "substring": true,
+      "exact": false,
+      "rule": {
+        "accepted": false,
+        "parsed": null,
+        "reason": "malformed amount"
+      },
+      "process": false
+    },
+    {
+      "id": "F",
+      "substring": true,
+      "exact": false,
+      "rule": {
+        "accepted": false,
+        "parsed": null,
+        "reason": "malformed amount"
+      },
+      "process": false
+    }
+  ],
+  "budget": [
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.155167
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.056041
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.037833
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        }
+      ],
+      "correct": 0,
+      "total": 4,
+      "calls": 0,
+      "tokens": 0,
+      "replay_elapsed_ms": 0.00575
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.014916
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.013542
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 8,
+      "tokens": 112,
+      "replay_elapsed_ms": 0.027875
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 8,
+      "tokens": 116,
+      "replay_elapsed_ms": 0.027625
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011625
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012667
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.03725
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 8,
+      "tokens": 116,
+      "replay_elapsed_ms": 0.024667
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011417
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.013
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.036916
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 4,
+      "total": 4,
+      "calls": 10,
+      "tokens": 145,
+      "replay_elapsed_ms": 0.029125
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.01125
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 3,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012667
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.036041
+    },
+    {
+      "order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "A",
+            "B",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 4,
+      "total": 4,
+      "calls": 10,
+      "tokens": 145,
+      "replay_elapsed_ms": 0.027583
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011584
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012584
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.014958
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 1,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        }
+      ],
+      "correct": 0,
+      "total": 4,
+      "calls": 0,
+      "tokens": 0,
+      "replay_elapsed_ms": 0.004875
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.01125
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.013791
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 8,
+      "tokens": 112,
+      "replay_elapsed_ms": 0.025625
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 2,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 8,
+      "tokens": 116,
+      "replay_elapsed_ms": 0.024125
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011125
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012375
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.035625
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 3,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 8,
+      "tokens": 116,
+      "replay_elapsed_ms": 0.02475
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011125
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012417
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.035125
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 4,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        }
+      ],
+      "correct": 4,
+      "total": 4,
+      "calls": 12,
+      "tokens": 174,
+      "replay_elapsed_ms": 0.03125
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011083
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.013708
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.035458
+    },
+    {
+      "order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "maximum": 6,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "B",
+            "A",
+            "C"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        }
+      ],
+      "correct": 4,
+      "total": 4,
+      "calls": 12,
+      "tokens": 174,
+      "replay_elapsed_ms": 0.043167
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 1,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011541
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 1,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012291
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 1,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.015292
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 1,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 1,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [],
+          "call_count": 0,
+          "tokens": 0
+        }
+      ],
+      "correct": 0,
+      "total": 4,
+      "calls": 0,
+      "tokens": 0,
+      "replay_elapsed_ms": 0.005041
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 2,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011417
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 2,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.014625
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 2,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 28
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 8,
+      "tokens": 112,
+      "replay_elapsed_ms": 0.025375
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 2,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 2,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 8,
+      "tokens": 116,
+      "replay_elapsed_ms": 0.022833
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 3,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011291
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 3,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012291
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 3,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.035416
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 3,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 3,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 8,
+      "tokens": 116,
+      "replay_elapsed_ms": 0.022875
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 4,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011167
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 4,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012166
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 4,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.035
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 4,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 4,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": null,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            }
+          ],
+          "call_count": 4,
+          "tokens": 58
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 174,
+      "replay_elapsed_ms": 0.030958
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 6,
+      "method": "direct",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "below-cap",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "both-above",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        },
+        {
+          "case": "uneven",
+          "method": "direct",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "direct",
+              "input_tokens": 9,
+              "output_tokens": 1,
+              "response": "1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 10
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 40,
+      "replay_elapsed_ms": 0.011125
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 6,
+      "method": "steps",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "below-cap",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "both-above",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        },
+        {
+          "case": "uneven",
+          "method": "steps",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            }
+          ],
+          "call_count": 1,
+          "tokens": 14
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 4,
+      "tokens": 56,
+      "replay_elapsed_ms": 0.012208
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 6,
+      "method": "vote",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 820 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "below-cap",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "both-above",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1700,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        },
+        {
+          "case": "uneven",
+          "method": "vote",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": false,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            }
+          ],
+          "call_count": 3,
+          "tokens": 42
+        }
+      ],
+      "correct": 2,
+      "total": 4,
+      "calls": 12,
+      "tokens": 168,
+      "replay_elapsed_ms": 0.038834
+    },
+    {
+      "order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "maximum": 6,
+      "method": "search",
+      "cases": [
+        {
+          "case": "two-night",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1430,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "680 + 750 = 1430"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "below-cap",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 700,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "400 + 300 = 700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 2,
+          "tokens": 29
+        },
+        {
+          "case": "both-above",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1500,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "800 + 900 = 1700"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "750 + 750 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 6,
+          "tokens": 87
+        },
+        {
+          "case": "uneven",
+          "method": "search",
+          "maximum": 6,
+          "order": [
+            "C",
+            "B",
+            "A"
+          ],
+          "selected": 1350,
+          "correct": true,
+          "calls": [
+            {
+              "kind": "generate",
+              "candidate": "C",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "C",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "B",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 900 = 1500"
+            },
+            {
+              "kind": "verify",
+              "candidate": "B",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "reject"
+            },
+            {
+              "kind": "generate",
+              "candidate": "A",
+              "input_tokens": 9,
+              "output_tokens": 5,
+              "response": "600 + 750 = 1350"
+            },
+            {
+              "kind": "verify",
+              "candidate": "A",
+              "input_tokens": 14,
+              "output_tokens": 1,
+              "response": "accept"
+            }
+          ],
+          "call_count": 6,
+          "tokens": 87
+        }
+      ],
+      "correct": 4,
+      "total": 4,
+      "calls": 16,
+      "tokens": 232,
+      "replay_elapsed_ms": 0.041542
+    }
+  ],
+  "low_rank": {
+    "delta": [
+      [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -2.0,
+        0.0,
+        1.0
+      ],
+      [
+        4.0,
+        0.0,
+        -2.0
+      ]
+    ],
+    "base_output": [
+      1,
+      2,
+      3,
+      3
+    ],
+    "adapter_output": [
+      -1.0,
+      0.0,
+      1.0,
+      -2.0
+    ],
+    "combined_output": [
+      0.0,
+      2.0,
+      4.0,
+      1.0
+    ],
+    "merged_output": [
+      0.0,
+      2.0,
+      4.0,
+      1.0
+    ],
+    "base_parameters": 12,
+    "trainable_parameters": 7
+  },
+  "quantization": {
+    "original": 1.86,
+    "quantized": 2.0,
+    "original_with_delta": 1.9600000000000002,
+    "quantized_with_delta": 2.1
+  }
+}

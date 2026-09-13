@@ -1,0 +1,295 @@
+{
+  "version": "ka1-contract-v1",
+  "as_of": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "status": "frozen before the first KA-1 model execution",
+  "scenario": "Bilingual fictional travel-policy and order-information assistance; answer from supplied evidence and respect missing information and approval boundaries.",
+  "inherits": {
+    "path": "data/knowledge-assistant/ka0-v1.json",
+    "sha256": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+    "retrieval_queries": "All nine KA-0 queries in both locales, unchanged documents, relevance, candidate order and lexical baselines. No pooling retrieval scores with answer scores."
+  },
+  "splits": {
+    "development": "Existing KA-0 examples and MG-2 training/validation are disclosed development evidence; not a secret test set.",
+    "acceptance": "Six authored bilingual case pairs frozen here before the comparison. Exact prompts/answers are public and cannot support a held-out generalization claim.",
+    "future": "New version and genuinely unused cases required after tuning to this suite. Document families must remain grouped across splits."
+  },
+  "locales": [
+    "en",
+    "zh-hans"
+  ],
+  "case_order": [
+    "current-limit",
+    "stale-premise",
+    "historical-limit",
+    "order-status",
+    "approval-boundary",
+    "unknown"
+  ],
+  "cases": [
+    {
+      "id": "current-limit",
+      "document_ids": [
+        "B"
+      ],
+      "inherited_query_ids": [
+        "current-lodging",
+        "explicit-current"
+      ],
+      "prompt": {
+        "en": "Beijing lodging limit: 750. Limit: ",
+        "zh-hans": "北京住宿限额750元。限额："
+      },
+      "strict_accepted": {
+        "en": [
+          "750"
+        ],
+        "zh-hans": [
+          "750"
+        ]
+      },
+      "criterion": "State the current amount, not an archived amount.",
+      "split": "acceptance"
+    },
+    {
+      "id": "stale-premise",
+      "document_ids": [
+        "A",
+        "B"
+      ],
+      "inherited_query_ids": [
+        "stale-premise"
+      ],
+      "prompt": {
+        "en": "Old: 600. New: 750. Current limit: ",
+        "zh-hans": "旧限额600，新限额750。现限额："
+      },
+      "strict_accepted": {
+        "en": [
+          "750"
+        ],
+        "zh-hans": [
+          "750"
+        ]
+      },
+      "criterion": "Correct the stale premise using the current version.",
+      "split": "acceptance"
+    },
+    {
+      "id": "historical-limit",
+      "document_ids": [
+        "A",
+        "B"
+      ],
+      "inherited_query_ids": [
+        "historical"
+      ],
+      "prompt": {
+        "en": "Old: 600. New: 750. Old limit: ",
+        "zh-hans": "旧限额600，新限额750。旧限额："
+      },
+      "strict_accepted": {
+        "en": [
+          "600"
+        ],
+        "zh-hans": [
+          "600"
+        ]
+      },
+      "criterion": "Use the archived amount only when the question asks for history.",
+      "split": "acceptance"
+    },
+    {
+      "id": "order-status",
+      "document_ids": [
+        "D"
+      ],
+      "inherited_query_ids": [
+        "status"
+      ],
+      "prompt": {
+        "en": "Fictional order A104: processing. Status: ",
+        "zh-hans": "虚构订单A104：处理中。状态："
+      },
+      "strict_accepted": {
+        "en": [
+          "processing"
+        ],
+        "zh-hans": [
+          "处理中"
+        ]
+      },
+      "criterion": "Read the supplied fictional status; no live order lookup occurs.",
+      "split": "acceptance"
+    },
+    {
+      "id": "approval-boundary",
+      "document_ids": [
+        "E"
+      ],
+      "inherited_query_ids": [
+        "approval"
+      ],
+      "prompt": {
+        "en": "Cancellation needs approval. No approval. Allowed? ",
+        "zh-hans": "取消需审批，尚未批准。可取消吗？"
+      },
+      "strict_accepted": {
+        "en": [
+          "no"
+        ],
+        "zh-hans": [
+          "不可以",
+          "不可",
+          "不能",
+          "否"
+        ]
+      },
+      "criterion": "Do not turn a requirement for approval into an approval or a completed action.",
+      "split": "acceptance"
+    },
+    {
+      "id": "unknown",
+      "document_ids": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "inherited_query_ids": [
+        "out-of-scope"
+      ],
+      "prompt": {
+        "en": "Passport rules: unknown. Answer: ",
+        "zh-hans": "护照规定未知。答案："
+      },
+      "strict_accepted": {
+        "en": [
+          "unknown"
+        ],
+        "zh-hans": [
+          "未知",
+          "不知道"
+        ]
+      },
+      "criterion": "Explicitly retain the supplied lack of information rather than invent a rule.",
+      "split": "acceptance"
+    }
+  ],
+  "adaptation": {
+    "mode": "Supplied compact evidence, not generated retrieval or a deployed RAG system. All evidence excerpts are explicit reductions of KA-0 fictional records, with old/current/unknown/approval meanings retained.",
+    "normalization": "No prompt normalization or silent truncation; tokenizer from MG-2, BOS once, candidate order ascending tokenizer ID; BOS/PAD excluded and EOS permitted.",
+    "same_inputs": "Both checkpoints receive byte-identical prompts and policies per case/locale/seed. No per-candidate rescue prompts.",
+    "max_new_tokens": 24,
+    "overflow": "Record input/context failure as a failed attempt, retain it in denominator."
+  },
+  "candidates": [
+    {
+      "id": "selected-50",
+      "checkpoint": "data/mini-gpt/weights-selected.pt",
+      "step": 50
+    },
+    {
+      "id": "final-600",
+      "checkpoint": "data/mini-gpt/weights-final.pt",
+      "step": 600
+    }
+  ],
+  "policies": [
+    {
+      "id": "greedy",
+      "mode": "greedy",
+      "temperature": 1.0,
+      "top_k": null,
+      "role": "primary acceptance and repeated timing"
+    },
+    {
+      "id": "sample-0.7-k5",
+      "mode": "sample",
+      "temperature": 0.7,
+      "top_k": 5,
+      "role": "declared stability stress; no best-of selection"
+    }
+  ],
+  "seeds": [
+    7,
+    42,
+    31415
+  ],
+  "runtime": {
+    "device": "CPU",
+    "dtype": "float64",
+    "threads": 1,
+    "warmup_calls_per_candidate": 2,
+    "schedule": "Alternate candidate order by repeat index within the same cases; keep model and tokenizer loading outside timing.",
+    "latency": "perf_counter_ns around the complete existing generate call, including trace collection and byte decoding. No network, no streaming, no KV cache; not service TTFT or TPOT.",
+    "quantile": "Nearest-rank empirical p95 = sorted sample at ceil(0.95*n)-1; medians conventional."
+  },
+  "rubric": {
+    "semantic": {
+      "0": "Wrong, missing, unsupported, contradictory or unintelligible answer.",
+      "1": "Correct fact/boundary but ambiguous scope or extra unsupported material; does not pass.",
+      "2": "Correct intended answer, scope and boundary, no unsupported assertion."
+    },
+    "format": "Strict diagnostic separately compares strip().casefold() to resource accepted strings; it is not the semantic judge.",
+    "review": "Expose every raw response; author inspection may adjudicate explicit paraphrases with a reason. No human participant study or calibrated LLM judge is claimed. An independent human panel remains required for product acceptance.",
+    "examples": [
+      {
+        "id": "paraphrase",
+        "response": {
+          "en": "The current cap is CNY 750.",
+          "zh-hans": "现行上限是750元。"
+        },
+        "strict": false,
+        "semantic": 2,
+        "reason": "Correct paraphrase with amount/unit/current scope."
+      },
+      {
+        "id": "negated-number",
+        "response": {
+          "en": "The cap is not 750; use 600.",
+          "zh-hans": "限额不是750，应按600执行。"
+        },
+        "contains_750": true,
+        "semantic": 0,
+        "reason": "Contains the expected digits but contradicts the current rule."
+      }
+    ]
+  },
+  "metrics": {
+    "primary": "Per-locale fraction of six cases with semantic score 2 on all three greedy repeats. Denominator six, including errors; no seed selection.",
+    "secondary": [
+      "Per-attempt strict-match and semantic score by policy and locale",
+      "Context/UTF-8/stop failures and per-case repeated outputs",
+      "Median and nearest-rank p95 complete-call milliseconds",
+      "Inherited retrieval accuracy for Keyword, BoW Count and TF-IDF"
+    ],
+    "uncertainty": "Repeated outputs are clustered within a case; do not call 18 attempts 18 independent scenarios. Report counts and paired cases. Any Wilson interval is illustrative for six exchangeable cases, not a population guarantee for this deliberately selected public suite."
+  },
+  "gates": {
+    "quality": "All six cases must pass in both languages on primary policy; any current-version or approval failure rejects the candidate.",
+    "latency": "Complete-call empirical p95 below 1000 ms in this CPU diagnostic only; production SLO not established.",
+    "privacy": "Local comparison must require no external prompt transfer. An external service needs separate contractual/location/retention review.",
+    "release": "Even a diagnostic pass is insufficient for product release: citations, realistic document lengths, independent human review, concurrency and operations require evidence.",
+    "decision": "Allow rejection of both candidates; lower training loss cannot override a failed gate."
+  },
+  "failure_taxonomy": [
+    "stale_version",
+    "wrong_fact",
+    "unsupported_claim",
+    "approval_confusion",
+    "missing_abstention",
+    "unintelligible",
+    "format_mismatch",
+    "context_limit",
+    "invalid_utf8",
+    "runtime_error"
+  ],
+  "non_goals": [
+    "No tools are executed or orders changed.",
+    "No paid API/GPU or downloaded larger-model benchmark.",
+    "No general ranking of base vs instruct families."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "ch-21/training-curve",
+  "structure": "mini-gpt-curve",
+  "alt": {
+    "en": "Thirteen measured points from step 0 to 600: training loss falls from 5.674427 to 0.159599; validation reaches its measured minimum 2.405571 at step 50 and rises to 4.068374.",
+    "zh-hans": "第 0 至 600 步的十三个实测点：训练损失从 5.674427 降到 0.159599；验证损失在第 50 步达到实测最低值 2.405571，随后升到 4.068374。"
+  },
+  "caption": {
+    "en": "Figure 21.1 — Training fit improves while validation worsens after step 50",
+    "zh-hans": "图 21.1 — 第 50 步后，训练拟合继续改善，验证表现反而变差"
+  },
+  "credit": {
+    "en": "Original measured CPU experiment, CC BY-SA 4.0. Source: data/mini-gpt/training-run.json; every plotted point is also in Table 21.2.",
+    "zh-hans": "本书原创 CPU 实测，CC BY-SA 4.0。数据见 data/mini-gpt/training-run.json；所有绘图点也列于表 21.2。"
+  },
+  "labels": {
+    "y": {
+      "en": "Mean loss (nats / target)",
+      "zh-hans": "平均损失（奈特／目标）"
+    },
+    "x": {
+      "en": "Completed updates",
+      "zh-hans": "已完成更新次数"
+    },
+    "legend": {
+      "en": "Solid line and circles: training. Dashed line and squares: validation.",
+      "zh-hans": "实线、圆点：训练。虚线、方点：验证。"
+    },
+    "selection": {
+      "en": "Dotted vertical: selected step 50. Lines join measured points only.",
+      "zh-hans": "点状竖线：所选第 50 步。线段只连接实测点。"
+    }
+  }
+}

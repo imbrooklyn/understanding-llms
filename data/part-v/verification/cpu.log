@@ -1,0 +1,30 @@
+$ node scripts/test-part-v-cpu.mjs
+test_actual_stops_and_decoding_failure_are_retained (test_ka1.KA1Tests.test_actual_stops_and_decoding_failure_are_retained) ... ok
+test_adjudication_covers_every_attempt_and_handles_punctuation (test_ka1.KA1Tests.test_adjudication_covers_every_attempt_and_handles_punctuation) ... ok
+test_both_languages_keep_all_lexical_baselines (test_ka1.KA1Tests.test_both_languages_keep_all_lexical_baselines) ... ok
+test_complete_paired_matrix_and_same_inputs (test_ka1.KA1Tests.test_complete_paired_matrix_and_same_inputs) ... ok
+test_cpu_replay_ids_bytes_stops_and_utf8 (test_ka1.KA1Tests.test_cpu_replay_ids_bytes_stops_and_utf8) ... ok
+test_frozen_inputs_and_recorded_source_hashes (test_ka1.KA1Tests.test_frozen_inputs_and_recorded_source_hashes) ... ok
+test_accumulation_weights_valid_events (test_mechanisms.MechanismTests.test_accumulation_weights_valid_events) ... ok
+test_architecture_counts_and_loss_of_order (test_mechanisms.MechanismTests.test_architecture_counts_and_loss_of_order) ... ok
+test_beam_uses_joint_probability_not_first_step (test_mechanisms.MechanismTests.test_beam_uses_joint_probability_not_first_step) ... ok
+test_budget_and_storage_integer_products (test_mechanisms.MechanismTests.test_budget_and_storage_integer_products) ... ok
+test_evaluator_confusion_uses_actual_and_predicted_denominators (test_mechanisms.MechanismTests.test_evaluator_confusion_uses_actual_and_predicted_denominators) ... ok
+test_gate_sign_and_symbolic_output (test_mechanisms.MechanismTests.test_gate_sign_and_symbolic_output) ... ok
+test_kv_dimensions_and_linear_growth (test_mechanisms.MechanismTests.test_kv_dimensions_and_linear_growth) ... ok
+test_latency_denominator_and_missing_interval (test_mechanisms.MechanismTests.test_latency_denominator_and_missing_interval) ... ok
+test_monthly_cost_boundary (test_mechanisms.MechanismTests.test_monthly_cost_boundary) ... ok
+test_patch_controls_and_undefined_recovery (test_mechanisms.MechanismTests.test_patch_controls_and_undefined_recovery) ... ok
+test_pipeline_records_mistaken_filter_and_all_stage_counts (test_mechanisms.MechanismTests.test_pipeline_records_mistaken_filter_and_all_stage_counts) ... ok
+test_quantization_rounding_clipping_and_argmax_change (test_mechanisms.MechanismTests.test_quantization_rounding_clipping_and_argmax_change) ... ok
+test_rms_scale_not_offset_and_zero_boundary (test_mechanisms.MechanismTests.test_rms_scale_not_offset_and_zero_boundary) ... ok
+test_rotation_preserves_length_and_relative_displacement (test_mechanisms.MechanismTests.test_rotation_preserves_length_and_relative_displacement) ... ok
+test_sampling_weights_shift_ties_and_boundaries (test_mechanisms.MechanismTests.test_sampling_weights_shift_ties_and_boundaries) ... ok
+test_serving_window_and_single_request_tradeoff (test_mechanisms.MechanismTests.test_serving_window_and_single_request_tradeoff) ... ok
+test_speculation_recovers_distribution_including_zero_proposal (test_mechanisms.MechanismTests.test_speculation_recovers_distribution_including_zero_proposal) ... ok
+test_top_p_minimal_mass_and_renormalization (test_mechanisms.MechanismTests.test_top_p_minimal_mass_and_renormalization) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.383s
+
+OK

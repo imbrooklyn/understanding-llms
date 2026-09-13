@@ -1,0 +1,117 @@
+{
+  "id": "ch-21/generation-decisions",
+  "structure": "lanes",
+  "alt": {
+    "en": "A prompt ending with colon-space generates red, then a period, then EOS; each choice is appended before the next model call.",
+    "zh-hans": "以冒号加空格结尾的提示，依次生成 red、句点、EOS；每次追加所选 ID 后再运行模型。"
+  },
+  "caption": {
+    "en": "Figure 21.2 — The same parameters, three changing prefixes",
+    "zh-hans": "图 21.2 — 参数不变，前缀改变三次"
+  },
+  "credit": {
+    "en": "Original teaching diagram, CC BY-SA 4.0. Values and rules are declared in the chapter and shared data.",
+    "zh-hans": "本书原创教学图，CC BY-SA 4.0。数值与规则见正文及共享数据。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Decision 1 · final step-600 weights",
+        "zh-hans": "选择 1 · 第 600 步权重"
+      },
+      "nodes": [
+        {
+          "kind": "id",
+          "text": {
+            "en": "13 IDs; last ID 259 = colon-space",
+            "zh-hans": "13 个 ID；末项 259 为冒号加空格"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Forward → last logits → greedy",
+            "zh-hans": "前向计算 → 最后位置 logits → 贪心选择"
+          }
+        },
+        {
+          "kind": "id",
+          "text": {
+            "en": "Append 270 = red; p = 0.986202",
+            "zh-hans": "追加 270 = red；p = 0.986202"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The model has not yet received a generated red token. BOS/PAD cannot be selected.",
+        "zh-hans": "模型此时还没有收到生成的 red；BOS、PAD 不能被选中。"
+      }
+    },
+    {
+      "label": {
+        "en": "Decision 2 · same weights",
+        "zh-hans": "选择 2 · 权重不变"
+      },
+      "nodes": [
+        {
+          "kind": "id",
+          "text": {
+            "en": "14 IDs; last ID 270 = red",
+            "zh-hans": "14 个 ID；末项 270 = red"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Recompute with the new prefix",
+            "zh-hans": "用新前缀重新计算"
+          }
+        },
+        {
+          "kind": "id",
+          "text": {
+            "en": "Append 46 = period; p = 0.999693",
+            "zh-hans": "追加 46 = 句点；p = 0.999693"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The period probability belongs to a new vocabulary distribution.",
+        "zh-hans": "句点概率来自一次新的词表概率分布。"
+      }
+    },
+    {
+      "label": {
+        "en": "Decision 3 · same weights",
+        "zh-hans": "选择 3 · 权重不变"
+      },
+      "nodes": [
+        {
+          "kind": "id",
+          "text": {
+            "en": "15 IDs; last ID 46 = period",
+            "zh-hans": "15 个 ID；末项 46 = 句点"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Recompute → select 257 = EOS",
+            "zh-hans": "重新计算 → 选择 257 = EOS"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Stop; ordinary text: red.",
+            "zh-hans": "停止；普通文本为 red."
+          }
+        }
+      ],
+      "flow": {
+        "en": "p(EOS) = 0.999583. Probabilities shown are raw model probabilities, before excluding BOS/PAD.",
+        "zh-hans": "p(EOS) = 0.999583。图中均为排除 BOS、PAD 以前的原始模型概率。"
+      }
+    }
+  ]
+}

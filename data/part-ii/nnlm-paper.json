@@ -1,0 +1,123 @@
+{
+  "version": "nnlm-paper-v1",
+  "license": "CC-BY-SA-4.0",
+  "status": "author-supplied snapshot and independently derived output; not a trained Word2Vec or NNLM result",
+  "vocabulary": [
+    "beijing",
+    "lodging",
+    "750",
+    "EOS"
+  ],
+  "context_ids": [
+    [
+      0,
+      1
+    ]
+  ],
+  "target": [
+    2
+  ],
+  "embedding": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "hidden_weight": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "hidden_bias": [
+    0,
+    0
+  ],
+  "output_weight_rule": [
+    [
+      "0",
+      "0",
+      "ln(3)",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "output_bias": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "expected_concat": [
+    [
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "expected_hidden": [
+    [
+      1,
+      1
+    ]
+  ],
+  "expected_probabilities": [
+    [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.5,
+      0.16666666666666666
+    ]
+  ],
+  "loss_rule": "ln(2)",
+  "reversed_context": [
+    [
+      1,
+      0
+    ]
+  ],
+  "reversed_hidden": [
+    [
+      0,
+      0
+    ]
+  ],
+  "reversed_probabilities": [
+    [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  ]
+}

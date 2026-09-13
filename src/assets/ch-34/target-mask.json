@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 34.1 — The loss mask follows the target, not the input role.",
+    "zh-hans": "图 34.1：损失掩码跟着目标走，不能按输入角色判断。"
+  },
+  "alt": {
+    "en": "The prefix ends with the assistant marker. Its next target Paris is scored with probability one half. Three selected losses average to 0.924196, and answer loss can update shared parameters that processed the prompt.",
+    "zh-hans": "前缀以助手标记结束，下一个目标 Paris 计分，指定概率为二分之一。三个损失项平均为 0.924196，回答损失可以更新处理过提示的共享参数。"
+  },
+  "credit": {
+    "en": "Original teaching diagram and assigned probabilities · CC BY-SA 4.0",
+    "zh-hans": "原创教学图，概率为作者给定 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "First answer prediction",
+        "zh-hans": "预测回答的第一个 Token"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Prefix: … France? <eot> <assistant>",
+            "zh-hans": "前缀：… France? <eot> <assistant>"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Input position 7 → target Paris; m₇ = 1",
+            "zh-hans": "输入位置 7 → 目标 Paris；m₇ = 1"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "−ln(1/2) = 0.693147 nats",
+            "zh-hans": "−ln(1/2) = 0.693147 nat"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The header is supplied, but the answer predicted after it is scored.",
+        "zh-hans": "助手开头由输入提供，但在它之后预测的回答要计分。"
+      }
+    },
+    {
+      "label": {
+        "en": "Selected loss and update",
+        "zh-hans": "所选损失与参数更新"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Paris, period, end: 3 selected targets",
+            "zh-hans": "Paris、句号、结束标记：3 个计分目标"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "ln(16) / 3 = 0.924196",
+            "zh-hans": "ln(16) / 3 = 0.924196"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Shared parameters may change; prompt loss = 0 does not freeze them",
+            "zh-hans": "共享参数可以改变；提示不计分不等于参数被冻结"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Loss selection and the choice of trainable parameters are separate decisions.",
+        "zh-hans": "选择损失项与选择可训练参数，是两件不同的事。"
+      }
+    }
+  ]
+}

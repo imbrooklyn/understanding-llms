@@ -1,0 +1,16 @@
+{
+ "id":"ch-10/outside-window", "structure":"lanes",
+ "alt":{"en":"Two sequences begin with different color IDs, red 0 or blue 1, then six filler IDs 2 and identical key/is IDs 3,4. A two-token window sees 3,4 in both cases although the required color targets differ.","zh-hans":"两条序列分别以红色 ID 0 和蓝色 ID 1 开始，随后都有六个填充 ID 2，末尾同为 key/is 的 ID 3、4。两词窗口看到的都是 3、4，但应答颜色不同。"},
+ "caption":{"en":"Figure 10.2 — Once the clue is outside the input window, no parameter choice can distinguish these two inputs.","zh-hans":"图 10.2 — 线索落到输入窗口外之后，无论怎样选参数，都无法区分这两个输入。"},
+ "credit":{"en":"Original impossibility example, CC BY-SA 4.0; a separate declared vocabulary, not an observed language-model accuracy result.","zh-hans":"本书原创不可区分算例，CC BY-SA 4.0；使用单独声明的词表，不是语言模型准确率实测。"},
+ "lanes":[
+  {"label":{"en":"Red clue","zh-hans":"红钥匙线索"},"nodes":[
+   {"kind":"token","text":{"en":"red, filler × 6, key, is","zh-hans":"red、filler × 6、key、is"}},
+   {"kind":"id","text":{"en":"Visible final window: [3,4]","zh-hans":"可见的末尾窗口：[3,4]"}},
+   {"kind":"state","text":{"en":"Required color: red (0)","zh-hans":"应答颜色：红（0）"}}],"flow":{"en":"The initial color has already left the window.","zh-hans":"开头的颜色已经离开窗口。"}},
+  {"label":{"en":"Blue clue","zh-hans":"蓝钥匙线索"},"nodes":[
+   {"kind":"token","text":{"en":"blue, filler × 6, key, is","zh-hans":"blue、filler × 6、key、is"}},
+   {"kind":"id","text":{"en":"Visible final window: [3,4]","zh-hans":"可见的末尾窗口：[3,4]"}},
+   {"kind":"state","text":{"en":"Required color: blue (1)","zh-hans":"应答颜色：蓝（1）"}}],"flow":{"en":"Same input IDs and fixed parameters imply the same output distribution.","zh-hans":"输入 ID 相同、参数固定，输出概率分布就相同。"}}
+ ]
+}

@@ -52,14 +52,14 @@ export const bookParts = [
       {
         "id": "ch-05",
         "title": {
-          "zh-hans": "Batch、Shape、Vector 和 Matrix",
+          "zh-hans": "从向量、矩阵到批处理与形状",
           "en": "Batches, Shapes, Vectors, and Matrices"
         }
       },
       {
         "id": "ch-06",
         "title": {
-          "zh-hans": "从 Logits 到 Probability、Loss 与 Perplexity",
+          "zh-hans": "从分数到概率、损失与困惑度",
           "en": "From Logits to Probability, Loss, and Perplexity"
         }
       },
@@ -80,7 +80,7 @@ export const bookParts = [
       {
         "id": "ch-09",
         "title": {
-          "zh-hans": "Keyword、Bag-of-Words 与 TF-IDF：建立稀疏 baseline",
+          "zh-hans": "关键词、词袋与 TF-IDF：建立稀疏基线",
           "en": "Keywords, Bag of Words, and TF-IDF: Establishing a Sparse Baseline"
         }
       },
@@ -140,21 +140,21 @@ export const bookParts = [
       {
         "id": "ch-15",
         "title": {
-          "zh-hans": "Self-Attention 与 Q/K/V",
+          "zh-hans": "自注意力与 Q/K/V",
           "en": "Self-Attention and Q/K/V"
         }
       },
       {
         "id": "ch-16",
         "title": {
-          "zh-hans": "Mask 与 Multi-Head Attention",
+          "zh-hans": "掩码与多头注意力",
           "en": "Masks and Multi-Head Attention"
         }
       },
       {
         "id": "ch-17",
         "title": {
-          "zh-hans": "拼出完整 Transformer Block",
+          "zh-hans": "拼出完整的 Transformer 块",
           "en": "Assembling a Complete Transformer Block"
         }
       },
@@ -168,7 +168,7 @@ export const bookParts = [
       {
         "id": "ch-19",
         "title": {
-          "zh-hans": "Tokenizer 深入：BPE、WordPiece、SentencePiece 与 Byte-level",
+          "zh-hans": "深入分词：BPE、WordPiece、SentencePiece 与字节级方法",
           "en": "Tokenizers in Depth: BPE, WordPiece, SentencePiece, and Byte-Level Models"
         }
       },
@@ -198,7 +198,7 @@ export const bookParts = [
       {
         "id": "ch-22",
         "title": {
-          "zh-hans": "什么使 Language Model 成为 LLM",
+          "zh-hans": "什么使语言模型成为 LLM",
           "en": "What Makes a Language Model an LLM"
         }
       },
@@ -212,14 +212,14 @@ export const bookParts = [
       {
         "id": "ch-24",
         "title": {
-          "zh-hans": "Scaling：Model、Data 与 Compute 怎样共同变化",
+          "zh-hans": "模型、数据与算力如何共同扩展",
           "en": "Scaling: How Model, Data, and Compute Grow Together"
         }
       },
       {
         "id": "ch-25",
         "title": {
-          "zh-hans": "现代 Dense LLM Block：RoPE、RMSNorm 与 SwiGLU",
+          "zh-hans": "现代稠密 LLM 的三个组件：RoPE、RMSNorm 与 SwiGLU",
           "en": "Modern Dense LLM Blocks: RoPE, RMSNorm, and SwiGLU"
         }
       },
@@ -233,7 +233,7 @@ export const bookParts = [
       {
         "id": "ch-27",
         "title": {
-          "zh-hans": "大规模训练系统的地图与估算",
+          "zh-hans": "大规模训练：系统分工与资源估算",
           "en": "Mapping and Estimating Large-Scale Training Systems"
         }
       },
@@ -247,21 +247,21 @@ export const bookParts = [
       {
         "id": "ch-29",
         "title": {
-          "zh-hans": "生成策略：从 Logits 到 Sampling",
+          "zh-hans": "生成策略：从分数到采样",
           "en": "Generation Strategies: From Logits to Sampling"
         }
       },
       {
         "id": "ch-30",
         "title": {
-          "zh-hans": "模型 inference：Prefill、Decode、KV Cache 与量化",
+          "zh-hans": "模型运行：预填充、解码、KV 缓存与量化",
           "en": "Model Inference: Prefill, Decode, KV Cache, and Quantization"
         }
       },
       {
         "id": "ch-31",
         "title": {
-          "zh-hans": "Serving 效率：复用、内核、推测与批处理",
+          "zh-hans": "高效服务：缓存复用、内核、推测解码与批处理",
           "en": "Serving Efficiency: Reuse, Kernels, Speculation, and Batching"
         }
       },
@@ -305,28 +305,28 @@ export const bookParts = [
       {
         "id": "ch-36",
         "title": {
-          "zh-hans": "Reasoning 能力怎样训练：监督、RLVR 与 Verifier",
+          "zh-hans": "解题推理能力怎样训练：监督、RLVR 与核验器",
           "en": "Training Reasoning Capabilities: Supervision, RLVR, and Verifiers"
         }
       },
       {
         "id": "ch-37",
         "title": {
-          "zh-hans": "Test-Time Compute：采样、搜索、验证和停止",
+          "zh-hans": "运行时增加计算：采样、搜索、验证和停止",
           "en": "Test-Time Compute: Sampling, Search, Verification, and Stopping"
         }
       },
       {
         "id": "ch-38",
         "title": {
-          "zh-hans": "能力缺口决策：Prompt、RAG、Tool 还是改参数",
+          "zh-hans": "能力不足该改哪里：提示、检索、工具还是参数",
           "en": "Diagnosing Capability Gaps: Prompt, RAG, Tools, or Parameter Updates"
         }
       },
       {
         "id": "ch-39",
         "title": {
-          "zh-hans": "Continued Pretraining、Fine-tuning 与 LoRA/QLoRA",
+          "zh-hans": "继续预训练、微调与 LoRA/QLoRA",
           "en": "Continued Pretraining, Fine-Tuning, and LoRA/QLoRA"
         }
       }

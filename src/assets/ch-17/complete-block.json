@@ -1,0 +1,145 @@
+{
+  "id": "ch-17/complete-block",
+  "structure": "lanes",
+  "alt": {
+    "en": "Token and position rows add to X [B, T, C]. The first path normalizes X, projects Q/K/V, splits H heads of width d, scores and masks [B, H, T, T], mixes, joins and projects back to [B, T, C], then adds X. The second path normalizes the sum, expands C to F, applies ReLU, returns to C and adds that sum.",
+    "zh-hans": "token 与位置相加得到 X [B, T, C]。第一条路径依次归一化、投影 Q/K/V、拆成 H 个宽度为 d 的头，计算并屏蔽 [B, H, T, T] 分数，混合、拼接并投影回 [B, T, C]，再加 X。第二条路径归一化前一次和，将 C 扩为 F，经 ReLU 再返回 C，最后加上前一次和。"
+  },
+  "caption": {
+    "en": "Figure 17.1 — Each sublayer returns to the residual width.",
+    "zh-hans": "图 17.1 — 每个子层都回到残差相加所需的宽度。"
+  },
+  "credit": {
+    "en": "Original teaching diagram, CC BY-SA 4.0. Values and rules are declared in the chapter and shared data.",
+    "zh-hans": "本书原创教学图，CC BY-SA 4.0。数值与规则见正文及共享数据。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Before the block",
+        "zh-hans": "进入块之前"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Token table [V, C]; position table [T_max, C]",
+            "zh-hans": "token 表 [V, C]；位置表 [T_max, C]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Look up rows, then add → X [B, T, C]",
+            "zh-hans": "取出相应行，再相加 → X [B, T, C]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Example X₁ = [1, 0]",
+            "zh-hans": "本例 X₁ = [1, 0]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Position is supplied here; it is not a new token appended to the sequence.",
+        "zh-hans": "此处提供位置；不是往序列末尾再加一个 token。"
+      }
+    },
+    {
+      "label": {
+        "en": "First residual path",
+        "zh-hans": "第一条残差路径"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "LN₁ over C → N₁ [B, T, C]",
+            "zh-hans": "沿 C 做 LN₁ → N₁ [B, T, C]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Q/K/V projection weights [C, C]",
+            "zh-hans": "Q/K/V 投影权重 [C, C]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Split → [B, H, T, d]; QKᵀ/√d → [B, H, T, T]",
+            "zh-hans": "拆头 → [B, H, T, d]；QKᵀ/√d → [B, H, T, T]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Mask → row Softmax → mix V [B, H, T, d]",
+            "zh-hans": "掩码 → 逐行 Softmax → 混合 V [B, H, T, d]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Join → W_O → U [B, T, C]",
+            "zh-hans": "拼接 → W_O → U [B, T, C]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "ADD X + U → R; R₁ = [1, 1.999960]",
+            "zh-hans": "相加 X + U → R；R₁ = [1, 1.999960]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "X goes directly to ADD as well as through the normalized attention branch.",
+        "zh-hans": "X 一路经过归一化和注意力，另一路直接参与相加。"
+      }
+    },
+    {
+      "label": {
+        "en": "Second residual path",
+        "zh-hans": "第二条残差路径"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "LN₂ over C → N₂ [B, T, C]",
+            "zh-hans": "沿 C 做 LN₂ → N₂ [B, T, C]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "W₁ [C, F], b₁ [F]; W₂ [F, C], b₂ [C]",
+            "zh-hans": "W₁ [C, F]、b₁ [F]；W₂ [F, C]、b₂ [C]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "N₂W₁+b₁ → ReLU [B, T, F] → W₂,b₂ [B, T, C]",
+            "zh-hans": "N₂W₁+b₁ → ReLU [B, T, F] → W₂、b₂ [B, T, C]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "ADD R + FFN → Y; Y₁ = [1.999980, 2.999940]",
+            "zh-hans": "相加 R + FFN → Y；Y₁ = [1.999980, 2.999940]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "R also goes directly to the second ADD. Mini GPT applies a final norm after this block.",
+        "zh-hans": "R 同样有一路直接参与第二次相加。Mini GPT 在此块之后再做最终归一化。"
+      }
+    }
+  ]
+}

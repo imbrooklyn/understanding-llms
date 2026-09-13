@@ -1,0 +1,53 @@
+{
+  "version": "generation-tasks-v1",
+  "license": "CC BY-SA 4.0",
+  "status": "fixed before execution",
+  "checkpoint": "data/mini-gpt/weights-final.pt",
+  "seeds": [
+    7,
+    42,
+    31415
+  ],
+  "max_new_tokens": 24,
+  "tasks": [
+    {
+      "id": "structured",
+      "prompt": {
+        "en": "Beijing lodging limit: 750. Answer: ",
+        "zh-hans": "北京住宿限额750元。答案："
+      },
+      "criterion": "Return exactly the current amount 750 after trimming; this strict format diagnostic is separate from factual paraphrase review.",
+      "accepted": [
+        "750"
+      ]
+    },
+    {
+      "id": "creative",
+      "prompt": {
+        "en": "The key is red. ",
+        "zh-hans": "钥匙是红色的。"
+      },
+      "criterion": "Continue a coherent short scene that retains the red key. Report distinct decoded continuations as diversity only, not as a quality score."
+    }
+  ],
+  "policies": [
+    {
+      "id": "greedy",
+      "mode": "greedy",
+      "temperature": 1.0,
+      "top_k": null
+    },
+    {
+      "id": "sample-0.7-k5",
+      "mode": "sample",
+      "temperature": 0.7,
+      "top_k": 5
+    },
+    {
+      "id": "sample-1.2-k5",
+      "mode": "sample",
+      "temperature": 1.2,
+      "top_k": 5
+    }
+  ]
+}

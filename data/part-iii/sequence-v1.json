@@ -1,0 +1,324 @@
+{
+  "version": "part-iii-sequence-v1",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original supplied diagnostic weights and conditional trace; no fitted model or corpus measurement.",
+  "as_of": "2026-09-12",
+  "last_verified": "2026-09-12",
+  "seed": null,
+  "precision": "Python binary64; retain full precision internally; probabilities displayed to six decimals; exact fractions and ln(2) are authoritative.",
+  "tokenizer": "Explicit token lists; no external tokenizer; IDs are row labels.",
+  "baseline_source": {
+    "path": "data/part-ii/nnlm-data.json",
+    "field": "window_collision",
+    "sha256": "735274f74e900dcef9ef158c8a2e7505fe6580e4be471a2984c61371fa961b7a"
+  },
+  "rnn": {
+    "vocabulary": [
+      "red",
+      "blue",
+      "filler",
+      "key",
+      "is"
+    ],
+    "embedding": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "initial": [
+      0,
+      0
+    ],
+    "input_weight": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "recurrent_weight": [
+      [
+        0.5,
+        0
+      ],
+      [
+        0,
+        0.5
+      ]
+    ],
+    "hidden_bias": [
+      0,
+      0
+    ],
+    "output_weight": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "output_bias": [
+      0.125,
+      0
+    ],
+    "candidates": [
+      "red",
+      "blue"
+    ],
+    "selection": "argmax; first candidate wins ties",
+    "short_inputs": [
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        3,
+        4
+      ]
+    ],
+    "targets": [
+      0,
+      1
+    ],
+    "window_weight": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "gradient": {
+    "inputs": [
+      1,
+      0,
+      0
+    ],
+    "initial": 0,
+    "weight": 0.5,
+    "target": 1,
+    "loss": "0.5 * (last_state - target)^2",
+    "learning_rate": 0.1,
+    "distances": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "factors": [
+      0.5,
+      1.5
+    ]
+  },
+  "gates": {
+    "status": "Supplied activation values, not calculated from a fitted gate network",
+    "lstm": {
+      "previous_cell": 0.8,
+      "forget": 0.9,
+      "input": 0.2,
+      "candidate": 0.5,
+      "output": 0.75
+    },
+    "gru": {
+      "previous_hidden": 0.8,
+      "update_retains_old": 0.9,
+      "reset": 0.25,
+      "candidate_input": 0,
+      "candidate_recurrent_weight": 1
+    }
+  },
+  "translation": {
+    "vocabulary": [
+      "红色",
+      "蓝色",
+      "钥匙",
+      "。"
+    ],
+    "embedding_in_units_of_ln2": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "input_weight": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "recurrent_weight": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "hidden_bias": [
+      0,
+      0
+    ],
+    "initial": [
+      0,
+      0
+    ],
+    "source_ids": [
+      0,
+      2,
+      3
+    ],
+    "contrast_source_ids": [
+      1,
+      2,
+      3
+    ],
+    "candidates": [
+      "red",
+      "blue",
+      "key",
+      "door",
+      ".",
+      "EOS"
+    ],
+    "target": [
+      "red",
+      "key",
+      ".",
+      "EOS"
+    ],
+    "start": "BOS",
+    "end": "EOS",
+    "max_steps": 8,
+    "decoder_status": "Authored conditional lookup for fixed source context; not a fitted decoder and not derived from the encoder weights",
+    "conditional_rows": {
+      "BOS": [
+        0.4,
+        0.5,
+        0.1,
+        0,
+        0,
+        0
+      ],
+      "red": [
+        0,
+        0,
+        0.8,
+        0.1,
+        0.1,
+        0
+      ],
+      "blue": [
+        0,
+        0,
+        0.2,
+        0.7,
+        0.1,
+        0
+      ],
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        0.9,
+        0.1
+      ],
+      "door": [
+        0,
+        0,
+        0,
+        0,
+        0.9,
+        0.1
+      ],
+      ".": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "attention": {
+    "score": "unscaled dot product",
+    "queries": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "query_status": "Supplied decoder-state probes, not a computed decoder trajectory",
+    "readout": [
+      1,
+      2
+    ],
+    "deletion_indices": [
+      0,
+      1,
+      2
+    ],
+    "intervention": "Freeze query and remaining memory for slot deletion; recompute encoder for source deletion; no decoder rollout claimed."
+  }
+}

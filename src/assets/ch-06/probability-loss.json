@@ -1,0 +1,16 @@
+{
+  "id":"ch-06/probability-loss", "structure":"lanes",
+  "alt":{"en":"Logits ln 2, zero, zero become weights 2, 1, 1 and probabilities one half, one quarter, one quarter. Targets Paris and Lyon have losses ln 2 and ln 4; their mean is ln 8 divided by 2 and perplexity is square root 8.","zh-hans":"分数 ln 2、0、0 变成权重 2、1、1，再变成概率二分之一、四分之一、四分之一。目标为巴黎和里昂时，损失分别为 ln 2 和 ln 4；平均损失为 ln 8 除以 2，困惑度为根号 8。"},
+  "caption":{"en":"Figure 6.1 — Candidate normalization and target averaging use different denominators.","zh-hans":"图 6.1 — 候选概率的归一化与目标损失的平均，使用不同的分母。"},
+  "credit":{"en":"Original diagram and derived teaching arithmetic, CC BY-SA 4.0.","zh-hans":"本书原创图示与教学推导，CC BY-SA 4.0。"},
+  "lanes":[
+    {"label":{"en":"One prediction; candidate order Paris, Lyon, other","zh-hans":"一次预测；候选顺序为巴黎、里昂、其他"},"nodes":[
+      {"kind":"vector","text":{"en":"Logits: [ln 2, 0, 0]","zh-hans":"分数：[ln 2, 0, 0]"}},
+      {"kind":"computation","text":{"en":"Exponentials: [2,1,1]; total 4","zh-hans":"取指数：[2,1,1]；总和为 4"}},
+      {"kind":"vector","text":{"en":"Probabilities: [1/2,1/4,1/4]","zh-hans":"概率：[1/2,1/4,1/4]"}}],"flow":{"en":"Divide each weight by the sum of all three candidate weights.","zh-hans":"每项权重都除以三个候选权重的总和。"}},
+    {"label":{"en":"Two labeled predictions with that same distribution","zh-hans":"两个有目标标注的预测，使用相同分布"},"nodes":[
+      {"kind":"computation","text":{"en":"Paris target: −ln(1/2) = ln 2","zh-hans":"目标为巴黎：−ln(1/2) = ln 2"}},
+      {"kind":"computation","text":{"en":"Lyon target: −ln(1/4) = ln 4","zh-hans":"目标为里昂：−ln(1/4) = ln 4"}},
+      {"kind":"vector","text":{"en":"Mean: (ln 2 + ln 4)/2; PPL: √8","zh-hans":"平均：(ln 2 + ln 4)/2；困惑度：√8"}}],"flow":{"en":"Divide total loss by two scored targets, not by three candidates or padded storage slots.","zh-hans":"总损失除以两个计分目标，不是除以三个候选，也不是除以含补齐项的槽位数。"}}
+  ]
+}

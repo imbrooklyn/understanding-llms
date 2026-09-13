@@ -1,0 +1,29 @@
+{
+  "as_of": "2026-09-12T05:30:42.548718+00:00",
+  "python": "3.12.10",
+  "condition": "fresh kernel per notebook, CPU, no allowed errors",
+  "executions": [
+    {
+      "notebook": "notebooks/part-iii/01-state-and-gradient.ipynb",
+      "code_sha256": "c288dfa0befc2b6aa6fc11c751f272e0e9bd6b53fb02a74d99c345fdde7f55e0",
+      "code_cells": 6,
+      "elapsed_seconds": 1.0425,
+      "status": "passed"
+    },
+    {
+      "notebook": "notebooks/part-iii/02-seq2seq-attention.ipynb",
+      "code_sha256": "953ae1ba4ea2a9a79d0ed56273f72d027c0eb3221db7505c3957815df43e266b",
+      "code_cells": 6,
+      "elapsed_seconds": 1.2429,
+      "status": "passed"
+    }
+  ],
+  "inputs_sha256": {
+    "code/part-iii/core.py": "2da74bc5d25de258f1492da1b0e12cbd44bbc0e4c3b70d362fa029ff7bc86993",
+    "code/part-ii/numerical.py": "d0dcfdfcbe25e073f79e997964b70f4b178a637197d6d47f0244b50418880d14",
+    "data/part-iii/sequence-v1.json": "a28fa5e5463ade7e050d2938f6c848087ecaa70c7a9f0e6b69d66b053a4b4a06",
+    "data/part-iii/expected.json": "4390817360d1b96818fcb9d849647f6a8e45117eb86a1f38b909427d86a3c08f",
+    "data/part-ii/nnlm-data.json": "735274f74e900dcef9ef158c8a2e7505fe6580e4be471a2984c61371fa961b7a",
+    "code/part-iii/requirements.txt": "b6a23aaf0cee63ed1c4620fee200fa746b799aa7c64459d3949f9fc499e6e830"
+  }
+}

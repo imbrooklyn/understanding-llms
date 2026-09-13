@@ -1,0 +1,541 @@
+{
+  "hand_bpe": [
+    {
+      "rank": 1,
+      "counts": [
+        {
+          "pair": [
+            "e",
+            "r"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "e",
+            "w"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "l",
+            "o"
+          ],
+          "count": 3
+        },
+        {
+          "pair": [
+            "n",
+            "e"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "o",
+            "w"
+          ],
+          "count": 3
+        },
+        {
+          "pair": [
+            "r",
+            "</w>"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "w",
+            "</w>"
+          ],
+          "count": 3
+        },
+        {
+          "pair": [
+            "w",
+            "e"
+          ],
+          "count": 1
+        }
+      ],
+      "selected": [
+        "l",
+        "o"
+      ],
+      "selected_count": 3,
+      "segments": {
+        "low": [
+          "lo",
+          "w",
+          "</w>"
+        ],
+        "lower": [
+          "lo",
+          "w",
+          "e",
+          "r",
+          "</w>"
+        ],
+        "new": [
+          "n",
+          "e",
+          "w",
+          "</w>"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "counts": [
+        {
+          "pair": [
+            "e",
+            "r"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "e",
+            "w"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "lo",
+            "w"
+          ],
+          "count": 3
+        },
+        {
+          "pair": [
+            "n",
+            "e"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "r",
+            "</w>"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "w",
+            "</w>"
+          ],
+          "count": 3
+        },
+        {
+          "pair": [
+            "w",
+            "e"
+          ],
+          "count": 1
+        }
+      ],
+      "selected": [
+        "lo",
+        "w"
+      ],
+      "selected_count": 3,
+      "segments": {
+        "low": [
+          "low",
+          "</w>"
+        ],
+        "lower": [
+          "low",
+          "e",
+          "r",
+          "</w>"
+        ],
+        "new": [
+          "n",
+          "e",
+          "w",
+          "</w>"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "counts": [
+        {
+          "pair": [
+            "e",
+            "r"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "e",
+            "w"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "low",
+            "</w>"
+          ],
+          "count": 2
+        },
+        {
+          "pair": [
+            "low",
+            "e"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "n",
+            "e"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "r",
+            "</w>"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "w",
+            "</w>"
+          ],
+          "count": 1
+        }
+      ],
+      "selected": [
+        "low",
+        "</w>"
+      ],
+      "selected_count": 2,
+      "segments": {
+        "low": [
+          "low</w>"
+        ],
+        "lower": [
+          "low",
+          "e",
+          "r",
+          "</w>"
+        ],
+        "new": [
+          "n",
+          "e",
+          "w",
+          "</w>"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "counts": [
+        {
+          "pair": [
+            "e",
+            "r"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "e",
+            "w"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "low",
+            "e"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "n",
+            "e"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "r",
+            "</w>"
+          ],
+          "count": 1
+        },
+        {
+          "pair": [
+            "w",
+            "</w>"
+          ],
+          "count": 1
+        }
+      ],
+      "selected": [
+        "e",
+        "r"
+      ],
+      "selected_count": 1,
+      "segments": {
+        "low": [
+          "low</w>"
+        ],
+        "lower": [
+          "low",
+          "er",
+          "</w>"
+        ],
+        "new": [
+          "n",
+          "e",
+          "w",
+          "</w>"
+        ]
+      }
+    }
+  ],
+  "tokenizer_sha256": "9bb146ce375bda3aa518a48a60d9f69611b8d0afde9df9a8298eae9dfa9dd354",
+  "roundtrips": [
+    {
+      "text": "red key .",
+      "utf8_bytes": [
+        114,
+        101,
+        100,
+        32,
+        107,
+        101,
+        121,
+        32,
+        46
+      ],
+      "codepoints": 9,
+      "byte_count": 9,
+      "ids": [
+        270,
+        32,
+        268,
+        32,
+        46
+      ],
+      "token_count": 5,
+      "decoded": "red key ."
+    },
+    {
+      "text": "法国首都是巴黎。",
+      "utf8_bytes": [
+        230,
+        179,
+        149,
+        229,
+        155,
+        189,
+        233,
+        166,
+        150,
+        233,
+        131,
+        189,
+        230,
+        152,
+        175,
+        229,
+        183,
+        180,
+        233,
+        187,
+        142,
+        227,
+        128,
+        130
+      ],
+      "codepoints": 8,
+      "byte_count": 24,
+      "ids": [
+        230,
+        179,
+        149,
+        229,
+        155,
+        189,
+        233,
+        166,
+        150,
+        233,
+        131,
+        189,
+        230,
+        152,
+        175,
+        229,
+        183,
+        180,
+        233,
+        187,
+        142,
+        227,
+        128,
+        130
+      ],
+      "token_count": 24,
+      "decoded": "法国首都是巴黎。"
+    },
+    {
+      "text": "中",
+      "utf8_bytes": [
+        228,
+        184,
+        173
+      ],
+      "codepoints": 1,
+      "byte_count": 3,
+      "ids": [
+        228,
+        184,
+        173
+      ],
+      "token_count": 3,
+      "decoded": "中"
+    },
+    {
+      "text": "🙂",
+      "utf8_bytes": [
+        240,
+        159,
+        153,
+        130
+      ],
+      "codepoints": 1,
+      "byte_count": 4,
+      "ids": [
+        240,
+        159,
+        153,
+        130
+      ],
+      "token_count": 4,
+      "decoded": "🙂"
+    },
+    {
+      "text": "é",
+      "utf8_bytes": [
+        101,
+        204,
+        129
+      ],
+      "codepoints": 2,
+      "byte_count": 3,
+      "ids": [
+        101,
+        204,
+        129
+      ],
+      "token_count": 3,
+      "decoded": "é"
+    },
+    {
+      "text": "é",
+      "utf8_bytes": [
+        195,
+        169
+      ],
+      "codepoints": 1,
+      "byte_count": 2,
+      "ids": [
+        195,
+        169
+      ],
+      "token_count": 2,
+      "decoded": "é"
+    },
+    {
+      "text": "Ａ A",
+      "utf8_bytes": [
+        239,
+        188,
+        161,
+        32,
+        65
+      ],
+      "codepoints": 3,
+      "byte_count": 5,
+      "ids": [
+        239,
+        188,
+        161,
+        32,
+        65
+      ],
+      "token_count": 5,
+      "decoded": "Ａ A"
+    },
+    {
+      "text": "  red  key .\n",
+      "utf8_bytes": [
+        32,
+        32,
+        114,
+        101,
+        100,
+        32,
+        32,
+        107,
+        101,
+        121,
+        32,
+        46,
+        10
+      ],
+      "codepoints": 13,
+      "byte_count": 13,
+      "ids": [
+        32,
+        32,
+        270,
+        32,
+        32,
+        268,
+        32,
+        46,
+        10
+      ],
+      "token_count": 9,
+      "decoded": "  red  key .\n"
+    }
+  ],
+  "wordpiece": [
+    {
+      "text": "lower",
+      "pieces": [
+        "low",
+        "##er"
+      ]
+    },
+    {
+      "text": "lowerz",
+      "pieces": [
+        "[UNK]"
+      ]
+    }
+  ],
+  "unicode_data": "15.0.0",
+  "normalization": {
+    "raw": "é",
+    "normalized": "é",
+    "raw_equal": false
+  }
+}

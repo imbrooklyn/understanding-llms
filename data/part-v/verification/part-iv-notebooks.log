@@ -1,0 +1,4 @@
+$ node scripts/run-part-iv-notebooks.mjs
+{"notebook": "notebooks/part-iv/01-attention-and-block.ipynb", "code_sha256": "31ae8d2bd1ae268ac8c0ad93af39e227faea5de629f6892eef258c212154c6e0", "code_cells": 3, "elapsed_seconds": 0.751, "status": "passed"}
+{"notebook": "notebooks/part-iv/02-tokenizer-boundaries.ipynb", "code_sha256": "0f2144a673856c1853d854df319c6b59435244fb24c154ee5a4bd085b1f66718", "code_cells": 3, "elapsed_seconds": 0.7671, "status": "passed"}
+{"notebook": "notebooks/part-iv/03-mini-gpt.ipynb", "code_sha256": "fa27ee30cd229c040dd31215a39089f436f842ad38c0e39039682b7f0122e270", "code_cells": 3, "elapsed_seconds": 7.3664, "status": "passed"}

@@ -1,0 +1,11 @@
+{
+ "id":"ch-07/training-curve", "structure":"training-curve",
+ "alt":{"en":"Measured loss over 600 updates. Solid training loss falls from 0.697 to 0.033 nats. Dashed validation loss reaches its minimum 0.582 at step 5, then rises to 8.150 at step 600. No test curve is used for selection.","zh-hans":"600 次更新的实测损失。实线表示训练损失，从 0.697 降到 0.033 nat；虚线表示验证损失，在第 5 步达到最低值 0.582，随后升高，第 600 步为 8.150。选择模型时没有使用测试集曲线。"},
+ "caption":{"en":"Figure 7.2 — Fitting the training labels eventually harms validation likelihood.","zh-hans":"图 7.2 — 持续拟合训练标签，后来反而降低了验证数据的似然。"},
+ "credit":{"en":"Original CPU experiment and diagram, CC BY-SA 4.0; full measured points in classifier-run.json.","zh-hans":"本书原创 CPU 实验与图示，CC BY-SA 4.0；全部实测点见 classifier-run.json。"},
+ "labels":{
+  "x":{"en":"Updates","zh-hans":"更新次数"},"y":{"en":"Mean loss (nats)","zh-hans":"平均损失（nat）"},
+  "legend":{"en":"Solid: training. Dashed: validation. Both axes are linear.","zh-hans":"实线：训练集；虚线：验证集。两条坐标轴均为线性刻度。"},
+  "selection":{"en":"The dotted vertical line marks the selected step 5, close to the left edge.","zh-hans":"靠近左边缘的竖向点线标出选中的第 5 步。"}
+ }
+}

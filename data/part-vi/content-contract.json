@@ -1,0 +1,82 @@
+{
+  "chapters": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "headings": {
+    "en": {
+      "summary": "Summary",
+      "exercises": "Exercises",
+      "answers": "Reference answers",
+      "references": "References"
+    },
+    "zh-hans": {
+      "summary": "本章小结",
+      "exercises": "习题",
+      "answers": "参考解答",
+      "references": "参考文献"
+    }
+  },
+  "captions": {
+    "en": {
+      "example": "Example",
+      "table": "Table",
+      "separator": " — "
+    },
+    "zh-hans": {
+      "example": "例",
+      "table": "表",
+      "separator": "："
+    }
+  },
+  "evidence": {
+    "ch-34": [
+      "0 0 0 0 0 0 0 1 1 1",
+      "0.924196",
+      "1.039721",
+      "1.155245",
+      "sft-v1.json"
+    ],
+    "ch-35": [
+      "0.130812",
+      "0.143841",
+      "0.619188",
+      "0.488376",
+      "0.287682",
+      "preferences-v1.json"
+    ],
+    "ch-36": [
+      "1,430",
+      "1430",
+      "1380",
+      "reasoning-v1.json",
+      "RLVR"
+    ],
+    "ch-37": [
+      "145",
+      "232",
+      "0.011417",
+      "0.029125",
+      "budget-v1.json",
+      "mechanism-run-v1.json"
+    ],
+    "ch-38": [
+      "0/18 → 6/18",
+      "2/6 → 2/6",
+      "0.982542",
+      "ka1-format-run-v1.json",
+      "ka1-adaptation-report.md"
+    ],
+    "ch-39": [
+      "0.390625%",
+      "16,777,216",
+      "65,536",
+      "0.14",
+      "QLoRA"
+    ]
+  }
+}

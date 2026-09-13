@@ -1,0 +1,66 @@
+$ pnpm validate:content && pnpm check && pnpm build
+$ tsx scripts/validate-content.ts
+Validated 1 Markdown file across posts/ and drafts/.
+$ tsx scripts/validate-content.ts && astro sync --force && astro check
+Validated 1 Markdown file across posts/ and drafts/.
+13:48:32 [WARN] [content] data store cleared (force)
+13:48:32 [content] Syncing content
+13:48:32 [WARN] [glob-loader] No files found matching "**/*.md" in directory "../blog/drafts"
+13:48:32 [content] Synced content
+13:48:32 [types] Generated 280ms
+13:48:33 [content] Syncing content
+13:48:33 [WARN] [glob-loader] No files found matching "**/*.md" in directory "../blog/drafts"
+13:48:33 [content] Synced content
+13:48:33 [types] Generated 205ms
+13:48:33 [check] Getting diagnostics for Astro files in <main-root>...
+Result (34 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+$ tsx scripts/validate-content.ts && astro sync --force && astro build
+Validated 1 Markdown file across posts/ and drafts/.
+13:48:36 [WARN] [content] data store cleared (force)
+13:48:36 [content] Syncing content
+13:48:36 [WARN] [glob-loader] No files found matching "**/*.md" in directory "../blog/drafts"
+13:48:36 [content] Synced content
+13:48:36 [types] Generated 251ms
+13:48:36 [content] Syncing content
+13:48:36 [WARN] [glob-loader] No files found matching "**/*.md" in directory "../blog/drafts"
+13:48:36 [content] Synced content
+13:48:36 [types] Generated 160ms
+13:48:36 [build] output: "static"
+13:48:36 [build] mode: "static"
+13:48:36 [build] directory: <main-root>/dist/
+13:48:36 [build] Collecting build info...
+13:48:36 [build] ✓ Completed in 182ms.
+13:48:36 [build] Building static entrypoints...
+13:48:36 [vite] ✓ built in 180ms
+13:48:37 [vite] ✓ built in 11ms
+13:48:37 [build] Rearranging server assets...
+
+ generating static routes 
+The collection "drafts" does not exist or is empty. Please check your content config file for errors.
+13:48:37   ├─ /about/index.html (+5ms) 
+13:48:37   ├─ /blog/shuttle-v0-1-0/index.html (+2ms) 
+13:48:37   ├─ /blog/index.htmlThe collection "drafts" does not exist or is empty. Please check your content config file for errors.
+ (+2ms) 
+13:48:37   ├─ /books/understanding-llms/index.html (+1ms) 
+13:48:37   ├─ /books/index.html (+2ms) 
+13:48:37   ├─ /projects/index.html (+2ms) 
+13:48:37   ├─ /robots.txt (+1ms) 
+13:48:37   ├─ /rss.xmlThe collection "drafts" does not exist or is empty. Please check your content config file for errors.
+ (+21ms) 
+13:48:37   ├─ /index.htmlThe collection "drafts" does not exist or is empty. Please check your content config file for errors.
+The collection "drafts" does not exist or is empty. Please check your content config file for errors.
+ (+2ms) 
+13:48:37 ✓ Completed in 50ms.
+
+ generating optimized images 
+13:48:37   ▶ /_astro/cover.8cA_crDZ_yRPNH.png (reused cache entry) (+2ms) (1/1)
+13:48:37 ✓ Completed in 2ms.
+
+13:48:37 [build] ✓ Completed in 260ms.
+13:48:37 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+13:48:37 [build] 7 page(s) built in 458ms
+13:48:37 [build] Complete!

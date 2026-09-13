@@ -1,0 +1,10 @@
+{
+  "version": "ka1-provenance-note-v1",
+  "recorded_at": "2026-09-13T05:38:53.455186+00:00",
+  "license": "CC BY-SA 4.0",
+  "kind": "Post-run source-attribution correction; no input, evaluator or result revision",
+  "frozen_contract": "data/knowledge-assistant/ka1-contract-v1.json",
+  "contract_sha256": "00300195c59bf81d81c6c40495b3e02cb44765063e04e927a0a4f15d7058a4b4",
+  "correction": "The frozen adaptation.mode statement that all compact evidence consists of reductions of KA-0 records overstates attribution. Document IDs identify related meanings. D defines processing as a possible status; the KA-1 prompt newly assigns processing to fictional A104. E supplies the approval rule; no-granted-approval is additionally assigned. A104 is a new synthetic short label, not a search-key normalization of A-104. The unknown-passport condition explicitly extends the out-of-scope case.",
+  "effect": "All prompts, expected behaviors, scoring rules, checkpoints, raw attempts and rejection decisions remain unchanged. Original source records and the pre-run contract/freeze are retained byte-for-byte; this note must accompany reuse of that metadata."
+}

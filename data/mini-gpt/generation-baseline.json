@@ -1,0 +1,6412 @@
+[
+  {
+    "prompt": "The key is red. Answer:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      271,
+      102,
+      32,
+      65,
+      276,
+      112,
+      267,
+      97,
+      112,
+      32,
+      273,
+      274,
+      101,
+      46
+    ],
+    "generated_hex": "206f6620416e7370697461702074686520626c75652e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": " of Anspitap the blue.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 271,
+        "chosen_hex": "206f",
+        "model_probability": 0.1489399143173354,
+        "sampling_probability": 0.14895863152175312,
+        "top5": [
+          {
+            "id": 271,
+            "bytes_hex": "206f",
+            "logit": 4.234458109512528,
+            "model_probability": 0.1489399143173354,
+            "sampling_probability": 0.14895863152175312
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 3.98744337727876,
+            "model_probability": 0.11634131398428732,
+            "sampling_probability": 0.11635593453893214
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 3.527039904498098,
+            "model_probability": 0.07341474198856797,
+            "sampling_probability": 0.07342396798241504
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.289390190328499,
+            "model_probability": 0.0578859702856198,
+            "sampling_probability": 0.057893244786506426
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 3.1907801854003064,
+            "model_probability": 0.052450246832625745,
+            "sampling_probability": 0.05245683822886917
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271
+        ],
+        "chosen_id": 102,
+        "chosen_hex": "66",
+        "model_probability": 0.18690208138533204,
+        "sampling_probability": 0.18724589985303755,
+        "top5": [
+          {
+            "id": 102,
+            "bytes_hex": "66",
+            "logit": 4.627718254449674,
+            "model_probability": 0.18690208138533204,
+            "sampling_probability": 0.18724589985303755
+          },
+          {
+            "id": 286,
+            "bytes_hex": "72646572",
+            "logit": 4.497251464663945,
+            "model_probability": 0.16404127302883567,
+            "sampling_probability": 0.16434303756091145
+          },
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 3.4740652767343723,
+            "model_probability": 0.05896428213500031,
+            "sampling_probability": 0.05907275074585122
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 3.135388676190148,
+            "model_probability": 0.042024604681233056,
+            "sampling_probability": 0.04210191165973397
+          },
+          {
+            "id": 114,
+            "bytes_hex": "72",
+            "logit": 3.042277595072766,
+            "model_probability": 0.03828829329542376,
+            "sampling_probability": 0.03835872708746244
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102
+        ],
+        "chosen_id": 32,
+        "chosen_hex": "20",
+        "model_probability": 0.6506941363674337,
+        "sampling_probability": 0.650694518643489,
+        "top5": [
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 8.226045968768199,
+            "model_probability": 0.6506941363674337,
+            "sampling_probability": 0.650694518643489
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 6.35624286027758,
+            "model_probability": 0.10030711069287081,
+            "sampling_probability": 0.10030716962225783
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 6.215213229962446,
+            "model_probability": 0.08711307229800759,
+            "sampling_probability": 0.08711312347603392
+          },
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 5.503831159242919,
+            "model_probability": 0.042769485198892565,
+            "sampling_probability": 0.04276951032552146
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 4.916193484975862,
+            "model_probability": 0.023764365514655654,
+            "sampling_probability": 0.023764379475973884
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32
+        ],
+        "chosen_id": 65,
+        "chosen_hex": "41",
+        "model_probability": 0.31358667351657477,
+        "sampling_probability": 0.3136362711337285,
+        "top5": [
+          {
+            "id": 65,
+            "bytes_hex": "41",
+            "logit": 5.582854234711751,
+            "model_probability": 0.31358667351657477,
+            "sampling_probability": 0.3136362711337285
+          },
+          {
+            "id": 66,
+            "bytes_hex": "42",
+            "logit": 4.2819460369212905,
+            "model_probability": 0.08538475693312989,
+            "sampling_probability": 0.08539826159019213
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 4.206587361176656,
+            "model_probability": 0.07918674461763844,
+            "sampling_probability": 0.07919926898227152
+          },
+          {
+            "id": 289,
+            "bytes_hex": "4672616e63",
+            "logit": 3.8716332747270013,
+            "model_probability": 0.0566478952055513,
+            "sampling_probability": 0.05665685477193677
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 3.738809727323044,
+            "model_probability": 0.04960200642455184,
+            "sampling_probability": 0.049609851596341556
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65
+        ],
+        "chosen_id": 276,
+        "chosen_hex": "6e73",
+        "model_probability": 0.28429411731467386,
+        "sampling_probability": 0.2843126882796861,
+        "top5": [
+          {
+            "id": 276,
+            "bytes_hex": "6e73",
+            "logit": 5.382465354786865,
+            "model_probability": 0.28429411731467386,
+            "sampling_probability": 0.2843126882796861
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 5.269874052341597,
+            "model_probability": 0.25402127520856277,
+            "sampling_probability": 0.2540378686585392
+          },
+          {
+            "id": 104,
+            "bytes_hex": "68",
+            "logit": 4.667222871903889,
+            "model_probability": 0.1390407205376874,
+            "sampling_probability": 0.13904980310464576
+          },
+          {
+            "id": 268,
+            "bytes_hex": "6b6579",
+            "logit": 3.3423345280416497,
+            "model_probability": 0.03696156170760662,
+            "sampling_probability": 0.03696397615035259
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 3.2657331834607395,
+            "model_probability": 0.03423598059758172,
+            "sampling_probability": 0.034238216996997375
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276
+        ],
+        "chosen_id": 112,
+        "chosen_hex": "70",
+        "model_probability": 0.2455942280206315,
+        "sampling_probability": 0.24561250937205992,
+        "top5": [
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 5.580841242491422,
+            "model_probability": 0.2455942280206315,
+            "sampling_probability": 0.24561250937205992
+          },
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 5.55387792541891,
+            "model_probability": 0.23906067198182607,
+            "sampling_probability": 0.23907846699351032
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 5.14530095758515,
+            "model_probability": 0.15887860333162426,
+            "sampling_probability": 0.15889042981307447
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 4.070243757451194,
+            "model_probability": 0.05422180909899191,
+            "sampling_probability": 0.05422584521969072
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 3.658385977001654,
+            "model_probability": 0.03591752826922633,
+            "sampling_probability": 0.03592020187015752
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112
+        ],
+        "chosen_id": 267,
+        "chosen_hex": "6974",
+        "model_probability": 0.22385085351528036,
+        "sampling_probability": 0.2239366682241583,
+        "top5": [
+          {
+            "id": 267,
+            "bytes_hex": "6974",
+            "logit": 4.979543952322171,
+            "model_probability": 0.22385085351528036,
+            "sampling_probability": 0.2239366682241583
+          },
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 4.6070713499254445,
+            "model_probability": 0.1542396243196459,
+            "sampling_probability": 0.15429875310227317
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 3.854653836310435,
+            "model_probability": 0.07268171803227826,
+            "sampling_probability": 0.07270958105078251
+          },
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 3.74807080548846,
+            "model_probability": 0.06533362603862072,
+            "sampling_probability": 0.06535867211733967
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.3593104973198957,
+            "model_probability": 0.04428945189832818,
+            "sampling_probability": 0.0443064305533627
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267
+        ],
+        "chosen_id": 97,
+        "chosen_hex": "61",
+        "model_probability": 0.38195940427182346,
+        "sampling_probability": 0.38198432190823556,
+        "top5": [
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 5.772812988293516,
+            "model_probability": 0.38195940427182346,
+            "sampling_probability": 0.38198432190823556
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 4.717005929722125,
+            "model_probability": 0.1328880803520105,
+            "sampling_probability": 0.13289674948499342
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 4.229454891908838,
+            "model_probability": 0.08161036165990664,
+            "sampling_probability": 0.08161568562181609
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 3.727643496766751,
+            "model_probability": 0.04940960506918765,
+            "sampling_probability": 0.04941282837135173
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 3.293041788989889,
+            "model_probability": 0.03199383193265108,
+            "sampling_probability": 0.03199591909338757
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97
+        ],
+        "chosen_id": 112,
+        "chosen_hex": "70",
+        "model_probability": 0.2851990156567482,
+        "sampling_probability": 0.2852182849539398,
+        "top5": [
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 5.804439887217199,
+            "model_probability": 0.2851990156567482,
+            "sampling_probability": 0.2852182849539398
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 5.280672779016245,
+            "model_probability": 0.1689191383165415,
+            "sampling_probability": 0.16893055123488585
+          },
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 5.05106761790148,
+            "model_probability": 0.13426493405086448,
+            "sampling_probability": 0.13427400557907673
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 4.440468549459963,
+            "model_probability": 0.07290927786973905,
+            "sampling_probability": 0.07291420394053934
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 4.209131288955492,
+            "model_probability": 0.05785145698325853,
+            "sampling_probability": 0.05785536568159331
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97,
+          112
+        ],
+        "chosen_id": 32,
+        "chosen_hex": "20",
+        "model_probability": 0.19890177438416026,
+        "sampling_probability": 0.1989239772792812,
+        "top5": [
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 5.111689695933701,
+            "model_probability": 0.19890177438416026,
+            "sampling_probability": 0.1989239772792812
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 5.064242244325579,
+            "model_probability": 0.1896847825457975,
+            "sampling_probability": 0.18970595657175046
+          },
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 4.4334237136532915,
+            "model_probability": 0.10094190209230153,
+            "sampling_probability": 0.10095316997803258
+          },
+          {
+            "id": 267,
+            "bytes_hex": "6974",
+            "logit": 3.8995358725495852,
+            "model_probability": 0.059184357965572296,
+            "sampling_probability": 0.0591909645637124
+          },
+          {
+            "id": 266,
+            "bytes_hex": "6973",
+            "logit": 3.802972289242617,
+            "model_probability": 0.053736565958631084,
+            "sampling_probability": 0.05374256443371676
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97,
+          112,
+          32
+        ],
+        "chosen_id": 273,
+        "chosen_hex": "74686520",
+        "model_probability": 0.20101837512272525,
+        "sampling_probability": 0.20104624773356172,
+        "top5": [
+          {
+            "id": 273,
+            "bytes_hex": "74686520",
+            "logit": 4.613595478419116,
+            "model_probability": 0.20101837512272525,
+            "sampling_probability": 0.20104624773356172
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 4.1756324061408145,
+            "model_probability": 0.12972713073370393,
+            "sampling_probability": 0.12974511831234029
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 3.7982928647672147,
+            "model_probability": 0.08895171627460155,
+            "sampling_probability": 0.08896405005537877
+          },
+          {
+            "id": 277,
+            "bytes_hex": "697320",
+            "logit": 3.35719070134601,
+            "model_probability": 0.05722503888382514,
+            "sampling_probability": 0.05723297353774888
+          },
+          {
+            "id": 268,
+            "bytes_hex": "6b6579",
+            "logit": 3.280741082726772,
+            "model_probability": 0.05301325235389467,
+            "sampling_probability": 0.05302060301400787
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97,
+          112,
+          32,
+          273
+        ],
+        "chosen_id": 274,
+        "chosen_hex": "626c75",
+        "model_probability": 0.18439693520904726,
+        "sampling_probability": 0.18444013433528328,
+        "top5": [
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 4.833269199993414,
+            "model_probability": 0.18439693520904726,
+            "sampling_probability": 0.18444013433528328
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 4.662657914958413,
+            "model_probability": 0.15547413845602495,
+            "sampling_probability": 0.15551056176710648
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 4.532149516852299,
+            "model_probability": 0.13645174116052788,
+            "sampling_probability": 0.13648370804753082
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 4.142390002660229,
+            "model_probability": 0.09240780948478675,
+            "sampling_probability": 0.092429458090945
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 3.99599674215134,
+            "model_probability": 0.07982352278818845,
+            "sampling_probability": 0.07984222324236694
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97,
+          112,
+          32,
+          273,
+          274
+        ],
+        "chosen_id": 101,
+        "chosen_hex": "65",
+        "model_probability": 0.5203514992960954,
+        "sampling_probability": 0.5203807917039728,
+        "top5": [
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 7.103867477028654,
+            "model_probability": 0.5203514992960954,
+            "sampling_probability": 0.5203807917039728
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 6.069394384464463,
+            "model_probability": 0.18494000049719342,
+            "sampling_probability": 0.1849504114173786
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 5.03121250368363,
+            "model_probability": 0.06548686381316217,
+            "sampling_probability": 0.06549055029802485
+          },
+          {
+            "id": 267,
+            "bytes_hex": "6974",
+            "logit": 4.889930061868831,
+            "model_probability": 0.056858579769761,
+            "sampling_probability": 0.056861780538303416
+          },
+          {
+            "id": 288,
+            "bytes_hex": "206c696d69743a20",
+            "logit": 4.209238535928685,
+            "model_probability": 0.028785609792917485,
+            "sampling_probability": 0.028787230235683952
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97,
+          112,
+          32,
+          273,
+          274,
+          101
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.4474065477505905,
+        "sampling_probability": 0.44745515796579494,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 5.964734205151924,
+            "model_probability": 0.4474065477505905,
+            "sampling_probability": 0.44745515796579494
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 4.6562880840820755,
+            "model_probability": 0.12090698887166994,
+            "sampling_probability": 0.12092012527921318
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 4.230908766619915,
+            "model_probability": 0.07901535854490124,
+            "sampling_probability": 0.07902394347420688
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 3.5836277824547977,
+            "model_probability": 0.041361945254808456,
+            "sampling_probability": 0.04136643918336229
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 3.4777563366662276,
+            "model_probability": 0.03720673582969666,
+            "sampling_probability": 0.037210778299447786
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          271,
+          102,
+          32,
+          65,
+          276,
+          112,
+          267,
+          97,
+          112,
+          32,
+          273,
+          274,
+          101,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.8968944124189043,
+        "sampling_probability": 0.89690882853843,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 8.231137111399656,
+            "model_probability": 0.8968944124189043,
+            "sampling_probability": 0.89690882853843
+          },
+          {
+            "id": 276,
+            "bytes_hex": "6e73",
+            "logit": 4.2045181922988135,
+            "model_probability": 0.015995688611093788,
+            "sampling_probability": 0.015995945715782722
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 3.940744212380412,
+            "model_probability": 0.012287042406416855,
+            "sampling_probability": 0.012287239900647496
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 3.7989037147684193,
+            "model_probability": 0.0106621996818404,
+            "sampling_probability": 0.010662371059365884
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.0706398691609085,
+            "model_probability": 0.005147138354831876,
+            "sampling_probability": 0.00514722108671281
+          }
+        ]
+      }
+    ],
+    "checkpoint": "selected",
+    "diagnostic_index": 0,
+    "expected_suffix": " red.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "The key is blue. Answer:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      100,
+      111,
+      111,
+      114,
+      46
+    ],
+    "generated_hex": "646f6f722e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "door.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 100,
+        "chosen_hex": "64",
+        "model_probability": 0.1860358415818422,
+        "sampling_probability": 0.1861991329764269,
+        "top5": [
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 3.9926587706089554,
+            "model_probability": 0.1860358415818422,
+            "sampling_probability": 0.1861991329764269
+          },
+          {
+            "id": 273,
+            "bytes_hex": "74686520",
+            "logit": 2.977429459329195,
+            "model_probability": 0.06740438266762074,
+            "sampling_probability": 0.06746354629734569
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 2.9175673115478538,
+            "model_probability": 0.06348780833653392,
+            "sampling_probability": 0.06354353422609503
+          },
+          {
+            "id": 277,
+            "bytes_hex": "697320",
+            "logit": 2.7559185164505133,
+            "model_probability": 0.054011614008343437,
+            "sampling_probability": 0.05405902224806865
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 2.2635852963913066,
+            "model_probability": 0.033011826551382364,
+            "sampling_probability": 0.03304080240436601
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          100
+        ],
+        "chosen_id": 111,
+        "chosen_hex": "6f",
+        "model_probability": 0.49440399967637993,
+        "sampling_probability": 0.49454053933659564,
+        "top5": [
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 5.771604922153445,
+            "model_probability": 0.49440399967637993,
+            "sampling_probability": 0.49454053933659564
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 3.7745452335474434,
+            "model_probability": 0.06710733198055847,
+            "sampling_probability": 0.0671258650270399
+          },
+          {
+            "id": 269,
+            "bytes_hex": "616e",
+            "logit": 3.5783096377223576,
+            "model_probability": 0.05515005327164286,
+            "sampling_probability": 0.05516528407386031
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 2.9101446819139576,
+            "model_probability": 0.028272589201807544,
+            "sampling_probability": 0.02828039724892197
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 2.8546665073823076,
+            "model_probability": 0.026746793080120287,
+            "sampling_probability": 0.026754179747787637
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          100,
+          111
+        ],
+        "chosen_id": 111,
+        "chosen_hex": "6f",
+        "model_probability": 0.487869040709021,
+        "sampling_probability": 0.4879057211939293,
+        "top5": [
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 6.2219746113028265,
+            "model_probability": 0.487869040709021,
+            "sampling_probability": 0.4879057211939293
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 5.222311388629686,
+            "model_probability": 0.17953744402101798,
+            "sampling_probability": 0.17955094256254525
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 4.061617677875579,
+            "model_probability": 0.056243477410161766,
+            "sampling_probability": 0.05624770608189985
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 3.192863514198633,
+            "model_probability": 0.0235926662951063,
+            "sampling_probability": 0.02359444011219198
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 3.0660517880465297,
+            "model_probability": 0.020782768115850534,
+            "sampling_probability": 0.020784330670447396
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          100,
+          111,
+          111
+        ],
+        "chosen_id": 114,
+        "chosen_hex": "72",
+        "model_probability": 0.3383550413228087,
+        "sampling_probability": 0.33842827564868416,
+        "top5": [
+          {
+            "id": 114,
+            "bytes_hex": "72",
+            "logit": 5.577069913490489,
+            "model_probability": 0.3383550413228087,
+            "sampling_probability": 0.33842827564868416
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 4.815782293508748,
+            "model_probability": 0.15803367485528125,
+            "sampling_probability": 0.15806788001917774
+          },
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 4.315415443756937,
+            "model_probability": 0.09581711213471797,
+            "sampling_probability": 0.09583785100589627
+          },
+          {
+            "id": 286,
+            "bytes_hex": "72646572",
+            "logit": 3.700531761257826,
+            "model_probability": 0.051808675195624335,
+            "sampling_probability": 0.051819888781766334
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 3.2662694318746066,
+            "model_probability": 0.03355867101943515,
+            "sampling_probability": 0.033565934533641345
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          100,
+          111,
+          111,
+          114
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.7543254236350742,
+        "sampling_probability": 0.7543458737277505,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 7.205852139582585,
+            "model_probability": 0.7543254236350742,
+            "sampling_probability": 0.7543458737277505
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 4.2393330357201355,
+            "model_probability": 0.0388343345872371,
+            "sampling_probability": 0.03883538740305962
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 3.8228612315666024,
+            "model_probability": 0.02560616040135329,
+            "sampling_probability": 0.025606854595578866
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.7090095373328857,
+            "model_probability": 0.022850688975363687,
+            "sampling_probability": 0.022851308467551838
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 3.7078248783732115,
+            "model_probability": 0.022823634730125334,
+            "sampling_probability": 0.022824253488861045
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          100,
+          111,
+          111,
+          114,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9085081024378587,
+        "sampling_probability": 0.9085178775494954,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 8.323344479826288,
+            "model_probability": 0.9085081024378587,
+            "sampling_probability": 0.9085178775494954
+          },
+          {
+            "id": 276,
+            "bytes_hex": "6e73",
+            "logit": 4.081657187298658,
+            "model_probability": 0.013067346877794813,
+            "sampling_probability": 0.013067487476182634
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 3.7028280079067613,
+            "model_probability": 0.008946723128544352,
+            "sampling_probability": 0.00894681939099609
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.6366477965988664,
+            "model_probability": 0.008373794466466869,
+            "sampling_probability": 0.00837388456448087
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 3.500857082852745,
+            "model_probability": 0.007310534640346907,
+            "sampling_probability": 0.007310613298194913
+          }
+        ]
+      }
+    ],
+    "checkpoint": "selected",
+    "diagnostic_index": 1,
+    "expected_suffix": " blue.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "The key was red. Now blue. Answer:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      112,
+      112,
+      263,
+      46
+    ],
+    "generated_hex": "707065642e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "pped.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 112,
+        "chosen_hex": "70",
+        "model_probability": 0.18332160017249108,
+        "sampling_probability": 0.18333374238630795,
+        "top5": [
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 5.046262451010675,
+            "model_probability": 0.18332160017249108,
+            "sampling_probability": 0.18333374238630795
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 5.003217361890091,
+            "model_probability": 0.17559793111575245,
+            "sampling_probability": 0.17560956175624107
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 4.713116196683601,
+            "model_probability": 0.1313802426143938,
+            "sampling_probability": 0.1313889445185646
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 4.3449472147309525,
+            "model_probability": 0.09091515892866495,
+            "sampling_probability": 0.09092118064840703
+          },
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 4.131515497952985,
+            "model_probability": 0.07344193069550979,
+            "sampling_probability": 0.0734467950847841
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          112
+        ],
+        "chosen_id": 112,
+        "chosen_hex": "70",
+        "model_probability": 0.2803873105391981,
+        "sampling_probability": 0.28043747451424317,
+        "top5": [
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 5.488702463675601,
+            "model_probability": 0.2803873105391981,
+            "sampling_probability": 0.28043747451424317
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 5.17724046038577,
+            "model_probability": 0.2053487793192257,
+            "sampling_probability": 0.20538551818241285
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 4.133523551451178,
+            "model_probability": 0.07231220945655233,
+            "sampling_probability": 0.0723251468033376
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 4.0795593515581245,
+            "model_probability": 0.0685133616729913,
+            "sampling_probability": 0.0685256193695276
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 3.561420892567508,
+            "model_probability": 0.040808497352759314,
+            "sampling_probability": 0.04081579838374711
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          112,
+          112
+        ],
+        "chosen_id": 263,
+        "chosen_hex": "6564",
+        "model_probability": 0.28467302047274146,
+        "sampling_probability": 0.28482172717806936,
+        "top5": [
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 4.851423182030028,
+            "model_probability": 0.28467302047274146,
+            "sampling_probability": 0.28482172717806936
+          },
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 3.2987137130114585,
+            "model_probability": 0.06025778381730452,
+            "sampling_probability": 0.06028926111180524
+          },
+          {
+            "id": 267,
+            "bytes_hex": "6974",
+            "logit": 3.2555629753728486,
+            "model_probability": 0.057712917294217916,
+            "sampling_probability": 0.057743065208380746
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 3.16624029621715,
+            "model_probability": 0.05278137272775296,
+            "sampling_probability": 0.05280894451530063
+          },
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 2.926966327325792,
+            "model_probability": 0.041549453580686894,
+            "sampling_probability": 0.04157115806936622
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          112,
+          112,
+          263
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.7075463255837539,
+        "sampling_probability": 0.7075495707531771,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 7.877567730838578,
+            "model_probability": 0.7075463255837539,
+            "sampling_probability": 0.7075495707531771
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 6.054667725159244,
+            "model_probability": 0.11430874757091058,
+            "sampling_probability": 0.11430927184930624
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 5.7983391731740435,
+            "model_probability": 0.08846212971128169,
+            "sampling_probability": 0.08846253544386495
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 4.388267054327451,
+            "model_probability": 0.021595877256535816,
+            "sampling_probability": 0.021595976306277166
+          },
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 3.136747144981237,
+            "model_probability": 0.006177925400340362,
+            "sampling_probability": 0.006177953735466818
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          112,
+          112,
+          263,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.8943212968183117,
+        "sampling_probability": 0.8943341556861909,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 8.259280659068512,
+            "model_probability": 0.8943212968183117,
+            "sampling_probability": 0.8943341556861909
+          },
+          {
+            "id": 276,
+            "bytes_hex": "6e73",
+            "logit": 4.245332558073147,
+            "model_probability": 0.01615318109382883,
+            "sampling_probability": 0.01615341334997911
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 4.073168234244747,
+            "model_probability": 0.0135984073354652,
+            "sampling_probability": 0.013598602858174897
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 3.979654205382281,
+            "model_probability": 0.012384412796412928,
+            "sampling_probability": 0.01238459086387982
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 3.1604317371010127,
+            "model_probability": 0.005458730104184129,
+            "sampling_probability": 0.005458808591736028
+          }
+        ]
+      }
+    ],
+    "checkpoint": "selected",
+    "diagnostic_index": 2,
+    "expected_suffix": " blue.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "Old limit: 750. New limit:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      259,
+      115,
+      117,
+      115,
+      46
+    ],
+    "generated_hex": "3a207375732e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": ": sus.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58
+        ],
+        "chosen_id": 259,
+        "chosen_hex": "3a20",
+        "model_probability": 0.3934984036873882,
+        "sampling_probability": 0.3936261847222436,
+        "top5": [
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 5.78304543213563,
+            "model_probability": 0.3934984036873882,
+            "sampling_probability": 0.3936261847222436
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 4.860737000015389,
+            "model_probability": 0.15645502351979804,
+            "sampling_probability": 0.1565058292781603
+          },
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 4.701340354579125,
+            "model_probability": 0.13340264136058994,
+            "sampling_probability": 0.13344596130142264
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 3.802388969656789,
+            "model_probability": 0.05429437056163604,
+            "sampling_probability": 0.05431200161373733
+          },
+          {
+            "id": 104,
+            "bytes_hex": "68",
+            "logit": 2.9269869695133504,
+            "model_probability": 0.022624164223909744,
+            "sampling_probability": 0.022631510985904657
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259
+        ],
+        "chosen_id": 115,
+        "chosen_hex": "73",
+        "model_probability": 0.18101556840682592,
+        "sampling_probability": 0.18110289147178996,
+        "top5": [
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 4.159458610241344,
+            "model_probability": 0.18101556840682592,
+            "sampling_probability": 0.18110289147178996
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 3.7402343950589385,
+            "model_probability": 0.11902800787132345,
+            "sampling_probability": 0.11908542774164381
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 3.6554312184784545,
+            "model_probability": 0.1093502079815587,
+            "sampling_probability": 0.10940295921947402
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 3.4544824254753483,
+            "model_probability": 0.08944347451557322,
+            "sampling_probability": 0.0894866226182722
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 2.7053080589784466,
+            "model_probability": 0.04228500322918686,
+            "sampling_probability": 0.042305401784496134
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          115
+        ],
+        "chosen_id": 117,
+        "chosen_hex": "75",
+        "model_probability": 0.6046741226040013,
+        "sampling_probability": 0.6047282255609706,
+        "top5": [
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 6.681766974384012,
+            "model_probability": 0.6046741226040013,
+            "sampling_probability": 0.6047282255609706
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 4.636859048930236,
+            "model_probability": 0.07824005644296082,
+            "sampling_probability": 0.07824705693834962
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 4.429281874546598,
+            "model_probability": 0.0635739994290786,
+            "sampling_probability": 0.06357968768532589
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 4.059765675755687,
+            "model_probability": 0.043933994120214065,
+            "sampling_probability": 0.04393792509543612
+          },
+          {
+            "id": 104,
+            "bytes_hex": "68",
+            "logit": 3.9112172134905494,
+            "model_probability": 0.03786926797167775,
+            "sampling_probability": 0.03787265630813691
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          115,
+          117
+        ],
+        "chosen_id": 115,
+        "chosen_hex": "73",
+        "model_probability": 0.288640651055098,
+        "sampling_probability": 0.2886596062771758,
+        "top5": [
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 5.741712478741069,
+            "model_probability": 0.288640651055098,
+            "sampling_probability": 0.2886596062771758
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 5.486439051513196,
+            "model_probability": 0.22361125272024618,
+            "sampling_probability": 0.22362593741881137
+          },
+          {
+            "id": 269,
+            "bytes_hex": "616e",
+            "logit": 4.593999307735494,
+            "model_probability": 0.09160348542630405,
+            "sampling_probability": 0.09160950108765668
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 4.268863246286495,
+            "model_probability": 0.06617701915575476,
+            "sampling_probability": 0.06618136504428418
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 4.221249543692786,
+            "model_probability": 0.06309992351475754,
+            "sampling_probability": 0.06310406732838511
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          115,
+          117,
+          115
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.3739469337294912,
+        "sampling_probability": 0.37401227633243106,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 5.776960538219802,
+            "model_probability": 0.3739469337294912,
+            "sampling_probability": 0.37401227633243106
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 4.451993306805936,
+            "model_probability": 0.09939945865388608,
+            "sampling_probability": 0.09941682748024462
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 4.19674727010624,
+            "model_probability": 0.0770073314386428,
+            "sampling_probability": 0.07702078751764167
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 4.021023858374009,
+            "model_probability": 0.06459759746016296,
+            "sampling_probability": 0.06460888509159132
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 3.6452789868893203,
+            "model_probability": 0.044364178248283,
+            "sampling_probability": 0.04437193033988359
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          115,
+          117,
+          115,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9143116579012031,
+        "sampling_probability": 0.9143219644945759,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 8.415344973313571,
+            "model_probability": 0.9143116579012031,
+            "sampling_probability": 0.9143219644945759
+          },
+          {
+            "id": 276,
+            "bytes_hex": "6e73",
+            "logit": 3.959529905018168,
+            "model_probability": 0.01061593768844552,
+            "sampling_probability": 0.010616057356779705
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 3.914388700362017,
+            "model_probability": 0.010147376739439901,
+            "sampling_probability": 0.010147491125912993
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.750398700719405,
+            "model_probability": 0.00861259117917157,
+            "sampling_probability": 0.008612688264748904
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 3.6245000999023236,
+            "model_probability": 0.007593758214674387,
+            "sampling_probability": 0.00759384381544018
+          }
+        ]
+      }
+    ],
+    "checkpoint": "selected",
+    "diagnostic_index": 3,
+    "expected_suffix": " 600.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "The key is red. Answer:",
+    "mode": "sample",
+    "temperature": 0.7,
+    "top_k": 5,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [],
+    "generated_hex": "",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.07341474198856797,
+        "sampling_probability": 0.14268781643019507,
+        "top5": [
+          {
+            "id": 271,
+            "bytes_hex": "206f",
+            "logit": 4.234458109512528,
+            "model_probability": 0.1489399143173354,
+            "sampling_probability": 0.39199793725313714
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 3.98744337727876,
+            "model_probability": 0.11634131398428732,
+            "sampling_probability": 0.2754423604569924
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 3.527039904498098,
+            "model_probability": 0.07341474198856797,
+            "sampling_probability": 0.14268781643019507
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.289390190328499,
+            "model_probability": 0.0578859702856198,
+            "sampling_probability": 0.10161178781967047
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 3.1907801854003064,
+            "model_probability": 0.052450246832625745,
+            "sampling_probability": 0.08826009804000497
+          }
+        ]
+      }
+    ],
+    "checkpoint": "selected",
+    "diagnostic_index": 0
+  },
+  {
+    "prompt": "The key is red. Answer:",
+    "mode": "sample",
+    "temperature": 1.2,
+    "top_k": 5,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [],
+    "generated_hex": "",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.07341474198856797,
+        "sampling_probability": 0.1710357626785506,
+        "top5": [
+          {
+            "id": 271,
+            "bytes_hex": "206f",
+            "logit": 4.234458109512528,
+            "model_probability": 0.1489399143173354,
+            "sampling_probability": 0.30839697839286545
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 3.98744337727876,
+            "model_probability": 0.11634131398428732,
+            "sampling_probability": 0.25102241395185454
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 3.527039904498098,
+            "model_probability": 0.07341474198856797,
+            "sampling_probability": 0.1710357626785506
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 3.289390190328499,
+            "model_probability": 0.0578859702856198,
+            "sampling_probability": 0.14030677069401712
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 3.1907801854003064,
+            "model_probability": 0.052450246832625745,
+            "sampling_probability": 0.12923807428271233
+          }
+        ]
+      }
+    ],
+    "checkpoint": "selected",
+    "diagnostic_index": 0
+  },
+  {
+    "prompt": "The key is red. Answer:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      82,
+      101,
+      115,
+      117,
+      108,
+      116,
+      259,
+      268,
+      270,
+      32,
+      270,
+      46
+    ],
+    "generated_hex": "526573756c743a206b6579726564207265642e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "Result: keyred red.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 82,
+        "chosen_hex": "52",
+        "model_probability": 0.3530295920707804,
+        "sampling_probability": 0.35303077000482797,
+        "top5": [
+          {
+            "id": 82,
+            "bytes_hex": "52",
+            "logit": 9.422252124348727,
+            "model_probability": 0.3530295920707804,
+            "sampling_probability": 0.35303077000482797
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 9.257280129803043,
+            "model_probability": 0.29933995150749076,
+            "sampling_probability": 0.29934095029832475
+          },
+          {
+            "id": 86,
+            "bytes_hex": "56",
+            "logit": 9.094416919942248,
+            "model_probability": 0.2543513755217347,
+            "sampling_probability": 0.25435222420170944
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 7.117629355798373,
+            "model_probability": 0.03523109647137163,
+            "sampling_probability": 0.03523121402499603
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 6.293947331538678,
+            "model_probability": 0.015459861597740772,
+            "sampling_probability": 0.015459913181794223
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82
+        ],
+        "chosen_id": 101,
+        "chosen_hex": "65",
+        "model_probability": 0.9968346443551004,
+        "sampling_probability": 0.9968346463093896,
+        "top5": [
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 16.426038105693877,
+            "model_probability": 0.9968346443551004,
+            "sampling_probability": 0.9968346463093896
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 9.646278547120374,
+            "model_probability": 0.0011329505596584383,
+            "sampling_probability": 0.001132950561879582
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 9.438982750984863,
+            "model_probability": 0.0009208386466650889,
+            "sampling_probability": 0.0009208386484703883
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 8.959129592284397,
+            "model_probability": 0.0005698833373557238,
+            "sampling_probability": 0.0005698833384729773
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 7.648037031595879,
+            "model_probability": 0.00015359804732214337,
+            "sampling_probability": 0.00015359804762327155
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101
+        ],
+        "chosen_id": 115,
+        "chosen_hex": "73",
+        "model_probability": 0.4758334471477733,
+        "sampling_probability": 0.47583345210178285,
+        "top5": [
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 11.314730330541972,
+            "model_probability": 0.4758334471477733,
+            "sampling_probability": 0.47583345210178285
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 10.657506124291181,
+            "model_probability": 0.24661876575841873,
+            "sampling_probability": 0.24661876832602242
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 10.386812549159298,
+            "model_probability": 0.18813317894337975,
+            "sampling_probability": 0.18813318090207679
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 8.825022656893891,
+            "model_probability": 0.039462869549083165,
+            "sampling_probability": 0.039462869959940014
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 8.708949817471696,
+            "model_probability": 0.03513814803806237,
+            "sampling_probability": 0.035138148403893565
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115
+        ],
+        "chosen_id": 117,
+        "chosen_hex": "75",
+        "model_probability": 0.9912799922362232,
+        "sampling_probability": 0.9912810371776252,
+        "top5": [
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 13.739764896237439,
+            "model_probability": 0.9912799922362232,
+            "sampling_probability": 0.9912810371776252
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 8.220873346803021,
+            "model_probability": 0.00397532092239759,
+            "sampling_probability": 0.003975325112916364
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 7.289158701747587,
+            "model_probability": 0.001565790541805267,
+            "sampling_probability": 0.0015657921923574588
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 6.297431809829806,
+            "model_probability": 0.0005808074102073518,
+            "sampling_probability": 0.0005808080224558731
+          },
+          {
+            "id": 166,
+            "bytes_hex": "a6",
+            "logit": 5.95583035224582,
+            "model_probability": 0.00041273996272987067,
+            "sampling_probability": 0.0004127403978128731
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117
+        ],
+        "chosen_id": 108,
+        "chosen_hex": "6c",
+        "model_probability": 0.9855611095264817,
+        "sampling_probability": 0.985561125450518,
+        "top5": [
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 14.333062266635547,
+            "model_probability": 0.9855611095264817,
+            "sampling_probability": 0.985561125450518
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 9.03050422222158,
+            "model_probability": 0.0049069525583744856,
+            "sampling_probability": 0.004906952637657739
+          },
+          {
+            "id": 114,
+            "bytes_hex": "72",
+            "logit": 8.593881746961317,
+            "model_probability": 0.00317094805339463,
+            "sampling_probability": 0.003170948104628685
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 8.35110426313595,
+            "model_probability": 0.002487437663464047,
+            "sampling_probability": 0.002487437703654399
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 7.659067559870152,
+            "model_probability": 0.001245100720390948,
+            "sampling_probability": 0.0012451007405084515
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108
+        ],
+        "chosen_id": 116,
+        "chosen_hex": "74",
+        "model_probability": 0.7283544220035474,
+        "sampling_probability": 0.7283554060787012,
+        "top5": [
+          {
+            "id": 116,
+            "bytes_hex": "74",
+            "logit": 11.391542428233656,
+            "model_probability": 0.7283544220035474,
+            "sampling_probability": 0.7283554060787012
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 9.767609367439213,
+            "model_probability": 0.14357459305066997,
+            "sampling_probability": 0.14357478703341447
+          },
+          {
+            "id": 229,
+            "bytes_hex": "e5",
+            "logit": 8.42184449958385,
+            "model_probability": 0.03737828214667131,
+            "sampling_probability": 0.03737833264823709
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 8.281003863071358,
+            "model_probability": 0.03246781230553849,
+            "sampling_probability": 0.03246785617259884
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 8.249923791673709,
+            "model_probability": 0.0314742306548982,
+            "sampling_probability": 0.03147427317953653
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116
+        ],
+        "chosen_id": 259,
+        "chosen_hex": "3a20",
+        "model_probability": 0.9978190963089475,
+        "sampling_probability": 0.9978191015076139,
+        "top5": [
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 14.548345203320714,
+            "model_probability": 0.9978190963089475,
+            "sampling_probability": 0.9978191015076139
+          },
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 6.755291959861806,
+            "model_probability": 0.00041169139572649796,
+            "sampling_probability": 0.00041169139787142206
+          },
+          {
+            "id": 104,
+            "bytes_hex": "68",
+            "logit": 6.283313665324746,
+            "model_probability": 0.00025679952821456615,
+            "sampling_probability": 0.0002567995295524991
+          },
+          {
+            "id": 277,
+            "bytes_hex": "697320",
+            "logit": 6.183871136795961,
+            "model_probability": 0.00023249139326208794,
+            "sampling_probability": 0.00023249139447337484
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 6.158687507101894,
+            "model_probability": 0.00022670952588636992,
+            "sampling_probability": 0.00022670952706753313
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116,
+          259
+        ],
+        "chosen_id": 268,
+        "chosen_hex": "6b6579",
+        "model_probability": 0.8766977092836851,
+        "sampling_probability": 0.8766977740946745,
+        "top5": [
+          {
+            "id": 268,
+            "bytes_hex": "6b6579",
+            "logit": 12.26384683118291,
+            "model_probability": 0.8766977092836851,
+            "sampling_probability": 0.8766977740946745
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 9.947570382480183,
+            "model_probability": 0.08647763252759619,
+            "sampling_probability": 0.0864776389205648
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 8.504031936013352,
+            "model_probability": 0.02041658070818522,
+            "sampling_probability": 0.020416582217506828
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 7.395483140338071,
+            "model_probability": 0.0067382385959747606,
+            "sampling_probability": 0.006738239094107591
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 6.11770710071778,
+            "model_probability": 0.0018776528545948745,
+            "sampling_probability": 0.0018776529934027418
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116,
+          259,
+          268
+        ],
+        "chosen_id": 270,
+        "chosen_hex": "726564",
+        "model_probability": 0.6891733539399663,
+        "sampling_probability": 0.6891742933389425,
+        "top5": [
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 10.793249827901771,
+            "model_probability": 0.6891733539399663,
+            "sampling_probability": 0.6891742933389425
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 8.789518592506196,
+            "model_probability": 0.09292210915038324,
+            "sampling_probability": 0.09292223581072742
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 8.007545383905956,
+            "model_probability": 0.04251208538921817,
+            "sampling_probability": 0.04251214333662613
+          },
+          {
+            "id": 271,
+            "bytes_hex": "206f",
+            "logit": 7.889586686093182,
+            "model_probability": 0.03778188291599061,
+            "sampling_probability": 0.03778193441575033
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 7.84625723096219,
+            "model_probability": 0.036179774407385366,
+            "sampling_probability": 0.03617982372334172
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116,
+          259,
+          268,
+          270
+        ],
+        "chosen_id": 32,
+        "chosen_hex": "20",
+        "model_probability": 0.7870840191197671,
+        "sampling_probability": 0.7870840192210055,
+        "top5": [
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 14.352083924085825,
+            "model_probability": 0.7870840191197671,
+            "sampling_probability": 0.7870840192210055
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 12.727166085414849,
+            "model_probability": 0.15499876711288227,
+            "sampling_probability": 0.15499876713281893
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 11.732011475303175,
+            "model_probability": 0.057297818570062393,
+            "sampling_probability": 0.0572978185774323
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 5.960092376966933,
+            "model_probability": 0.00017841257999224542,
+            "sampling_probability": 0.00017841258001519367
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 4.704654853238254,
+            "model_probability": 5.0838869496782195e-05,
+            "sampling_probability": 5.083886950332132e-05
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116,
+          259,
+          268,
+          270,
+          32
+        ],
+        "chosen_id": 270,
+        "chosen_hex": "726564",
+        "model_probability": 0.8651716545237711,
+        "sampling_probability": 0.865172601643848,
+        "top5": [
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 12.010392639934993,
+            "model_probability": 0.8651716545237711,
+            "sampling_probability": 0.865172601643848
+          },
+          {
+            "id": 273,
+            "bytes_hex": "74686520",
+            "logit": 9.239522548846764,
+            "model_probability": 0.05416624024616969,
+            "sampling_probability": 0.05416629954299635
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 8.859390976699931,
+            "model_probability": 0.037037327985129744,
+            "sampling_probability": 0.03703736853060618
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 8.453654805741433,
+            "model_probability": 0.024684859934649687,
+            "sampling_probability": 0.024684886957641386
+          },
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 7.160016378701277,
+            "model_probability": 0.006770342459786483,
+            "sampling_probability": 0.006770349871410798
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116,
+          259,
+          268,
+          270,
+          32,
+          270
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.993948952089449,
+        "sampling_probability": 0.9939490017484114,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 14.606652755022232,
+            "model_probability": 0.993948952089449,
+            "sampling_probability": 0.9939490017484114
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 8.818690486708324,
+            "model_probability": 0.00304567813553805,
+            "sampling_probability": 0.0030456782877040295
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 8.47637914615924,
+            "model_probability": 0.002162818517761506,
+            "sampling_probability": 0.0021628186258186885
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 6.956517240863931,
+            "model_probability": 0.0004730994471724273,
+            "sampling_probability": 0.00047309947080908144
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 5.627862374792296,
+            "model_probability": 0.00012529246795987896,
+            "sampling_probability": 0.0001252924742196511
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          82,
+          101,
+          115,
+          117,
+          108,
+          116,
+          259,
+          268,
+          270,
+          32,
+          270,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9995455095813505,
+        "sampling_probability": 0.9995455122880379,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 16.601096373148156,
+            "model_probability": 0.9995455095813505,
+            "sampling_probability": 0.9995455122880379
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 7.832886166554302,
+            "model_probability": 0.00015553110715719022,
+            "sampling_probability": 0.00015553110757835571
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 7.224880698534425,
+            "model_probability": 8.46766842800617e-05,
+            "sampling_probability": 8.467668450935923e-05
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 7.021273699815745,
+            "model_probability": 6.907779207425883e-05,
+            "sampling_probability": 6.907779226131584e-05
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 6.108506910055958,
+            "model_probability": 2.772865905159732e-05,
+            "sampling_probability": 2.772865912668426e-05
+          }
+        ]
+      }
+    ],
+    "checkpoint": "final",
+    "diagnostic_index": 0,
+    "expected_suffix": " red.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "The key is blue. Answer:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      274,
+      101,
+      46
+    ],
+    "generated_hex": "626c75652e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "blue.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 274,
+        "chosen_hex": "626c75",
+        "model_probability": 0.4293004068836204,
+        "sampling_probability": 0.429449071805723,
+        "top5": [
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 8.146976913249246,
+            "model_probability": 0.4293004068836204,
+            "sampling_probability": 0.429449071805723
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 6.779108181990177,
+            "model_probability": 0.10932096537584111,
+            "sampling_probability": 0.10935882276554115
+          },
+          {
+            "id": 152,
+            "bytes_hex": "98",
+            "logit": 6.5035413200645324,
+            "model_probability": 0.08299010051911554,
+            "sampling_probability": 0.08301883964125736
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 6.4165036977478795,
+            "model_probability": 0.07607226224158917,
+            "sampling_probability": 0.07609860574548288
+          },
+          {
+            "id": 67,
+            "bytes_hex": "43",
+            "logit": 6.150520463460521,
+            "model_probability": 0.05830573582849004,
+            "sampling_probability": 0.05832592685914384
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          274
+        ],
+        "chosen_id": 101,
+        "chosen_hex": "65",
+        "model_probability": 0.9988113686264489,
+        "sampling_probability": 0.9988113796065006,
+        "top5": [
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 16.60351374660012,
+            "model_probability": 0.9988113686264489,
+            "sampling_probability": 0.9988113796065006
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 8.758178793644175,
+            "model_probability": 0.0003911089894940847,
+            "sampling_probability": 0.00039110899379359216
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 8.733145451181644,
+            "model_probability": 0.00038143975578417105,
+            "sampling_probability": 0.00038143975997738345
+          },
+          {
+            "id": 264,
+            "bytes_hex": "6579",
+            "logit": 7.619684849783071,
+            "model_probability": 0.0001252726200413084,
+            "sampling_probability": 0.00012527262141844516
+          },
+          {
+            "id": 288,
+            "bytes_hex": "206c696d69743a20",
+            "logit": 6.980346241134543,
+            "model_probability": 6.609900634500393e-05,
+            "sampling_probability": 6.609900707163812e-05
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          274,
+          101
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.9981895224794237,
+        "sampling_probability": 0.9981896196355837,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 14.386132297631976,
+            "model_probability": 0.9981895224794237,
+            "sampling_probability": 0.9981896196355837
+          },
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 6.672780984553389,
+            "model_probability": 0.0004460125659816235,
+            "sampling_probability": 0.00044601260939308723
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 6.044539856744245,
+            "model_probability": 0.00023796081057428522,
+            "sampling_probability": 0.0002379608337355768
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 5.913263465290596,
+            "model_probability": 0.000208685765710402,
+            "sampling_probability": 0.00020868578602228384
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 5.815115548893765,
+            "model_probability": 0.00018917673629956021,
+            "sampling_probability": 0.00018917675471258184
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          274,
+          101,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9995710284952938,
+        "sampling_probability": 0.9995710312527014,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 16.240109373927883,
+            "model_probability": 0.9995710284952938,
+            "sampling_probability": 0.9995710312527014
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 7.213817902303948,
+            "model_probability": 0.00012015589477791927,
+            "sampling_probability": 0.00012015589510938024
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 6.604866526036128,
+            "model_probability": 6.535530705783685e-05,
+            "sampling_probability": 6.535530723812542e-05
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 6.224685947596326,
+            "model_probability": 4.468590234493633e-05,
+            "sampling_probability": 4.468590246820646e-05
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 6.147880685060276,
+            "model_probability": 4.138228147636185e-05,
+            "sampling_probability": 4.1382281590518635e-05
+          }
+        ]
+      }
+    ],
+    "checkpoint": "final",
+    "diagnostic_index": 1,
+    "expected_suffix": " blue.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "The key was red. Now blue. Answer:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      119,
+      262,
+      115,
+      105,
+      111,
+      110,
+      101,
+      119,
+      46
+    ],
+    "generated_hex": "77657273696f6e65772e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "wersionew.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 119,
+        "chosen_hex": "77",
+        "model_probability": 0.33289995430371516,
+        "sampling_probability": 0.3329000032875351,
+        "top5": [
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 10.123093440423805,
+            "model_probability": 0.33289995430371516,
+            "sampling_probability": 0.3329000032875351
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 9.845568077858363,
+            "model_probability": 0.2522237637105354,
+            "sampling_probability": 0.25222380082343754
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 9.730931663720314,
+            "model_probability": 0.2249054812497329,
+            "sampling_probability": 0.2249055143429474
+          },
+          {
+            "id": 99,
+            "bytes_hex": "63",
+            "logit": 8.5513130600575,
+            "model_probability": 0.06913503540451146,
+            "sampling_probability": 0.06913504557723177
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 8.093177246314127,
+            "model_probability": 0.04372525326902146,
+            "sampling_probability": 0.043725259702876156
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119
+        ],
+        "chosen_id": 262,
+        "chosen_hex": "6572",
+        "model_probability": 0.6202831750632533,
+        "sampling_probability": 0.6202838070413261,
+        "top5": [
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 12.241368275759763,
+            "model_probability": 0.6202831750632533,
+            "sampling_probability": 0.6202838070413261
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 11.697106294490446,
+            "model_probability": 0.35993164069881,
+            "sampling_probability": 0.3599320074166476
+          },
+          {
+            "id": 54,
+            "bytes_hex": "36",
+            "logit": 7.676257618272571,
+            "model_probability": 0.006456358442461033,
+            "sampling_probability": 0.006456365020548477
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 7.1897896252968,
+            "model_probability": 0.00396933056588545,
+            "sampling_probability": 0.0039693346100542785
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 7.155091927015244,
+            "model_probability": 0.0038339659326572127,
+            "sampling_probability": 0.0038339698389092264
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262
+        ],
+        "chosen_id": 115,
+        "chosen_hex": "73",
+        "model_probability": 0.9255604166548563,
+        "sampling_probability": 0.9255604380169742,
+        "top5": [
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 14.215888044106347,
+            "model_probability": 0.9255604166548563,
+            "sampling_probability": 0.9255604380169742
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 11.676041420509389,
+            "model_probability": 0.07300681451425936,
+            "sampling_probability": 0.07300681619927112
+          },
+          {
+            "id": 269,
+            "bytes_hex": "616e",
+            "logit": 6.871470729471886,
+            "model_probability": 0.0005980876853650789,
+            "sampling_probability": 0.0005980876991690612
+          },
+          {
+            "id": 121,
+            "bytes_hex": "79",
+            "logit": 5.591396887496255,
+            "model_probability": 0.00016627840669381188,
+            "sampling_probability": 0.00016627841053155047
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 5.148657213286552,
+            "model_probability": 0.00010679636154993834,
+            "sampling_probability": 0.00010679636401481953
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115
+        ],
+        "chosen_id": 105,
+        "chosen_hex": "69",
+        "model_probability": 0.9644767092589867,
+        "sampling_probability": 0.9644804993141591,
+        "top5": [
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 13.099672339484773,
+            "model_probability": 0.9644767092589867,
+            "sampling_probability": 0.9644804993141591
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 9.515234587209838,
+            "model_probability": 0.02676641504779519,
+            "sampling_probability": 0.026766520230417878
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 7.665606065932295,
+            "model_probability": 0.004210238978223597,
+            "sampling_probability": 0.0042102555229860195
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 6.159449515295894,
+            "model_probability": 0.0009336654083282047,
+            "sampling_probability": 0.0009336690773057717
+          },
+          {
+            "id": 120,
+            "bytes_hex": "78",
+            "logit": 5.704834405710257,
+            "model_probability": 0.0005925901594416879,
+            "sampling_probability": 0.0005925924881131606
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115,
+          105
+        ],
+        "chosen_id": 111,
+        "chosen_hex": "6f",
+        "model_probability": 0.6415721898518667,
+        "sampling_probability": 0.6415723035206413,
+        "top5": [
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 11.076118732473732,
+            "model_probability": 0.6415721898518667,
+            "sampling_probability": 0.6415723035206413
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 10.072270515439511,
+            "model_probability": 0.23511470315263847,
+            "sampling_probability": 0.2351147448084344
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 8.468573235051268,
+            "model_probability": 0.04729365833230402,
+            "sampling_probability": 0.04729366671142686
+          },
+          {
+            "id": 230,
+            "bytes_hex": "e6",
+            "logit": 7.735869612154269,
+            "model_probability": 0.02272970343078218,
+            "sampling_probability": 0.022729707457854388
+          },
+          {
+            "id": 114,
+            "bytes_hex": "72",
+            "logit": 7.314374361057302,
+            "model_probability": 0.01491216524465341,
+            "sampling_probability": 0.014912167886674958
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115,
+          105,
+          111
+        ],
+        "chosen_id": 110,
+        "chosen_hex": "6e",
+        "model_probability": 0.9989669789679059,
+        "sampling_probability": 0.9989669854851788,
+        "top5": [
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 15.272074899543318,
+            "model_probability": 0.9989669789679059,
+            "sampling_probability": 0.9989669854851788
+          },
+          {
+            "id": 99,
+            "bytes_hex": "63",
+            "logit": 7.2348289839837205,
+            "model_probability": 0.00032286396949422394,
+            "sampling_probability": 0.00032286397160059246
+          },
+          {
+            "id": 106,
+            "bytes_hex": "6a",
+            "logit": 6.6680095419862075,
+            "model_probability": 0.00018316944354301938,
+            "sampling_probability": 0.0001831694447380191
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 6.169863087546194,
+            "model_probability": 0.00011130399938354413,
+            "sampling_probability": 0.0001113040001096928
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 5.967252695119131,
+            "model_probability": 9.089043758580904e-05,
+            "sampling_probability": 9.089043817877937e-05
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115,
+          105,
+          111,
+          110
+        ],
+        "chosen_id": 101,
+        "chosen_hex": "65",
+        "model_probability": 0.9610861486996957,
+        "sampling_probability": 0.9610861704122947,
+        "top5": [
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 13.492304770316606,
+            "model_probability": 0.9610861486996957,
+            "sampling_probability": 0.9610861704122947
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 9.067745607008112,
+            "model_probability": 0.011513322999457157,
+            "sampling_probability": 0.011513323259563045
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 8.79908880891752,
+            "model_probability": 0.008800848069740554,
+            "sampling_probability": 0.00880084826856694
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 8.059167186197055,
+            "model_probability": 0.0041993362021091035,
+            "sampling_probability": 0.004199336296979374
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 7.972207083145997,
+            "model_probability": 0.0038495888971244187,
+            "sampling_probability": 0.0038495889840932927
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115,
+          105,
+          111,
+          110,
+          101
+        ],
+        "chosen_id": 119,
+        "chosen_hex": "77",
+        "model_probability": 0.9982809902028786,
+        "sampling_probability": 0.9982809922277295,
+        "top5": [
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 16.043832752932275,
+            "model_probability": 0.9982809902028786,
+            "sampling_probability": 0.9982809922277295
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 8.837036770238885,
+            "model_probability": 0.0007402545298251768,
+            "sampling_probability": 0.0007402545313266629
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 8.39089221858799,
+            "model_probability": 0.00047383043926633734,
+            "sampling_probability": 0.00047383044022742543
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 7.451978182936002,
+            "model_probability": 0.00018529247061474405,
+            "sampling_probability": 0.00018529247099057972
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 6.6911975482669614,
+            "model_probability": 8.658744813067131e-05,
+            "sampling_probability": 8.65874483062999e-05
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115,
+          105,
+          111,
+          110,
+          101,
+          119
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.9872337536736951,
+        "sampling_probability": 0.9872340596983968,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 14.022143855734788,
+            "model_probability": 0.9872337536736951,
+            "sampling_probability": 0.9872340596983968
+          },
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 8.983643736067627,
+            "model_probability": 0.006400695934516425,
+            "sampling_probability": 0.006400697918617006
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 8.591569870994212,
+            "model_probability": 0.00432465712224991,
+            "sampling_probability": 0.0043246584628158094
+          },
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 7.02223336420428,
+            "model_probability": 0.0009003212385313706,
+            "sampling_probability": 0.0009003215176147563
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 5.542568257566444,
+            "model_probability": 0.00020501569244133348,
+            "sampling_probability": 0.00020501575599250958
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          119,
+          97,
+          115,
+          32,
+          270,
+          261,
+          78,
+          111,
+          119,
+          32,
+          274,
+          101,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          119,
+          262,
+          115,
+          105,
+          111,
+          110,
+          101,
+          119,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9995189416669544,
+        "sampling_probability": 0.9995189457643077,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 15.840426258465646,
+            "model_probability": 0.9995189416669544,
+            "sampling_probability": 0.9995189457643077
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 6.826723164901244,
+            "model_probability": 0.00012167168252787925,
+            "sampling_probability": 0.00012167168302665105
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 6.748242046811608,
+            "model_probability": 0.0001124878450977182,
+            "sampling_probability": 0.00011248784555884246
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 5.475308712674794,
+            "model_probability": 3.149761529655927e-05,
+            "sampling_probability": 3.149761542567824e-05
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 5.376064955511114,
+            "model_probability": 2.8521782138856123e-05,
+            "sampling_probability": 2.8521782255776184e-05
+          }
+        ]
+      }
+    ],
+    "checkpoint": "final",
+    "diagnostic_index": 2,
+    "expected_suffix": " blue.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "Old limit: 750. New limit:",
+    "mode": "greedy",
+    "temperature": 1.0,
+    "top_k": null,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      259,
+      290,
+      266,
+      46
+    ],
+    "generated_hex": "3a2050617269732e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": ": Paris.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58
+        ],
+        "chosen_id": 259,
+        "chosen_hex": "3a20",
+        "model_probability": 0.6437638129227685,
+        "sampling_probability": 0.643772958560494,
+        "top5": [
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 10.224540157972324,
+            "model_probability": 0.6437638129227685,
+            "sampling_probability": 0.643772958560494
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 8.604744979813093,
+            "model_probability": 0.12742611807388238,
+            "sampling_probability": 0.1274279283544376
+          },
+          {
+            "id": 78,
+            "bytes_hex": "4e",
+            "logit": 7.685490175914032,
+            "model_probability": 0.0508195908378766,
+            "sampling_probability": 0.050820312806955675
+          },
+          {
+            "id": 289,
+            "bytes_hex": "4672616e63",
+            "logit": 7.187081679733981,
+            "model_probability": 0.030872734955035664,
+            "sampling_probability": 0.030873173548886117
+          },
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 7.176665804144454,
+            "model_probability": 0.030552837287935154,
+            "sampling_probability": 0.030553271337155862
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259
+        ],
+        "chosen_id": 290,
+        "chosen_hex": "506172",
+        "model_probability": 0.5192399267215518,
+        "sampling_probability": 0.5192466515157641,
+        "top5": [
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 9.354250165953493,
+            "model_probability": 0.5192399267215518,
+            "sampling_probability": 0.5192466515157641
+          },
+          {
+            "id": 289,
+            "bytes_hex": "4672616e63",
+            "logit": 8.533806919130022,
+            "model_probability": 0.22858835649021242,
+            "sampling_probability": 0.2285913169899306
+          },
+          {
+            "id": 67,
+            "bytes_hex": "43",
+            "logit": 7.614782757587222,
+            "model_probability": 0.0911857517927279,
+            "sampling_probability": 0.091186932760108
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 7.294277123729044,
+            "model_probability": 0.06618097405635459,
+            "sampling_probability": 0.06618183118117954
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 6.099425131768284,
+            "model_probability": 0.02003620783887083,
+            "sampling_probability": 0.02003646733234885
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          290
+        ],
+        "chosen_id": 266,
+        "chosen_hex": "6973",
+        "model_probability": 0.9960948744585378,
+        "sampling_probability": 0.9960960897886388,
+        "top5": [
+          {
+            "id": 266,
+            "bytes_hex": "6973",
+            "logit": 13.942597351490072,
+            "model_probability": 0.9960948744585378,
+            "sampling_probability": 0.9960960897886388
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 7.57798439334883,
+            "model_probability": 0.0017146852745362185,
+            "sampling_probability": 0.0017146873666146754
+          },
+          {
+            "id": 78,
+            "bytes_hex": "4e",
+            "logit": 6.916064664206745,
+            "model_probability": 0.0008845376686741205,
+            "sampling_probability": 0.0008845387478938633
+          },
+          {
+            "id": 120,
+            "bytes_hex": "78",
+            "logit": 5.629458175784052,
+            "model_probability": 0.00024431505753807765,
+            "sampling_probability": 0.0002443153556255904
+          },
+          {
+            "id": 86,
+            "bytes_hex": "56",
+            "logit": 5.348888847878996,
+            "model_probability": 0.00018454425217338485,
+            "sampling_probability": 0.00018454447733485328
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          290,
+          266
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.9920772586599731,
+        "sampling_probability": 0.9920772605815906,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 15.449593789482682,
+            "model_probability": 0.9920772586599731,
+            "sampling_probability": 0.9920772605815906
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 9.765434894913971,
+            "model_probability": 0.003372458796049851,
+            "sampling_probability": 0.003372458802582181
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 9.543601966158517,
+            "model_probability": 0.002701505371505267,
+            "sampling_probability": 0.0027015053767379844
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 8.611747665594763,
+            "model_probability": 0.0010639143207625793,
+            "sampling_probability": 0.0010639143228233425
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 7.436117117995981,
+            "model_probability": 0.0003283498295287319,
+            "sampling_probability": 0.0003283498301647336
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          79,
+          108,
+          100,
+          288,
+          282,
+          261,
+          78,
+          101,
+          119,
+          280,
+          275,
+          267,
+          58,
+          259,
+          290,
+          266,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9980078840871074,
+        "sampling_probability": 0.9980078867758705,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 15.95483235229638,
+            "model_probability": 0.9980078840871074,
+            "sampling_probability": 0.9980078867758705
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 9.471393033274317,
+            "model_probability": 0.0015254994385710877,
+            "sampling_probability": 0.0015254994426809818
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 6.820060643377392,
+            "model_probability": 0.00010763487865063433,
+            "sampling_probability": 0.00010763487894061669
+          },
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 6.752685928610148,
+            "model_probability": 0.00010062191042969135,
+            "sampling_probability": 0.00010062191070077987
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 6.512677026956822,
+            "model_probability": 7.915129359722643e-05,
+            "sampling_probability": 7.915129381047031e-05
+          }
+        ]
+      }
+    ],
+    "checkpoint": "final",
+    "diagnostic_index": 3,
+    "expected_suffix": " 600.",
+    "exact_suffix_match": false
+  },
+  {
+    "prompt": "The key is red. Answer:",
+    "mode": "sample",
+    "temperature": 0.7,
+    "top_k": 5,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      86,
+      262,
+      259,
+      270,
+      261,
+      65,
+      269,
+      261,
+      86,
+      262,
+      115,
+      105,
+      111,
+      110,
+      259,
+      110,
+      101,
+      119,
+      46
+    ],
+    "generated_hex": "5665723a207265642e2041616e2e2056657273696f6e3a206e65772e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "Ver: red. Aan. Version: new.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 86,
+        "chosen_hex": "56",
+        "model_probability": 0.2543513755217347,
+        "sampling_probability": 0.2540030269651751,
+        "top5": [
+          {
+            "id": 82,
+            "bytes_hex": "52",
+            "logit": 9.422252124348727,
+            "model_probability": 0.3530295920707804,
+            "sampling_probability": 0.4057276778856453
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 9.257280129803043,
+            "model_probability": 0.29933995150749076,
+            "sampling_probability": 0.32054026891406584
+          },
+          {
+            "id": 86,
+            "bytes_hex": "56",
+            "logit": 9.094416919942248,
+            "model_probability": 0.2543513755217347,
+            "sampling_probability": 0.2540030269651751
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 7.117629355798373,
+            "model_probability": 0.03523109647137163,
+            "sampling_probability": 0.015079918373118862
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 6.293947331538678,
+            "model_probability": 0.015459861597740772,
+            "sampling_probability": 0.0046491078619948925
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86
+        ],
+        "chosen_id": 262,
+        "chosen_hex": "6572",
+        "model_probability": 0.978385013382488,
+        "sampling_probability": 0.9982810938591554,
+        "top5": [
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 13.265922132984619,
+            "model_probability": 0.978385013382488,
+            "sampling_probability": 0.9982810938591554
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 8.343734009501036,
+            "model_probability": 0.0071257511367301095,
+            "sampling_probability": 0.0008819125077701766
+          },
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 8.119947142631098,
+            "model_probability": 0.00569693480349999,
+            "sampling_probability": 0.0006405949343294317
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 6.877272704352818,
+            "model_probability": 0.0016441998263938328,
+            "sampling_probability": 0.00010854318713626308
+          },
+          {
+            "id": 150,
+            "bytes_hex": "96",
+            "logit": 6.729254498083619,
+            "model_probability": 0.0014179832730441518,
+            "sampling_probability": 8.785551160858033e-05
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262
+        ],
+        "chosen_id": 259,
+        "chosen_hex": "3a20",
+        "model_probability": 0.8979225647098802,
+        "sampling_probability": 0.9578435287451311,
+        "top5": [
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 14.226738696968145,
+            "model_probability": 0.8979225647098802,
+            "sampling_probability": 0.9578435287451311
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 12.040080766570552,
+            "model_probability": 0.1008289889772209,
+            "sampling_probability": 0.04213536408242588
+          },
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 6.200029873717154,
+            "model_probability": 0.0002932807347812704,
+            "sampling_probability": 1.0031326255449002e-05
+          },
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 5.958298757088532,
+            "model_probability": 0.00023030376912632402,
+            "sampling_probability": 7.102044181377526e-06
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 5.551837222674644,
+            "model_probability": 0.00015338293512320988,
+            "sampling_probability": 3.973802006231269e-06
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259
+        ],
+        "chosen_id": 270,
+        "chosen_hex": "726564",
+        "model_probability": 0.6187032619210715,
+        "sampling_probability": 0.7078887520255769,
+        "top5": [
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 10.80148836666698,
+            "model_probability": 0.6187032619210715,
+            "sampling_probability": 0.7078887520255769
+          },
+          {
+            "id": 268,
+            "bytes_hex": "6b6579",
+            "logit": 10.16108125956855,
+            "model_probability": 0.3261047561532934,
+            "sampling_probability": 0.28355884154589606
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 7.3223252435507025,
+            "model_probability": 0.019076603787626267,
+            "sampling_probability": 0.004913831179078168
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 6.873768830489123,
+            "model_probability": 0.01218135176610946,
+            "sampling_probability": 0.0025889672282447215
+          },
+          {
+            "id": 98,
+            "bytes_hex": "62",
+            "logit": 6.241779247591238,
+            "model_probability": 0.006474793114619131,
+            "sampling_probability": 0.0010496080212042665
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270
+        ],
+        "chosen_id": 261,
+        "chosen_hex": "2e20",
+        "model_probability": 0.40979486823050154,
+        "sampling_probability": 0.45333877866835176,
+        "top5": [
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 11.727200021880066,
+            "model_probability": 0.41167443075248816,
+            "sampling_probability": 0.45631209661743355
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 11.72262391464327,
+            "model_probability": 0.40979486823050154,
+            "sampling_probability": 0.45333877866835176
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 10.453611326128895,
+            "model_probability": 0.11519704819111005,
+            "sampling_probability": 0.07397776501694212
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 9.258141340140616,
+            "model_probability": 0.034854217153843264,
+            "sampling_probability": 0.013409324318208031
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 8.20108978547581,
+            "model_probability": 0.012111102379565586,
+            "sampling_probability": 0.002962035379064577
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261
+        ],
+        "chosen_id": 65,
+        "chosen_hex": "41",
+        "model_probability": 0.9698691679531624,
+        "sampling_probability": 0.9968197742195084,
+        "top5": [
+          {
+            "id": 65,
+            "bytes_hex": "41",
+            "logit": 12.067993617189938,
+            "model_probability": 0.9698691679531624,
+            "sampling_probability": 0.9968197742195084
+          },
+          {
+            "id": 290,
+            "bytes_hex": "506172",
+            "logit": 7.645637561609198,
+            "model_probability": 0.01164416421110572,
+            "sampling_probability": 0.0017984379409695934
+          },
+          {
+            "id": 66,
+            "bytes_hex": "42",
+            "logit": 7.230179430837729,
+            "model_probability": 0.0076855888523228635,
+            "sampling_probability": 0.0009934285492213867
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 6.450585606395865,
+            "model_probability": 0.0035245514262695686,
+            "sampling_probability": 0.0003261823815928049
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 5.290354513752415,
+            "model_probability": 0.0011046428616082876,
+            "sampling_probability": 6.217690870790783e-05
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65
+        ],
+        "chosen_id": 269,
+        "chosen_hex": "616e",
+        "model_probability": 0.20360573458917405,
+        "sampling_probability": 0.19277030238398357,
+        "top5": [
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 10.414612504835214,
+            "model_probability": 0.3358862262934145,
+            "sampling_probability": 0.39410748636315746
+          },
+          {
+            "id": 276,
+            "bytes_hex": "6e73",
+            "logit": 10.365782713866503,
+            "model_probability": 0.31987896805815197,
+            "sampling_probability": 0.36755274636583896
+          },
+          {
+            "id": 269,
+            "bytes_hex": "616e",
+            "logit": 9.914025464674383,
+            "model_probability": 0.20360573458917405,
+            "sampling_probability": 0.19277030238398357
+          },
+          {
+            "id": 120,
+            "bytes_hex": "78",
+            "logit": 8.796331285348119,
+            "model_probability": 0.06658579529319006,
+            "sampling_probability": 0.039048066693379804
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 7.543538088628395,
+            "model_probability": 0.019023937872357705,
+            "sampling_probability": 0.006521398193640235
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269
+        ],
+        "chosen_id": 261,
+        "chosen_hex": "2e20",
+        "model_probability": 0.9788188888912108,
+        "sampling_probability": 0.9972603627519795,
+        "top5": [
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 14.32255715408704,
+            "model_probability": 0.9788188888912108,
+            "sampling_probability": 0.9972603627519795
+          },
+          {
+            "id": 268,
+            "bytes_hex": "6b6579",
+            "logit": 9.892332149385343,
+            "model_probability": 0.011659503804884551,
+            "sampling_probability": 0.0017791202813957018
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 9.406554593468051,
+            "model_probability": 0.0071731441186956325,
+            "sampling_probability": 0.0008888303280017967
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 7.258457980059326,
+            "model_probability": 0.0008371495550073307,
+            "sampling_probability": 4.13138135443364e-05
+          },
+          {
+            "id": 99,
+            "bytes_hex": "63",
+            "logit": 7.043103949083008,
+            "model_probability": 0.0006749568098172313,
+            "sampling_probability": 3.037282507871534e-05
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261
+        ],
+        "chosen_id": 86,
+        "chosen_hex": "56",
+        "model_probability": 0.9727896052207076,
+        "sampling_probability": 0.997100942570761,
+        "top5": [
+          {
+            "id": 86,
+            "bytes_hex": "56",
+            "logit": 12.01639696577895,
+            "model_probability": 0.9727896052207076,
+            "sampling_probability": 0.997100942570761
+          },
+          {
+            "id": 82,
+            "bytes_hex": "52",
+            "logit": 7.847322207141834,
+            "model_probability": 0.015045712503129886,
+            "sampling_probability": 0.0025832051326096883
+          },
+          {
+            "id": 65,
+            "bytes_hex": "41",
+            "logit": 6.039016640230255,
+            "model_probability": 0.0024664688199167836,
+            "sampling_probability": 0.0001950961549516204
+          },
+          {
+            "id": 266,
+            "bytes_hex": "6973",
+            "logit": 5.374115558409683,
+            "model_probability": 0.0012685650989409639,
+            "sampling_probability": 7.546234959637742e-05
+          },
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 5.016790850752182,
+            "model_probability": 0.0008874187693674578,
+            "sampling_probability": 4.529379208117681e-05
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86
+        ],
+        "chosen_id": 262,
+        "chosen_hex": "6572",
+        "model_probability": 0.9984226615737971,
+        "sampling_probability": 0.9999591490566013,
+        "top5": [
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 15.335760137292867,
+            "model_probability": 0.9984226615737971,
+            "sampling_probability": 0.9999591490566013
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 8.035354005645381,
+            "model_probability": 0.0006741993526217952,
+            "sampling_probability": 2.9556925726765012e-05
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 6.757414814713093,
+            "model_probability": 0.00018783927024501284,
+            "sampling_probability": 4.762109174220398e-06
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 6.645332538321836,
+            "model_probability": 0.00016792280424488435,
+            "sampling_probability": 4.0575248150205054e-06
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 6.299125286480334,
+            "model_probability": 0.00011878286035541311,
+            "sampling_probability": 2.474383682608429e-06
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262
+        ],
+        "chosen_id": 115,
+        "chosen_hex": "73",
+        "model_probability": 0.9959702897803715,
+        "sampling_probability": 0.9998979838227119,
+        "top5": [
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 14.194220368260606,
+            "model_probability": 0.9959702897803715,
+            "sampling_probability": 0.9998979838227119
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 7.212141203504789,
+            "model_probability": 0.0009246298930546597,
+            "sampling_probability": 4.65724763228837e-05
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 6.610522365226641,
+            "model_probability": 0.0005066268332773572,
+            "sampling_probability": 1.971844015763324e-05
+          },
+          {
+            "id": 269,
+            "bytes_hex": "616e",
+            "logit": 6.542895911514095,
+            "model_probability": 0.0004734982656727754,
+            "sampling_probability": 1.7902583408767994e-05
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 6.5397645529819135,
+            "model_probability": 0.00047201789183884434,
+            "sampling_probability": 1.782267739898612e-05
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115
+        ],
+        "chosen_id": 105,
+        "chosen_hex": "69",
+        "model_probability": 0.994430641202683,
+        "sampling_probability": 0.9997717946904325,
+        "top5": [
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 13.69486301385667,
+            "model_probability": 0.994430641202683,
+            "sampling_probability": 0.9997717946904325
+          },
+          {
+            "id": 86,
+            "bytes_hex": "56",
+            "logit": 7.470528210634026,
+            "model_probability": 0.00196960999340312,
+            "sampling_probability": 0.00013746584206029863
+          },
+          {
+            "id": 120,
+            "bytes_hex": "78",
+            "logit": 6.69545326819466,
+            "model_probability": 0.0009073387703253478,
+            "sampling_probability": 4.5427858812964284e-05
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 6.446935185968513,
+            "model_probability": 0.0007076840978013899,
+            "sampling_probability": 3.1851985378276415e-05
+          },
+          {
+            "id": 180,
+            "bytes_hex": "b4",
+            "logit": 5.843951422096083,
+            "model_probability": 0.00038722814477124814,
+            "sampling_probability": 1.3459623315944225e-05
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105
+        ],
+        "chosen_id": 111,
+        "chosen_hex": "6f",
+        "model_probability": 0.984016716766771,
+        "sampling_probability": 0.9983533742786248,
+        "top5": [
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 13.584812082072652,
+            "model_probability": 0.984016716766771,
+            "sampling_probability": 0.9983533742786248
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 8.90626506075227,
+            "model_probability": 0.009143981142157817,
+            "sampling_probability": 0.001249156713183697
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 7.667719829411497,
+            "model_probability": 0.002649976131114362,
+            "sampling_probability": 0.00021291087324931037
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 7.248825971967438,
+            "model_probability": 0.001743085424517013,
+            "sampling_probability": 0.00011703275423472184
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 6.863860755907957,
+            "model_probability": 0.001186124843449997,
+            "sampling_probability": 6.752538070755682e-05
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111
+        ],
+        "chosen_id": 110,
+        "chosen_hex": "6e",
+        "model_probability": 0.9944938450997537,
+        "sampling_probability": 0.9997239050949125,
+        "top5": [
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 14.507920181585606,
+            "model_probability": 0.9944938450997537,
+            "sampling_probability": 0.9997239050949125
+          },
+          {
+            "id": 114,
+            "bytes_hex": "72",
+            "logit": 8.405586626633406,
+            "model_probability": 0.0022253191741426815,
+            "sampling_probability": 0.00016363119111287912
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 7.947018186879885,
+            "model_probability": 0.001406820107553052,
+            "sampling_probability": 8.498861358078872e-05
+          },
+          {
+            "id": 108,
+            "bytes_hex": "6c",
+            "logit": 6.980668495660331,
+            "model_probability": 0.0005352519134807058,
+            "sampling_probability": 2.137063387411609e-05
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 6.103570587874426,
+            "model_probability": 0.0002226585861815911,
+            "sampling_probability": 6.104466520019638e-06
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111,
+          110
+        ],
+        "chosen_id": 259,
+        "chosen_hex": "3a20",
+        "model_probability": 0.7161523318829643,
+        "sampling_probability": 0.8604958756287803,
+        "top5": [
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 10.642558568092554,
+            "model_probability": 0.7161523318829643,
+            "sampling_probability": 0.8604958756287803
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 9.263430486556858,
+            "model_probability": 0.18032572823186013,
+            "sampling_probability": 0.11998009440016603
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 7.819476389569561,
+            "model_probability": 0.042555568662276534,
+            "sampling_probability": 0.015249310392989327
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 6.45613430337434,
+            "model_probability": 0.010885902827947913,
+            "sampling_probability": 0.0021747261100373756
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 6.43165635622303,
+            "model_probability": 0.010622673078920983,
+            "sampling_probability": 0.0020999934680270074
+          }
+        ]
+      },
+      {
+        "step": 16,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111,
+          110,
+          259
+        ],
+        "chosen_id": 110,
+        "chosen_hex": "6e",
+        "model_probability": 0.9995456956948525,
+        "sampling_probability": 0.9999951054358776,
+        "top5": [
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 15.881034753938366,
+            "model_probability": 0.9995456956948525,
+            "sampling_probability": 0.9999951054358776
+          },
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 6.8648200694177,
+            "model_probability": 0.00012136972507210434,
+            "sampling_probability": 2.547720330322432e-06
+          },
+          {
+            "id": 99,
+            "bytes_hex": "63",
+            "logit": 6.287792493421813,
+            "model_probability": 6.815700152993402e-05,
+            "sampling_probability": 1.117253970511127e-06
+          },
+          {
+            "id": 48,
+            "bytes_hex": "30",
+            "logit": 6.067601803997275,
+            "model_probability": 5.468684574304761e-05,
+            "sampling_probability": 8.157198817686451e-07
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 5.592638332448312,
+            "model_probability": 3.401017446911186e-05,
+            "sampling_probability": 4.138699395588298e-07
+          }
+        ]
+      },
+      {
+        "step": 17,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111,
+          110,
+          259,
+          110
+        ],
+        "chosen_id": 101,
+        "chosen_hex": "65",
+        "model_probability": 0.9445185223363699,
+        "sampling_probability": 0.9879837648944668,
+        "top5": [
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 14.115872007022277,
+            "model_probability": 0.9445185223363699,
+            "sampling_probability": 0.9879837648944668
+          },
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 10.77617512350068,
+            "model_probability": 0.033481010051205344,
+            "sampling_probability": 0.008370140892813474
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 10.176261372811858,
+            "model_probability": 0.018376352783703743,
+            "sampling_probability": 0.0035524981974673405
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 7.347870665410722,
+            "model_probability": 0.001086187605715269,
+            "sampling_probability": 6.248010581691405e-05
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 6.859880398070685,
+            "model_probability": 0.0006667658718057421,
+            "sampling_probability": 3.1115909435617873e-05
+          }
+        ]
+      },
+      {
+        "step": 18,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111,
+          110,
+          259,
+          110,
+          101
+        ],
+        "chosen_id": 119,
+        "chosen_hex": "77",
+        "model_probability": 0.9949414800460102,
+        "sampling_probability": 0.9995878776587234,
+        "top5": [
+          {
+            "id": 119,
+            "bytes_hex": "77",
+            "logit": 15.684740998799393,
+            "model_probability": 0.9949414800460102,
+            "sampling_probability": 0.9995878776587234
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 10.198639088786642,
+            "model_probability": 0.004123003948464399,
+            "sampling_probability": 0.0003945752649638717
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 7.335729764935736,
+            "model_probability": 0.00023543337542330413,
+            "sampling_probability": 6.605743151750826e-06
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 7.331378747288851,
+            "model_probability": 0.00023441122595990345,
+            "sampling_probability": 6.564810916985245e-06
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 7.047550233878593,
+            "model_probability": 0.00017648721464298618,
+            "sampling_probability": 4.376522244055563e-06
+          }
+        ]
+      },
+      {
+        "step": 19,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111,
+          110,
+          259,
+          110,
+          101,
+          119
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.9952903771860201,
+        "sampling_probability": 0.999850895942286,
+        "top5": [
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 13.633753834802873,
+            "model_probability": 0.9952903771860201,
+            "sampling_probability": 0.999850895942286
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 6.816630634768076,
+            "model_probability": 0.001089709700459955,
+            "sampling_probability": 5.894554279306463e-05
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 6.742995028795089,
+            "model_probability": 0.0010123513809145038,
+            "sampling_probability": 5.3059837776734855e-05
+          },
+          {
+            "id": 263,
+            "bytes_hex": "6564",
+            "logit": 6.045872166154711,
+            "model_probability": 0.0005041672918577147,
+            "sampling_probability": 1.9600018058298064e-05
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 5.966487802882977,
+            "model_probability": 0.0004656916770953425,
+            "sampling_probability": 1.74986590859277e-05
+          }
+        ]
+      },
+      {
+        "step": 20,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          261,
+          65,
+          269,
+          261,
+          86,
+          262,
+          115,
+          105,
+          111,
+          110,
+          259,
+          110,
+          101,
+          119,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9996161116986632,
+        "sampling_probability": 0.9999961773151915,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 15.9060953204141,
+            "model_probability": 0.9996161116986632,
+            "sampling_probability": 0.9999961773151915
+          },
+          {
+            "id": 103,
+            "bytes_hex": "67",
+            "logit": 6.547627539060042,
+            "model_probability": 8.619902050938396e-05,
+            "sampling_probability": 1.562468664369042e-06
+          },
+          {
+            "id": 49,
+            "bytes_hex": "31",
+            "logit": 6.542823485492823,
+            "model_probability": 8.578590889708671e-05,
+            "sampling_probability": 1.5517822575625146e-06
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 5.80990945021595,
+            "model_probability": 4.122070694136623e-05,
+            "sampling_probability": 5.446477974475873e-07
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 4.9688047795096475,
+            "model_probability": 1.777576575221042e-05,
+            "sampling_probability": 1.6378608907551954e-07
+          }
+        ]
+      }
+    ],
+    "checkpoint": "final",
+    "diagnostic_index": 0
+  },
+  {
+    "prompt": "The key is red. Answer:",
+    "mode": "sample",
+    "temperature": 1.2,
+    "top_k": 5,
+    "seed": 31415,
+    "max_new_tokens": 24,
+    "stop": "EOS",
+    "generated_ids": [
+      86,
+      262,
+      259,
+      270,
+      46
+    ],
+    "generated_hex": "5665723a207265642e",
+    "valid_utf8": true,
+    "display_decode": "strict",
+    "completion": "Ver: red.",
+    "trace": [
+      {
+        "step": 1,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58
+        ],
+        "chosen_id": 86,
+        "chosen_hex": "56",
+        "model_probability": 0.2543513755217347,
+        "sampling_probability": 0.26673659139028927,
+        "top5": [
+          {
+            "id": 82,
+            "bytes_hex": "52",
+            "logit": 9.422252124348727,
+            "model_probability": 0.3530295920707804,
+            "sampling_probability": 0.3505339719442337
+          },
+          {
+            "id": 105,
+            "bytes_hex": "69",
+            "logit": 9.257280129803043,
+            "model_probability": 0.29933995150749076,
+            "sampling_probability": 0.30550952725139857
+          },
+          {
+            "id": 86,
+            "bytes_hex": "56",
+            "logit": 9.094416919942248,
+            "model_probability": 0.2543513755217347,
+            "sampling_probability": 0.26673659139028927
+          },
+          {
+            "id": 274,
+            "bytes_hex": "626c75",
+            "logit": 7.117629355798373,
+            "model_probability": 0.03523109647137163,
+            "sampling_probability": 0.05136405723244199
+          },
+          {
+            "id": 282,
+            "bytes_hex": "373530",
+            "logit": 6.293947331538678,
+            "model_probability": 0.015459861597740772,
+            "sampling_probability": 0.02585585218163658
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86
+        ],
+        "chosen_id": 262,
+        "chosen_hex": "6572",
+        "model_probability": 0.978385013382488,
+        "sampling_probability": 0.962044792178898,
+        "top5": [
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 13.265922132984619,
+            "model_probability": 0.978385013382488,
+            "sampling_probability": 0.962044792178898
+          },
+          {
+            "id": 97,
+            "bytes_hex": "61",
+            "logit": 8.343734009501036,
+            "model_probability": 0.0071257511367301095,
+            "sampling_probability": 0.015914610312116537
+          },
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 8.119947142631098,
+            "model_probability": 0.00569693480349999,
+            "sampling_probability": 0.013207020168099467
+          },
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 6.877272704352818,
+            "model_probability": 0.0016441998263938328,
+            "sampling_probability": 0.004688845955427657
+          },
+          {
+            "id": 150,
+            "bytes_hex": "96",
+            "logit": 6.729254498083619,
+            "model_probability": 0.0014179832730441518,
+            "sampling_probability": 0.004144731385458398
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262
+        ],
+        "chosen_id": 259,
+        "chosen_hex": "3a20",
+        "model_probability": 0.8979225647098802,
+        "sampling_probability": 0.8586236516354353,
+        "top5": [
+          {
+            "id": 259,
+            "bytes_hex": "3a20",
+            "logit": 14.226738696968145,
+            "model_probability": 0.8979225647098802,
+            "sampling_probability": 0.8586236516354353
+          },
+          {
+            "id": 115,
+            "bytes_hex": "73",
+            "logit": 12.040080766570552,
+            "model_probability": 0.1008289889772209,
+            "sampling_probability": 0.13881134210086363
+          },
+          {
+            "id": 100,
+            "bytes_hex": "64",
+            "logit": 6.200029873717154,
+            "model_probability": 0.0002932807347812704,
+            "sampling_probability": 0.0010686612349269252
+          },
+          {
+            "id": 101,
+            "bytes_hex": "65",
+            "logit": 5.958298757088532,
+            "model_probability": 0.00023030376912632402,
+            "sampling_probability": 0.0008736845332599603
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 5.551837222674644,
+            "model_probability": 0.00015338293512320988,
+            "sampling_probability": 0.0006226604955142101
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259
+        ],
+        "chosen_id": 270,
+        "chosen_hex": "726564",
+        "model_probability": 0.6187032619210715,
+        "sampling_probability": 0.5876221498127098,
+        "top5": [
+          {
+            "id": 270,
+            "bytes_hex": "726564",
+            "logit": 10.80148836666698,
+            "model_probability": 0.6187032619210715,
+            "sampling_probability": 0.5876221498127098
+          },
+          {
+            "id": 268,
+            "bytes_hex": "6b6579",
+            "logit": 10.16108125956855,
+            "model_probability": 0.3261047561532934,
+            "sampling_probability": 0.3446093820830452
+          },
+          {
+            "id": 112,
+            "bytes_hex": "70",
+            "logit": 7.3223252435507025,
+            "model_probability": 0.019076603787626267,
+            "sampling_probability": 0.03235541957834108
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 6.873768830489123,
+            "model_probability": 0.01218135176610946,
+            "sampling_probability": 0.022264300594455017
+          },
+          {
+            "id": 98,
+            "bytes_hex": "62",
+            "logit": 6.241779247591238,
+            "model_probability": 0.006474793114619131,
+            "sampling_probability": 0.013148747931448889
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270
+        ],
+        "chosen_id": 46,
+        "chosen_hex": "2e",
+        "model_probability": 0.11519704819111005,
+        "sampling_probability": 0.1371423622361979,
+        "top5": [
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 11.727200021880066,
+            "model_probability": 0.41167443075248816,
+            "sampling_probability": 0.39636814553574257
+          },
+          {
+            "id": 261,
+            "bytes_hex": "2e20",
+            "logit": 11.72262391464327,
+            "model_probability": 0.40979486823050154,
+            "sampling_probability": 0.39485950462405023
+          },
+          {
+            "id": 46,
+            "bytes_hex": "2e",
+            "logit": 10.453611326128895,
+            "model_probability": 0.11519704819111005,
+            "sampling_probability": 0.1371423622361979
+          },
+          {
+            "id": 260,
+            "bytes_hex": "6520",
+            "logit": 9.258141340140616,
+            "model_probability": 0.034854217153843264,
+            "sampling_probability": 0.050642671864542466
+          },
+          {
+            "id": 117,
+            "bytes_hex": "75",
+            "logit": 8.20108978547581,
+            "model_probability": 0.012111102379565586,
+            "sampling_probability": 0.020987315739466734
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "context_ids": [
+          256,
+          84,
+          265,
+          268,
+          32,
+          277,
+          270,
+          261,
+          65,
+          276,
+          119,
+          262,
+          58,
+          86,
+          262,
+          259,
+          270,
+          46
+        ],
+        "chosen_id": 257,
+        "chosen_hex": null,
+        "model_probability": 0.9985995109812218,
+        "sampling_probability": 0.9957173993370665,
+        "top5": [
+          {
+            "id": 257,
+            "bytes_hex": null,
+            "logit": 16.110808617811657,
+            "model_probability": 0.9985995109812218,
+            "sampling_probability": 0.9957173993370665
+          },
+          {
+            "id": 32,
+            "bytes_hex": "20",
+            "logit": 9.207242214035134,
+            "model_probability": 0.0010027912930096945,
+            "sampling_probability": 0.0031597454753249108
+          },
+          {
+            "id": 111,
+            "bytes_hex": "6f",
+            "logit": 7.171940481872216,
+            "model_probability": 0.0001310057154193435,
+            "sampling_probability": 0.0005794978662683999
+          },
+          {
+            "id": 110,
+            "bytes_hex": "6e",
+            "logit": 6.349071070806201,
+            "model_probability": 5.753373896533071e-05,
+            "sampling_probability": 0.0002919076460322762
+          },
+          {
+            "id": 262,
+            "bytes_hex": "6572",
+            "logit": 6.170037550576671,
+            "model_probability": 4.810268612317775e-05,
+            "sampling_probability": 0.00025144967530794324
+          }
+        ]
+      }
+    ],
+    "checkpoint": "final",
+    "diagnostic_index": 0
+  }
+]

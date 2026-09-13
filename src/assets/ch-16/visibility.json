@@ -1,0 +1,96 @@
+{
+  "id": "ch-16/visibility",
+  "structure": "lanes",
+  "alt": {
+    "en": "Query 1 may read key 1 only; query 2 may read keys 1 and 2; query 3 may read all three. Key columns run 1,2,3. If slot 3 is padding, exclude its key and zero its unused query.",
+    "zh-hans": "键列依次为 1、2、3。查询 1 只读键 1，查询 2 读键 1、2，查询 3 可读三个键。若槽位 3 是填充，排除其键，并将不用的查询结果置零。"
+  },
+  "caption": {
+    "en": "Figure 16.1 — The inclusive diagonal preserves known input; future edges are forbidden.",
+    "zh-hans": "图 16.1 — 保留已知输入所在的对角线，禁止通向未来的连接。"
+  },
+  "credit": {
+    "en": "Original teaching diagram, CC BY-SA 4.0. Values and rules are declared in the chapter and shared data.",
+    "zh-hans": "本书原创教学图，CC BY-SA 4.0。数值与规则见正文及共享数据。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Query 1 → next token",
+        "zh-hans": "查询 1 → 下一个 token"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Key 1: allowed; 2: forbidden; 3: forbidden",
+            "zh-hans": "键 1：允许；2：禁止；3：禁止"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Weights [1, 0, 0] → output [1, 0]",
+            "zh-hans": "权重 [1, 0, 0] → 输出 [1, 0]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The current input is known; its successor is the target.",
+        "zh-hans": "当前输入已知，要预测的是它后面的 token。"
+      }
+    },
+    {
+      "label": {
+        "en": "Query 2 → next token",
+        "zh-hans": "查询 2 → 下一个 token"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Keys 1,2: allowed; key 3: forbidden",
+            "zh-hans": "键 1、2：允许；键 3：禁止"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Weights [0.5, 0.5, 0] → output [1, 1]",
+            "zh-hans": "权重 [0.5, 0.5, 0] → 输出 [1, 1]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The denominator includes the two allowed keys.",
+        "zh-hans": "归一化分母包含两个允许的键。"
+      }
+    },
+    {
+      "label": {
+        "en": "Query 3: real or padding?",
+        "zh-hans": "查询 3：真实位置还是填充？"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Real: keys 1,2,3 allowed",
+            "zh-hans": "真实位置：键 1、2、3 都允许"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Padding: query unused; key 3 excluded",
+            "zh-hans": "填充位置：查询不用；键 3 被排除"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A real empty row is an error. An unused padded row returns zero by explicit convention.",
+        "zh-hans": "真实的全遮蔽行会报错；未使用的填充行按明确约定返回零。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# SPDX-License-Identifier: Apache-2.0
+# The original local Mini GPT and fresh-kernel notebooks reuse the pinned CPU stack.
+-r ../part-iv/requirements-tested.txt

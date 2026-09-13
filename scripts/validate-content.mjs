@@ -1,10 +1,11 @@
 import { readFileSync } from "node:fs";
+import { assertPublicationState } from "./publication-state.mjs";
 import { fileURLToPath } from "node:url";
 import { BOOK_LOCALES, chapterLabel, plannedChapters } from "../src/config/book.mjs";
 
 const repositoryRoot = fileURLToPath(new URL("../", import.meta.url));
 const docsRoot = `${repositoryRoot}src/content/docs`;
-const extraDrafts = ["primer-py", "primer-http", "ext-mm-01"];
+const supportingLessons = ["primer-py", "primer-http", "ext-mm-01"];
 const requiredPublishedPages = [
   "index",
   "roadmap",
@@ -38,7 +39,11 @@ function readPage(locale, id) {
     .match(/^description:\s*(.+)$/mu)?.[1]
     ?.trim();
   const draft = /^draft:\s*true\s*$/mu.test(frontmatter);
-  const published = /^published:\s*\d{4}-\d{2}-\d{2}\s*$/mu.test(frontmatter);
+  const published = frontmatter.match(/^published:\s*(\d{4}-\d{2}-\d{2})\s*$/mu)?.[1];
+  if (plannedChapters.some((entry) => entry.id === id) || supportingLessons.includes(id)) {
+    try { assertPublicationState(frontmatter, `${locale}/${id}.md`); }
+    catch (error) { errors.push(error.message); }
+  }
 
   if (!title) errors.push(`${locale}/${id}.md is missing title.`);
   const chapter = plannedChapters.find((entry) => entry.id === id);
@@ -56,13 +61,17 @@ function readPage(locale, id) {
   return { body, draft, published };
 }
 
-for (const { id } of plannedChapters) {
+for (const id of [...plannedChapters.map((chapter) => chapter.id), ...supportingLessons]) {
   const pages = Object.fromEntries(
     BOOK_LOCALES.map((locale) => [locale, readPage(locale, id)]),
   );
 
   if (pages.en && pages["zh-hans"] && pages.en.draft !== pages["zh-hans"].draft) {
     errors.push(`${id} must have the same draft status in both languages.`);
+  }
+
+  if (pages.en && pages["zh-hans"] && pages.en.published !== pages["zh-hans"].published) {
+    errors.push(`${id} must have the same publication date in both languages.`);
   }
 
   for (const [locale, page] of Object.entries(pages)) {
@@ -77,10 +86,6 @@ for (const { id } of plannedChapters) {
       errors.push(`${locale}/${id}.md is too short to publish.`);
     }
   }
-}
-
-for (const id of extraDrafts) {
-  for (const locale of BOOK_LOCALES) readPage(locale, id);
 }
 
 for (const id of requiredPublishedPages) {

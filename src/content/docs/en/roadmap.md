@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-The book contains nine progressive parts, 57 core chapters, two foundation primers, and one online multimodal extension. Part I (Chapters 1–4) is available in both languages as of September 10, 2026. Later chapters are planned and not yet published.
+The book contains nine progressive parts, 57 core chapters, two foundation primers, and one online multimodal extension. Chapters 1–39 and the Python primer are available in both languages. Chapters 5–39 and the primer were released on September 13, 2026; Part I retains its September 10 first-edition date. Chapters 40–57, the HTTP primer and the multimodal extension are planned and not yet open for reading.
 
 ## Part I: Opening the Black Box
 
@@ -16,53 +16,53 @@ The book contains nine progressive parts, 57 core chapters, two foundation prime
 
 ## Part II: Essential Foundations
 
-- **Chapter 5** Batches, Shapes, Vectors, and Matrices
-- **Chapter 6** From Logits to Probability, Loss, and Perplexity
-- **Chapter 7** The Smallest Machine-Learning and Neural-Network Training Loop
-- **Chapter 8** Real Text Is Not a Clean String
-- **Chapter 9** Keywords, Bag of Words, and TF-IDF: Establishing a Sparse Baseline
-- **Chapter 10** From Sparse Representations to Word2Vec and Neural Language Models
+- [**Chapter 5** Batches, Shapes, Vectors, and Matrices](../ch-05/)
+- [**Chapter 6** From Logits to Probability, Loss, and Perplexity](../ch-06/)
+- [**Chapter 7** The Smallest Machine-Learning and Neural-Network Training Loop](../ch-07/)
+- [**Chapter 8** Real Text Is Not a Clean String](../ch-08/)
+- [**Chapter 9** Keywords, Bag of Words, and TF-IDF: Establishing a Sparse Baseline](../ch-09/)
+- [**Chapter 10** From Sparse Representations to Word2Vec and Neural Language Models](../ch-10/)
 
 ## Part III: Why Context Is Hard
 
-- **Chapter 11** RNNs: Carrying the Past into the Present
-- **Chapter 12** Why RNNs Forget: BPTT, LSTM/GRU, and Contextual Representations
-- **Chapter 13** Seq2Seq: Why Read-Then-Write Becomes a Bottleneck
-- **Chapter 14** Attention: Where Should the Current Output Look?
+- [**Chapter 11** RNNs: Carrying the Past into the Present](../ch-11/)
+- [**Chapter 12** Why RNNs Forget: BPTT, LSTM/GRU, and Contextual Representations](../ch-12/)
+- [**Chapter 13** Seq2Seq: Why Read-Then-Write Becomes a Bottleneck](../ch-13/)
+- [**Chapter 14** Attention: Where Should the Current Output Look?](../ch-14/)
 
 ## Part IV: Inside the Transformer
 
-- **Chapter 15** Self-Attention and Q/K/V
-- **Chapter 16** Masks and Multi-Head Attention
-- **Chapter 17** Assembling a Complete Transformer Block
-- **Chapter 18** Transformer Families: BERT, GPT, and T5
-- **Chapter 19** Tokenizers in Depth: BPE, WordPiece, SentencePiece, and Byte-Level Models
-- **Chapter 20** Building a Mini GPT from Scratch
-- **Chapter 21** Training, Saving, and Interrogating a Mini GPT
+- [**Chapter 15** Self-Attention and Q/K/V](../ch-15/)
+- [**Chapter 16** Masks and Multi-Head Attention](../ch-16/)
+- [**Chapter 17** Assembling a Complete Transformer Block](../ch-17/)
+- [**Chapter 18** Transformer Families: BERT, GPT, and T5](../ch-18/)
+- [**Chapter 19** Tokenizers in Depth: BPE, WordPiece, SentencePiece, and Byte-Level Models](../ch-19/)
+- [**Chapter 20** Building a Mini GPT from Scratch](../ch-20/)
+- [**Chapter 21** Training, Saving, and Interrogating a Mini GPT](../ch-21/)
 
 ## Part V: How Modern LLMs Are Built and Run
 
-- **Chapter 22** What Makes a Language Model an LLM
-- **Chapter 23** Pretraining Data Pipelines and Governance
-- **Chapter 24** Scaling: How Model, Data, and Compute Grow Together
-- **Chapter 25** Modern Dense LLM Blocks: RoPE, RMSNorm, and SwiGLU
-- **Chapter 26** A Map of Efficient, Sparse, and Alternative Architectures
-- **Chapter 27** Mapping and Estimating Large-Scale Training Systems
-- **Chapter 28** Mechanistic Interpretability: Decodability, Correlation, and Causality
-- **Chapter 29** Generation Strategies: From Logits to Sampling
-- **Chapter 30** Model Inference: Prefill, Decode, KV Cache, and Quantization
-- **Chapter 31** Serving Efficiency: Reuse, Kernels, Speculation, and Batching
-- **Chapter 32** Write the Model Evaluation Contract First
-- **Chapter 33** Choosing an API or Local Model from Evidence
+- [**Chapter 22** What Makes a Language Model an LLM](../ch-22/)
+- [**Chapter 23** Pretraining Data Pipelines and Governance](../ch-23/)
+- [**Chapter 24** Scaling: How Model, Data, and Compute Grow Together](../ch-24/)
+- [**Chapter 25** Modern Dense LLM Blocks: RoPE, RMSNorm, and SwiGLU](../ch-25/)
+- [**Chapter 26** A Map of Efficient, Sparse, and Alternative Architectures](../ch-26/)
+- [**Chapter 27** Mapping and Estimating Large-Scale Training Systems](../ch-27/)
+- [**Chapter 28** Mechanistic Interpretability: Decodability, Correlation, and Causality](../ch-28/)
+- [**Chapter 29** Generation Strategies: From Logits to Sampling](../ch-29/)
+- [**Chapter 30** Model Inference: Prefill, Decode, KV Cache, and Quantization](../ch-30/)
+- [**Chapter 31** Serving Efficiency: Reuse, Kernels, Speculation, and Batching](../ch-31/)
+- [**Chapter 32** Write the Model Evaluation Contract First](../ch-32/)
+- [**Chapter 33** Choosing an API or Local Model from Evidence](../ch-33/)
 
 ## Part VI: Turning Base Models into Useful Capabilities
 
-- **Chapter 34** SFT: From Completion to Instruction Following
-- **Chapter 35** Preference Optimization: RLHF, DPO, and the Limits of Alignment
-- **Chapter 36** Training Reasoning Capabilities: Supervision, RLVR, and Verifiers
-- **Chapter 37** Test-Time Compute: Sampling, Search, Verification, and Stopping
-- **Chapter 38** Diagnosing Capability Gaps: Prompt, RAG, Tools, or Parameter Updates
-- **Chapter 39** Continued Pretraining, Fine-Tuning, and LoRA/QLoRA
+- [**Chapter 34** SFT: From Completion to Instruction Following](../ch-34/)
+- [**Chapter 35** Preference Optimization: RLHF, DPO, and the Limits of Alignment](../ch-35/)
+- [**Chapter 36** Training Reasoning Capabilities: Supervision, RLVR, and Verifiers](../ch-36/)
+- [**Chapter 37** Test-Time Compute: Sampling, Search, Verification, and Stopping](../ch-37/)
+- [**Chapter 38** Diagnosing Capability Gaps: Prompt, RAG, Tools, or Parameter Updates](../ch-38/)
+- [**Chapter 39** Continued Pretraining, Fine-Tuning, and LoRA/QLoRA](../ch-39/)
 
 ## Part VII: Connecting Context, Tools, and Knowledge
 
@@ -93,7 +93,7 @@ The book contains nine progressive parts, 57 core chapters, two foundation prime
 
 ## Foundation primers
 
-- **Primer-PY**: Python, notebooks, NumPy/PyTorch tensors, and reading errors.
+- [**Primer-PY**: Python, notebooks, NumPy/PyTorch tensors, and reading errors](../primer-py/). Read after the core of Chapter 5 and before the programming exercises.
 - **Primer-HTTP**: Client/server systems, HTTP, JSON, authentication, streaming, timeouts, and retries.
 
 ## Online extension

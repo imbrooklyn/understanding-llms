@@ -1,0 +1,21 @@
+{
+  "version": "tokenizer-cases-v1",
+  "hand_bpe": {
+    "words": {"low": 2, "lower": 1, "new": 1},
+    "end_marker": "</w>",
+    "initial_alphabet": ["</w>", "e", "l", "n", "o", "r", "w"],
+    "tie_rule": "highest frequency, then lexicographically smallest pair of current symbol strings",
+    "merge_budget": 4,
+    "expected_pairs": [["l","o"],["lo","w"],["low","</w>"],["e","r"]],
+    "expected_counts": [3,3,2,1],
+    "expected_final": {"low":["low</w>"],"lower":["low","er","</w>"],"new":["n","e","w","</w>"]}
+  },
+  "wordpiece": {
+    "vocabulary": ["[UNK]","low","##er","new"],
+    "cases": [{"text":"lower","expected":["low","##er"]},{"text":"lowerz","expected":["[UNK]"]}]
+  },
+  "roundtrip_texts": ["red key .","法国首都是巴黎。","中","🙂","é","é","Ａ A","  red  key .\n"],
+  "normalization_counterexample": {"raw":"é","normalized_nfc":"é"},
+  "unknown_counterexample": {"raw":"☃","pieces":["[UNK]"],"decoded":"[UNK]"},
+  "invalid_generated_bytes": [255]
+}

@@ -1,0 +1,42 @@
+{
+  "as_of": "2026-09-11T17:06:33.391802+00:00",
+  "python": "3.12.10",
+  "condition": "fresh kernel per notebook, CPU, no allowed errors",
+  "executions": [
+    {
+      "notebook": "notebooks/part-ii/01-primer-and-ngram.ipynb",
+      "code_sha256": "228074c892ddfcc6a57769794d9aff9834367a6d60ba29dee470acb15b25417a",
+      "code_cells": 7,
+      "elapsed_seconds": 0.7205,
+      "status": "passed"
+    },
+    {
+      "notebook": "notebooks/part-ii/02-shapes-and-loss.ipynb",
+      "code_sha256": "97d65a8bfbf7d2ef0067707ee33edf791bd3b113ed2f47e907e34c4b9961942a",
+      "code_cells": 5,
+      "elapsed_seconds": 1.3401,
+      "status": "passed"
+    },
+    {
+      "notebook": "notebooks/part-ii/03-training.ipynb",
+      "code_sha256": "07f9c6b245b25ad1c0b25f11892ea8c14917de7d444bcc0663034e3020dae237",
+      "code_cells": 3,
+      "elapsed_seconds": 1.7201,
+      "status": "passed"
+    },
+    {
+      "notebook": "notebooks/part-ii/04-text-and-ka0.ipynb",
+      "code_sha256": "555aa6d73dea921ffae22ce863cf6b72aee0cde2965ce6f032978348ea4b58f3",
+      "code_cells": 5,
+      "elapsed_seconds": 0.5413,
+      "status": "passed"
+    },
+    {
+      "notebook": "notebooks/part-ii/05-representations-and-nnlm.ipynb",
+      "code_sha256": "918693aeaf1700a7f97d4346d56d2f15b4dfebd68c146f61f2c77848770a1944",
+      "code_cells": 5,
+      "elapsed_seconds": 1.2927,
+      "status": "passed"
+    }
+  ]
+}

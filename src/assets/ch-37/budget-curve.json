@@ -1,0 +1,33 @@
+{
+  "structure": "budget-curve",
+  "caption": {
+    "en": "Figure 37.1 — Extra votes can lower quality; verified search also needs a sufficient call budget.",
+    "zh-hans": "图 37.1：增加投票可能降低质量；核验搜索也需要足够的调用预算。"
+  },
+  "alt": {
+    "en": "For caps 1, 2, 3, 4 and 6 calls per question, direct scores 2 of 4 throughout, first steps 3, voting 3 3 2 2 2, and search 0 3 3 4 4. These are authored pool results in order A B C, not a measured model scaling curve.",
+    "zh-hans": "每题调用上限为 1、2、3、4、6 时，直接作答始终答对 2/4，首条分步路径始终 3/4，投票依次为 3、3、2、2、2，搜索为 0、3、3、4、4。这是 A B C 顺序下的固定候选池结果，不是模型实测扩展曲线。"
+  },
+  "credit": {
+    "en": "Original fixed-pool data and static plot · CC BY-SA 4.0",
+    "zh-hans": "原创固定候选数据与静态曲线图 · CC BY-SA 4.0"
+  },
+  "labels": {
+    "y": {
+      "en": "Correct questions / 4",
+      "zh-hans": "正确题数 / 4"
+    },
+    "x": {
+      "en": "Maximum charged calls per question",
+      "zh-hans": "每题最多允许调用数"
+    },
+    "legend": {
+      "en": "○ Direct · □ First steps · △ Vote · ◇ Search + verifier",
+      "zh-hans": "○ 直接作答 · □ 首条分步路径 · △ 投票 · ◇ 搜索加核验器"
+    },
+    "scope": {
+      "en": "Primary order A–B–C. One generation = 1 call; one verification = 1 call. Actual work may stop below the cap.",
+      "zh-hans": "主顺序 A—B—C。生成一次、核验一次都各计一次调用；实际工作可以在上限之前停止。"
+    }
+  }
+}

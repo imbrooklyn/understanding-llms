@@ -1,0 +1,36 @@
+{
+  "version": "part-ii-arithmetic-v1",
+  "status": "authored inputs and independently derived expectations",
+  "license": "CC-BY-SA-4.0",
+  "precision": "float64 reproduction; display six decimals unless stated; absolute tolerance 1e-12 for small arithmetic",
+  "shape": {
+    "axes": ["sample", "position", "coordinate"],
+    "tokenizer": "toy-longest-v1",
+    "token_ids": [[4, 5], [6, 7]],
+    "input": [[[2, 1], [1, -1]], [[2, 2], [0, -1]]],
+    "weight": [[1, 0, -1], [0, 1, 1]],
+    "candidate_order": ["Paris", "Lyon", "other"],
+    "expected_output": [[[2, 1, -1], [1, -1, -2]], [[2, 2, 0], [0, -1, -1]]],
+    "padding": {"lengths": [2, 1], "last_row": [0, 0], "valid_second_mean": [2, 2], "incorrect_second_mean": [1, 1]}
+  },
+  "probability": {
+    "logits_rule": ["ln(2)", "0", "0"],
+    "candidate_order": ["Paris", "Lyon", "other"],
+    "expected_probabilities": [0.5, 0.25, 0.25],
+    "targets": [0, 1],
+    "loss_rules": ["ln(2)", "ln(4)"],
+    "mean_loss_rule": "ln(8)/2",
+    "perplexity_rule": "sqrt(8)",
+    "kl_reference": [0.75, 0.25],
+    "kl_proposal": [0.5, 0.5],
+    "kl_forward_rule": "0.75*ln(1.5)+0.25*ln(0.5)",
+    "kl_reverse_rule": "0.5*ln(2/3)+0.5*ln(2)"
+  },
+  "update": {
+    "input": [1, 2], "target": 1, "weight": [0, 0], "bias": 0,
+    "learning_rate": 0.1, "initial_probability": 0.5,
+    "gradient_weight": [-0.5, -1], "gradient_bias": -0.5,
+    "new_weight": [0.05, 0.1], "new_bias": 0.05, "new_score": 0.3,
+    "new_loss_rule": "ln(1+exp(-0.3))"
+  }
+}

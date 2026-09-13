@@ -1,0 +1,2195 @@
+{
+  "version": "ka1-adjudication-v1",
+  "recorded_at": "2026-09-13T04:44:20.260126+00:00",
+  "method": "Author inspection by the AI-assisted book-writing process of all 62 unique case/locale/completion/UTF-8 combinations, propagated to their identical repeated attempts. No recruited human raters, independent panel, or calibrated LLM judge; no hidden judge API. Explicit reasons are inspectable and may be challenged.",
+  "run_sha256": "5e2b34ef4d935b4364dd7a2d47765011426e22047bdf10e6745a65f5129015a6",
+  "contract_sha256": "00300195c59bf81d81c6c40495b3e02cb44765063e04e927a0a4f15d7058a4b4",
+  "rows": [
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "800a21b74bd1135e41edbd5f0164ef0a7d7e32ee8ddfaa46afe7d9d706e8701e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "2ae3f96cc26040eb543c6abe5a6e41c9c53fe567b94bb703f6ba46bee440d3ff",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "96cf89cb96cc6c1c87ebba57bdadb0561cee27219227d6f4460e79b02ee30703",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "3ed79e4d486e2bb8d0d8e98d85d3e21bb70b54a942ddb189434a037d968110ad",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "dff54bd587e82383c9b224d7f9155f4f67b40bf88b2338ffa96ac2bf4efa42b2",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "9a82fb845d2505877ae56345418328b2dd421b297dd7bb63906cf09bfe26a936",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "ccc4673a06c58572c13597731ef94ac80447ca347c0f2f0c60c439b54d166cc2",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "3b40d53f87a7c9f5ecb73f1ecd64d1995ce61400b16274eee10ef822c15df6cd",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "6a19f097035d31fa0fa78263325890693aad1f8574cf96cd3c4e8299c5311a52",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "c1a050c65c5352ca6179b9d51c3cb0a56811d08fa51949ea7e1142abe9741922",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "42fb80f39f832c72b52f51597c4f0af1c9cad70206795ed9176207f4887f5fc0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "74e9eec208225aaecfd0fd30ff5ed679ce5b683af1b99e4c776730b2ef00f0e6",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "38d1a9abc2c2fddf587d38e77d340ebca404bed7e0ae942ce800354627992a9d",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "ca47e259cf11254d875b9099ca5f5197496640e603d8e217ed2e0014b7e9f94f",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "38d1a9abc2c2fddf587d38e77d340ebca404bed7e0ae942ce800354627992a9d",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "42fb80f39f832c72b52f51597c4f0af1c9cad70206795ed9176207f4887f5fc0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "74e9eec208225aaecfd0fd30ff5ed679ce5b683af1b99e4c776730b2ef00f0e6",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "2eefe3e7c62e7900d025f24a532369ed1275af8e6adf4dc906ae3621a3c84f7e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "76304b8e4b75c6bb5786c9a67fbbacd09e003c6a3d9ef7e0a41688bbfa06162c",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "1aa14d30d36b98438f4095119b4349c10c89b8c6555a074d522b03e0ec979f9a",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "0f6f724fa69262f0d9609cd5fec3132c02b1d822687493c6ff4dc2fa8e4c1781",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "2ce77f8d764f365a55bfb809447c15fa055b2b28592643042c28c29cf43e1210",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "2a0a11f9ef7d23f4eddd99405423a6e37d060428cbbbd78a9f22c1186f6219dc",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "9a82fb845d2505877ae56345418328b2dd421b297dd7bb63906cf09bfe26a936",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "690ee11408dce1279d3c36ab8645be85707efb62d7fa2a87aed3a5edb2ef85ae",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "e77db3ad89f2c0721205df361da8dc20af32382b8c7f47edba2b49bc8c3c276a",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "1a088b9b1da7ecc89f55f8b057e960656a892c4225399df7a88b43f1ca5f8a0e",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "e77db3ad89f2c0721205df361da8dc20af32382b8c7f47edba2b49bc8c3c276a",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "49cb0b88fd15d7d046fe4a56b83c700dc4d90464e2577d15ba9e64dc06323084",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "399029e8d07b3751936bffc81cbf295667ae481668502cd07541c3cea98fad01",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "b36f885488a3e6a3619cdcc67fe6604005062caef64cf4ee4365dc452e68b991",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "51300489c31c00845f031f7248cbe46143f45ab2f5039f6568006b4ce5d63977",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "1b08d9665d96b81c5dc920eb1813c566fb5d18d25b013b4f4cc995b1aab085af",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 1,
+      "seed": 7,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "800a21b74bd1135e41edbd5f0164ef0a7d7e32ee8ddfaa46afe7d9d706e8701e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "800a21b74bd1135e41edbd5f0164ef0a7d7e32ee8ddfaa46afe7d9d706e8701e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "dff54bd587e82383c9b224d7f9155f4f67b40bf88b2338ffa96ac2bf4efa42b2",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "3ed79e4d486e2bb8d0d8e98d85d3e21bb70b54a942ddb189434a037d968110ad",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "b428cd32e3e73377de1433d4b60ad67d277f6ed5b14cd2d62063ddb20df0e4c4",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "5c471b013e274004adb969cbbd52c40581fc7e3056cea5dd203b74eb38c19e62",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "3b40d53f87a7c9f5ecb73f1ecd64d1995ce61400b16274eee10ef822c15df6cd",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "c1a050c65c5352ca6179b9d51c3cb0a56811d08fa51949ea7e1142abe9741922",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "57873b18ffe5c76d6594aabb9328c625732605247805d8479235f40acba4c2c7",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "42fb80f39f832c72b52f51597c4f0af1c9cad70206795ed9176207f4887f5fc0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "2b505ee9cc4415b513c0e29f259933b8b54c6d22915c6bfe0ab8729dcf656361",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "38d1a9abc2c2fddf587d38e77d340ebca404bed7e0ae942ce800354627992a9d",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "38d1a9abc2c2fddf587d38e77d340ebca404bed7e0ae942ce800354627992a9d",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "42fb80f39f832c72b52f51597c4f0af1c9cad70206795ed9176207f4887f5fc0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "bdec316bbaa1b45b3325205b72f9f0a0a729b6615987fc7a3ce34cd86fdb529c",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "76304b8e4b75c6bb5786c9a67fbbacd09e003c6a3d9ef7e0a41688bbfa06162c",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "2eefe3e7c62e7900d025f24a532369ed1275af8e6adf4dc906ae3621a3c84f7e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "f19e95f3117706a1181c4660c8fcb46df449aa3bac5bc3a369cdf61067235bf4",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "d6761941e6068b88008698ac0a3e2063457b683e4750bd6db212157d7530b01a",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "2a0a11f9ef7d23f4eddd99405423a6e37d060428cbbbd78a9f22c1186f6219dc",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "2ce77f8d764f365a55bfb809447c15fa055b2b28592643042c28c29cf43e1210",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "2a0a11f9ef7d23f4eddd99405423a6e37d060428cbbbd78a9f22c1186f6219dc",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "eceee6b77752fb8840dcc60e1f6ce2b879f0cd7094179ba6fdc5f10dadffc2c3",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "1a088b9b1da7ecc89f55f8b057e960656a892c4225399df7a88b43f1ca5f8a0e",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "e77db3ad89f2c0721205df361da8dc20af32382b8c7f47edba2b49bc8c3c276a",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "87118a113670368bc438576f2934b51ccc025b838d06bbc45f0f7bc3397c77df",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "543ab2fc0814ab3c5cee478f15bed1eb018dfebdfb7eb55ca79ef04b8e6ffb4b",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "b36f885488a3e6a3619cdcc67fe6604005062caef64cf4ee4365dc452e68b991",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "399029e8d07b3751936bffc81cbf295667ae481668502cd07541c3cea98fad01",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "95ab40353869160d4a2a71f757e22aecdee8f25492723dbad7a79ad4503857bf",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "2265c374d826e82b6e19873cb047035d69548d4ee70b0375c1dc594ba209c31a",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "8e5b9e206783d5e49e7294f9fda1a6b69ac4633fde3ff0c53f769d1dfcc07771",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 2,
+      "seed": 42,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "800a21b74bd1135e41edbd5f0164ef0a7d7e32ee8ddfaa46afe7d9d706e8701e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "c219f849013f2fd4bd3cee9c586190b7f37b79848d8327f9c2ecee824f3c07c9",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "800a21b74bd1135e41edbd5f0164ef0a7d7e32ee8ddfaa46afe7d9d706e8701e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "3ed79e4d486e2bb8d0d8e98d85d3e21bb70b54a942ddb189434a037d968110ad",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "dff54bd587e82383c9b224d7f9155f4f67b40bf88b2338ffa96ac2bf4efa42b2",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "933488957ac54d5a8866a74da8b1728e8e64e62b2cc30b8cae59d4f339322fb0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "current-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "b428cd32e3e73377de1433d4b60ad67d277f6ed5b14cd2d62063ddb20df0e4c4",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 2,
+      "reason": "The complete answer gives the correct current amount; sentence punctuation changes strict format only. Units and current scope are supplied by the question.",
+      "failure_tags": [
+        "format_mismatch"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "3b40d53f87a7c9f5ecb73f1ecd64d1995ce61400b16274eee10ef822c15df6cd",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "366816ba4d1b1bc6c785cf8c014da3334bdf1551926ba701b1137164eea87722",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "19696fe9a0f8f87d1407da9605553bf2cdfd0fd928609c77505ba62e190f2d4a",
+      "semantic_score": 0,
+      "reason": "The retained byte sequence is invalid UTF-8 and the displayed replacement characters do not form an intelligible answer.",
+      "failure_tags": [
+        "invalid_utf8",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "42fb80f39f832c72b52f51597c4f0af1c9cad70206795ed9176207f4887f5fc0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "be8dbae76dab1cc7e403a001c62cbf769298ce8e1a1640c5bfa9b9a5cf819a1e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "stale-premise",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "38d1a9abc2c2fddf587d38e77d340ebca404bed7e0ae942ce800354627992a9d",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "c7078ace48053f4ce17bf38d46293c9a0819e5307ea20aab44676a395ed5faaf",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "38d1a9abc2c2fddf587d38e77d340ebca404bed7e0ae942ce800354627992a9d",
+      "semantic_score": 0,
+      "reason": "The answer gives the current amount 750 when the question explicitly asks for the old amount 600; additional fragments do not correct it.",
+      "failure_tags": [
+        "wrong_fact"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "42fb80f39f832c72b52f51597c4f0af1c9cad70206795ed9176207f4887f5fc0",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "be8dbae76dab1cc7e403a001c62cbf769298ce8e1a1640c5bfa9b9a5cf819a1e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "historical-limit",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "2eefe3e7c62e7900d025f24a532369ed1275af8e6adf4dc906ae3621a3c84f7e",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "76304b8e4b75c6bb5786c9a67fbbacd09e003c6a3d9ef7e0a41688bbfa06162c",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "1aa14d30d36b98438f4095119b4349c10c89b8c6555a074d522b03e0ec979f9a",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "e859dc22f8641920d78819853a3a7710fd92bfb784598786f20387a7e37d0026",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "2ce77f8d764f365a55bfb809447c15fa055b2b28592643042c28c29cf43e1210",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "2a0a11f9ef7d23f4eddd99405423a6e37d060428cbbbd78a9f22c1186f6219dc",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "4644865053fdefadf239f666c40da75d66ec0fecee2046caa3d8edd98d78949f",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "order-status",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "0f06f706dc48387a23d502df3aaddc44027271830374345e0d6d6c355b35c5f4",
+      "semantic_score": 0,
+      "reason": "The complete response does not intelligibly express the requested fact. Correct-looking digit substrings inside fragments are insufficient under the frozen whole-answer rubric.",
+      "failure_tags": [
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "e77db3ad89f2c0721205df361da8dc20af32382b8c7f47edba2b49bc8c3c276a",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "1a088b9b1da7ecc89f55f8b057e960656a892c4225399df7a88b43f1ca5f8a0e",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "e77db3ad89f2c0721205df361da8dc20af32382b8c7f47edba2b49bc8c3c276a",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "3681e2405832c2f56d692c71fb70e5308f292acc49a7e574bae4abc5b73ce68f",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "399029e8d07b3751936bffc81cbf295667ae481668502cd07541c3cea98fad01",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "b36f885488a3e6a3619cdcc67fe6604005062caef64cf4ee4365dc452e68b991",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "399029e8d07b3751936bffc81cbf295667ae481668502cd07541c3cea98fad01",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "approval-boundary",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "9ac30f580f201d0841d6d0e8d5f2af3d5be8d28d257737042e8e8b4550abbfdc",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate the required lack of permission. No tool ran; this is a missing approval-boundary answer, not an executed cancellation.",
+      "failure_tags": [
+        "approval_confusion",
+        "unintelligible",
+        "context_limit"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "en",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "f111e58261a27d7541f9c2f9230a72ca67d8c21391f4117a19fd2802433faea8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "greedy",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "selected-50",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    },
+    {
+      "candidate": "final-600",
+      "case": "unknown",
+      "locale": "zh-hans",
+      "policy": "sample-0.7-k5",
+      "repeat": 3,
+      "seed": 31415,
+      "completion_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "semantic_score": 0,
+      "reason": "The completion does not communicate that the passport rule is unknown; new or a period is not an abstention.",
+      "failure_tags": [
+        "missing_abstention"
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "candidate": "final-600",
+      "policy": "greedy",
+      "locale": "en",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 1.5149585,
+      "p95_complete_call_ms": 5.475667,
+      "semantic_passes": 0,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    },
+    {
+      "candidate": "final-600",
+      "policy": "greedy",
+      "locale": "zh-hans",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 1.023396,
+      "p95_complete_call_ms": 5.160334,
+      "semantic_passes": 0,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    },
+    {
+      "candidate": "final-600",
+      "policy": "sample-0.7-k5",
+      "locale": "en",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 1,
+      "median_complete_call_ms": 1.622875,
+      "p95_complete_call_ms": 5.680458,
+      "semantic_passes": 0,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    },
+    {
+      "candidate": "final-600",
+      "policy": "sample-0.7-k5",
+      "locale": "zh-hans",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 0.7286665,
+      "p95_complete_call_ms": 5.454416,
+      "semantic_passes": 0,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    },
+    {
+      "candidate": "selected-50",
+      "policy": "greedy",
+      "locale": "en",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 0.718167,
+      "p95_complete_call_ms": 0.983209,
+      "semantic_passes": 6,
+      "stable_semantic_cases": 2,
+      "decision": "reject"
+    },
+    {
+      "candidate": "selected-50",
+      "policy": "greedy",
+      "locale": "zh-hans",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 1.3761459999999999,
+      "p95_complete_call_ms": 2.230083,
+      "semantic_passes": 0,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    },
+    {
+      "candidate": "selected-50",
+      "policy": "sample-0.7-k5",
+      "locale": "en",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 1.0151875,
+      "p95_complete_call_ms": 2.475958,
+      "semantic_passes": 1,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    },
+    {
+      "candidate": "selected-50",
+      "policy": "sample-0.7-k5",
+      "locale": "zh-hans",
+      "attempts": 18,
+      "strict_passes": 0,
+      "stable_strict_cases": 0,
+      "cases": 6,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "median_complete_call_ms": 2.1751455,
+      "p95_complete_call_ms": 5.484417,
+      "semantic_passes": 0,
+      "stable_semantic_cases": 0,
+      "decision": "reject"
+    }
+  ]
+}

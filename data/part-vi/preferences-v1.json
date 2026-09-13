@@ -1,0 +1,131 @@
+{
+  "version": "preferences-v1",
+  "as_of": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "evidence_kind": "authored rubric examples, not human annotation measurements",
+  "rubric": [
+    "Requested version and supplied evidence",
+    "No unsupported claims or permissions",
+    "Clarity and relevant detail after hard criteria pass"
+  ],
+  "pairs": [
+    {
+      "id": "current",
+      "scope": "current",
+      "evidence": {
+        "old": 600,
+        "current": 750
+      },
+      "chosen": {
+        "amount": 750,
+        "text": {
+          "en": "Current cap: 750",
+          "zh-hans": "现限额：750"
+        }
+      },
+      "rejected": {
+        "amount": 600,
+        "text": {
+          "en": "Current cap: 600",
+          "zh-hans": "现限额：600"
+        }
+      },
+      "audit": "keep"
+    },
+    {
+      "id": "history",
+      "scope": "old",
+      "evidence": {
+        "old": 600,
+        "current": 750
+      },
+      "chosen": {
+        "amount": 750,
+        "text": {
+          "en": "Old cap: 750",
+          "zh-hans": "旧限额：750"
+        }
+      },
+      "rejected": {
+        "amount": 600,
+        "text": {
+          "en": "Old cap: 600",
+          "zh-hans": "旧限额：600"
+        }
+      },
+      "audit": "reverse"
+    },
+    {
+      "id": "missing",
+      "scope": "current",
+      "evidence": {},
+      "chosen": {
+        "amount": 750,
+        "text": {
+          "en": "Current cap: 750",
+          "zh-hans": "现限额：750"
+        }
+      },
+      "rejected": {
+        "amount": 600,
+        "text": {
+          "en": "Current cap: 600",
+          "zh-hans": "现限额：600"
+        }
+      },
+      "audit": "quarantine"
+    },
+    {
+      "id": "tie",
+      "scope": "current",
+      "evidence": {
+        "current": 750
+      },
+      "chosen": {
+        "amount": 750,
+        "text": {
+          "en": "750 yuan",
+          "zh-hans": "750 元"
+        }
+      },
+      "rejected": {
+        "amount": 750,
+        "text": {
+          "en": "Current cap: 750 yuan",
+          "zh-hans": "现限额：750 元"
+        }
+      },
+      "audit": "tie"
+    }
+  ],
+  "probability_example": {
+    "order": [
+      "chosen",
+      "rejected"
+    ],
+    "reference": [
+      0.5,
+      0.5
+    ],
+    "policy": [
+      0.75,
+      0.25
+    ],
+    "reward": [
+      1,
+      0
+    ],
+    "beta": [
+      1,
+      2
+    ]
+  },
+  "gaming": {
+    "text": {
+      "en": "The cap is not 750; use 600.",
+      "zh-hans": "限额不是 750，应按 600 执行。"
+    },
+    "substring_reward": 1,
+    "correct": false
+  }
+}

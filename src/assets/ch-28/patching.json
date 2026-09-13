@@ -1,0 +1,117 @@
+{
+  "id": "ch-28/patching",
+  "structure": "lanes",
+  "alt": {
+    "en": "The readout margin equals four times r and does not depend on b. Restoring r changes the corrupted margin from −4 to 4; restoring b leaves it at −4. Both coordinates nevertheless reveal color in the correlated observational examples.",
+    "zh-hans": "输出分差为 r 的四倍，与 b 无关。恢复 r 把扰动分差从 −4 改为 4，恢复 b 后仍为 −4。不过，在相关的观察样例中，两坐标都能读出颜色。"
+  },
+  "caption": {
+    "en": "Figure 28.1 — The matched ineffective patch is evidence too.",
+    "zh-hans": "图 28.1：匹配但无效的修补，同样提供证据。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Observed pairing",
+        "zh-hans": "观察到的配对"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Clean [r,b]=[1,1]",
+            "zh-hans": "干净 [r,b]=[1,1]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Fixed W = [[2,−2],[0,0]]",
+            "zh-hans": "固定 W = [[2,−2],[0,0]]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Margin 4; both signs reveal red",
+            "zh-hans": "分差 4；两坐标符号都能读出红色"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Decodability follows the paired data; the zero weight blocks causal use of b here.",
+        "zh-hans": "可解码性来自数据配对；这里的零权重阻断了 b 对输出的作用。"
+      }
+    },
+    {
+      "label": {
+        "en": "Restore r",
+        "zh-hans": "恢复 r"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Corrupted [−1,−1]",
+            "zh-hans": "扰动 [−1,−1]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Replace only r → [1,−1]",
+            "zh-hans": "只换 r → [1,−1]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Margin −4 → 4; rescue 1",
+            "zh-hans": "分差 −4 → 4；恢复比例 1"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Same readout, downstream recomputed.",
+        "zh-hans": "输出规则相同，重算下游。"
+      }
+    },
+    {
+      "label": {
+        "en": "Restore b: matched control",
+        "zh-hans": "恢复 b：匹配对照"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Corrupted [−1,−1]",
+            "zh-hans": "扰动 [−1,−1]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Replace only b → [−1,1]",
+            "zh-hans": "只换 b → [−1,1]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Margin −4 → −4; rescue 0",
+            "zh-hans": "分差 −4 → −4；恢复比例 0"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The replacement is equally large but does not affect this output.",
+        "zh-hans": "替换幅度相同，却不影响这个输出。"
+      }
+    }
+  ]
+}

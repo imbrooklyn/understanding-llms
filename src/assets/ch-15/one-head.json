@@ -1,0 +1,124 @@
+{
+  "id": "ch-15/one-head",
+  "structure": "lanes",
+  "alt": {
+    "en": "X has three two-coordinate rows. Three stored matrices produce Q, K and V. Query 1 scores keys 1–3 as [1, 0, 1]; scaling and row Softmax give [0.401112, 0.197776, 0.401112]. Mixing V gives [1.401112, 1.197776].",
+    "zh-hans": "X 有三行，每行两个坐标。三份保存的矩阵分别算出 Q、K、V。查询 1 与三个键的分数为 [1, 0, 1]，缩放并逐行归一化后为 [0.401112, 0.197776, 0.401112]，混合 V 得到 [1.401112, 1.197776]。"
+  },
+  "caption": {
+    "en": "Figure 15.1 — One query produces three weights and two output coordinates.",
+    "zh-hans": "图 15.1 — 一条查询产生三个权重，得到两个输出坐标。"
+  },
+  "credit": {
+    "en": "Original computed teaching diagram, CC BY-SA 4.0. Inputs and parameters are authored; results follow the declared arithmetic.",
+    "zh-hans": "本书原创教学计算图，CC BY-SA 4.0。输入和参数为给定值，结果由声明的计算规则推得。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Separate three roles",
+        "zh-hans": "分开三种作用"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "X [3, 2]",
+            "zh-hans": "X [3, 2]"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "W_Q, W_K, W_V: each [2, 2]",
+            "zh-hans": "W_Q、W_K、W_V：各 [2, 2]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Q, K, V: each [3, 2]",
+            "zh-hans": "Q、K、V：各 [3, 2]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Projection sums over input coordinates; position rows stay separate.",
+        "zh-hans": "投影沿输入坐标求和，各位置仍分行保存。"
+      }
+    },
+    {
+      "label": {
+        "en": "Compare and normalize",
+        "zh-hans": "比较与归一化"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Q [3, 2] @ Kᵀ [2, 3] → D [3, 3]",
+            "zh-hans": "Q [3, 2] @ Kᵀ [2, 3] → D [3, 3]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Row 1: [1, 0, 1] / √2",
+            "zh-hans": "第 1 行：[1, 0, 1] / √2"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "exp → [r, 1, r]; divide by 2r+1",
+            "zh-hans": "取指数 → [r, 1, r]；除以 2r+1"
+          }
+        }
+      ],
+      "flow": {
+        "en": "r = exp(1/√2). Each receiving row has its own denominator.",
+        "zh-hans": "r = exp(1/√2)。每一接收行都用自己的分母。"
+      }
+    },
+    {
+      "label": {
+        "en": "Mix the values",
+        "zh-hans": "混合值向量"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "A₁ = [0.401112, 0.197776, 0.401112]",
+            "zh-hans": "A₁ = [0.401112, 0.197776, 0.401112]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "V rows: [1, 0]; [1, 2]; [2, 2]",
+            "zh-hans": "V 各行：[1, 0]；[1, 2]；[2, 2]"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "A [3, 3] @ V [3, 2] → O [3, 2]",
+            "zh-hans": "A [3, 3] @ V [3, 2] → O [3, 2]"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "O₁ = [1.401112, 1.197776]",
+            "zh-hans": "O₁ = [1.401112, 1.197776]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Mixing sums over source positions. Displayed decimals are rounded to six places.",
+        "zh-hans": "混合沿来源位置求和。图中小数保留六位。"
+      }
+    }
+  ]
+}

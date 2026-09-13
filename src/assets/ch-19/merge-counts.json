@@ -1,0 +1,96 @@
+{
+  "id": "ch-19/merge-counts",
+  "structure": "lanes",
+  "alt": {
+    "en": "The corpus has low twice, lower once and new once. First l+o and o+w and w+end tie at three; lexical order chooses l+o. Then lo+w wins at three, low+end at two, and e+r at one.",
+    "zh-hans": "语料中 low 两次、lower 一次、new 一次。开始 l+o、o+w、w+词尾都为三次，字典序选 l+o；随后依次选 lo+w 三次、low+词尾两次、e+r 一次。"
+  },
+  "caption": {
+    "en": "Figure 19.1 — The winning pair changes when the symbols change.",
+    "zh-hans": "图 19.1 — 符号变了，胜出的相邻对也会变。"
+  },
+  "credit": {
+    "en": "Original teaching diagram, CC BY-SA 4.0. Values and rules are declared in the chapter and shared data.",
+    "zh-hans": "本书原创教学图，CC BY-SA 4.0。数值与规则见正文及共享数据。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Step 1: tied at 3",
+        "zh-hans": "第 1 步：次数 3 并列"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "(l,o):3; (o,w):3; (w,</w>):3",
+            "zh-hans": "(l,o)：3；(o,w)：3；(w,</w>)：3"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Lexical tie → merge l+o",
+            "zh-hans": "按字典序决胜 → 合并 l+o"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Low contributes two occurrences and lower contributes one to l+o.",
+        "zh-hans": "l+o 中，low 贡献两次，lower 贡献一次。"
+      }
+    },
+    {
+      "label": {
+        "en": "Steps 2 and 3: recount",
+        "zh-hans": "第 2—3 步：重新计数"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "(lo,w):3 → low",
+            "zh-hans": "(lo,w)：3 → low"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "(low,</w>):2 → low</w>",
+            "zh-hans": "(low,</w>)：2 → low</w>"
+          }
+        }
+      ],
+      "flow": {
+        "en": "There is no l+o pair inside the current lo symbol.",
+        "zh-hans": "当前 lo 已是一个符号，不能再数其内部的 l+o。"
+      }
+    },
+    {
+      "label": {
+        "en": "Step 4: tied at 1",
+        "zh-hans": "第 4 步：次数 1 并列"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "(e,r) precedes (e,w) → er",
+            "zh-hans": "(e,r) 排在 (e,w) 前 → er"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "low</w> ×2; low er </w>; n e w </w>",
+            "zh-hans": "low</w> ×2；low er </w>；n e w </w>"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Freeze all four ranked rules before encoding new words.",
+        "zh-hans": "编码新词之前，固定这四条有顺序的规则。"
+      }
+    }
+  ]
+}

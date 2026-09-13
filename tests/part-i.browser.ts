@@ -51,6 +51,9 @@ for (const locale of ['en','zh-hans']) for (const chapter of [1,2,3,4]) {
     if (chapter >= 2) {
       expect(await content.locator('.katex math').count()).toBeGreaterThan(0);
       await expect(content.locator('.katex-error')).toHaveCount(0);
+      const atom = content.locator('.katex-html > .base, .katex-html > .katex-base').first();
+      await expect(atom).toHaveCSS('display', 'inline-block');
+      await expect(atom).toHaveCSS('white-space', 'nowrap');
       await content.locator('.katex-display').first().screenshot({path:testInfo.outputPath('equation.png')});
     }
     const lastAnswers = content.locator('ol').last();

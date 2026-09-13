@@ -1,0 +1,25 @@
+{
+  "version": "mask-v1",
+  "convention": "true means visible; rows query, columns key",
+  "causal": [[true,false,false],[true,true,false],[true,true,true]],
+  "padding_only_keys": [[true,true,false],[true,true,false],[true,true,false]],
+  "causal_with_padding": [[true,false,false],[true,true,false],[true,true,false]],
+  "query_valid": [true,true,false],
+  "causal_expected_weights": [[1,0,0],[0.5,0.5,0],[0.28399540974126003,0.14002924504337802,0.575975345215362]],
+  "causal_expected_output": [[1,0],[1,1],[1.575975345215362,1.43200918051748]],
+  "padded_expected_output": [[1,0],[1,1],[0,0]],
+  "leakage": {
+    "provenance": "Constructed future-copy oracle, not trained or benchmarked",
+    "score_row": ["0","ln(99)"],
+    "current_value": [0.5,0.5],
+    "future_values": [[1,0],[0,1]],
+    "candidate_order": ["red","blue"],
+    "future_visible_probability": 0.995,
+    "future_hidden_probability": 0.5,
+    "future_visible_loss": 0.005012541823544286,
+    "future_hidden_loss": 0.6931471805599453
+  },
+  "head_projection_columns": [[1,0],[0,1]],
+  "output_projection": [[1,1],[1,-1]],
+  "multihead_expected": [[1,1],[1.2310585786300048,-0.2310585786300049],[1.6892751930060728,0]]
+}

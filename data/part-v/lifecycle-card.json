@@ -1,0 +1,21 @@
+{
+  "version": "lifecycle-card-v1",
+  "status": "author-assigned hypothetical card, not a measured release",
+  "parameters": 1000000000,
+  "training_token_exposures": 20000000000,
+  "tokenizer": "T1",
+  "base": "B1",
+  "adapted": "I1",
+  "adaptation": [
+    "instruction demonstrations",
+    "preference training"
+  ],
+  "engine": "E1",
+  "server": "S1",
+  "evaluation_gaps": [
+    "Chinese",
+    "changed policy",
+    "verified reasoning budget"
+  ],
+  "license": "Unspecified hypothetical deployment license; exercise resource itself CC BY-SA 4.0"
+}

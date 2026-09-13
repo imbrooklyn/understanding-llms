@@ -1,0 +1,2673 @@
+{
+  "version": "nnlm-run-v1",
+  "as_of": "2026-09-12",
+  "status": "measured CPU training and deterministic retrieval",
+  "dataset_sha256": "735274f74e900dcef9ef158c8a2e7505fe6580e4be471a2984c61371fa961b7a",
+  "ka_dataset_sha256": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+  "source_sha256": "a6dddfb597ebd2e819b2fea208f0eec400838243517881672f4cdd0bbdcf7f51",
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.7.0",
+    "device": "cpu",
+    "dtype": "float64",
+    "threads": 1,
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "configuration": {
+    "seed": 23,
+    "window": 2,
+    "embedding_dimension": 4,
+    "hidden": 8,
+    "steps": 200,
+    "optimizer": "Adam",
+    "lr": 0.03,
+    "batch": 20,
+    "selection": "first minimum validation mean loss"
+  },
+  "train_events": [
+    {
+      "sequence": 0,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 0,
+      "position": 1,
+      "context": [
+        "BOS",
+        "beijing"
+      ],
+      "target": "lodging"
+    },
+    {
+      "sequence": 0,
+      "position": 2,
+      "context": [
+        "beijing",
+        "lodging"
+      ],
+      "target": "600"
+    },
+    {
+      "sequence": 0,
+      "position": 3,
+      "context": [
+        "lodging",
+        "600"
+      ],
+      "target": "EOS"
+    },
+    {
+      "sequence": 1,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 1,
+      "position": 1,
+      "context": [
+        "BOS",
+        "beijing"
+      ],
+      "target": "lodging"
+    },
+    {
+      "sequence": 1,
+      "position": 2,
+      "context": [
+        "beijing",
+        "lodging"
+      ],
+      "target": "lodging"
+    },
+    {
+      "sequence": 1,
+      "position": 3,
+      "context": [
+        "lodging",
+        "lodging"
+      ],
+      "target": "750"
+    },
+    {
+      "sequence": 1,
+      "position": 4,
+      "context": [
+        "lodging",
+        "750"
+      ],
+      "target": "EOS"
+    },
+    {
+      "sequence": 2,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 2,
+      "position": 1,
+      "context": [
+        "BOS",
+        "beijing"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 2,
+      "position": 2,
+      "context": [
+        "beijing",
+        "beijing"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 2,
+      "position": 3,
+      "context": [
+        "beijing",
+        "beijing"
+      ],
+      "target": "train"
+    },
+    {
+      "sequence": 2,
+      "position": 4,
+      "context": [
+        "beijing",
+        "train"
+      ],
+      "target": "EOS"
+    },
+    {
+      "sequence": 3,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "order"
+    },
+    {
+      "sequence": 3,
+      "position": 1,
+      "context": [
+        "BOS",
+        "order"
+      ],
+      "target": "processing"
+    },
+    {
+      "sequence": 3,
+      "position": 2,
+      "context": [
+        "order",
+        "processing"
+      ],
+      "target": "EOS"
+    },
+    {
+      "sequence": 4,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "order"
+    },
+    {
+      "sequence": 4,
+      "position": 1,
+      "context": [
+        "BOS",
+        "order"
+      ],
+      "target": "approval"
+    },
+    {
+      "sequence": 4,
+      "position": 2,
+      "context": [
+        "order",
+        "approval"
+      ],
+      "target": "EOS"
+    }
+  ],
+  "validation_events": [
+    {
+      "sequence": 0,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 0,
+      "position": 1,
+      "context": [
+        "BOS",
+        "beijing"
+      ],
+      "target": "lodging"
+    },
+    {
+      "sequence": 0,
+      "position": 2,
+      "context": [
+        "beijing",
+        "lodging"
+      ],
+      "target": "750"
+    },
+    {
+      "sequence": 0,
+      "position": 3,
+      "context": [
+        "lodging",
+        "750"
+      ],
+      "target": "EOS"
+    },
+    {
+      "sequence": 1,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "order"
+    },
+    {
+      "sequence": 1,
+      "position": 1,
+      "context": [
+        "BOS",
+        "order"
+      ],
+      "target": "order"
+    },
+    {
+      "sequence": 1,
+      "position": 2,
+      "context": [
+        "order",
+        "order"
+      ],
+      "target": "processing"
+    },
+    {
+      "sequence": 1,
+      "position": 3,
+      "context": [
+        "order",
+        "processing"
+      ],
+      "target": "EOS"
+    }
+  ],
+  "test_events": [
+    {
+      "sequence": 0,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 0,
+      "position": 1,
+      "context": [
+        "BOS",
+        "beijing"
+      ],
+      "target": "lodging"
+    },
+    {
+      "sequence": 0,
+      "position": 2,
+      "context": [
+        "beijing",
+        "lodging"
+      ],
+      "target": "lodging"
+    },
+    {
+      "sequence": 0,
+      "position": 3,
+      "context": [
+        "lodging",
+        "lodging"
+      ],
+      "target": "600"
+    },
+    {
+      "sequence": 0,
+      "position": 4,
+      "context": [
+        "lodging",
+        "600"
+      ],
+      "target": "EOS"
+    },
+    {
+      "sequence": 1,
+      "position": 0,
+      "context": [
+        "BOS",
+        "BOS"
+      ],
+      "target": "beijing"
+    },
+    {
+      "sequence": 1,
+      "position": 1,
+      "context": [
+        "BOS",
+        "beijing"
+      ],
+      "target": "train"
+    },
+    {
+      "sequence": 1,
+      "position": 2,
+      "context": [
+        "beijing",
+        "train"
+      ],
+      "target": "EOS"
+    }
+  ],
+  "curve": [
+    {
+      "step": 0,
+      "train_loss": 2.117831124377431,
+      "validation_loss": 2.091091612074276
+    },
+    {
+      "step": 1,
+      "train_loss": 2.0348058317581397,
+      "validation_loss": 2.018574299927949
+    },
+    {
+      "step": 2,
+      "train_loss": 1.9448391871643467,
+      "validation_loss": 1.9341853667439821
+    },
+    {
+      "step": 3,
+      "train_loss": 1.8519633184745103,
+      "validation_loss": 1.842937051508898
+    },
+    {
+      "step": 4,
+      "train_loss": 1.753736820493869,
+      "validation_loss": 1.7474913161214451
+    },
+    {
+      "step": 5,
+      "train_loss": 1.6549821749107032,
+      "validation_loss": 1.6580864672807063
+    },
+    {
+      "step": 6,
+      "train_loss": 1.5591801834210997,
+      "validation_loss": 1.5784163877118278
+    },
+    {
+      "step": 7,
+      "train_loss": 1.4715563520765709,
+      "validation_loss": 1.5176783137357304
+    },
+    {
+      "step": 8,
+      "train_loss": 1.394717183227187,
+      "validation_loss": 1.4798921198395414
+    },
+    {
+      "step": 9,
+      "train_loss": 1.3237054504272439,
+      "validation_loss": 1.4607301982815
+    },
+    {
+      "step": 10,
+      "train_loss": 1.2580410905050692,
+      "validation_loss": 1.4542136735502054
+    },
+    {
+      "step": 11,
+      "train_loss": 1.198155511663685,
+      "validation_loss": 1.4645767416023165
+    },
+    {
+      "step": 12,
+      "train_loss": 1.14485157672267,
+      "validation_loss": 1.4879871653116377
+    },
+    {
+      "step": 13,
+      "train_loss": 1.0963231623876435,
+      "validation_loss": 1.5248059704416135
+    },
+    {
+      "step": 14,
+      "train_loss": 1.054136935579392,
+      "validation_loss": 1.5706802013539427
+    },
+    {
+      "step": 15,
+      "train_loss": 1.0219816932364119,
+      "validation_loss": 1.6319494007845776
+    },
+    {
+      "step": 16,
+      "train_loss": 0.9909456852255264,
+      "validation_loss": 1.698096648252699
+    },
+    {
+      "step": 17,
+      "train_loss": 0.9593446395117354,
+      "validation_loss": 1.7662279738219786
+    },
+    {
+      "step": 18,
+      "train_loss": 0.9277724161380098,
+      "validation_loss": 1.8353842246996268
+    },
+    {
+      "step": 19,
+      "train_loss": 0.8970577206225313,
+      "validation_loss": 1.904020732326347
+    },
+    {
+      "step": 20,
+      "train_loss": 0.8695425100797444,
+      "validation_loss": 1.970382292066812
+    },
+    {
+      "step": 21,
+      "train_loss": 0.8446963287377937,
+      "validation_loss": 2.037336820014561
+    },
+    {
+      "step": 22,
+      "train_loss": 0.8220501636950781,
+      "validation_loss": 2.0974846704757586
+    },
+    {
+      "step": 23,
+      "train_loss": 0.8005284553365983,
+      "validation_loss": 2.1488944641057968
+    },
+    {
+      "step": 24,
+      "train_loss": 0.7807377496680399,
+      "validation_loss": 2.197070315402946
+    },
+    {
+      "step": 25,
+      "train_loss": 0.7636369243508077,
+      "validation_loss": 2.25025022287634
+    },
+    {
+      "step": 26,
+      "train_loss": 0.7441483875331768,
+      "validation_loss": 2.3125670095829176
+    },
+    {
+      "step": 27,
+      "train_loss": 0.723538878995409,
+      "validation_loss": 2.383970149278239
+    },
+    {
+      "step": 28,
+      "train_loss": 0.7044887014500406,
+      "validation_loss": 2.4597197793415804
+    },
+    {
+      "step": 29,
+      "train_loss": 0.683393100273904,
+      "validation_loss": 2.5281663495521913
+    },
+    {
+      "step": 30,
+      "train_loss": 0.6634271083528414,
+      "validation_loss": 2.5858496605831705
+    },
+    {
+      "step": 31,
+      "train_loss": 0.6428244507027339,
+      "validation_loss": 2.6387309514457242
+    },
+    {
+      "step": 32,
+      "train_loss": 0.6224222779555586,
+      "validation_loss": 2.6882096436270118
+    },
+    {
+      "step": 33,
+      "train_loss": 0.6025981578734468,
+      "validation_loss": 2.7444558894591493
+    },
+    {
+      "step": 34,
+      "train_loss": 0.5846171548187469,
+      "validation_loss": 2.8157896300870187
+    },
+    {
+      "step": 35,
+      "train_loss": 0.5671775321412988,
+      "validation_loss": 2.89246734905708
+    },
+    {
+      "step": 36,
+      "train_loss": 0.550478615498546,
+      "validation_loss": 2.963744727978347
+    },
+    {
+      "step": 37,
+      "train_loss": 0.5363321523356293,
+      "validation_loss": 3.022591386485975
+    },
+    {
+      "step": 38,
+      "train_loss": 0.5241280945579685,
+      "validation_loss": 3.083984755763649
+    },
+    {
+      "step": 39,
+      "train_loss": 0.5141328406426744,
+      "validation_loss": 3.1483236155334504
+    },
+    {
+      "step": 40,
+      "train_loss": 0.507054149353188,
+      "validation_loss": 3.209356509707681
+    },
+    {
+      "step": 41,
+      "train_loss": 0.5014634253489535,
+      "validation_loss": 3.2598911988006156
+    },
+    {
+      "step": 42,
+      "train_loss": 0.49665507860409364,
+      "validation_loss": 3.302791562204673
+    },
+    {
+      "step": 43,
+      "train_loss": 0.49225248281504186,
+      "validation_loss": 3.34646625283836
+    },
+    {
+      "step": 44,
+      "train_loss": 0.4883929738421303,
+      "validation_loss": 3.3939550925420323
+    },
+    {
+      "step": 45,
+      "train_loss": 0.4856797382794002,
+      "validation_loss": 3.4393498559884517
+    },
+    {
+      "step": 46,
+      "train_loss": 0.48296131522023644,
+      "validation_loss": 3.475964494811496
+    },
+    {
+      "step": 47,
+      "train_loss": 0.48061589884133477,
+      "validation_loss": 3.508539430242184
+    },
+    {
+      "step": 48,
+      "train_loss": 0.4789998480263621,
+      "validation_loss": 3.545460689563502
+    },
+    {
+      "step": 49,
+      "train_loss": 0.478399905747055,
+      "validation_loss": 3.585253696598887
+    },
+    {
+      "step": 50,
+      "train_loss": 0.47768854866612365,
+      "validation_loss": 3.612219691947911
+    },
+    {
+      "step": 51,
+      "train_loss": 0.4765186678184167,
+      "validation_loss": 3.6310605359078387
+    },
+    {
+      "step": 52,
+      "train_loss": 0.47548908099731974,
+      "validation_loss": 3.6535429487407933
+    },
+    {
+      "step": 53,
+      "train_loss": 0.4748909455022341,
+      "validation_loss": 3.6811320479466776
+    },
+    {
+      "step": 54,
+      "train_loss": 0.4747606682659076,
+      "validation_loss": 3.7053178810503278
+    },
+    {
+      "step": 55,
+      "train_loss": 0.4746568763208797,
+      "validation_loss": 3.7236229386342874
+    },
+    {
+      "step": 56,
+      "train_loss": 0.4742392787133558,
+      "validation_loss": 3.7426951467995435
+    },
+    {
+      "step": 57,
+      "train_loss": 0.4736856656409939,
+      "validation_loss": 3.762938922717867
+    },
+    {
+      "step": 58,
+      "train_loss": 0.4734636999754159,
+      "validation_loss": 3.7777378100568377
+    },
+    {
+      "step": 59,
+      "train_loss": 0.4734193680148996,
+      "validation_loss": 3.789000430974506
+    },
+    {
+      "step": 60,
+      "train_loss": 0.4733261221250279,
+      "validation_loss": 3.80525439302483
+    },
+    {
+      "step": 61,
+      "train_loss": 0.47322772269462554,
+      "validation_loss": 3.8242694220511475
+    },
+    {
+      "step": 62,
+      "train_loss": 0.47290512008597296,
+      "validation_loss": 3.837734259630398
+    },
+    {
+      "step": 63,
+      "train_loss": 0.4727973323993647,
+      "validation_loss": 3.849243707089933
+    },
+    {
+      "step": 64,
+      "train_loss": 0.47285660654008643,
+      "validation_loss": 3.8644052940802256
+    },
+    {
+      "step": 65,
+      "train_loss": 0.47277353642441977,
+      "validation_loss": 3.8774056206496375
+    },
+    {
+      "step": 66,
+      "train_loss": 0.4725899704968649,
+      "validation_loss": 3.8851184061931567
+    },
+    {
+      "step": 67,
+      "train_loss": 0.47256225625785075,
+      "validation_loss": 3.8943038734094193
+    },
+    {
+      "step": 68,
+      "train_loss": 0.4725424308105099,
+      "validation_loss": 3.905263158657201
+    },
+    {
+      "step": 69,
+      "train_loss": 0.4724694033065261,
+      "validation_loss": 3.912769223080442
+    },
+    {
+      "step": 70,
+      "train_loss": 0.47241319170130414,
+      "validation_loss": 3.920685614485468
+    },
+    {
+      "step": 71,
+      "train_loss": 0.47236582388020293,
+      "validation_loss": 3.9324185210137657
+    },
+    {
+      "step": 72,
+      "train_loss": 0.4723657631674037,
+      "validation_loss": 3.9412955850383518
+    },
+    {
+      "step": 73,
+      "train_loss": 0.47230574304287887,
+      "validation_loss": 3.9461778998005537
+    },
+    {
+      "step": 74,
+      "train_loss": 0.4722534690616417,
+      "validation_loss": 3.953349874568328
+    },
+    {
+      "step": 75,
+      "train_loss": 0.4722488050839749,
+      "validation_loss": 3.9605052827685623
+    },
+    {
+      "step": 76,
+      "train_loss": 0.47223384101771104,
+      "validation_loss": 3.9647923789263313
+    },
+    {
+      "step": 77,
+      "train_loss": 0.47221394805435085,
+      "validation_loss": 3.9710503500500445
+    },
+    {
+      "step": 78,
+      "train_loss": 0.4721524859203596,
+      "validation_loss": 3.978145124382295
+    },
+    {
+      "step": 79,
+      "train_loss": 0.4721380451500393,
+      "validation_loss": 3.982058657410113
+    },
+    {
+      "step": 80,
+      "train_loss": 0.4721715808117154,
+      "validation_loss": 3.986935699364385
+    },
+    {
+      "step": 81,
+      "train_loss": 0.472131239318437,
+      "validation_loss": 3.993463178869444
+    },
+    {
+      "step": 82,
+      "train_loss": 0.4720770601537464,
+      "validation_loss": 3.9970251289477323
+    },
+    {
+      "step": 83,
+      "train_loss": 0.4720851371572259,
+      "validation_loss": 4.000317331480742
+    },
+    {
+      "step": 84,
+      "train_loss": 0.4721048959510612,
+      "validation_loss": 4.0051870916166905
+    },
+    {
+      "step": 85,
+      "train_loss": 0.47207026286066023,
+      "validation_loss": 4.008148044035405
+    },
+    {
+      "step": 86,
+      "train_loss": 0.47203573408504607,
+      "validation_loss": 4.01153848352865
+    },
+    {
+      "step": 87,
+      "train_loss": 0.47204203850575643,
+      "validation_loss": 4.0166952191123535
+    },
+    {
+      "step": 88,
+      "train_loss": 0.4720494094503106,
+      "validation_loss": 4.019556306494391
+    },
+    {
+      "step": 89,
+      "train_loss": 0.4720341515941362,
+      "validation_loss": 4.022090386250268
+    },
+    {
+      "step": 90,
+      "train_loss": 0.4720011940390115,
+      "validation_loss": 4.025987002670641
+    },
+    {
+      "step": 91,
+      "train_loss": 0.4720056761474719,
+      "validation_loss": 4.0281249570342865
+    },
+    {
+      "step": 92,
+      "train_loss": 0.4720196263198444,
+      "validation_loss": 4.030492781249695
+    },
+    {
+      "step": 93,
+      "train_loss": 0.47199547834697253,
+      "validation_loss": 4.034027227158195
+    },
+    {
+      "step": 94,
+      "train_loss": 0.47197758019941993,
+      "validation_loss": 4.036057181751125
+    },
+    {
+      "step": 95,
+      "train_loss": 0.4719844782767201,
+      "validation_loss": 4.038762437983728
+    },
+    {
+      "step": 96,
+      "train_loss": 0.471987705135578,
+      "validation_loss": 4.041920327946689
+    },
+    {
+      "step": 97,
+      "train_loss": 0.4719700616390079,
+      "validation_loss": 4.043201897205636
+    },
+    {
+      "step": 98,
+      "train_loss": 0.4719607190273322,
+      "validation_loss": 4.045286001136086
+    },
+    {
+      "step": 99,
+      "train_loss": 0.47196579042325437,
+      "validation_loss": 4.047722786950493
+    },
+    {
+      "step": 100,
+      "train_loss": 0.471964105136351,
+      "validation_loss": 4.049269494568808
+    },
+    {
+      "step": 101,
+      "train_loss": 0.4719515780662892,
+      "validation_loss": 4.051946748117916
+    },
+    {
+      "step": 102,
+      "train_loss": 0.4719462164624053,
+      "validation_loss": 4.053992597894624
+    },
+    {
+      "step": 103,
+      "train_loss": 0.47195086877892567,
+      "validation_loss": 4.055387089540919
+    },
+    {
+      "step": 104,
+      "train_loss": 0.47194460453432463,
+      "validation_loss": 4.057797707974855
+    },
+    {
+      "step": 105,
+      "train_loss": 0.47193679081517625,
+      "validation_loss": 4.059227727385153
+    },
+    {
+      "step": 106,
+      "train_loss": 0.47193585211959405,
+      "validation_loss": 4.060745638646872
+    },
+    {
+      "step": 107,
+      "train_loss": 0.47193513686307825,
+      "validation_loss": 4.062823009652308
+    },
+    {
+      "step": 108,
+      "train_loss": 0.47193026483249734,
+      "validation_loss": 4.064097485939362
+    },
+    {
+      "step": 109,
+      "train_loss": 0.471925779991005,
+      "validation_loss": 4.066203726767846
+    },
+    {
+      "step": 110,
+      "train_loss": 0.47192455370778397,
+      "validation_loss": 4.067976202102405
+    },
+    {
+      "step": 111,
+      "train_loss": 0.47192243920550725,
+      "validation_loss": 4.069102109416582
+    },
+    {
+      "step": 112,
+      "train_loss": 0.471918894499509,
+      "validation_loss": 4.070906746429156
+    },
+    {
+      "step": 113,
+      "train_loss": 0.47191590556577,
+      "validation_loss": 4.072044926127722
+    },
+    {
+      "step": 114,
+      "train_loss": 0.4719143981638239,
+      "validation_loss": 4.073619788796643
+    },
+    {
+      "step": 115,
+      "train_loss": 0.47191138795462473,
+      "validation_loss": 4.075347597950483
+    },
+    {
+      "step": 116,
+      "train_loss": 0.471909421963696,
+      "validation_loss": 4.076505365383002
+    },
+    {
+      "step": 117,
+      "train_loss": 0.47190729160309103,
+      "validation_loss": 4.078304253590362
+    },
+    {
+      "step": 118,
+      "train_loss": 0.47190451336104583,
+      "validation_loss": 4.07945867600327
+    },
+    {
+      "step": 119,
+      "train_loss": 0.4719025940059369,
+      "validation_loss": 4.080729020403488
+    },
+    {
+      "step": 120,
+      "train_loss": 0.471900926132796,
+      "validation_loss": 4.082134747139065
+    },
+    {
+      "step": 121,
+      "train_loss": 0.47189875389263386,
+      "validation_loss": 4.083167724604231
+    },
+    {
+      "step": 122,
+      "train_loss": 0.4718965790652335,
+      "validation_loss": 4.084844938902044
+    },
+    {
+      "step": 123,
+      "train_loss": 0.47189502907191694,
+      "validation_loss": 4.085938046980734
+    },
+    {
+      "step": 124,
+      "train_loss": 0.471893145775795,
+      "validation_loss": 4.087246586155763
+    },
+    {
+      "step": 125,
+      "train_loss": 0.47189095178383555,
+      "validation_loss": 4.08842543930355
+    },
+    {
+      "step": 126,
+      "train_loss": 0.4718893215121155,
+      "validation_loss": 4.089424759847732
+    },
+    {
+      "step": 127,
+      "train_loss": 0.47188816570166947,
+      "validation_loss": 4.090807852799616
+    },
+    {
+      "step": 128,
+      "train_loss": 0.4718859329312662,
+      "validation_loss": 4.091696267593032
+    },
+    {
+      "step": 129,
+      "train_loss": 0.4718841662763008,
+      "validation_loss": 4.093067915148104
+    },
+    {
+      "step": 130,
+      "train_loss": 0.47188292528820347,
+      "validation_loss": 4.094052302538973
+    },
+    {
+      "step": 131,
+      "train_loss": 0.47188118641789456,
+      "validation_loss": 4.095245582404016
+    },
+    {
+      "step": 132,
+      "train_loss": 0.4718793080897143,
+      "validation_loss": 4.096250694464109
+    },
+    {
+      "step": 133,
+      "train_loss": 0.4718780775468387,
+      "validation_loss": 4.0971695525306995
+    },
+    {
+      "step": 134,
+      "train_loss": 0.4718767331405994,
+      "validation_loss": 4.098341255001721
+    },
+    {
+      "step": 135,
+      "train_loss": 0.4718750129701254,
+      "validation_loss": 4.099255998402963
+    },
+    {
+      "step": 136,
+      "train_loss": 0.47187354503743695,
+      "validation_loss": 4.1005482068398535
+    },
+    {
+      "step": 137,
+      "train_loss": 0.4718723995653086,
+      "validation_loss": 4.1013594537657
+    },
+    {
+      "step": 138,
+      "train_loss": 0.4718708343277013,
+      "validation_loss": 4.102608841171001
+    },
+    {
+      "step": 139,
+      "train_loss": 0.471869380585041,
+      "validation_loss": 4.103338825426736
+    },
+    {
+      "step": 140,
+      "train_loss": 0.47186819600188495,
+      "validation_loss": 4.104560285422755
+    },
+    {
+      "step": 141,
+      "train_loss": 0.4718668457146583,
+      "validation_loss": 4.105248144857143
+    },
+    {
+      "step": 142,
+      "train_loss": 0.47186545246025063,
+      "validation_loss": 4.106543933926204
+    },
+    {
+      "step": 143,
+      "train_loss": 0.4718642797731845,
+      "validation_loss": 4.107171140920921
+    },
+    {
+      "step": 144,
+      "train_loss": 0.4718631528097349,
+      "validation_loss": 4.108513297066815
+    },
+    {
+      "step": 145,
+      "train_loss": 0.47186204271873605,
+      "validation_loss": 4.108885394317027
+    },
+    {
+      "step": 146,
+      "train_loss": 0.47186123402027186,
+      "validation_loss": 4.11044883841035
+    },
+    {
+      "step": 147,
+      "train_loss": 0.471860959603308,
+      "validation_loss": 4.110470159716203
+    },
+    {
+      "step": 148,
+      "train_loss": 0.47186155096527677,
+      "validation_loss": 4.112602062507728
+    },
+    {
+      "step": 149,
+      "train_loss": 0.47186425510911967,
+      "validation_loss": 4.11180679915727
+    },
+    {
+      "step": 150,
+      "train_loss": 0.47187175868160197,
+      "validation_loss": 4.1151951582762685
+    },
+    {
+      "step": 151,
+      "train_loss": 0.4718899326875846,
+      "validation_loss": 4.112500542469448
+    },
+    {
+      "step": 152,
+      "train_loss": 0.4719343579049033,
+      "validation_loss": 4.1188363960547125
+    },
+    {
+      "step": 153,
+      "train_loss": 0.472035935720169,
+      "validation_loss": 4.111651122428703
+    },
+    {
+      "step": 154,
+      "train_loss": 0.47227362441152854,
+      "validation_loss": 4.125103131496308
+    },
+    {
+      "step": 155,
+      "train_loss": 0.47270804045510906,
+      "validation_loss": 4.108342952445248
+    },
+    {
+      "step": 156,
+      "train_loss": 0.47338192985546995,
+      "validation_loss": 4.134783099056118
+    },
+    {
+      "step": 157,
+      "train_loss": 0.47347944276481757,
+      "validation_loss": 4.106480922620012
+    },
+    {
+      "step": 158,
+      "train_loss": 0.47277807294291385,
+      "validation_loss": 4.132626838241368
+    },
+    {
+      "step": 159,
+      "train_loss": 0.47189844389487,
+      "validation_loss": 4.11845667619962
+    },
+    {
+      "step": 160,
+      "train_loss": 0.47214566048333106,
+      "validation_loss": 4.115707169283288
+    },
+    {
+      "step": 161,
+      "train_loss": 0.47281558513195565,
+      "validation_loss": 4.135128201349267
+    },
+    {
+      "step": 162,
+      "train_loss": 0.4724987990510633,
+      "validation_loss": 4.114454483624637
+    },
+    {
+      "step": 163,
+      "train_loss": 0.4718821420264286,
+      "validation_loss": 4.126372266451135
+    },
+    {
+      "step": 164,
+      "train_loss": 0.47206485781960844,
+      "validation_loss": 4.1304564356295055
+    },
+    {
+      "step": 165,
+      "train_loss": 0.47244950339355707,
+      "validation_loss": 4.116780709505823
+    },
+    {
+      "step": 166,
+      "train_loss": 0.47218044170363954,
+      "validation_loss": 4.133296693782301
+    },
+    {
+      "step": 167,
+      "train_loss": 0.4718402984276093,
+      "validation_loss": 4.126624757277426
+    },
+    {
+      "step": 168,
+      "train_loss": 0.47210430940191034,
+      "validation_loss": 4.1216112796753785
+    },
+    {
+      "step": 169,
+      "train_loss": 0.4722671218389475,
+      "validation_loss": 4.136276996770722
+    },
+    {
+      "step": 170,
+      "train_loss": 0.47194083073896403,
+      "validation_loss": 4.125037555163783
+    },
+    {
+      "step": 171,
+      "train_loss": 0.47187594961530177,
+      "validation_loss": 4.127086163035374
+    },
+    {
+      "step": 172,
+      "train_loss": 0.47211739408840697,
+      "validation_loss": 4.1366132901856645
+    },
+    {
+      "step": 173,
+      "train_loss": 0.4720434993387787,
+      "validation_loss": 4.125529283739417
+    },
+    {
+      "step": 174,
+      "train_loss": 0.47184132208195007,
+      "validation_loss": 4.13236363548712
+    },
+    {
+      "step": 175,
+      "train_loss": 0.4719308377002284,
+      "validation_loss": 4.135855668873479
+    },
+    {
+      "step": 176,
+      "train_loss": 0.4720358543539043,
+      "validation_loss": 4.127637237478725
+    },
+    {
+      "step": 177,
+      "train_loss": 0.47190796627919784,
+      "validation_loss": 4.136811647355851
+    },
+    {
+      "step": 178,
+      "train_loss": 0.4718367959156242,
+      "validation_loss": 4.135038026467931
+    },
+    {
+      "step": 179,
+      "train_loss": 0.47194518086683557,
+      "validation_loss": 4.130978896230712
+    },
+    {
+      "step": 180,
+      "train_loss": 0.47195602686475874,
+      "validation_loss": 4.139932489950838
+    },
+    {
+      "step": 181,
+      "train_loss": 0.47184585741898066,
+      "validation_loss": 4.134760664141199
+    },
+    {
+      "step": 182,
+      "train_loss": 0.47185408502178683,
+      "validation_loss": 4.135081038483906
+    },
+    {
+      "step": 183,
+      "train_loss": 0.4719283282633576,
+      "validation_loss": 4.141508169277391
+    },
+    {
+      "step": 184,
+      "train_loss": 0.47188938028231026,
+      "validation_loss": 4.135405840267047
+    },
+    {
+      "step": 185,
+      "train_loss": 0.4718270176140683,
+      "validation_loss": 4.139372347097662
+    },
+    {
+      "step": 186,
+      "train_loss": 0.4718599392164176,
+      "validation_loss": 4.141929871474053
+    },
+    {
+      "step": 187,
+      "train_loss": 0.4718944490802783,
+      "validation_loss": 4.137264173347836
+    },
+    {
+      "step": 188,
+      "train_loss": 0.47185398013667007,
+      "validation_loss": 4.143087455879915
+    },
+    {
+      "step": 189,
+      "train_loss": 0.47182326592965146,
+      "validation_loss": 4.1418647060175315
+    },
+    {
+      "step": 190,
+      "train_loss": 0.47185363119719614,
+      "validation_loss": 4.140298603945862
+    },
+    {
+      "step": 191,
+      "train_loss": 0.4718694044234624,
+      "validation_loss": 4.14570676981924
+    },
+    {
+      "step": 192,
+      "train_loss": 0.4718367019210876,
+      "validation_loss": 4.142272099019165
+    },
+    {
+      "step": 193,
+      "train_loss": 0.4718208545924849,
+      "validation_loss": 4.144091116620384
+    },
+    {
+      "step": 194,
+      "train_loss": 0.4718428364887206,
+      "validation_loss": 4.146973859102237
+    },
+    {
+      "step": 195,
+      "train_loss": 0.4718505143411361,
+      "validation_loss": 4.143724290071542
+    },
+    {
+      "step": 196,
+      "train_loss": 0.4718287023579462,
+      "validation_loss": 4.147773185008331
+    },
+    {
+      "step": 197,
+      "train_loss": 0.4718173716627386,
+      "validation_loss": 4.14741118736686
+    },
+    {
+      "step": 198,
+      "train_loss": 0.47183093961344086,
+      "validation_loss": 4.146421733883763
+    },
+    {
+      "step": 199,
+      "train_loss": 0.4718381658215899,
+      "validation_loss": 4.150344272927293
+    },
+    {
+      "step": 200,
+      "train_loss": 0.47182463880364267,
+      "validation_loss": 4.148020332407786
+    }
+  ],
+  "selected_step": 10,
+  "selected_train": {
+    "mean_loss": 1.2580410905050692,
+    "perplexity": 3.518522265422049,
+    "correct": 11,
+    "events": 20,
+    "target_losses": [
+      0.46708173914918505,
+      1.579025834149149,
+      2.8343663403610497,
+      0.3067485205407024,
+      0.46708173914918505,
+      1.579025834149149,
+      1.6149389559860798,
+      2.4846249668251064,
+      0.1297043414476651,
+      0.46708173914918505,
+      0.8951005334779025,
+      1.2960444489657998,
+      2.677706737256159,
+      0.8717594664902872,
+      1.4976039920665805,
+      2.022729803959079,
+      0.07587317745126818,
+      1.4976039920665805,
+      2.3509507220921124,
+      0.04576892536915934
+    ],
+    "predicted_ids": [
+      1,
+      1,
+      2,
+      0,
+      1,
+      1,
+      2,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "target_probabilities": [
+      0.626828851861272,
+      0.20617584987851673,
+      0.05875574518470669,
+      0.7358356251865291,
+      0.626828851861272,
+      0.20617584987851673,
+      0.19890281189625242,
+      0.08335681021993875,
+      0.8783550857271698,
+      0.626828851861272,
+      0.40856652196268495,
+      0.27361194133229233,
+      0.0687205679078611,
+      0.41821506613435866,
+      0.22366542277300608,
+      0.1322938354798766,
+      0.926933755206656,
+      0.22366542277300608,
+      0.0952785357332507,
+      0.9552626736589936
+    ]
+  },
+  "selected_validation": {
+    "mean_loss": 1.4542136735502054,
+    "perplexity": 4.281115787150249,
+    "correct": 3,
+    "events": 8,
+    "target_losses": [
+      0.46708173914918505,
+      1.579025834149149,
+      2.6350688647248006,
+      0.1297043414476651,
+      1.4976039920665805,
+      2.069624155251402,
+      3.1797272841615927,
+      0.07587317745126818
+    ],
+    "predicted_ids": [
+      1,
+      1,
+      2,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "target_probabilities": [
+      0.626828851861272,
+      0.20617584987851673,
+      0.07171403067155381,
+      0.8783550857271698,
+      0.22366542277300608,
+      0.126233216882013,
+      0.04159699773456012,
+      0.926933755206656
+    ]
+  },
+  "test_once_after_selection": {
+    "count_lm": {
+      "target_probabilities": [
+        0.2857142857142857,
+        0.25,
+        0.18181818181818182,
+        0.1,
+        0.2,
+        0.2857142857142857,
+        0.08333333333333333,
+        0.2
+      ],
+      "predictions": [
+        "beijing",
+        "lodging",
+        "lodging",
+        "750",
+        "EOS",
+        "beijing",
+        "lodging",
+        "EOS"
+      ],
+      "mean_loss": 1.7003669947499123,
+      "perplexity": 5.475956670356062,
+      "events": 8,
+      "correct": 6
+    },
+    "nnlm": {
+      "mean_loss": 1.4244286318523989,
+      "perplexity": 4.15548285378354,
+      "correct": 5,
+      "events": 8,
+      "target_losses": [
+        0.46708173914918505,
+        1.579025834149149,
+        1.6149389559860798,
+        2.986624662516385,
+        0.3067485205407024,
+        0.46708173914918505,
+        3.1021681368382183,
+        0.8717594664902872
+      ],
+      "predicted_ids": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "target_probabilities": [
+        0.626828851861272,
+        0.20617584987851673,
+        0.19890281189625242,
+        0.05045746057623934,
+        0.7358356251865291,
+        0.626828851861272,
+        0.04495163536586984,
+        0.41821506613435866
+      ]
+    }
+  },
+  "paper_trace": {
+    "ids_shape": [
+      1,
+      2
+    ],
+    "embedded_shape": [
+      1,
+      2,
+      2
+    ],
+    "combined": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "hidden": [
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "logits": [
+      [
+        0.0,
+        0.0,
+        1.0986122886681098,
+        0.0
+      ]
+    ],
+    "probabilities": [
+      [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.5,
+        0.16666666666666666
+      ]
+    ],
+    "loss": 0.6931471805599453
+  },
+  "learned_vectors": {
+    "beijing": [
+      0.5697531315562467,
+      -0.7229033052131175,
+      -0.7346485901082637,
+      0.05950451620138447
+    ],
+    "lodging": [
+      -0.7953235537669927,
+      0.5819958831231368,
+      -1.2271292943229166,
+      0.5185819860900723
+    ],
+    "600": [
+      -2.142605370143404,
+      0.13305641847028774,
+      0.2769626293577203,
+      2.5356956241654536
+    ],
+    "750": [
+      -0.3743935304318463,
+      1.1963747069117299,
+      1.0213455635680528,
+      0.7276788547983285
+    ],
+    "train": [
+      1.5849906006510062,
+      0.12782926793769958,
+      -0.7870088415425054,
+      -0.3558819647678367
+    ],
+    "order": [
+      0.7185878749334869,
+      0.6593285921098354,
+      -0.1364004192874107,
+      -0.6802042495849477
+    ],
+    "processing": [
+      1.036221740769529,
+      1.4588086618947254,
+      -0.17798619221164044,
+      0.49040399146056557
+    ],
+    "approval": [
+      1.488072785401551,
+      0.48960663982614966,
+      0.8851002861366166,
+      1.9458267264857692
+    ]
+  },
+  "retrieval": {
+    "authored_static": {
+      "en": {
+        "dimension": 3,
+        "document_matrix": [
+          [
+            0.6666666666666666,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            0.0,
+            0.25
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "query_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.2857142857142857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "results": [
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "current-lodging",
+            "success": false
+          },
+          {
+            "scores": [
+              0.7071067811865475,
+              0.7071067811865476,
+              0.6708203932499369,
+              0.7071067811865475,
+              0.7071067811865475
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "geographic-status",
+            "success": false
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "explicit-current",
+            "success": false
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "synonym",
+            "success": true
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "historical",
+            "success": true
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "status",
+            "success": true
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "approval",
+            "success": false
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "stale-premise",
+            "success": false
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": null,
+            "query_id": "out-of-scope",
+            "success": true
+          }
+        ],
+        "success_count": 4,
+        "query_count": 9
+      },
+      "zh-hans": {
+        "dimension": 3,
+        "document_matrix": [
+          [
+            0.6666666666666666,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            0.0,
+            0.25
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "query_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.2857142857142857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "results": [
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "current-lodging",
+            "success": false
+          },
+          {
+            "scores": [
+              0.7071067811865475,
+              0.7071067811865476,
+              0.6708203932499369,
+              0.7071067811865475,
+              0.7071067811865475
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "geographic-status",
+            "success": false
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "explicit-current",
+            "success": false
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "synonym",
+            "success": true
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "historical",
+            "success": true
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "status",
+            "success": true
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "approval",
+            "success": false
+          },
+          {
+            "scores": [
+              1.0,
+              1.0,
+              0.9486832980505138,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "stale-premise",
+            "success": false
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": null,
+            "query_id": "out-of-scope",
+            "success": true
+          }
+        ],
+        "success_count": 4,
+        "query_count": 9
+      }
+    },
+    "nnlm_input_mean": {
+      "en": {
+        "dimension": 4,
+        "document_matrix": [
+          [
+            -0.7893919307847167,
+            -0.002617001206564338,
+            -0.5616050850244867,
+            1.0379273754856368
+          ],
+          [
+            -0.3488218766023963,
+            0.40936579198622147,
+            -0.541890403796511,
+            0.4560868357949644
+          ],
+          [
+            0.8235624988299366,
+            -0.5102201619254132,
+            -0.7477386529668241,
+            -0.044342104040920816
+          ],
+          [
+            0.877404807851508,
+            1.0590686270022804,
+            -0.15719330574952556,
+            -0.09490012906219109
+          ],
+          [
+            1.1033303301675188,
+            0.5744676159679926,
+            0.374349933424603,
+            0.6328112384504108
+          ]
+        ],
+        "query_matrix": [
+          [
+            -0.11278521110537298,
+            -0.07045371104499037,
+            -0.9808889422155902,
+            0.2890432511457284
+          ],
+          [
+            0.8029874361628879,
+            0.3679526783408039,
+            -0.45631739115995207,
+            0.27495425383097505
+          ],
+          [
+            -0.5848585420994195,
+            0.8891852950174333,
+            -0.10289186537743189,
+            0.6231304204442004
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.7864261192935786,
+            -0.2949234433714149,
+            -0.22884298037527168,
+            1.297600070183419
+          ],
+          [
+            0.877404807851508,
+            1.0590686270022804,
+            -0.15719330574952556,
+            -0.09490012906219109
+          ],
+          [
+            1.1033303301675188,
+            0.5744676159679926,
+            0.374349933424603,
+            0.6328112384504108
+          ],
+          [
+            -0.3383108274791643,
+            -0.0011215719456704307,
+            -0.24068789358192286,
+            0.4448260180652729
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "results": [
+          {
+            "scores": [
+              0.6420967572875588,
+              0.7347906435793955,
+              0.5255670034451023,
+              -0.03271924260438551,
+              -0.234353120994805
+            ],
+            "ranking": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v2",
+            "query_id": "current-lodging",
+            "success": true
+          },
+          {
+            "scores": [
+              -0.06362570250670847,
+              0.26511533445659835,
+              0.635366983178039,
+              0.7964300219322062,
+              0.7383516127048909
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "geographic-status",
+            "success": true
+          },
+          {
+            "scores": [
+              0.6623968266529098,
+              0.8249649036114206,
+              -0.5846383114877616,
+              0.22455263130736436,
+              0.12376430089814953
+            ],
+            "ranking": [
+              "travel-v2",
+              "travel-v1",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "prediction": "travel-v2",
+            "query_id": "explicit-current",
+            "success": true
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": null,
+            "query_id": "synonym",
+            "success": false
+          },
+          {
+            "scores": [
+              0.9451810675564071,
+              0.625643703674038,
+              -0.2004785837250339,
+              -0.5025358340031736,
+              -0.13359773692765903
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "status-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "historical",
+            "success": true
+          },
+          {
+            "scores": [
+              -0.3581779731528381,
+              0.13727122017497084,
+              0.17890524576706202,
+              1.0,
+              0.7269999144579294
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "status",
+            "success": true
+          },
+          {
+            "scores": [
+              -0.2075910655496554,
+              -0.04975485265073419,
+              0.17382151757662043,
+              0.7269999144579294,
+              1.0
+            ],
+            "ranking": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "prediction": "approval-faq-v1",
+            "query_id": "approval",
+            "success": true
+          },
+          {
+            "scores": [
+              1.0000000000000002,
+              0.8331473821141718,
+              -0.1580885836207424,
+              -0.358177973152838,
+              -0.20759106554965542
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1",
+              "status-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "stale-premise",
+            "success": false
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": null,
+            "query_id": "out-of-scope",
+            "success": true
+          }
+        ],
+        "success_count": 7,
+        "query_count": 9
+      },
+      "zh-hans": {
+        "dimension": 4,
+        "document_matrix": [
+          [
+            -0.7893919307847167,
+            -0.002617001206564338,
+            -0.5616050850244867,
+            1.0379273754856368
+          ],
+          [
+            -0.3488218766023963,
+            0.40936579198622147,
+            -0.541890403796511,
+            0.4560868357949644
+          ],
+          [
+            0.8235624988299366,
+            -0.5102201619254132,
+            -0.7477386529668241,
+            -0.044342104040920816
+          ],
+          [
+            0.877404807851508,
+            1.0590686270022804,
+            -0.15719330574952556,
+            -0.09490012906219109
+          ],
+          [
+            1.1033303301675188,
+            0.5744676159679926,
+            0.374349933424603,
+            0.6328112384504108
+          ]
+        ],
+        "query_matrix": [
+          [
+            -0.11278521110537298,
+            -0.07045371104499037,
+            -0.9808889422155902,
+            0.2890432511457284
+          ],
+          [
+            0.8029874361628879,
+            0.3679526783408039,
+            -0.45631739115995207,
+            0.27495425383097505
+          ],
+          [
+            -0.5848585420994195,
+            0.8891852950174333,
+            -0.10289186537743189,
+            0.6231304204442004
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.7864261192935786,
+            -0.2949234433714149,
+            -0.22884298037527168,
+            1.297600070183419
+          ],
+          [
+            0.877404807851508,
+            1.0590686270022804,
+            -0.15719330574952556,
+            -0.09490012906219109
+          ],
+          [
+            1.1033303301675188,
+            0.5744676159679926,
+            0.374349933424603,
+            0.6328112384504108
+          ],
+          [
+            -0.3383108274791643,
+            -0.0011215719456704307,
+            -0.24068789358192286,
+            0.4448260180652729
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "results": [
+          {
+            "scores": [
+              0.6420967572875588,
+              0.7347906435793955,
+              0.5255670034451023,
+              -0.03271924260438551,
+              -0.234353120994805
+            ],
+            "ranking": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": "travel-v2",
+            "query_id": "current-lodging",
+            "success": true
+          },
+          {
+            "scores": [
+              -0.06362570250670847,
+              0.26511533445659835,
+              0.635366983178039,
+              0.7964300219322062,
+              0.7383516127048909
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "geographic-status",
+            "success": true
+          },
+          {
+            "scores": [
+              0.6623968266529098,
+              0.8249649036114206,
+              -0.5846383114877616,
+              0.22455263130736436,
+              0.12376430089814953
+            ],
+            "ranking": [
+              "travel-v2",
+              "travel-v1",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "prediction": "travel-v2",
+            "query_id": "explicit-current",
+            "success": true
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": null,
+            "query_id": "synonym",
+            "success": false
+          },
+          {
+            "scores": [
+              0.9451810675564071,
+              0.625643703674038,
+              -0.2004785837250339,
+              -0.5025358340031736,
+              -0.13359773692765903
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "status-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "historical",
+            "success": true
+          },
+          {
+            "scores": [
+              -0.3581779731528381,
+              0.13727122017497084,
+              0.17890524576706202,
+              1.0,
+              0.7269999144579294
+            ],
+            "ranking": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "prediction": "status-faq-v1",
+            "query_id": "status",
+            "success": true
+          },
+          {
+            "scores": [
+              -0.2075910655496554,
+              -0.04975485265073419,
+              0.17382151757662043,
+              0.7269999144579294,
+              1.0
+            ],
+            "ranking": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "prediction": "approval-faq-v1",
+            "query_id": "approval",
+            "success": true
+          },
+          {
+            "scores": [
+              1.0000000000000002,
+              0.8331473821141718,
+              -0.1580885836207424,
+              -0.358177973152838,
+              -0.20759106554965542
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1",
+              "status-faq-v1"
+            ],
+            "prediction": "travel-v1",
+            "query_id": "stale-premise",
+            "success": false
+          },
+          {
+            "scores": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ranking": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "prediction": null,
+            "query_id": "out-of-scope",
+            "success": true
+          }
+        ],
+        "success_count": 7,
+        "query_count": 9
+      }
+    }
+  },
+  "elapsed_seconds": 0.37711024982854724
+}

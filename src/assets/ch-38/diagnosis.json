@@ -1,0 +1,97 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 38.1 — The same format repair preserves both the correct amount and the wrong one.",
+    "zh-hans": "图 38.1：同一种格式修正既保留了正确金额，也保留了错误金额。"
+  },
+  "alt": {
+    "en": "Current and historical prompts both produce 750 followed by a period. The normalizer removes the period without changing digits. Current amount 750 now passes strict matching; historical amount 750 still fails the required 600. No model parameter changes.",
+    "zh-hans": "现行和历史限额问题都输出了带句号的 750。格式修正规则删除句号而保留数字。现行限额 750 通过严格匹配，历史限额仍错，因为要求的是 600。模型参数没有改变。"
+  },
+  "credit": {
+    "en": "Original diagram of the recorded KA-1 comparison · CC BY-SA 4.0",
+    "zh-hans": "原创图示，依据 KA-1 实测对照 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Current amount",
+        "zh-hans": "问现行限额"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Required: 750",
+            "zh-hans": "要求：750"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Raw: 750.",
+            "zh-hans": "原输出：750."
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Remove terminal period → 750",
+            "zh-hans": "删末尾句号 → 750"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Strict pass; meaning was already correct",
+            "zh-hans": "严格匹配通过；原意已正确"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Three repeats on current + three on stale premise = six new strict passes.",
+        "zh-hans": "现行限额 3 次 + 纠正旧前提 3 次 = 新增 6 次严格匹配通过。"
+      }
+    },
+    {
+      "label": {
+        "en": "Historical amount",
+        "zh-hans": "问历史限额"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Required: 600",
+            "zh-hans": "要求：600"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Raw: 750.",
+            "zh-hans": "原输出：750."
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Remove terminal period → 750",
+            "zh-hans": "删末尾句号 → 750"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Still wrong; semantic gate unchanged",
+            "zh-hans": "仍然答错；语义验收未改善"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Three further displays change; their factual claims do not. Both checkpoints remain rejected.",
+        "zh-hans": "另有 3 次显示改变，事实主张却没变。两个检查点仍不通过验收。"
+      }
+    }
+  ]
+}

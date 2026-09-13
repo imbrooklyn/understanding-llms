@@ -1,0 +1,330 @@
+{
+  "version": "ka0-v1",
+  "as_of": "2026-09-11",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Original fictional bilingual content resource; all index cards and relevance labels authored before baseline execution",
+  "scope": "Rank the five supplied index_text cards; bodies and version metadata are returned as evidence but not used for lexical scoring. Locale variants are parallel collections, not a translation or multilingual retrieval system.",
+  "candidate_order": [
+    "travel-v1",
+    "travel-v2",
+    "rail-faq-v1",
+    "status-faq-v1",
+    "approval-faq-v1"
+  ],
+  "vocabulary": [
+    {
+      "term": "beijing",
+      "surface": {
+        "en": "beijing",
+        "zh-hans": "北京"
+      }
+    },
+    {
+      "term": "lodging",
+      "surface": {
+        "en": "lodging",
+        "zh-hans": "住宿"
+      }
+    },
+    {
+      "term": "600",
+      "surface": {
+        "en": "600",
+        "zh-hans": "600"
+      }
+    },
+    {
+      "term": "750",
+      "surface": {
+        "en": "750",
+        "zh-hans": "750"
+      }
+    },
+    {
+      "term": "train",
+      "surface": {
+        "en": "train",
+        "zh-hans": "火车"
+      }
+    },
+    {
+      "term": "order",
+      "surface": {
+        "en": "order",
+        "zh-hans": "订单"
+      }
+    },
+    {
+      "term": "processing",
+      "surface": {
+        "en": "processing",
+        "zh-hans": "处理中"
+      }
+    },
+    {
+      "term": "approval",
+      "surface": {
+        "en": "approval",
+        "zh-hans": "审批"
+      }
+    }
+  ],
+  "extra_lexemes": [
+    {
+      "term": "hotel",
+      "surface": {
+        "en": "hotel",
+        "zh-hans": "酒店"
+      }
+    },
+    {
+      "term": "allowance",
+      "surface": {
+        "en": "allowance",
+        "zh-hans": "补助"
+      }
+    },
+    {
+      "term": "passport",
+      "surface": {
+        "en": "passport",
+        "zh-hans": "护照"
+      }
+    },
+    {
+      "term": "renewal",
+      "surface": {
+        "en": "renewal",
+        "zh-hans": "换发"
+      }
+    }
+  ],
+  "tokenizer": "ka-lex-v1: search-key-v1; English ASCII letter runs or decimal digit runs; Chinese longest known surface at each position, ASCII runs/digits, otherwise one code point; punctuation and whitespace skipped",
+  "ranking": "round cosine scores to 12 decimal places for ranking only; descending score, then frozen candidate order; top score <= 0 means abstain",
+  "tf": "raw count in the index card or query",
+  "idf": "ln((D+1)/(df+1))+1; fit on document cards only; absent query terms ignored in lexical vectors",
+  "success": "top prediction belongs to relevant set; for an empty relevant set, success requires abstention; denominator is all 9 queries",
+  "failure_taxonomy": {
+    "stale_version": "surface overlap favors a superseded source for a current query",
+    "common_term_distraction": "frequent geographic term outweighs a discriminating status term",
+    "synonym_gap": "different spellings have no vocabulary overlap",
+    "representation_collision": "distinct documents have the same direction under a representation",
+    "out_of_scope": "answering with a document when none is relevant",
+    "exact_term": "diagnostic with explicit matching terms"
+  },
+  "documents": [
+    {
+      "id": "travel-v1",
+      "label": "A",
+      "title": {
+        "en": "Archived lodging policy",
+        "zh-hans": "旧版住宿制度"
+      },
+      "version": "v1",
+      "effective_from": "2025-01-01",
+      "superseded_by": "travel-v2",
+      "body": {
+        "en": "The fictional Beijing lodging limit was 600 yuan per room per night. This archived version is retained for historical questions.",
+        "zh-hans": "虚构制度中的北京住宿限额曾为每间每晚 600 元。此旧版保留用于查询历史规定。"
+      },
+      "index_text": {
+        "en": "Beijing lodging 600",
+        "zh-hans": "北京 住宿 600"
+      }
+    },
+    {
+      "id": "travel-v2",
+      "label": "B",
+      "title": {
+        "en": "Current lodging policy",
+        "zh-hans": "新版住宿制度"
+      },
+      "version": "v2",
+      "effective_from": "2026-01-01",
+      "superseded_by": null,
+      "body": {
+        "en": "The fictional Beijing lodging limit is 750 yuan per room per night from the effective date. The lodging heading and summary repeat the topic word.",
+        "zh-hans": "虚构制度自生效日起，北京住宿限额为每间每晚 750 元。住宿标题与摘要都出现了主题词。"
+      },
+      "index_text": {
+        "en": "Beijing lodging lodging 750",
+        "zh-hans": "北京 住宿 住宿 750"
+      }
+    },
+    {
+      "id": "rail-faq-v1",
+      "label": "C",
+      "title": {
+        "en": "Rail travel FAQ",
+        "zh-hans": "铁路差旅 FAQ"
+      },
+      "version": "v1",
+      "effective_from": "2026-01-01",
+      "superseded_by": null,
+      "body": {
+        "en": "The Beijing rail FAQ concerns train travel. Its index card includes a Beijing title, a Beijing tag, and the summary Beijing train. It gives no lodging limit or order status.",
+        "zh-hans": "北京铁路 FAQ 说明火车出行。索引卡包含北京标题、北京标签和北京火车摘要，不提供住宿限额或订单状态。"
+      },
+      "index_text": {
+        "en": "Beijing Beijing Beijing train",
+        "zh-hans": "北京 北京 北京 火车"
+      }
+    },
+    {
+      "id": "status-faq-v1",
+      "label": "D",
+      "title": {
+        "en": "Order status FAQ",
+        "zh-hans": "订单状态 FAQ"
+      },
+      "version": "v1",
+      "effective_from": "2026-01-01",
+      "superseded_by": null,
+      "body": {
+        "en": "Processing is a possible status of a fictional order such as A-104. This FAQ explains the status; it does not retrieve a live order.",
+        "zh-hans": "处理中是虚构订单（如 A-104）的一种可能状态。本 FAQ 解释状态含义，不查询实时订单。"
+      },
+      "index_text": {
+        "en": "order processing",
+        "zh-hans": "订单 处理中"
+      }
+    },
+    {
+      "id": "approval-faq-v1",
+      "label": "E",
+      "title": {
+        "en": "Cancellation approval FAQ",
+        "zh-hans": "取消审批 FAQ"
+      },
+      "version": "v1",
+      "effective_from": "2026-01-01",
+      "superseded_by": null,
+      "body": {
+        "en": "Cancellation of a fictional order requires approval. This document explains that requirement; retrieving it cannot grant approval or perform cancellation.",
+        "zh-hans": "取消虚构订单需要审批。本条说明这一要求；检索到它不会获得审批，也不会执行取消。"
+      },
+      "index_text": {
+        "en": "order approval",
+        "zh-hans": "订单 审批"
+      }
+    }
+  ],
+  "queries": [
+    {
+      "id": "current-lodging",
+      "number": 1,
+      "text": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "relevant": [
+        "travel-v2"
+      ],
+      "intent": "current lodging limit",
+      "case_family": "stale_version"
+    },
+    {
+      "id": "geographic-status",
+      "number": 2,
+      "text": {
+        "en": "Beijing processing",
+        "zh-hans": "北京 处理中"
+      },
+      "relevant": [
+        "status-faq-v1"
+      ],
+      "intent": "meaning of processing for an order associated with Beijing",
+      "case_family": "common_term_distraction"
+    },
+    {
+      "id": "explicit-current",
+      "number": 3,
+      "text": {
+        "en": "750 lodging",
+        "zh-hans": "750 住宿"
+      },
+      "relevant": [
+        "travel-v2"
+      ],
+      "intent": "find the document mentioning the updated amount",
+      "case_family": "exact_term"
+    },
+    {
+      "id": "synonym",
+      "number": 4,
+      "text": {
+        "en": "hotel allowance",
+        "zh-hans": "酒店补助"
+      },
+      "relevant": [
+        "travel-v1",
+        "travel-v2"
+      ],
+      "intent": "find any version of the lodging allowance policy; not a current-amount question",
+      "case_family": "synonym_gap"
+    },
+    {
+      "id": "historical",
+      "number": 5,
+      "text": {
+        "en": "600 Beijing",
+        "zh-hans": "600 北京"
+      },
+      "relevant": [
+        "travel-v1"
+      ],
+      "intent": "find the archived 600-yuan policy",
+      "case_family": "exact_term"
+    },
+    {
+      "id": "status",
+      "number": 6,
+      "text": {
+        "en": "order processing",
+        "zh-hans": "订单 处理中"
+      },
+      "relevant": [
+        "status-faq-v1"
+      ],
+      "intent": "explain processing status",
+      "case_family": "exact_term"
+    },
+    {
+      "id": "approval",
+      "number": 7,
+      "text": {
+        "en": "order approval",
+        "zh-hans": "订单 审批"
+      },
+      "relevant": [
+        "approval-faq-v1"
+      ],
+      "intent": "find the approval requirement, without executing an action",
+      "case_family": "exact_term"
+    },
+    {
+      "id": "stale-premise",
+      "number": 8,
+      "text": {
+        "en": "Is 600 still the Beijing lodging limit?",
+        "zh-hans": "北京住宿还是600元吗？"
+      },
+      "relevant": [
+        "travel-v2"
+      ],
+      "intent": "verify whether the former 600-yuan limit still applies now",
+      "case_family": "stale_version"
+    },
+    {
+      "id": "out-of-scope",
+      "number": 9,
+      "text": {
+        "en": "passport renewal",
+        "zh-hans": "护照换发"
+      },
+      "relevant": [],
+      "intent": "no document answers passport renewal",
+      "case_family": "out_of_scope"
+    }
+  ]
+}

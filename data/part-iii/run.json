@@ -1,0 +1,1343 @@
+{
+  "as_of": "2026-09-12T05:28:02.048135+00:00",
+  "last_verified": "2026-09-12",
+  "python": "3.12.10",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "device": "CPU",
+  "seed": null,
+  "dependencies": "Python standard library only",
+  "command": "python3 code/part-iii/run.py --record",
+  "status": "executed deterministic authored diagnostics; no model fitting",
+  "sha256": {
+    "code/part-iii/core.py": "2da74bc5d25de258f1492da1b0e12cbd44bbc0e4c3b70d362fa029ff7bc86993",
+    "code/part-iii/run.py": "7ab48ee61abbcdf93900283605f28fc78da448a12bfccdaf6cd16234b6ab2403",
+    "code/part-ii/numerical.py": "d0dcfdfcbe25e073f79e997964b70f4b178a637197d6d47f0244b50418880d14",
+    "data/part-iii/sequence-v1.json": "a28fa5e5463ade7e050d2938f6c848087ecaa70c7a9f0e6b69d66b053a4b4a06",
+    "data/part-iii/expected.json": "4390817360d1b96818fcb9d849647f6a8e45117eb86a1f38b909427d86a3c08f",
+    "data/part-ii/nnlm-data.json": "735274f74e900dcef9ef158c8a2e7505fe6580e4be471a2984c61371fa961b7a"
+  },
+  "results": {
+    "short_rnn": [
+      [
+        {
+          "step": 1,
+          "token_id": 0,
+          "input": [
+            1,
+            0
+          ],
+          "previous": [
+            0,
+            0
+          ],
+          "preactivation": [
+            1.0,
+            0.0
+          ],
+          "state": [
+            1.0,
+            0.0
+          ],
+          "logits": [
+            1.125,
+            0.0
+          ],
+          "probabilities": [
+            0.7549149868676283,
+            0.24508501313237172
+          ],
+          "choice": 0
+        },
+        {
+          "step": 2,
+          "token_id": 3,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            1.0,
+            0.0
+          ],
+          "preactivation": [
+            0.5,
+            0.0
+          ],
+          "state": [
+            0.5,
+            0.0
+          ],
+          "logits": [
+            0.625,
+            0.0
+          ],
+          "probabilities": [
+            0.6513548646660542,
+            0.34864513533394575
+          ],
+          "choice": 0
+        },
+        {
+          "step": 3,
+          "token_id": 4,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.5,
+            0.0
+          ],
+          "preactivation": [
+            0.25,
+            0.0
+          ],
+          "state": [
+            0.25,
+            0.0
+          ],
+          "logits": [
+            0.375,
+            0.0
+          ],
+          "probabilities": [
+            0.5926665999540697,
+            0.4073334000459302
+          ],
+          "choice": 0
+        }
+      ],
+      [
+        {
+          "step": 1,
+          "token_id": 1,
+          "input": [
+            0,
+            1
+          ],
+          "previous": [
+            0,
+            0
+          ],
+          "preactivation": [
+            0.0,
+            1.0
+          ],
+          "state": [
+            0.0,
+            1.0
+          ],
+          "logits": [
+            0.125,
+            1.0
+          ],
+          "probabilities": [
+            0.29421497216298875,
+            0.7057850278370112
+          ],
+          "choice": 1
+        },
+        {
+          "step": 2,
+          "token_id": 3,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            1.0
+          ],
+          "preactivation": [
+            0.0,
+            0.5
+          ],
+          "state": [
+            0.0,
+            0.5
+          ],
+          "logits": [
+            0.125,
+            0.5
+          ],
+          "probabilities": [
+            0.4073334000459302,
+            0.5926665999540697
+          ],
+          "choice": 1
+        },
+        {
+          "step": 3,
+          "token_id": 4,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.5
+          ],
+          "preactivation": [
+            0.0,
+            0.25
+          ],
+          "state": [
+            0.0,
+            0.25
+          ],
+          "logits": [
+            0.125,
+            0.25
+          ],
+          "probabilities": [
+            0.46879062662624377,
+            0.5312093733737563
+          ],
+          "choice": 1
+        }
+      ]
+    ],
+    "long_rnn": [
+      [
+        {
+          "step": 1,
+          "token_id": 0,
+          "input": [
+            1,
+            0
+          ],
+          "previous": [
+            0,
+            0
+          ],
+          "preactivation": [
+            1.0,
+            0.0
+          ],
+          "state": [
+            1.0,
+            0.0
+          ],
+          "logits": [
+            1.125,
+            0.0
+          ],
+          "probabilities": [
+            0.7549149868676283,
+            0.24508501313237172
+          ],
+          "choice": 0
+        },
+        {
+          "step": 2,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            1.0,
+            0.0
+          ],
+          "preactivation": [
+            0.5,
+            0.0
+          ],
+          "state": [
+            0.5,
+            0.0
+          ],
+          "logits": [
+            0.625,
+            0.0
+          ],
+          "probabilities": [
+            0.6513548646660542,
+            0.34864513533394575
+          ],
+          "choice": 0
+        },
+        {
+          "step": 3,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.5,
+            0.0
+          ],
+          "preactivation": [
+            0.25,
+            0.0
+          ],
+          "state": [
+            0.25,
+            0.0
+          ],
+          "logits": [
+            0.375,
+            0.0
+          ],
+          "probabilities": [
+            0.5926665999540697,
+            0.4073334000459302
+          ],
+          "choice": 0
+        },
+        {
+          "step": 4,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.25,
+            0.0
+          ],
+          "preactivation": [
+            0.125,
+            0.0
+          ],
+          "state": [
+            0.125,
+            0.0
+          ],
+          "logits": [
+            0.25,
+            0.0
+          ],
+          "probabilities": [
+            0.5621765008857981,
+            0.4378234991142019
+          ],
+          "choice": 0
+        },
+        {
+          "step": 5,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.125,
+            0.0
+          ],
+          "preactivation": [
+            0.0625,
+            0.0
+          ],
+          "state": [
+            0.0625,
+            0.0
+          ],
+          "logits": [
+            0.1875,
+            0.0
+          ],
+          "probabilities": [
+            0.5467381519846138,
+            0.45326184801538616
+          ],
+          "choice": 0
+        },
+        {
+          "step": 6,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0625,
+            0.0
+          ],
+          "preactivation": [
+            0.03125,
+            0.0
+          ],
+          "state": [
+            0.03125,
+            0.0
+          ],
+          "logits": [
+            0.15625,
+            0.0
+          ],
+          "probabilities": [
+            0.5389832206876841,
+            0.4610167793123159
+          ],
+          "choice": 0
+        },
+        {
+          "step": 7,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.03125,
+            0.0
+          ],
+          "preactivation": [
+            0.015625,
+            0.0
+          ],
+          "state": [
+            0.015625,
+            0.0
+          ],
+          "logits": [
+            0.140625,
+            0.0
+          ],
+          "probabilities": [
+            0.5350984286266115,
+            0.46490157137338844
+          ],
+          "choice": 0
+        },
+        {
+          "step": 8,
+          "token_id": 3,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.015625,
+            0.0
+          ],
+          "preactivation": [
+            0.0078125,
+            0.0
+          ],
+          "state": [
+            0.0078125,
+            0.0
+          ],
+          "logits": [
+            0.1328125,
+            0.0
+          ],
+          "probabilities": [
+            0.5331544046668082,
+            0.46684559533319187
+          ],
+          "choice": 0
+        },
+        {
+          "step": 9,
+          "token_id": 4,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0078125,
+            0.0
+          ],
+          "preactivation": [
+            0.00390625,
+            0.0
+          ],
+          "state": [
+            0.00390625,
+            0.0
+          ],
+          "logits": [
+            0.12890625,
+            0.0
+          ],
+          "probabilities": [
+            0.5321820112760233,
+            0.4678179887239768
+          ],
+          "choice": 0
+        }
+      ],
+      [
+        {
+          "step": 1,
+          "token_id": 1,
+          "input": [
+            0,
+            1
+          ],
+          "previous": [
+            0,
+            0
+          ],
+          "preactivation": [
+            0.0,
+            1.0
+          ],
+          "state": [
+            0.0,
+            1.0
+          ],
+          "logits": [
+            0.125,
+            1.0
+          ],
+          "probabilities": [
+            0.29421497216298875,
+            0.7057850278370112
+          ],
+          "choice": 1
+        },
+        {
+          "step": 2,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            1.0
+          ],
+          "preactivation": [
+            0.0,
+            0.5
+          ],
+          "state": [
+            0.0,
+            0.5
+          ],
+          "logits": [
+            0.125,
+            0.5
+          ],
+          "probabilities": [
+            0.4073334000459302,
+            0.5926665999540697
+          ],
+          "choice": 1
+        },
+        {
+          "step": 3,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.5
+          ],
+          "preactivation": [
+            0.0,
+            0.25
+          ],
+          "state": [
+            0.0,
+            0.25
+          ],
+          "logits": [
+            0.125,
+            0.25
+          ],
+          "probabilities": [
+            0.46879062662624377,
+            0.5312093733737563
+          ],
+          "choice": 1
+        },
+        {
+          "step": 4,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.25
+          ],
+          "preactivation": [
+            0.0,
+            0.125
+          ],
+          "state": [
+            0.0,
+            0.125
+          ],
+          "logits": [
+            0.125,
+            0.125
+          ],
+          "probabilities": [
+            0.5,
+            0.5
+          ],
+          "choice": 0
+        },
+        {
+          "step": 5,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.125
+          ],
+          "preactivation": [
+            0.0,
+            0.0625
+          ],
+          "state": [
+            0.0,
+            0.0625
+          ],
+          "logits": [
+            0.125,
+            0.0625
+          ],
+          "probabilities": [
+            0.5156199157230156,
+            0.48438008427698437
+          ],
+          "choice": 0
+        },
+        {
+          "step": 6,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.0625
+          ],
+          "preactivation": [
+            0.0,
+            0.03125
+          ],
+          "state": [
+            0.0,
+            0.03125
+          ],
+          "logits": [
+            0.125,
+            0.03125
+          ],
+          "probabilities": [
+            0.523420348936324,
+            0.47657965106367595
+          ],
+          "choice": 0
+        },
+        {
+          "step": 7,
+          "token_id": 2,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.03125
+          ],
+          "preactivation": [
+            0.0,
+            0.015625
+          ],
+          "state": [
+            0.0,
+            0.015625
+          ],
+          "logits": [
+            0.125,
+            0.015625
+          ],
+          "probabilities": [
+            0.5273165233795671,
+            0.47268347662043286
+          ],
+          "choice": 0
+        },
+        {
+          "step": 8,
+          "token_id": 3,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.015625
+          ],
+          "preactivation": [
+            0.0,
+            0.0078125
+          ],
+          "state": [
+            0.0,
+            0.0078125
+          ],
+          "logits": [
+            0.125,
+            0.0078125
+          ],
+          "probabilities": [
+            0.5292633933665886,
+            0.4707366066334114
+          ],
+          "choice": 0
+        },
+        {
+          "step": 9,
+          "token_id": 4,
+          "input": [
+            0,
+            0
+          ],
+          "previous": [
+            0.0,
+            0.0078125
+          ],
+          "preactivation": [
+            0.0,
+            0.00390625
+          ],
+          "state": [
+            0.0,
+            0.00390625
+          ],
+          "logits": [
+            0.125,
+            0.00390625
+          ],
+          "probabilities": [
+            0.5302364982911614,
+            0.4697635017088386
+          ],
+          "choice": 0
+        }
+      ]
+    ],
+    "window": [
+      {
+        "visible_ids": [
+          3,
+          4
+        ],
+        "state": [
+          0,
+          0
+        ],
+        "logits": [
+          0.125,
+          0.0
+        ],
+        "probabilities": [
+          0.5312093733737563,
+          0.46879062662624377
+        ],
+        "choice": 0
+      },
+      {
+        "visible_ids": [
+          3,
+          4
+        ],
+        "state": [
+          0,
+          0
+        ],
+        "logits": [
+          0.125,
+          0.0
+        ],
+        "probabilities": [
+          0.5312093733737563,
+          0.46879062662624377
+        ],
+        "choice": 0
+      }
+    ],
+    "bptt": {
+      "states": [
+        1.0,
+        0.5,
+        0.25
+      ],
+      "loss": 0.28125,
+      "state_gradients": [
+        -0.1875,
+        -0.375,
+        -0.75
+      ],
+      "weight_contributions": [
+        -0.0,
+        -0.375,
+        -0.375
+      ],
+      "weight_gradient": -0.75
+    },
+    "updated_weight": 0.575,
+    "after_update": {
+      "states": [
+        1.0,
+        0.575,
+        0.33062499999999995
+      ],
+      "loss": 0.22403144531250005,
+      "state_gradients": [
+        -0.22131210937499998,
+        -0.384890625,
+        -0.669375
+      ],
+      "weight_contributions": [
+        -0.0,
+        -0.384890625,
+        -0.384890625
+      ],
+      "weight_gradient": -0.76978125
+    },
+    "distance_products": [
+      {
+        "edges": 0,
+        "contracting": 1.0,
+        "expanding": 1.0
+      },
+      {
+        "edges": 1,
+        "contracting": 0.5,
+        "expanding": 1.5
+      },
+      {
+        "edges": 2,
+        "contracting": 0.25,
+        "expanding": 2.25
+      },
+      {
+        "edges": 4,
+        "contracting": 0.0625,
+        "expanding": 5.0625
+      },
+      {
+        "edges": 8,
+        "contracting": 0.00390625,
+        "expanding": 25.62890625
+      },
+      {
+        "edges": 16,
+        "contracting": 1.52587890625e-05,
+        "expanding": 656.8408355712891
+      }
+    ],
+    "gates": {
+      "lstm_cell": 0.8200000000000001,
+      "lstm_hidden": 0.5063024061289559,
+      "gru_candidate": 0.197375320224904,
+      "gru_hidden": 0.7397375320224905,
+      "retention_09_eight_edges": 0.4304672100000001,
+      "retention_099_hundred_edges": 0.3660323412732292
+    },
+    "encoder": [
+      {
+        "step": 1,
+        "token_id": 0,
+        "input": [
+          0.6931471805599453,
+          0.0
+        ],
+        "previous": [
+          0,
+          0
+        ],
+        "preactivation": [
+          0.6931471805599453,
+          0.0
+        ],
+        "state": [
+          0.6931471805599453,
+          0.0
+        ]
+      },
+      {
+        "step": 2,
+        "token_id": 2,
+        "input": [
+          -0.6931471805599453,
+          0.6931471805599453
+        ],
+        "previous": [
+          0.6931471805599453,
+          0.0
+        ],
+        "preactivation": [
+          0.0,
+          0.6931471805599453
+        ],
+        "state": [
+          0.0,
+          0.6931471805599453
+        ]
+      },
+      {
+        "step": 3,
+        "token_id": 3,
+        "input": [
+          0.0,
+          -0.6931471805599453
+        ],
+        "previous": [
+          0.0,
+          0.6931471805599453
+        ],
+        "preactivation": [
+          0.0,
+          0.0
+        ],
+        "state": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "contrast_encoder": [
+      {
+        "step": 1,
+        "token_id": 1,
+        "input": [
+          0.0,
+          0.0
+        ],
+        "previous": [
+          0,
+          0
+        ],
+        "preactivation": [
+          0.0,
+          0.0
+        ],
+        "state": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "step": 2,
+        "token_id": 2,
+        "input": [
+          -0.6931471805599453,
+          0.6931471805599453
+        ],
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "preactivation": [
+          -0.6931471805599453,
+          0.6931471805599453
+        ],
+        "state": [
+          0.0,
+          0.6931471805599453
+        ]
+      },
+      {
+        "step": 3,
+        "token_id": 3,
+        "input": [
+          0.0,
+          -0.6931471805599453
+        ],
+        "previous": [
+          0.0,
+          0.6931471805599453
+        ],
+        "preactivation": [
+          0.0,
+          0.0
+        ],
+        "state": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "teacher": [
+      {
+        "step": 1,
+        "input": "BOS",
+        "target": "red",
+        "target_probability": 0.4,
+        "greedy": "blue"
+      },
+      {
+        "step": 2,
+        "input": "red",
+        "target": "key",
+        "target_probability": 0.8,
+        "greedy": "key"
+      },
+      {
+        "step": 3,
+        "input": "key",
+        "target": ".",
+        "target_probability": 0.9,
+        "greedy": "."
+      },
+      {
+        "step": 4,
+        "input": ".",
+        "target": "EOS",
+        "target_probability": 1,
+        "greedy": "EOS"
+      }
+    ],
+    "generation": {
+      "trace": [
+        {
+          "step": 1,
+          "input": "BOS",
+          "output": "blue",
+          "probability": 0.5
+        },
+        {
+          "step": 2,
+          "input": "blue",
+          "output": "door",
+          "probability": 0.7
+        },
+        {
+          "step": 3,
+          "input": "door",
+          "output": ".",
+          "probability": 0.9
+        },
+        {
+          "step": 4,
+          "input": ".",
+          "output": "EOS",
+          "probability": 1
+        }
+      ],
+      "stopped_at_eos": true
+    },
+    "target_sequence_probability": 0.2880000000000001,
+    "target_total_nll": 1.2447947988461907,
+    "target_mean_nll": 0.3111986997115477,
+    "attention": [
+      {
+        "kept_positions": [
+          0,
+          1,
+          2
+        ],
+        "scores_on_kept_positions": [
+          0.6931471805599453,
+          0.0,
+          0.0
+        ],
+        "weights": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "context": [
+          0.34657359027997264,
+          0.17328679513998632
+        ]
+      },
+      {
+        "kept_positions": [
+          0,
+          1,
+          2
+        ],
+        "scores_on_kept_positions": [
+          0.0,
+          0.6931471805599453,
+          0.0
+        ],
+        "weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "context": [
+          0.17328679513998632,
+          0.34657359027997264
+        ]
+      }
+    ],
+    "slot_deletions": [
+      {
+        "removed_position": 0,
+        "kept_positions": [
+          1,
+          2
+        ],
+        "scores_on_kept_positions": [
+          0.0,
+          0.0
+        ],
+        "weights": [
+          0.0,
+          0.5,
+          0.5
+        ],
+        "context": [
+          0.0,
+          0.34657359027997264
+        ],
+        "readout": 0.6931471805599453
+      },
+      {
+        "removed_position": 1,
+        "kept_positions": [
+          0,
+          2
+        ],
+        "scores_on_kept_positions": [
+          0.6931471805599453,
+          0.0
+        ],
+        "weights": [
+          0.6666666666666666,
+          0.0,
+          0.3333333333333333
+        ],
+        "context": [
+          0.46209812037329684,
+          0.0
+        ],
+        "readout": 0.46209812037329684
+      },
+      {
+        "removed_position": 2,
+        "kept_positions": [
+          0,
+          1
+        ],
+        "scores_on_kept_positions": [
+          0.6931471805599453,
+          0.0
+        ],
+        "weights": [
+          0.6666666666666666,
+          0.3333333333333333,
+          0.0
+        ],
+        "context": [
+          0.46209812037329684,
+          0.23104906018664842
+        ],
+        "readout": 0.9241962407465937
+      }
+    ],
+    "source_deletions": [
+      {
+        "removed_position": 0,
+        "source_ids": [
+          2,
+          3
+        ],
+        "encoder": [
+          {
+            "step": 1,
+            "token_id": 2,
+            "input": [
+              -0.6931471805599453,
+              0.6931471805599453
+            ],
+            "previous": [
+              0,
+              0
+            ],
+            "preactivation": [
+              -0.6931471805599453,
+              0.6931471805599453
+            ],
+            "state": [
+              0.0,
+              0.6931471805599453
+            ]
+          },
+          {
+            "step": 2,
+            "token_id": 3,
+            "input": [
+              0.0,
+              -0.6931471805599453
+            ],
+            "previous": [
+              0.0,
+              0.6931471805599453
+            ],
+            "preactivation": [
+              0.0,
+              0.0
+            ],
+            "state": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "kept_positions": [
+          0,
+          1
+        ],
+        "scores_on_kept_positions": [
+          0.0,
+          0.0
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "context": [
+          0.0,
+          0.34657359027997264
+        ],
+        "readout": 0.6931471805599453
+      },
+      {
+        "removed_position": 1,
+        "source_ids": [
+          0,
+          3
+        ],
+        "encoder": [
+          {
+            "step": 1,
+            "token_id": 0,
+            "input": [
+              0.6931471805599453,
+              0.0
+            ],
+            "previous": [
+              0,
+              0
+            ],
+            "preactivation": [
+              0.6931471805599453,
+              0.0
+            ],
+            "state": [
+              0.6931471805599453,
+              0.0
+            ]
+          },
+          {
+            "step": 2,
+            "token_id": 3,
+            "input": [
+              0.0,
+              -0.6931471805599453
+            ],
+            "previous": [
+              0.6931471805599453,
+              0.0
+            ],
+            "preactivation": [
+              0.6931471805599453,
+              -0.6931471805599453
+            ],
+            "state": [
+              0.6931471805599453,
+              0.0
+            ]
+          }
+        ],
+        "kept_positions": [
+          0,
+          1
+        ],
+        "scores_on_kept_positions": [
+          0.6931471805599453,
+          0.6931471805599453
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "context": [
+          0.6931471805599453,
+          0.0
+        ],
+        "readout": 0.6931471805599453
+      },
+      {
+        "removed_position": 2,
+        "source_ids": [
+          0,
+          2
+        ],
+        "encoder": [
+          {
+            "step": 1,
+            "token_id": 0,
+            "input": [
+              0.6931471805599453,
+              0.0
+            ],
+            "previous": [
+              0,
+              0
+            ],
+            "preactivation": [
+              0.6931471805599453,
+              0.0
+            ],
+            "state": [
+              0.6931471805599453,
+              0.0
+            ]
+          },
+          {
+            "step": 2,
+            "token_id": 2,
+            "input": [
+              -0.6931471805599453,
+              0.6931471805599453
+            ],
+            "previous": [
+              0.6931471805599453,
+              0.0
+            ],
+            "preactivation": [
+              0.0,
+              0.6931471805599453
+            ],
+            "state": [
+              0.0,
+              0.6931471805599453
+            ]
+          }
+        ],
+        "kept_positions": [
+          0,
+          1
+        ],
+        "scores_on_kept_positions": [
+          0.6931471805599453,
+          0.0
+        ],
+        "weights": [
+          0.6666666666666666,
+          0.3333333333333333
+        ],
+        "context": [
+          0.46209812037329684,
+          0.23104906018664842
+        ],
+        "readout": 0.9241962407465937
+      }
+    ]
+  }
+}

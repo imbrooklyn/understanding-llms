@@ -1,0 +1,67 @@
+{
+  "version": "low-rank-v1",
+  "as_of": "2026-09-13",
+  "license": "CC BY-SA 4.0",
+  "evidence_kind": "author-assigned exact integer matrices; no training performed",
+  "orientation": "Column input; W0 is output by input; A is rank by input; B is output by rank; scale alpha/r.",
+  "W0": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "A": [
+    [
+      2,
+      0,
+      -1
+    ]
+  ],
+  "B": [
+    [
+      1
+    ],
+    [
+      0
+    ],
+    [
+      -1
+    ],
+    [
+      2
+    ]
+  ],
+  "x": [
+    1,
+    2,
+    3
+  ],
+  "alpha": 1,
+  "quantization": {
+    "kind": "illustrative uniform nearest grid, not NF4",
+    "weight": 0.93,
+    "input": 2,
+    "grid": 0.25,
+    "range": [
+      -1,
+      1
+    ],
+    "delta": 0.05
+  }
+}

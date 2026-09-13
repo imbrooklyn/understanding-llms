@@ -1,0 +1,110 @@
+{
+  "id": "ch-27/training-ledger",
+  "structure": "lanes",
+  "alt": {
+    "en": "The assigned training estimate has 16 MB of model state and 1,310,720 activation bytes. Sharding the optimizer-related state changes the first term; saving fewer activations changes the second. Recovery separately needs a consistent snapshot, sampler state, step and versions.",
+    "zh-hans": "给定训练估算包含 16 MB 模型状态和 1,310,720 字节激活。优化器相关状态分片改变前一项，减少保存的激活改变后一项。恢复运行还需要一致的快照、采样器状态、步数和版本。"
+  },
+  "caption": {
+    "en": "Figure 27.1 — Storage objects have different lifetimes.",
+    "zh-hans": "图 27.1：不同存储对象有不同存活时间。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Storage allocated for model state",
+        "zh-hans": "为模型状态保留的存储"
+      },
+      "nodes": [
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Weights 2 MB + master 4 MB",
+            "zh-hans": "工作权重 2 MB + 主副本 4 MB"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "Gradients 2 MB + moments 8 MB",
+            "zh-hans": "梯度 2 MB + 矩状态 8 MB"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Shard master/moments over 4 workers",
+            "zh-hans": "主副本／矩状态分给 4 个进程"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Optimizer-only sharding reduces this storage from 16 MB to 7 MB per worker. Gradients are reset at update boundaries.",
+        "zh-hans": "仅分片优化器相关状态，每个进程的这部分存储从 16 MB 降至 7 MB；梯度在更新边界重置。"
+      }
+    },
+    {
+      "label": {
+        "en": "Within a step",
+        "zh-hans": "单步计算内"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "40 saved arrays × 32,768 bytes",
+            "zh-hans": "40 个已保存数组 × 32,768 字节"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Keep 16 arrays; recompute the rest",
+            "zh-hans": "保留 16 个数组，其余重算"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "1,310,720 → 524,288 bytes",
+            "zh-hans": "1,310,720 → 524,288 字节"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Recomputation saves activation storage and adds forward work.",
+        "zh-hans": "重算减少激活存储，增加前向计算。"
+      }
+    },
+    {
+      "label": {
+        "en": "Across a stop",
+        "zh-hans": "跨停止恢复"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Consistent weights + optimizer state",
+            "zh-hans": "一致的权重与优化器状态"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Step + RNG + data cursor + versions",
+            "zh-hans": "步数 + 随机状态 + 数据游标 + 版本"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Reload all required state at the same update boundary; a weight file alone cannot reproduce the continuation.",
+        "zh-hans": "在同一更新边界恢复所需状态；仅有权重文件不能复现原来的继续过程。"
+      }
+    }
+  ]
+}

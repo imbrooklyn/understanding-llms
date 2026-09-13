@@ -1,0 +1,124 @@
+{
+  "id": "ch-12/backward",
+  "structure": "lanes",
+  "alt": {
+    "en": "Forward states 1, 0.5, 0.25. Backward loss rates -0.75, -0.375, -0.1875. Shared-weight contributions 0, -0.375, -0.375 sum to -0.75.",
+    "zh-hans": "前向状态为 1、0.5、0.25。反向损失变化率为 -0.75、-0.375、-0.1875。共享权重的贡献为 0、-0.375、-0.375，相加为 -0.75。"
+  },
+  "caption": {
+    "en": "Figure 12.1 — Multiply backward along the path; add across uses of one weight.",
+    "zh-hans": "图 12.1 — 沿路径向后乘，按同一权重的各次使用相加。"
+  },
+  "credit": {
+    "en": "Original teaching diagram and supplied or derived values, CC BY-SA 4.0; no paper figure reproduced.",
+    "zh-hans": "本书原创教学图，数值为给定值或按规则推导值，CC BY-SA 4.0；未复制论文图示。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Forward",
+        "zh-hans": "前向"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "h₁ = 1",
+            "zh-hans": "h₁ = 1"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "h₂ = 0.5",
+            "zh-hans": "h₂ = 0.5"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "h₃ = 0.25",
+            "zh-hans": "h₃ = 0.25"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Loss = 0.28125",
+            "zh-hans": "损失 = 0.28125"
+          }
+        }
+      ],
+      "flow": {
+        "en": "h₁ → h₂ → h₃: each state passes through the same w = 0.5.",
+        "zh-hans": "h₁ → h₂ → h₃：每次状态传递都使用同一个 w = 0.5。"
+      }
+    },
+    {
+      "label": {
+        "en": "Backward",
+        "zh-hans": "反向"
+      },
+      "nodes": [
+        {
+          "kind": "vector",
+          "text": {
+            "en": "At h₃: −0.75",
+            "zh-hans": "对 h₃：−0.75"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "At h₂: −0.375",
+            "zh-hans": "对 h₂：−0.375"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "At h₁: −0.1875",
+            "zh-hans": "对 h₁：−0.1875"
+          }
+        }
+      ],
+      "flow": {
+        "en": "h₃ → h₂ → h₁: multiply the loss rate by 0.5 at each edge.",
+        "zh-hans": "h₃ → h₂ → h₁：损失变化率每跨过一条边，就乘一次 0.5。"
+      }
+    },
+    {
+      "label": {
+        "en": "Shared parameter",
+        "zh-hans": "共享参数"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Uses: 0 − 0.375 − 0.375",
+            "zh-hans": "各次贡献：0 − 0.375 − 0.375"
+          }
+        },
+        {
+          "kind": "vector",
+          "text": {
+            "en": "One gradient for w: −0.75",
+            "zh-hans": "w 的总梯度：−0.75"
+          }
+        },
+        {
+          "kind": "parameter",
+          "text": {
+            "en": "Updated w = 0.575",
+            "zh-hans": "更新后 w = 0.575"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Sum the contributions → update the shared w once, with learning rate 0.1.",
+        "zh-hans": "汇总各次贡献 → 用学习率 0.1 更新一次共享权重 w。"
+      }
+    }
+  ]
+}
