@@ -18,9 +18,9 @@ test('Publication metadata rejects missing, contradictory and invalid dates', ()
   }
 });
 
-test('The September 15 release promotes only its declared bilingual lessons', () => {
+test('The complete September 15 release promotes only its declared bilingual lessons', () => {
   const root = new URL('../', import.meta.url);
-  const release = JSON.parse(readFileSync(new URL('data/releases/2026-09-15-publication.json', root), 'utf8'));
+  const release = JSON.parse(readFileSync(new URL('data/releases/2026-09-15-complete-publication.json', root), 'utf8'));
   const groups = [release.previous_published_ids, release.promoted_ids, release.remaining_drafts];
   const ids = groups.flat();
   assert.equal(new Set(ids).size, 60, 'Every chapter, primer and extension has one publication state');
@@ -32,7 +32,7 @@ test('The September 15 release promotes only its declared bilingual lessons', ()
       if (release.remaining_drafts.includes(id)) assert.equal(state.draft, true, `${id}: unauthorized promotion`);
       else {
         const date = release.promoted_ids.includes(id) ? release.published
-          : /^ch-0[1-4]$/.test(id) ? '2026-09-10' : '2026-09-13';
+          : release.previous_published_dates[id];
         assert.deepEqual(state, { draft: false, published: date }, `${locale}/${id}: release date`);
       }
     }

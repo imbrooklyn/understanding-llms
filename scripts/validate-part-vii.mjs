@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { renderFigure } from '../src/plugins/remark-book.mjs';
+import { assertPublicationState } from './publication-state.mjs';
 const root = new URL('../', import.meta.url);
 const read = name => readFileSync(new URL(name, root), 'utf8');
 const json = name => JSON.parse(read(name));
@@ -22,8 +23,8 @@ const contract = {
 for (const id of ids) {
   const bodies = locales.map(locale=>read(`src/content/docs/${locale}/${id}.md`));
   for (const [i,body] of bodies.entries()) {
-    assert.match(body,/^draft: true$/m,`${id} remains draft`);
-    assert.doesNotMatch(body,/^published:|TODO|in progress|book-lab|<details|<button|<input|<select|<form/i);
+    assertPublicationState(body.split('---')[1], `${locales[i]}/${id}`);
+    assert.doesNotMatch(body,/TODO|in progress|book-lab|<details|<button|<input|<select|<form/i);
     assert.match(body,locales[i]==='en'?/## Reference answers\n/:/## 参考解答\n/);
     assert.match(body,locales[i]==='en'?/## References\n/:/## 参考文献\n/);
     const sections=body.split(/^## /m);

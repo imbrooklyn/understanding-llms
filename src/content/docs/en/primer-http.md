@@ -1,7 +1,7 @@
 ---
 title: "HTTP and API Foundations"
 description: "Follow local HTTP requests, JSON responses, credentials, streaming and bounded failures."
-draft: true
+published: 2026-09-15
 sidebar:
   order: 102
 ---

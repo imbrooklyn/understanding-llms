@@ -5,6 +5,12 @@ sidebar:
   order: 2
 ---
 
+## 2026-09-15 — All completed chapters and the HTTP primer
+
+- Published Chapters 40–53 and Primer-HTTP in both languages, adding 30 reading pages. All 57 core chapters and both primers are now available.
+- Completed the nine-part reading sequence and restored prerequisite links from Chapters 54 and 57. The temporary partial-release notices have been removed.
+- Preserved all earlier release dates, technical explanations, figures, code, notebooks and historical evidence. The optional multimodal extension remains unpublished; companion services remain local demonstrations.
+
 ## 2026-09-15 — Part IX
 
 - Published Chapters 54–57 in English and Chinese: eight new reading pages on the service, versions, operations and capstone evidence.

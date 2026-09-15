@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-The book contains nine progressive parts, 57 core chapters, two foundation primers and one online multimodal extension. Chapters 1–39, Chapters 54–57 and the Python primer are available in both languages. Chapters 54–57 were released on September 15, 2026; the earlier publication dates are unchanged. Chapters 40–53 and the HTTP primer remain web drafts, with their text and prerequisite project in the source repository. Part IX continues that project. The multimodal extension remains planned and unpublished.
+The book contains nine progressive parts, 57 core chapters, two foundation primers and one optional online multimodal extension. All 57 chapters and both primers are available in English and Chinese. Chapters 40–57 and the HTTP primer were released on September 15, 2026; earlier publication dates are unchanged. The multimodal extension remains planned and unpublished.
 
 ## Part I: Opening the Black Box
 
@@ -66,23 +66,23 @@ The book contains nine progressive parts, 57 core chapters, two foundation prime
 
 ## Part VII: Connecting Context, Tools, and Knowledge
 
-- **Chapter 40** Beyond Prompts: Context Engineering
-- **Chapter 41** Structured Output: A Machine-Checkable Data Contract
-- **Chapter 42** Function Calling and Tools: Who Actually Executes?
-- **Chapter 43** MCP: Stable Interoperability Concepts and Version Boundaries
-- **Chapter 44** Modern Retrieval: BM25, Dense, Hybrid, and Rerankers
-- **Chapter 45** Building a Cited RAG System from Scratch
-- **Chapter 46** RAG Engineering and Layered Evaluation
+- [**Chapter 40** Beyond Prompts: Context Engineering](../ch-40/)
+- [**Chapter 41** Structured Output: A Machine-Checkable Data Contract](../ch-41/)
+- [**Chapter 42** Function Calling and Tools: Who Actually Executes?](../ch-42/)
+- [**Chapter 43** MCP: Stable Interoperability Concepts and Version Boundaries](../ch-43/)
+- [**Chapter 44** Modern Retrieval: BM25, Dense, Hybrid, and Rerankers](../ch-44/)
+- [**Chapter 45** Building a Cited RAG System from Scratch](../ch-45/)
+- [**Chapter 46** RAG Engineering and Layered Evaluation](../ch-46/)
 
 ## Part VIII: From Workflows to Trustworthy Agents
 
-- **Chapter 47** Before Agents: Workflows, State, and Memory
-- **Chapter 48** Agent Skills: Packaging Reusable Practices
-- **Chapter 49** Reliable Agents: Permissions, Budgets, Replay, and Recovery
-- **Chapter 50** From Model Evaluation to System Evaluation
-- **Chapter 51** Hallucination, Bias, Privacy, and Copyright: Continuous Governance
-- **Chapter 52** Prompt Injection, Jailbreaks, and Untrusted Input/Output
-- **Chapter 53** Secrets, Permissions, Tenant Isolation, and Supply Chain Security
+- [**Chapter 47** Before Agents: Workflows, State, and Memory](../ch-47/)
+- [**Chapter 48** Agent Skills: Packaging Reusable Practices](../ch-48/)
+- [**Chapter 49** Reliable Agents: Permissions, Budgets, Replay, and Recovery](../ch-49/)
+- [**Chapter 50** From Model Evaluation to System Evaluation](../ch-50/)
+- [**Chapter 51** Hallucination, Bias, Privacy, and Copyright: Continuous Governance](../ch-51/)
+- [**Chapter 52** Prompt Injection, Jailbreaks, and Untrusted Input/Output](../ch-52/)
+- [**Chapter 53** Secrets, Permissions, Tenant Isolation, and Supply Chain Security](../ch-53/)
 
 ## Part IX: From Prototype to Maintainable Systems
 
@@ -94,7 +94,7 @@ The book contains nine progressive parts, 57 core chapters, two foundation prime
 ## Foundation primers
 
 - [**Primer-PY**: Python, notebooks, NumPy/PyTorch tensors, and reading errors](../primer-py/). Read after the core of Chapter 5 and before the programming exercises.
-- **Primer-HTTP**: Client/server systems, HTTP, JSON, authentication, streaming, timeouts, and retries.
+- [**Primer-HTTP**: Client/server systems, HTTP, JSON, authentication, streaming, timeouts, and retries](../primer-http/). Read before Chapter 42’s practice; Chapters 43 and 54 reuse it.
 
 ## Online extension
 

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { renderFigure } from '../src/plugins/remark-book.mjs';
+import { assertPublicationState } from './publication-state.mjs';
 const root=new URL('../',import.meta.url);
 const read=p=>readFileSync(new URL(p,root),'utf8');
 const json=p=>JSON.parse(read(p));
@@ -12,7 +13,8 @@ const evidence={47:['use_evidence','ABSTAINED','750','RNN'],48:['1.0.0','SKILL.m
 for(const n of chapters){
  const bodies=['en','zh-hans'].map(l=>read(`src/content/docs/${l}/ch-${n}.md`));
  for(const [i,body] of bodies.entries()){
-  assert.match(body,/^draft: true$/m);assert.doesNotMatch(body,/^published:|^date:|in progress|Replace the placeholder|TODO|<details|<button|<input|<select|<form|```book-lab/im);
+  assertPublicationState(body.split('---')[1], `ch-${n}/${i}`);
+  assert.doesNotMatch(body,/^date:|in progress|Replace the placeholder|TODO|<details|<button|<input|<select|<form|```book-lab/im);
   assert.match(body,i===0?/## Summary\n/:/## 本章小结\n/);
   assert.match(body,i===0?/## References\n/:/## 参考文献\n/);
   const sections=body.split(/^## /m),ex=sections.find(s=>s.startsWith(i===0?'Exercises\n':'习题\n')),answers=sections.find(s=>s.startsWith(i===0?'Reference answers\n':'参考解答\n')).split(/\*\*(?:Part checkpoint answers|本部分检查点解答)/)[0];

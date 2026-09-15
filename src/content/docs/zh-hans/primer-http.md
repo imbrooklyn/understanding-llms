@@ -1,7 +1,7 @@
 ---
 title: "HTTP 与 API 基础"
 description: "读懂本地 HTTP 请求、JSON 响应、凭证、流式传输与有上限的失败处理。"
-draft: true
+published: 2026-09-15
 sidebar:
   order: 102
 ---
