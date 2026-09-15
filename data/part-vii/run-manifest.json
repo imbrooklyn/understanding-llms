@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-09-13T17:44:39.297936+00:00",
+  "python": "3.12.10 (main, Apr  8 2025, 11:35:47) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "conditions": "fresh Python 3.12 CPU venv; no GPU; HTTP loopback and MCP subprocess; deterministic local composer; no paid API or model sampling",
+  "elapsed_seconds": 0.695347,
+  "inputs_sha256": {
+    "code/knowledge-assistant/baselines.py": "837f3978c7393c10e5403e1e9e768cbaefa089977fe0ab6608ef3b582f3e7916",
+    "code/knowledge-assistant/contracts.py": "91b020099b07df7a56e4932cd5f2b90a7e6c931b620e6ba0af80e7fac24aab0e",
+    "code/knowledge-assistant/format_adaptation.py": "a3388baea5562cb6c547819a2faec55ebac957351d4f9bd4a4b8d1dbb0758eda",
+    "code/knowledge-assistant/http_scaffold.py": "84ef56cb42e8660b71eba7402f863307bec4a391ccdfb3381bd1b152aad18aea",
+    "code/knowledge-assistant/ka1.py": "fdf0c982ad60087ee46fd69543c7442fb5611c5c5a6a6c491ff9f6a260419f97",
+    "code/knowledge-assistant/mcp_readonly.py": "d766e6c8f0ca2f3c1a47cb45c6ec4a304ab3d3e6ee8c636645efd38c99dfb2f2",
+    "code/knowledge-assistant/rag.py": "77e8f9f4d048ad57e7fad94b503e6074ea507cded1df7ea84cceb0a8d9041cb5",
+    "code/knowledge-assistant/rag_eval.py": "2d3049b7a75fbf68feeb3a51abdfffbbbaf4566d6a1b9116d9712c8758ff3168",
+    "code/knowledge-assistant/read_tools.py": "accbaede1581ee0282ff883e62f74dd50ed6d0412000b4cec68507378488064e",
+    "code/knowledge-assistant/retrieval.py": "74ebdd3d11ef1dc0b8d1313a18891114830aa812bb4b31e0c444a66cc13826af",
+    "code/part-vii/run_notebooks.py": "33f3cefbf9cb3b73386e54fa8f5c24f0bdde613245c77b79f598085c67f29583",
+    "code/part-vii/run_records.py": "f1b4633e50e968028bb7b48bcdfffafac8dbf5ddf7095ab505570ea0c3c7ca31",
+    "code/part-vii/test_pipeline.py": "2297bfa6b4ab5a1c0d017dbe5d3567bce8cae22a3146e9dc284e3417215f9446",
+    "data/knowledge-assistant/ka2-answer-schema-v1.json": "3b437b581f08b5428adbb5f78a05af29fd530d0ee75fa8aaf298f000e8fee19c",
+    "data/knowledge-assistant/ka2-content-v1.json": "f574088fd852a49eb8e862d757c3b53285f279ab46ce486d3bbadacecc11508e",
+    "data/knowledge-assistant/ka2-context-contract-v1.json": "cb78646192f91519e9a20feb77ee5cd304e76e00d48e041d0feb4c5ba8e271b3",
+    "data/knowledge-assistant/ka3-orders-v1.json": "2c4f9d1ded2404e848eb9c384b3fe52190ff49a55ab5cc750dc4d6f085ac3254",
+    "data/knowledge-assistant/ka4-documents-v1.json": "7c91973946ffb18ff661d1c8b05e978b4b17e3ba9437d97dfef61d4bba9e33da",
+    "data/knowledge-assistant/ka4-eval-v1.json": "ba6ac645042eb713d55a67c370470d88648d6e9c296bcd45b9d48880567bed34",
+    "data/knowledge-assistant/ka4-retrieval-rules-v1.json": "bdd4135492812b0e0b1945d5a3caf6a33f52ca7e51c1d5d802356e53a812beac",
+    "data/part-vii/expected-v1.json": "503888459381ba75aaf93b5a1392430230862879569cb0960f01f2b733079f16",
+    "data/part-vii/inherited-freeze-v1.json": "3e8468eb37e0b4e00af3975139f19dfca80f8f85d7ea5e1c4005fa3e0dd4e420",
+    "code/part-vii/requirements-tested.txt": "5af9cea6be185b7a6742d6be0af94adca3955676b0b8c5d516635c5d27526171"
+  },
+  "outputs_sha256": {
+    "context-run.json": "0ba54f3a6b2c0dffc84b0c8401b2683f24808445ca6b9239858d55e68fd44bb5",
+    "schema-run.json": "7c60a304b9c53fb2593d858806193b1fdbb390c6c90813fae9ad520f7f6d68f4",
+    "tool-run.json": "10fa4fee3179c6d62e035287e7d1a509e37eb17849654b390b156db51db9de15",
+    "http-run.json": "6bcd3e7a269c3c36732a96c2342713ee05c94eed18c00aa42abc92446400faf4",
+    "mcp-run.json": "8713602243a9fb903bbc646c983fa894f52eb274a5eba45bb00a8f4d2c7e44f0",
+    "retrieval-run.json": "ec1df8eb8bc226e164f3a6416b7fdc826ca8be9c8b1f6d40126d62d62c2d7875",
+    "eval-run.json": "b2035267d9b6f6614e56f195c38a082b48e01f3c07e2865bd8de0c367455b6d3",
+    "rag-traces.json": "04293a2cae108271aa27ef3dc4f99c11833816ddd169f2437e83b5a3aee83481",
+    "ablations-run.json": "6d31907fba121a0b77dc4b6e45e8a5e6e8e5b6520b055e883273078cadb529b3"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 44.1 — Fusion can move an obsolete source upward.",
+    "zh-hans": "图 44.1：融合也可能把旧来源移到前面。"
+  },
+  "alt": {
+    "en": "BM25 ranks B then A, authored dense ranks A then B. Equal RRF sums are broken by A–E order, making A first. A reranker cannot recover absent candidates.",
+    "zh-hans": "BM25 排 B、A，教学稠密排 A、B；RRF 总分相同，按 A—E 解并列，A 成为首项。重排无法找回缺失候选。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Same query: Beijing lodging",
+        "zh-hans": "同一查询：北京住宿"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "BM25: B → A → C",
+            "zh-hans": "BM25：B → A → C"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Dense: A → B → C",
+            "zh-hans": "稠密：A → B → C"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "RRF: A = B; tie → A",
+            "zh-hans": "RRF：A = B；并列选 A"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Higher coverage can coexist with a worse first answer source.",
+        "zh-hans": "覆盖提高，也可能伴随首项来源变差。"
+      }
+    },
+    {
+      "label": {
+        "en": "Shortlist boundary",
+        "zh-hans": "短名单边界"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Candidates C, D, E",
+            "zh-hans": "候选 C、D、E"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Rerank only these items",
+            "zh-hans": "只对这些候选重排"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Required B still absent",
+            "zh-hans": "所需 B 仍然缺失"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Repair retrieval or filtering before tuning the last scoring stage.",
+        "zh-hans": "先修检索或过滤，再考虑调最后的评分环节。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": "ka5-workflow-v1",
+  "candidate_order": [
+    "use_evidence",
+    "abstain"
+  ],
+  "max_model_calls": 1,
+  "max_transitions": 8,
+  "on_date": "2026-09-14",
+  "topic": "travel",
+  "authority_allowlist": [
+    "fictional-policy-office"
+  ],
+  "states": {
+    "START": [
+      "RETRIEVED",
+      "STOPPED"
+    ],
+    "RETRIEVED": [
+      "VERIFIED",
+      "ABSTAINED",
+      "STOPPED"
+    ],
+    "VERIFIED": [
+      "DECIDED",
+      "STOPPED"
+    ],
+    "DECIDED": [
+      "COMPOSED",
+      "ABSTAINED",
+      "STOPPED"
+    ],
+    "COMPOSED": [
+      "ANSWERED",
+      "ABSTAINED",
+      "STOPPED"
+    ],
+    "ANSWERED": [],
+    "ABSTAINED": [],
+    "STOPPED": []
+  }
+}

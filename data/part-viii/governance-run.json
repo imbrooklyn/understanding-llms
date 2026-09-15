@@ -1,0 +1,55 @@
+{
+  "provenance": "Actual local projection and deletion over synthetic copies; no real user records.",
+  "minimized": {
+    "question": "Beijing lodging",
+    "on_date": "2026-09-14",
+    "topic": "travel",
+    "locale": "en"
+  },
+  "deletion": {
+    "before": {
+      "logs": 2,
+      "memory": 2,
+      "cache": 2,
+      "feedback": 2
+    },
+    "after": {
+      "logs": 1,
+      "memory": 1,
+      "cache": 1,
+      "feedback": 1
+    },
+    "evidence": "counts only; no subject content in deletion receipt"
+  },
+  "expiry": {
+    "before": 2,
+    "after": 1,
+    "remaining_ids": [
+      "audit"
+    ]
+  },
+  "unsafe_group_pairs": [
+    {
+      "group": "amber",
+      "amount_yuan": 750
+    },
+    {
+      "group": "violet",
+      "amount_yuan": 600
+    }
+  ],
+  "group_pairs": [
+    {
+      "group": "amber",
+      "amount_yuan": 750
+    },
+    {
+      "group": "violet",
+      "amount_yuan": 750
+    }
+  ],
+  "correction": {
+    "current": 750,
+    "historical": 600
+  }
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{locale}}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{{title}}</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main><nav aria-label="{{language}}"><a href="/?lang=en">English</a> · <a href="/?lang=zh-hans">简体中文</a></nav>
+<h1>{{title}}</h1><p>{{scope}}</p><p class="identity">{{identity}}</p>
+<form id="ask"><label for="question">{{question}}</label><textarea id="question" name="question" maxlength="500" rows="3" required aria-describedby="question-help">{{sample}}</textarea><p id="question-help">{{question_help}}</p>
+<label for="on-date">{{date}}</label><input type="date" id="on-date" value="2026-09-14" required>
+<div class="actions"><button id="submit" type="submit">{{ask}}</button><button id="order" type="button">{{read_order}}</button><button id="cancel" type="button" disabled>{{cancel}}</button></div></form>
+<p id="status" role="status" aria-live="polite" aria-atomic="true" data-error="{{connection_unknown}}">{{ready}}</p>
+<section aria-labelledby="result-heading"><h2 id="result-heading">{{result}}</h2><div id="answer"></div><div id="citations"></div></section>
+<div class="actions"><button id="clear" type="button">{{clear}}</button><button id="undo" type="button" disabled>{{undo}}</button><button id="handoff" type="button">{{handoff}}</button></div>
+<p id="handoff-note"></p><p>{{handoff_boundary}}</p>
+<fieldset id="feedback" disabled><legend>{{feedback}}</legend><button type="button" data-category="wrong_source">{{wrong_source}}</button><button type="button" data-category="missing_answer">{{missing_answer}}</button><button type="button" data-category="hard_to_use">{{hard_to_use}}</button></fieldset>
+<p>{{privacy}}</p><noscript>{{no_script}}</noscript></main></body></html>

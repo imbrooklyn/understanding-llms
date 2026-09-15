@@ -1,0 +1,33 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "version": "ka-system-card-v1",
+  "intended_use": "Teach bounded dated-policy QA and simulated own-order operations.",
+  "excluded_use": "Real orders/payments, public network agent service, legal advice, arbitrary browsing or multi-agent orchestration.",
+  "components": [
+    "KA-0 lexical baselines",
+    "KA-2 schema/context",
+    "KA-3 read-only tools",
+    "KA-4 extractive RAG",
+    "KA-5 one-choice workflow",
+    "KA-6 source Skill and SQLite recovery",
+    "KA-7 diagnostics and rejected automatic Judge",
+    "KA-8 local governance/security controls"
+  ],
+  "model": "Optional installed Qwen3-1.7B quantization; fixed digest and raw local CPU calls in data/part-viii/model-run.json; not the accepted KA-1 Mini GPT.",
+  "human_oversight": "Fictional policy owner resolves source disputes; approver permits exact writes; service owner reconciles uncertain outcomes; security/data stewards own incidents.",
+  "failure_response": "Abstain for missing support, refuse forbidden access, stop at limits, reconcile uncertain committed effects.",
+  "evaluation": "Data/part-viii actual records; small diagnostic coverage, not certification.",
+  "residual_risks": [
+    "Source owner can publish a wrong but authentic policy.",
+    "Two synthetic group values do not measure societal fairness or unequal access.",
+    "Backups, provider retention and model training are outside this simulation.",
+    "A license may not cover all rights or every intended use.",
+    "Adversarial language and unknown semantic failures remain possible.",
+    "Remote side effects need the remote service contract; single-worker scope only.",
+    "Compromised host identity is outside this fixture.",
+    "Matching bytes do not prove a benign original or secure conversion provenance."
+  ],
+  "deployment_status": "Local teaching simulation only; all new chapters draft; no deployment."
+}

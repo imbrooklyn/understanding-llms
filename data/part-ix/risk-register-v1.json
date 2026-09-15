@@ -1,0 +1,122 @@
+{
+  "version": "part-ix-risks-v1",
+  "as_of": "2026-09-15",
+  "license": "CC-BY-SA-4.0",
+  "owner_definition": "Named human roles in a fictional local project; not external approval signatures.",
+  "entries": [
+    {
+      "id": "retrieval_miss",
+      "condition": "Supported paraphrases may not match lexical cards.",
+      "owner": "evaluation_maintainer",
+      "mitigation": "Retain synonym miss and require versioned paired rewrite/date regressions.",
+      "evidence_paths": [
+        "data/part-ix/service-run.json"
+      ],
+      "residual": "Broad paraphrase coverage remains unaccepted.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "stale_policy",
+      "condition": "A valid structured answer may use the wrong effective date.",
+      "owner": "policy_owner",
+      "mitigation": "Source approval, immutable intervals, bound candidate gate and scoped cache.",
+      "evidence_paths": [
+        "data/part-ix/release-run.json"
+      ],
+      "residual": "Human source authority and real-world policy correctness are not automated.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "authority",
+      "condition": "Guessed IDs or untrusted text could request another subject or a write.",
+      "owner": "access_administrator",
+      "mitigation": "Host identity, exact schema, own-order check, no HTTP write endpoint.",
+      "evidence_paths": [
+        "data/part-ix/capstone-run.json"
+      ],
+      "residual": "Public demo keys are not production identity.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "cancel_race",
+      "condition": "A late result or misclassified cancellation may mislead users and metrics.",
+      "owner": "service_maintainer",
+      "mitigation": "Locked terminal publication, worker-group stop, exception-order regression.",
+      "evidence_paths": [
+        "data/part-ix/initial-cancellation-observation.json",
+        "data/part-ix/service-run.json"
+      ],
+      "residual": "Connection loss alone does not stop work; Windows termination is unsupported.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "overload",
+      "condition": "Slow or failing dependencies exhaust capacity.",
+      "owner": "operator",
+      "mitigation": "Input/active/attempt/deadline/storage bounds, breaker, honest fallback and monitor.",
+      "evidence_paths": [
+        "data/part-ix/resilience-run.json",
+        "data/part-ix/policy-run.json"
+      ],
+      "residual": "No hostile public-network or sustained-capacity validation.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "rollback_scope",
+      "condition": "Restoring a pointer leaves in-flight work and cannot reverse incompatible state.",
+      "owner": "release_owner",
+      "mitigation": "Preserve manifests/traces, account for old jobs, check new request after switch.",
+      "evidence_paths": [
+        "data/part-ix/release-run.json"
+      ],
+      "residual": "Configuration-only drill; executable and migration recovery require separate artifacts.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "feedback_privacy",
+      "condition": "Biased or private reports may become unjustified labels or retained personal text.",
+      "owner": "feedback_reviewer",
+      "mitigation": "Bounded categories, quarantine, explicit minimized regression, expiry and deletion.",
+      "evidence_paths": [
+        "data/part-ix/feedback-run.json"
+      ],
+      "residual": "No full production erasure workflow or causal quality estimate.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "ux_accessibility",
+      "condition": "A correct result may still be hard to perceive or act on.",
+      "owner": "ux_maintainer",
+      "mitigation": "Bilingual associated labels, keyboard focus, status and citation checks; retain repaired order field defect.",
+      "evidence_paths": [
+        "data/part-ix/ui-initial-failure.json"
+      ],
+      "residual": "Assistive-technology user testing and full conformance remain unverified.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "judge_and_selection",
+      "condition": "An attractive score may conceal failed model selection or judge calibration.",
+      "owner": "model_owner",
+      "mitigation": "Retain rejected candidates, separate task denominators and use independent expected outcomes.",
+      "evidence_paths": [
+        "data/part-ix/capstone-run.json",
+        "data/part-viii/judge-calibration.json"
+      ],
+      "residual": "No new general neural-quality claim.",
+      "status": "open_with_local_mitigation"
+    },
+    {
+      "id": "supply_and_environment",
+      "condition": "Hashes may be mistaken for trust, licenses or portability.",
+      "owner": "maintainer",
+      "mitigation": "Retain reviewed Skill bytes, manifests, installed dependency metadata and license-file evidence.",
+      "evidence_paths": [
+        "data/part-ix/license-inventory-v1.json",
+        "data/part-ix/dependency-inventory.json"
+      ],
+      "residual": "No signed publisher chain or new Linux validation; hashes do not restore artifacts.",
+      "status": "open_with_local_mitigation"
+    }
+  ]
+}

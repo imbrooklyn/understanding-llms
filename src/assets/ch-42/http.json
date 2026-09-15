@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure HTTP.1 — The request outcome and order state are different fields.",
+    "zh-hans": "图 HTTP.1：请求结果与订单状态位于不同字段。"
+  },
+  "alt": {
+    "en": "The client sends a GET URL and placeholder credential to a loopback server. The server checks access and returns HTTP 200 plus a timestamped processing record.",
+    "zh-hans": "客户端向回环服务器发送 GET 地址和占位凭证；服务器核对访问权限，返回 HTTP 200 及带时间的处理中记录。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Request",
+        "zh-hans": "请求"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Client: URL + credential",
+            "zh-hans": "客户端：URL + 凭证"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "GET /orders/A-104",
+            "zh-hans": "GET /orders/A-104"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Server checks ownership",
+            "zh-hans": "服务器核对订单归属"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The actual local port is chosen by the operating system.",
+        "zh-hans": "实际本地端口由操作系统分配。"
+      }
+    },
+    {
+      "label": {
+        "en": "Response",
+        "zh-hans": "响应"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "HTTP 200: request succeeded",
+            "zh-hans": "HTTP 200：请求成功"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Body: processing + as_of",
+            "zh-hans": "消息体：processing + as_of"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Validate before using data",
+            "zh-hans": "使用数据前先校验"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A timeout is a client observation, not an order status.",
+        "zh-hans": "超时是客户端观察，不是订单状态。"
+      }
+    }
+  ]
+}

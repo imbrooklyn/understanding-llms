@@ -1,0 +1,182 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 47.1 — Who chooses the next step?",
+    "zh-hans": "图 47.1：下一步由谁决定？"
+  },
+  "alt": {
+    "en": "Four control arrangements for the same lodging question, followed by all branches of the bounded workflow. Only the decision after source verification is model-controlled.",
+    "zh-hans": "同一住宿问题的四种控制方式，以及受限工作流的全部分支。只有来源核验之后的一处选择交给模型。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Single call",
+        "zh-hans": "单次调用"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Question + supplied policy",
+            "zh-hans": "问题＋给定制度"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "One model call",
+            "zh-hans": "一次模型调用"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Answer → stop",
+            "zh-hans": "回答 → 停止"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The application supplies everything before the call.",
+        "zh-hans": "应用在调用前备齐输入。"
+      }
+    },
+    {
+      "label": {
+        "en": "Chain",
+        "zh-hans": "调用链"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Retrieve",
+            "zh-hans": "检索"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Compose",
+            "zh-hans": "组织回答"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Stop",
+            "zh-hans": "停止"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The next operation is fixed in advance.",
+        "zh-hans": "操作顺序事先确定。"
+      }
+    },
+    {
+      "label": {
+        "en": "Workflow",
+        "zh-hans": "工作流"
+      },
+      "nodes": [
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Retrieve → verify",
+            "zh-hans": "检索 → 核验"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Enough evidence?",
+            "zh-hans": "证据充分？"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Answer or abstain → stop",
+            "zh-hans": "回答或暂不作答 → 停止"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Branches and guards are written by the application.",
+        "zh-hans": "应用规定分支和进入条件。"
+      }
+    },
+    {
+      "label": {
+        "en": "Open decision loop",
+        "zh-hans": "开放决策循环"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Observe current state",
+            "zh-hans": "读取当前状态"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Model chooses tool or finish",
+            "zh-hans": "模型选择工具或结束"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Tool result → observe again",
+            "zh-hans": "工具结果 → 再读状态"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Without a host limit, the return arrow need not terminate.",
+        "zh-hans": "若宿主不设上限，返回箭头可能一直循环。"
+      }
+    },
+    {
+      "label": {
+        "en": "KA-5 exact graph",
+        "zh-hans": "KA-5 的实际状态图"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "START → RETRIEVED",
+            "zh-hans": "START → RETRIEVED"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Valid → VERIFIED → DECIDED",
+            "zh-hans": "有效 → VERIFIED → DECIDED"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "use_evidence → COMPOSED → ANSWERED",
+            "zh-hans": "use_evidence → COMPOSED → ANSWERED"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Invalid evidence → ABSTAINED; abstain → ABSTAINED; invalid choice, timeout or exhausted budget → STOPPED. Terminal states have no outgoing transition.",
+        "zh-hans": "证据无效 → ABSTAINED；选择 abstain → ABSTAINED；选择非法、超时或预算耗尽 → STOPPED。终止状态没有后续转移。"
+      }
+    }
+  ]
+}

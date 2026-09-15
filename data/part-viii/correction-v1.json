@@ -1,0 +1,31 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "version": "correction-v1",
+  "provenance": "Original simulated correction lifecycle.",
+  "events": [
+    {
+      "stage": "reported",
+      "detail": "Current answer used 600 from v1; no personal text retained."
+    },
+    {
+      "stage": "triaged",
+      "owner": "policy_owner",
+      "detail": "Compare question date 2026-09-14 with v1 validity ending 2026-01-01."
+    },
+    {
+      "stage": "repaired",
+      "detail": "Enforce validity before selection; invalidate answer cache for old processing version."
+    },
+    {
+      "stage": "verified",
+      "detail": "Expected current 750 and historical 600; actual rerun is recorded separately."
+    },
+    {
+      "stage": "closed",
+      "owner": "policy_owner",
+      "detail": "Keep synthetic current/history regression; monitor recurrence; no claim that a real employee was contacted."
+    }
+  ]
+}

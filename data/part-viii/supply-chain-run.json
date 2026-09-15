@@ -1,0 +1,29 @@
+{
+  "provenance": "Actual hash verification of copied files; changed bytes never executed.",
+  "cases": [
+    {
+      "component": "skill",
+      "before": true,
+      "after": false,
+      "executed_changed_bytes": false
+    },
+    {
+      "component": "helper",
+      "before": true,
+      "after": false,
+      "executed_changed_bytes": false
+    },
+    {
+      "component": "mcp",
+      "before": true,
+      "after": false,
+      "executed_changed_bytes": false
+    }
+  ],
+  "model_digest_case": {
+    "expected": "458ce03a21878025d072b8740d0e0e3b34abec3585fdadb0b5ab92d1e85dfb61",
+    "offered": "0000000000000000000000000000000000000000000000000000000000000000",
+    "accepted": false,
+    "provenance": "Authored mismatched manifest digest; no weight corruption performed."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "part-vii-inherited-v1",
+  "as_of": "2026-09-14",
+  "inputs_sha256": {
+    "data/knowledge-assistant/ka0-v1.json": "03aff08b8036ffe18329e9bedca80c31aaf227d5f9baf0d8b0522d2c548558f5",
+    "data/knowledge-assistant/ka0-lexical-run.json": "d2240c8e9f019fb699aa386eb283e01cb08351e47a5030baf4627ce26696cc56",
+    "data/knowledge-assistant/ka-static-v1.json": "942f13b39b82056c1dedc9a1dd0891743a78a4c05dd67f02c1c86ec6cd996a72",
+    "data/part-ii/nnlm-run.json": "f6e5f5b747179f8225d3ca59c03fea9ae468411806681eb536975b3b9a9072d1",
+    "data/knowledge-assistant/ka1-contract-v1.json": "00300195c59bf81d81c6c40495b3e02cb44765063e04e927a0a4f15d7058a4b4",
+    "data/knowledge-assistant/ka1-freeze-v1.json": "e5c48e9377d8c8fae2ce1229340e2c1179f71d90ecce28fc642fa3603e6891e5",
+    "data/knowledge-assistant/ka1-run-v1.json": "5e2b34ef4d935b4364dd7a2d47765011426e22047bdf10e6745a65f5129015a6",
+    "data/knowledge-assistant/ka1-format-run-v1.json": "509d33f91dc6eb19768b2859905a041406b2ec3e3a0c0ad3b33e11e1046ad6c1",
+    "code/knowledge-assistant/baselines.py": "837f3978c7393c10e5403e1e9e768cbaefa089977fe0ab6608ef3b582f3e7916",
+    "code/knowledge-assistant/ka1.py": "fdf0c982ad60087ee46fd69543c7442fb5611c5c5a6a6c491ff9f6a260419f97"
+  }
+}

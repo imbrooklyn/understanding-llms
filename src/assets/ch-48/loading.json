@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 48.1 — Load a practice without granting authority.",
+    "zh-hans": "图 48.1：加载做法，不等于授予权限。"
+  },
+  "alt": {
+    "en": "Metadata selects the source check. Its body points to one reference, helper and report template. The host checks the package before executing the helper.",
+    "zh-hans": "元数据定位来源核验；正文指向一份参考规则、一个辅助程序和一个报告模板。宿主先核对包，再执行程序。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Discovery → activation",
+        "zh-hans": "发现 → 启用"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "name + description",
+            "zh-hans": "name＋description"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Host selects source-verification",
+            "zh-hans": "宿主选中 source-verification"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Read SKILL.md",
+            "zh-hans": "读取 SKILL.md"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Other Skill bodies remain unloaded.",
+        "zh-hans": "其他 Skill 的正文仍未加载。"
+      }
+    },
+    {
+      "label": {
+        "en": "Needed resources",
+        "zh-hans": "所需资源"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Validity rule: start included, end excluded",
+            "zh-hans": "日期规则：含起日，不含止日"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "verify.py → exact span + authority checks",
+            "zh-hans": "verify.py → 核对原文范围与来源"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Report: supported / failed",
+            "zh-hans": "报告：支持／不通过"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The script runs under host permission; a reference cannot add network or write access.",
+        "zh-hans": "脚本按宿主权限运行；参考资料不能增加联网或写入权限。"
+      }
+    }
+  ]
+}

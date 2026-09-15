@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "tag": "qwen3:1.7b",
+  "registry": "registry.ollama.ai/library/qwen3",
+  "manifest_sha256": "458ce03a21878025d072b8740d0e0e3b34abec3585fdadb0b5ab92d1e85dfb61",
+  "manifest": {
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+    "config": {
+      "mediaType": "application/vnd.docker.container.image.v1+json",
+      "digest": "sha256:517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+      "size": 487
+    },
+    "layers": [
+      {
+        "mediaType": "application/vnd.ollama.image.model",
+        "digest": "sha256:3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+        "size": 1359279776
+      },
+      {
+        "mediaType": "application/vnd.ollama.image.template",
+        "digest": "sha256:eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+        "size": 1482
+      },
+      {
+        "mediaType": "application/vnd.ollama.image.license",
+        "digest": "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+        "size": 11338
+      },
+      {
+        "mediaType": "application/vnd.ollama.image.params",
+        "digest": "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+        "size": 120
+      }
+    ]
+  },
+  "blobs": [
+    {
+      "media_type": "application/vnd.docker.container.image.v1+json",
+      "declared_digest": "sha256:517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+      "actual_sha256": "517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+      "declared_size": 487,
+      "actual_size": 487,
+      "matches": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.model",
+      "declared_digest": "sha256:3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+      "actual_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+      "declared_size": 1359279776,
+      "actual_size": 1359279776,
+      "matches": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.template",
+      "declared_digest": "sha256:eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+      "actual_sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+      "declared_size": 1482,
+      "actual_size": 1482,
+      "matches": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.license",
+      "declared_digest": "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+      "actual_sha256": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+      "declared_size": 11338,
+      "actual_size": 11338,
+      "matches": true
+    },
+    {
+      "media_type": "application/vnd.ollama.image.params",
+      "declared_digest": "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+      "actual_sha256": "cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+      "declared_size": 120,
+      "actual_size": 120,
+      "matches": true
+    }
+  ],
+  "upstream": "https://huggingface.co/Qwen/Qwen3-1.7B",
+  "license": "Apache-2.0 (upstream model card and license verified)",
+  "conversion": "Installed Ollama Q4_K_M GGUF; no independently verified build attestation linking the conversion to upstream weights.",
+  "redistribution": "No weight blobs or runtime binaries included.",
+  "acceptance": "Pinned only for optional local experiments; not approved as a production dependency or automatic release Judge."
+}

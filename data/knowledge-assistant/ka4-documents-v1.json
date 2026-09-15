@@ -1,0 +1,102 @@
+{
+  "version": "ka4-documents-v1",
+  "as_of": "2026-09-14",
+  "provenance": "Original fictional line-addressable expansion; KA-0 index cards and relevance labels unchanged.",
+  "documents": [
+    {
+      "candidate_id": "A",
+      "source_id": "travel-v1",
+      "version": "v1",
+      "topic": "travel",
+      "valid_from": "2025-01-01",
+      "valid_until": "2026-01-01",
+      "authority": "fictional-policy-office",
+      "license": "CC-BY-SA-4.0",
+      "source_uri": "book://travel-v1",
+      "text": {
+        "en": "Fictional Beijing lodging policy; amounts are per room per night.\nEffective from 2025-01-01 through 2025-12-31.\nThe lodging limit is 600 yuan.",
+        "zh-hans": "虚构北京差旅住宿制度；金额单位为元/间夜。\n适用于 2025-01-01 至 2025-12-31。\n住宿限额为 600 元。"
+      },
+      "support_range": [
+        1,
+        3
+      ]
+    },
+    {
+      "candidate_id": "B",
+      "source_id": "travel-v2",
+      "version": "v2",
+      "topic": "travel",
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "authority": "fictional-policy-office",
+      "license": "CC-BY-SA-4.0",
+      "source_uri": "book://travel-v2",
+      "text": {
+        "en": "Fictional Beijing lodging policy; amounts are per room per night.\nEffective from 2026-01-01; replaces travel-v1.\nThe lodging limit is 750 yuan.",
+        "zh-hans": "虚构北京差旅住宿制度；金额单位为元/间夜。\n自 2026-01-01 起生效，替代 travel-v1。\n住宿限额为 750 元。"
+      },
+      "support_range": [
+        1,
+        3
+      ]
+    },
+    {
+      "candidate_id": "C",
+      "source_id": "rail-faq-v1",
+      "version": "v1",
+      "topic": "rail",
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "authority": "fictional-policy-office",
+      "license": "CC-BY-SA-4.0",
+      "source_uri": "book://rail-faq-v1",
+      "text": {
+        "en": "Fictional Beijing rail FAQ.\nTrain guidance does not state a lodging limit.",
+        "zh-hans": "虚构北京铁路常见问题。\n乘车说明没有规定住宿限额。"
+      },
+      "support_range": [
+        1,
+        2
+      ]
+    },
+    {
+      "candidate_id": "D",
+      "source_id": "status-faq-v1",
+      "version": "v1",
+      "topic": "order",
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "authority": "fictional-policy-office",
+      "license": "CC-BY-SA-4.0",
+      "source_uri": "book://status-faq-v1",
+      "text": {
+        "en": "Fictional order FAQ: processing is a possible order status.\nThis FAQ is not a live lookup of A-104.",
+        "zh-hans": "虚构订单常见问题：处理中是订单可能出现的状态。\n这份常见问题不是对 A-104 的实时查询。"
+      },
+      "support_range": [
+        1,
+        2
+      ]
+    },
+    {
+      "candidate_id": "E",
+      "source_id": "approval-faq-v1",
+      "version": "v1",
+      "topic": "approval",
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "authority": "fictional-policy-office",
+      "license": "CC-BY-SA-4.0",
+      "source_uri": "book://approval-faq-v1",
+      "text": {
+        "en": "Cancellation of a fictional order requires approval.\nReading this policy does not grant approval or execute cancellation.",
+        "zh-hans": "取消虚构订单需要审批。\n读到这条规则不等于获得批准，也不会执行取消操作。"
+      },
+      "support_range": [
+        1,
+        2
+      ]
+    }
+  ]
+}

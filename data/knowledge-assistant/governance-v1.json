@@ -1,0 +1,82 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "version": "ka8-governance-v1",
+  "roles": {
+    "policy_owner": "Fictional Policy Office",
+    "service_owner": "Fictional Assistant Maintainer",
+    "privacy_owner": "Fictional Data Steward",
+    "security_owner": "Fictional Security Reviewer",
+    "reviewer": "Fictional Order Approver"
+  },
+  "policy_scope": "Authored local simulation, not production policy or legal advice.",
+  "lifecycle": [
+    {
+      "data": "policy source and index",
+      "purpose": "answer dated questions",
+      "owner": "policy_owner",
+      "retention": "retain versioned public policies; retire eligibility when replaced",
+      "deletion": "remove index entries and invalidate source-dependent cache if a source is withdrawn",
+      "evidence": "source version, validity interval, license and corpus digest"
+    },
+    {
+      "data": "model input",
+      "purpose": "bounded evidence decision",
+      "owner": "service_owner",
+      "retention": "request lifetime; no default cross-request memory",
+      "deletion": "drop transient assembled input at request end",
+      "evidence": "allowlisted field projection"
+    },
+    {
+      "data": "operational content log",
+      "purpose": "authorized debugging",
+      "owner": "privacy_owner",
+      "retention_days": 7,
+      "deletion": "expire or erase eligible subject copies in logs, memory, cache and feedback",
+      "evidence": "count-only deletion receipt"
+    },
+    {
+      "data": "audit event metadata",
+      "purpose": "reconcile approved actions",
+      "owner": "security_owner",
+      "retention_days": 30,
+      "deletion": "expire metadata when no longer required; legal holds require separately documented applicable basis",
+      "evidence": "expiry test and action receipt without credential"
+    },
+    {
+      "data": "feedback and correction",
+      "purpose": "resolve disputed source or answer",
+      "owner": "policy_owner",
+      "retention_days": 7,
+      "deletion": "keep a synthetic regression instead of unnecessary original personal text",
+      "evidence": "correction record with source version and rerun result"
+    }
+  ],
+  "refusal_policy": [
+    {
+      "trigger": "no eligible evidence or conflicting evidence",
+      "status": "abstained",
+      "owner": "policy_owner",
+      "next": "request relevant source/date or escalate to policy owner"
+    },
+    {
+      "trigger": "cross-tenant request, secret disclosure or missing authorization",
+      "status": "refused",
+      "owner": "security_owner",
+      "next": "do not reveal whether another tenant record exists; retain minimal reason"
+    },
+    {
+      "trigger": "timeout with uncertain commit or mismatched object version",
+      "status": "manual_review",
+      "owner": "service_owner",
+      "next": "inspect receipt and current state; do not announce success without evidence"
+    },
+    {
+      "trigger": "permission valid but source is unlicensed for intended reuse",
+      "status": "refused",
+      "owner": "policy_owner",
+      "next": "withhold that source and seek a licensed substitute; do not infer permission from availability"
+    }
+  ]
+}

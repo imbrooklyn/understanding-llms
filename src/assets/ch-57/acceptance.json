@@ -1,0 +1,91 @@
+{
+  "version": "part-ix-v1",
+  "structure": "capstone-acceptance",
+  "alt": {
+    "en": "The accepted answer path connects host identity, dated evidence and verified 750-yuan output. A second path challenges ownership, missing evidence and stale releases; acceptance requires retained failures and named human owners.",
+    "zh-hans": "正常路径连接宿主身份、带日期的证据和核验后的 750 元答案；另一条路径挑战所有权、证据缺失和旧版本。验收还要求保留失败并明确人工负责人。"
+  },
+  "caption": {
+    "en": "Figure 57.1 — An answer trace and a challenged boundary support different acceptance claims.",
+    "zh-hans": "图 57.1——答案 trace 与边界挑战，支持的是不同的验收主张。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Normal request: explicit date 2026-09-14",
+        "zh-hans": "正常请求：明确日期 2026-09-14"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Host: north / Mira",
+            "zh-hans": "宿主：北区租户 / 米拉"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Eligible source: travel-v2, lines 1–3",
+            "zh-hans": "有效来源：travel-v2，第 1—3 行"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Structure + support + Skill checks",
+            "zh-hans": "结构、支持性与 Skill 核验"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "750 yuan / room / night, with quotation",
+            "zh-hans": "每间每晚 750 元，附引文"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Default extraction makes zero neural calls. A passing trace explains this answer, not all possible questions.",
+        "zh-hans": "默认抽取路径的神经模型调用为零。通过的 trace 解释这次回答，不能证明所有问题都能答对。"
+      }
+    },
+    {
+      "label": {
+        "en": "Abnormal requests and operator decisions",
+        "zh-hans": "异常请求与运行者决定"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Wrong owner → refuse",
+            "zh-hans": "所有者不符 → 拒绝"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Missing lexical match → abstain; retain miss",
+            "zh-hans": "词法未匹配 → 不作答；保留漏检"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Stale candidate → reject; local rollback 600 → 750",
+            "zh-hans": "旧规则候选 → 拒绝；本地回滚 600 → 750"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Keep independent expectations, actual outcomes and human owners together. No average score cancels a permission violation.",
+        "zh-hans": "同时保留独立预期、实际结果与人工负责人。平均分不能抵偿权限违规。"
+      }
+    }
+  ]
+}

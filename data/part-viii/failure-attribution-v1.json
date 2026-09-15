@@ -1,0 +1,50 @@
+{
+  "version": "ka7-attribution-report-v1",
+  "as_of": "2026-09-14",
+  "evidence": "data/part-viii/system-eval-run.json",
+  "scope": "Observed diagnostic faults, not inferred population causes.",
+  "rows": [
+    {
+      "system": "R",
+      "request": "current",
+      "observed": "No retrieved policy; final abstention",
+      "first_failure": "retrieval",
+      "owner": "service_owner",
+      "repair": "Restore eligible source selection",
+      "rerun": "Current and historical policy, then context/support/end-to-end",
+      "status": "deliberately_faulted_variant_retained"
+    },
+    {
+      "system": "G",
+      "request": "historical",
+      "observed": "v1 reaches context; proposed amount 750 conflicts with required 600; gate withholds",
+      "first_failure": "generation",
+      "owner": "service_owner",
+      "repair": "Restore exact-source composition",
+      "rerun": "Historical amount, citations, current policy and end-to-end",
+      "status": "deliberately_faulted_variant_retained"
+    },
+    {
+      "system": "local_judge",
+      "request": "four_public_human_pairs",
+      "observed": "0/4 reference agreement; 3/4 position consistency",
+      "first_failure": "evaluator",
+      "owner": "service_owner",
+      "repair": "Keep automatic release disabled; investigate rubric/model using new independently labeled cases",
+      "rerun": "Retain these pairs and swaps; add rather than replace domain cases",
+      "status": "rejected_for_automatic_release"
+    }
+  ],
+  "tool_controls": {
+    "denied_effects": 0,
+    "recovered_effects": 1,
+    "replay_mutations": 0,
+    "evidence": "data/part-viii/recovery-run.json"
+  },
+  "human_domain": {
+    "unique_cases": 4,
+    "annotators": 1,
+    "matched_per_language": 4,
+    "limitation": "Does not establish evaluator transfer or inter-annotator agreement"
+  }
+}

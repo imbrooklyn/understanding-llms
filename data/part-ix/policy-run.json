@@ -1,0 +1,231 @@
+{
+  "provenance": "Actual calculation on authored logical clocks and outcomes; not measured traffic or model accuracy.",
+  "bucket": [
+    {
+      "time": 0,
+      "allowed": true,
+      "remaining": 1,
+      "retry_after": 0
+    },
+    {
+      "time": 0,
+      "allowed": true,
+      "remaining": 0,
+      "retry_after": 0
+    },
+    {
+      "time": 0,
+      "allowed": false,
+      "remaining": 0,
+      "retry_after": 1
+    },
+    {
+      "time": 0.5,
+      "allowed": false,
+      "remaining": 0.5,
+      "retry_after": 1
+    },
+    {
+      "time": 1,
+      "allowed": true,
+      "remaining": 0.0,
+      "retry_after": 0
+    },
+    {
+      "time": 1.5,
+      "allowed": false,
+      "remaining": 0.5,
+      "retry_after": 1
+    },
+    {
+      "time": 2,
+      "allowed": true,
+      "remaining": 0.0,
+      "retry_after": 0
+    }
+  ],
+  "breaker": [
+    {
+      "time": 0,
+      "allowed": true,
+      "result": false,
+      "state": "closed"
+    },
+    {
+      "time": 1,
+      "allowed": true,
+      "result": false,
+      "state": "open"
+    },
+    {
+      "time": 2,
+      "allowed": false,
+      "result": null,
+      "state": "open"
+    },
+    {
+      "time": 6,
+      "allowed": true,
+      "result": true,
+      "state": "closed"
+    },
+    {
+      "time": 7,
+      "allowed": true,
+      "result": true,
+      "state": "closed"
+    }
+  ],
+  "slo_rows": [
+    {
+      "arrival": 0,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 1,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 2,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 3,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 4,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 5,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 6,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 7,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 8,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 9,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 10,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 11,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 12,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 13,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 14,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 15,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 16,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 17,
+      "outcome": "answered",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 18,
+      "outcome": "error",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 19,
+      "outcome": "error",
+      "eligible": true,
+      "duration": 0.2
+    },
+    {
+      "arrival": 20,
+      "outcome": "cancelled",
+      "eligible": true,
+      "duration": 0.1
+    },
+    {
+      "arrival": 21,
+      "outcome": "unauthenticated",
+      "eligible": false,
+      "duration": 0
+    }
+  ],
+  "slo": {
+    "window": [
+      0,
+      60
+    ],
+    "total": 20,
+    "good": 18,
+    "bad": 2,
+    "sli": 0.9,
+    "target": 0.95,
+    "budget": 1.0000000000000009,
+    "burn": 1.9999999999999984,
+    "cancelled": 1,
+    "excluded": 1,
+    "alert": false
+  },
+  "semantic_similarity": 0.999948988700964,
+  "semantic_cache_enabled": false
+}

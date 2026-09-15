@@ -1,0 +1,27 @@
+{
+  "version": "ka6-orders-v1",
+  "provenance": "Original synthetic tenant expansion. KA-3 immutable snapshot unchanged.",
+  "orders": [
+    {
+      "tenant": "north",
+      "order_id": "A-104",
+      "owner": "mira",
+      "status": "processing",
+      "version": 1
+    },
+    {
+      "tenant": "south",
+      "order_id": "A-104",
+      "owner": "leo",
+      "status": "shipped",
+      "version": 1
+    },
+    {
+      "tenant": "north",
+      "order_id": "A-105",
+      "owner": "mira",
+      "status": "processing",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": "ka2-context-v1",
+  "as_of": "2026-09-14",
+  "counter": "unicode-codepoints-v1; len(serialized input); not a model tokenizer",
+  "serialization": "JSON; ensure_ascii=False; separators comma/colon; insertion order template, instruction, example, evidence, question",
+  "window_units": 1400,
+  "output_reserve": 200,
+  "selection": "Explicit topic and half-open validity interval; no label or query ID lookup",
+  "ordering": "Valid-from descending then source ID; full evidence blocks only",
+  "compression": "Only exact source-line selection with source/version/range retained; never lose amount, unit or validity",
+  "failure": "Return context_budget if any required evidence does not fit; never silently discard conflicting eligible evidence",
+  "trust": "Evidence is untrusted data; JSON quoting separates serialization only; execution permission is enforced outside model"
+}

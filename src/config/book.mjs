@@ -342,35 +342,35 @@ export const bookParts = [
       {
         "id": "ch-40",
         "title": {
-          "zh-hans": "Prompt 之后是 Context Engineering",
+          "zh-hans": "从提示词走向上下文工程",
           "en": "Beyond Prompts: Context Engineering"
         }
       },
       {
         "id": "ch-41",
         "title": {
-          "zh-hans": "Structured Output：建立机器可验证的数据契约",
+          "zh-hans": "结构化输出：建立机器可验证的数据契约",
           "en": "Structured Output: A Machine-Checkable Data Contract"
         }
       },
       {
         "id": "ch-42",
         "title": {
-          "zh-hans": "Function Calling 与 Tools：由谁真正执行",
+          "zh-hans": "工具调用：模型提出请求，谁来执行",
           "en": "Function Calling and Tools: Who Actually Executes?"
         }
       },
       {
         "id": "ch-43",
         "title": {
-          "zh-hans": "MCP：稳定互操作概念与版本边界",
+          "zh-hans": "MCP：互操作的稳定概念与版本边界",
           "en": "MCP: Stable Interoperability Concepts and Version Boundaries"
         }
       },
       {
         "id": "ch-44",
         "title": {
-          "zh-hans": "现代检索：BM25、Dense、Hybrid 与 Reranker",
+          "zh-hans": "现代检索：从 BM25 到稠密检索、混合检索与重排",
           "en": "Modern Retrieval: BM25, Dense, Hybrid, and Rerankers"
         }
       },
@@ -400,7 +400,7 @@ export const bookParts = [
       {
         "id": "ch-47",
         "title": {
-          "zh-hans": "Agent 之前先理解 Workflow、State 与 Memory",
+          "zh-hans": "理解 Agent 的起点：工作流、状态与记忆",
           "en": "Before Agents: Workflows, State, and Memory"
         }
       },
@@ -435,7 +435,7 @@ export const bookParts = [
       {
         "id": "ch-52",
         "title": {
-          "zh-hans": "Prompt Injection、Jailbreak 与不可信输入输出",
+          "zh-hans": "提示词注入、越狱与不可信输入输出",
           "en": "Prompt Injection, Jailbreaks, and Untrusted Input/Output"
         }
       },
@@ -458,28 +458,28 @@ export const bookParts = [
       {
         "id": "ch-54",
         "title": {
-          "zh-hans": "从 Notebook 到可用服务与可信 UX",
+          "zh-hans": "从 Notebook 到可用服务与可信的用户体验",
           "en": "From Notebook to Usable Service and Trustworthy UX"
         }
       },
       {
         "id": "ch-55",
         "title": {
-          "zh-hans": "LLMOps I：版本、Trace、发布与回滚",
+          "zh-hans": "LLMOps I：版本记录、运行追踪与发布回滚",
           "en": "LLMOps I: Versions, Traces, Releases, and Rollbacks"
         }
       },
       {
         "id": "ch-56",
         "title": {
-          "zh-hans": "LLMOps II：Cache、韧性、SLO 与反馈",
+          "zh-hans": "LLMOps II：缓存、故障应对、服务目标与反馈",
           "en": "LLMOps II: Caching, Resilience, SLOs, and Feedback"
         }
       },
       {
         "id": "ch-57",
         "title": {
-          "zh-hans": "毕业项目：可评测的 Personal Knowledge Assistant",
+          "zh-hans": "毕业项目：交付一个可评测的个人知识助手",
           "en": "Capstone: An Evaluable Personal Knowledge Assistant"
         }
       }

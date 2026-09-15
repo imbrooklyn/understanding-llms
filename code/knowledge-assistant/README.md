@@ -18,3 +18,13 @@ For the precise indexing scope, relevance labels, candidate order, TF/IDF defini
 `format_adaptation.py` reuses the frozen KA-1 inputs, the same Mini GPT/checkpoints and the same lexical baselines. It compares each actual generation with a terminal-period-only amount normalization, without changing parameters or the judge. The original contract and unfavorable responses remain intact.
 
 Run `python code/knowledge-assistant/format_adaptation.py` from the book root in the [Part VI CPU environment](../part-vi/README.md). Normal replay checks input hashes and exact raw output reproduction; it does not overwrite the retained freeze/run. The complete comparison is in `data/knowledge-assistant/ka1-format-run-v1.json` and [the adaptation decision](../../docs/ka1-adaptation-report.md). Formatting improves a narrow strict score, while semantic gates still reject both checkpoints. No RAG interface, live tool, cancellation or parameter training is implemented by this increment.
+
+## Part VII context, read interfaces and cited retrieval
+
+`contracts.py` supplies KA-2's serialized input and full Draft 2020-12 output validation. `read_tools.py`, `http_scaffold.py` and `mcp_readonly.py` share the same owned-order lookup for KA-3; MCP pins 2026-07-28. `retrieval.py`, `rag.py` and `rag_eval.py` add KA-4 while retaining every earlier lexical and KA-1 artifact. The generator callable defaults to `local-extractive-v1`, an exact-source composer, not a neural model or replay. No write tool is exposed.
+
+Use the [Part VII environment and runners](../part-vii/README.md), [evidence card](../../data/part-vii/README.md) and [dated protocol layer](../../docs/part-vii-online.md). The previous increment's statement that it did not implement RAG or tools describes Part VI; these new modules provide those local interfaces without revising its experiment or model-acceptance decision.
+
+## KA-5 through KA-8
+
+Part VIII adds `workflow.py`, `source_skill.py` and `skills/source-verification/`, `reliable_runtime.py`, `system_eval.py` and `security_controls.py` around the existing RAG/contracts. The only model choice in KA-5 is `use_evidence` versus `abstain`. Simulated writes use separate exact approvals and durable SQLite receipts; the inherited MCP server remains read-only. Run the Part VIII CPU checks and two notebooks using `code/part-viii/README.md`. Governance, human labels and actual adverse results are documented in `data/part-viii/README.md`; an unsuccessful automatic-Judge calibration is retained as evidence.

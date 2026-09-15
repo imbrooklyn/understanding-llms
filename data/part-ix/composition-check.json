@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-09-14T16:44:41.399051+00:00",
+  "command": "pnpm compose:site; compare every book file with the local combined copy; check eight Part IX routes absent",
+  "book_files": 306,
+  "byte_identical": true,
+  "part_ix_routes_absent": 8,
+  "deployment": false
+}

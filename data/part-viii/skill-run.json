@@ -1,0 +1,81 @@
+{
+  "provenance": "Actual local reads and helper subprocess after matching the separately captured package inventory.",
+  "package_version": "1.0.0",
+  "package_sha256": {
+    "SKILL.md": "8e6edb6678df7bfca8d23a1543ec7633c876d9fef456b3f09b4f3800b0dce5f4",
+    "assets/report-template.json": "87a261c8c9cecc71cd58817f954a3d8e304d232294b946298030246658aa59f2",
+    "references/evidence-contract.md": "6d0888a67593f67e331603a0610a691c3a14c890cf8cc4a3a10550072f2d878e",
+    "scripts/verify.py": "066563ab9c9a176326cce42510405dcd4de6b941ae067313506950b2db8b51db"
+  },
+  "trace": [
+    {
+      "stage": "discover",
+      "loaded_fields": {
+        "name": "source-verification",
+        "description": "Verify dated travel-policy evidence and exact citation spans in the Understanding LLMs knowledge assistant. Use for checking a proposed answer against the local fictional corpus."
+      },
+      "utf8_bytes": 225
+    },
+    {
+      "stage": "activate",
+      "path": "SKILL.md",
+      "utf8_bytes": 1511
+    },
+    {
+      "stage": "reference",
+      "path": "references/evidence-contract.md",
+      "utf8_bytes": 1127
+    },
+    {
+      "stage": "execute",
+      "path": "scripts/verify.py",
+      "returncode": 0,
+      "report": {
+        "schema_version": "source-verification-report-v1",
+        "supported": true,
+        "authority_ok": true,
+        "context_matches": true,
+        "reason": "supported",
+        "checks": {
+          "citations": [
+            {
+              "exists": true,
+              "exact": true,
+              "eligible": true,
+              "complete_scope": true,
+              "amount_matches": true,
+              "supports": true
+            }
+          ],
+          "text_matches_extractive_claim": true,
+          "supported": true
+        }
+      }
+    },
+    {
+      "stage": "report",
+      "path": "assets/report-template.json",
+      "report": {
+        "schema_version": "source-verification-report-v1",
+        "supported": true,
+        "authority_ok": true,
+        "context_matches": true,
+        "reason": "supported",
+        "checks": {
+          "citations": [
+            {
+              "exists": true,
+              "exact": true,
+              "eligible": true,
+              "complete_scope": true,
+              "amount_matches": true,
+              "supports": true
+            }
+          ],
+          "text_matches_extractive_claim": true,
+          "supported": true
+        }
+      }
+    }
+  ]
+}

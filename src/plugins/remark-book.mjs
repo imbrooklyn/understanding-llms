@@ -21,12 +21,12 @@ export function renderFigure(id, locale) {
 // Number the source AST, so the body and Starlight TOC share numbers and anchors.
 export default function remarkBook() {
   return (tree, file) => {
-    const match = String(file.path).replaceAll("\\", "/").match(/\/(en|zh-hans)\/ch-(\d{2})\.md$/);
+    const match = String(file.path).replaceAll("\\", "/").match(/\/(en|zh-hans)\/(?:ch-(\d{2})|primer-http)\.md$/);
     if (!match) return;
     const [, locale, chapter] = match;
     const counters = [Number(chapter), 0, 0, 0, 0, 0];
     for (const node of tree.children) {
-      if (node.type === "heading") {
+      if (node.type === "heading" && chapter) {
         if (node.depth < 2) throw new Error(`${file.path}: body headings must start at ##`);
         const level = node.depth - 1;
         if (level > 1 && counters[level - 1] === 0) throw new Error(`${file.path}: skipped heading level`);

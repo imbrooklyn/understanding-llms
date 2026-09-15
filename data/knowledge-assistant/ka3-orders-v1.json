@@ -1,0 +1,18 @@
+{
+  "version": "ka3-orders-v1",
+  "as_of": "2026-09-14T00:00:00Z",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "Authored fictional snapshot, not live business data; A-104 is distinct from KA-1 A104.",
+  "orders": [
+    {
+      "order_id": "A-104",
+      "owner": "mira",
+      "status": "processing"
+    },
+    {
+      "order_id": "B-205",
+      "owner": "leo",
+      "status": "shipped"
+    }
+  ]
+}

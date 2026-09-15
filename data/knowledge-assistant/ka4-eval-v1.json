@@ -1,0 +1,208 @@
+{
+  "version": "ka4-eval-v1",
+  "as_of": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "split": "authored development diagnostics; no held-out test",
+  "provenance": "New RAG task contract; references KA-0 questions without changing its relevance judgments. Explicit topic/date are inputs to both pipeline conditions.",
+  "conditions": {
+    "baseline": {
+      "scope_filter": false
+    },
+    "filtered": {
+      "scope_filter": true
+    }
+  },
+  "repeats": 3,
+  "seed": 23,
+  "cases": [
+    {
+      "id": "current",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": 750,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": null
+    },
+    {
+      "id": "stale",
+      "question": {
+        "en": "Is 600 still the Beijing lodging limit?",
+        "zh-hans": "北京住宿还是600元吗？"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": 750,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": null
+    },
+    {
+      "id": "historical",
+      "question": {
+        "en": "600 Beijing",
+        "zh-hans": "600 北京"
+      },
+      "topic": "travel",
+      "on_date": "2025-09-14",
+      "expected_status": "answered",
+      "expected_amount": 600,
+      "required_sources": [
+        "travel-v1"
+      ],
+      "corpus_variant": null,
+      "fault": null
+    },
+    {
+      "id": "synonym",
+      "question": {
+        "en": "hotel allowance",
+        "zh-hans": "酒店补助"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": 750,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": null
+    },
+    {
+      "id": "unknown",
+      "question": {
+        "en": "passport renewal",
+        "zh-hans": "护照换发"
+      },
+      "topic": "passport",
+      "on_date": "2026-09-14",
+      "expected_status": "abstained",
+      "expected_amount": null,
+      "required_sources": [],
+      "corpus_variant": null,
+      "fault": null
+    },
+    {
+      "id": "old-only",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "abstained",
+      "expected_amount": null,
+      "required_sources": [],
+      "corpus_variant": "old_only",
+      "fault": null
+    },
+    {
+      "id": "conflict",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "abstained",
+      "expected_amount": null,
+      "required_sources": [
+        "travel-v2",
+        "travel-conflict-v1"
+      ],
+      "corpus_variant": "conflict",
+      "fault": null
+    },
+    {
+      "id": "budget",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "abstained",
+      "expected_amount": null,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": "budget"
+    },
+    {
+      "id": "context-drop",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": 750,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": "context_drop"
+    },
+    {
+      "id": "wrong-amount",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": 750,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": "wrong_amount"
+    },
+    {
+      "id": "wrong-citation",
+      "question": {
+        "en": "Beijing lodging",
+        "zh-hans": "北京住宿"
+      },
+      "topic": "travel",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": 750,
+      "required_sources": [
+        "travel-v2"
+      ],
+      "corpus_variant": null,
+      "fault": "wrong_citation"
+    },
+    {
+      "id": "approval",
+      "question": {
+        "en": "order approval",
+        "zh-hans": "订单 审批"
+      },
+      "topic": "approval",
+      "on_date": "2026-09-14",
+      "expected_status": "answered",
+      "expected_amount": null,
+      "required_sources": [
+        "approval-faq-v1"
+      ],
+      "corpus_variant": null,
+      "fault": null
+    }
+  ]
+}

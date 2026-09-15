@@ -1,0 +1,4247 @@
+{
+  "version": "ka4-ranking-run-v1",
+  "producer": "CPU Python; no new embedding training; authored map and retained learned NNLM vectors",
+  "k": 2,
+  "locales": {
+    "en": {
+      "inherited": {
+        "vocabulary": [
+          "beijing",
+          "lodging",
+          "600",
+          "750",
+          "train",
+          "order",
+          "processing",
+          "approval"
+        ],
+        "document_tokens": [
+          [
+            "beijing",
+            "lodging",
+            "600"
+          ],
+          [
+            "beijing",
+            "lodging",
+            "lodging",
+            "750"
+          ],
+          [
+            "beijing",
+            "beijing",
+            "beijing",
+            "train"
+          ],
+          [
+            "order",
+            "processing"
+          ],
+          [
+            "order",
+            "approval"
+          ]
+        ],
+        "query_tokens": [
+          [
+            "beijing",
+            "lodging"
+          ],
+          [
+            "beijing",
+            "processing"
+          ],
+          [
+            "750",
+            "lodging"
+          ],
+          [
+            "hotel",
+            "allowance"
+          ],
+          [
+            "600",
+            "beijing"
+          ],
+          [
+            "order",
+            "processing"
+          ],
+          [
+            "order",
+            "approval"
+          ],
+          [
+            "is",
+            "600",
+            "still",
+            "the",
+            "beijing",
+            "lodging",
+            "limit"
+          ],
+          [
+            "passport",
+            "renewal"
+          ]
+        ],
+        "count_matrix": [
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        ],
+        "query_count_matrix": [
+          [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "document_frequency": [
+          3,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "idf": [
+          1.4054651081081644,
+          1.6931471805599454,
+          2.09861228866811,
+          2.09861228866811,
+          2.09861228866811,
+          1.6931471805599454,
+          2.09861228866811,
+          2.09861228866811
+        ],
+        "tfidf_matrix": [
+          [
+            1.4054651081081644,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.4054651081081644,
+            3.386294361119891,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            4.216395324324493,
+            0.0,
+            0.0,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            0.0,
+            2.09861228866811
+          ]
+        ],
+        "query_tfidf_matrix": [
+          [
+            1.4054651081081644,
+            1.6931471805599454,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.4054651081081644,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.09861228866811,
+            0.0
+          ],
+          [
+            0.0,
+            1.6931471805599454,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.4054651081081644,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            0.0,
+            2.09861228866811
+          ],
+          [
+            1.4054651081081644,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "methods": {
+          "keyword": [
+            {
+              "scores": [
+                2,
+                2,
+                1,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "current-lodging",
+              "success": false
+            },
+            {
+              "scores": [
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "geographic-status",
+              "success": false
+            },
+            {
+              "scores": [
+                1,
+                2,
+                0,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "explicit-current",
+              "success": true
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "synonym",
+              "success": false
+            },
+            {
+              "scores": [
+                2,
+                1,
+                1,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "historical",
+              "success": true
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "approval-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "status",
+              "success": true
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "ranking": [
+                "approval-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "approval-faq-v1",
+              "query_id": "approval",
+              "success": true
+            },
+            {
+              "scores": [
+                3,
+                2,
+                1,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "stale-premise",
+              "success": false
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "out-of-scope",
+              "success": true
+            }
+          ],
+          "count": [
+            {
+              "scores": [
+                0.8164965809277261,
+                0.8660254037844387,
+                0.6708203932499369,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "current-lodging",
+              "success": true
+            },
+            {
+              "scores": [
+                0.4082482904638631,
+                0.2886751345948129,
+                0.6708203932499369,
+                0.5,
+                0.0
+              ],
+              "ranking": [
+                "rail-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "approval-faq-v1"
+              ],
+              "prediction": "rail-faq-v1",
+              "query_id": "geographic-status",
+              "success": false
+            },
+            {
+              "scores": [
+                0.4082482904638631,
+                0.8660254037844387,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "explicit-current",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "synonym",
+              "success": false
+            },
+            {
+              "scores": [
+                0.8164965809277261,
+                0.2886751345948129,
+                0.6708203932499369,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "rail-faq-v1",
+                "travel-v2",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "historical",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.5
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "approval-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "status",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                1.0
+              ],
+              "ranking": [
+                "approval-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "approval-faq-v1",
+              "query_id": "approval",
+              "success": true
+            },
+            {
+              "scores": [
+                1.0,
+                0.7071067811865476,
+                0.5477225575051661,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "stale-premise",
+              "success": false
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "out-of-scope",
+              "success": true
+            }
+          ],
+          "tfidf": [
+            {
+              "scores": [
+                0.7236575068051737,
+                0.8292698296067984,
+                0.5717991227530961,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "current-lodging",
+              "success": true
+            },
+            {
+              "scores": [
+                0.25719571764394594,
+                0.18512716549060695,
+                0.4981566468105211,
+                0.6466602973341435,
+                0.0
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "rail-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "approval-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "geographic-status",
+              "success": true
+            },
+            {
+              "scores": [
+                0.34963252357446317,
+                0.889952641503542,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "explicit-current",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "synonym",
+              "success": false
+            },
+            {
+              "scores": [
+                0.8306357653043197,
+                0.18512716549060695,
+                0.4981566468105211,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "rail-faq-v1",
+                "travel-v2",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "historical",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.39427569207070046
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "approval-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "status",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.39427569207070046,
+                1.0
+              ],
+              "ranking": [
+                "approval-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "approval-faq-v1",
+              "query_id": "approval",
+              "success": true
+            },
+            {
+              "scores": [
+                1.0,
+                0.6001073373620068,
+                0.4137867275648908,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "stale-premise",
+              "success": false
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "out-of-scope",
+              "success": true
+            }
+          ]
+        },
+        "success_counts": {
+          "keyword": 5,
+          "count": 6,
+          "tfidf": 7
+        },
+        "query_count": 9
+      },
+      "rows": [
+        {
+          "query_id": "current-lodging",
+          "query": "Beijing lodging",
+          "relevant": [
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 1.414465238086587,
+              "travel-v2": 1.5749061904610961,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.6420967572875588,
+              "travel-v2": 0.7347906435793955,
+              "rail-faq-v1": 0.5255670034451023,
+              "status-faq-v1": -0.03271924260438551,
+              "approval-faq-v1": -0.234353120994805
+            },
+            "hybrid": {
+              "travel-v1": 0.03252247488101534,
+              "travel-v2": 0.03252247488101534,
+              "rail-faq-v1": 0.031746031746031744,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": false
+          }
+        },
+        {
+          "query_id": "geographic-status",
+          "query": "Beijing processing",
+          "relevant": [
+            "status-faq-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.5389965007326871,
+              "travel-v2": 0.4743169206447647,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 1.6051829444546102,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 0.7071067811865475,
+              "travel-v2": 0.7071067811865476,
+              "rail-faq-v1": 0.6708203932499369,
+              "status-faq-v1": 0.7071067811865475,
+              "approval-faq-v1": 0.7071067811865475
+            },
+            "dense_nnlm": {
+              "travel-v1": -0.06362570250670847,
+              "travel-v2": 0.26511533445659835,
+              "rail-faq-v1": 0.635366983178039,
+              "status-faq-v1": 0.7964300219322062,
+              "approval-faq-v1": 0.7383516127048909
+            },
+            "hybrid": {
+              "travel-v1": 0.032266458495966696,
+              "travel-v2": 0.031754032258064516,
+              "rail-faq-v1": 0.0315136476426799,
+              "status-faq-v1": 0.032266458495966696,
+              "approval-faq-v1": 0.015625
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "status-faq-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v1",
+              "travel-v2"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "status-faq-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1"
+            ],
+            "reranked": [
+              "status-faq-v1",
+              "travel-v1",
+              "travel-v2"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 0.0,
+              "rr": 0.3333333333333333,
+              "ndcg": 0.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "explicit-current",
+          "query": "750 lodging",
+          "relevant": [
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.8754687373538999,
+              "travel-v2": 2.320528307601835,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.6623968266529098,
+              "travel-v2": 0.8249649036114206,
+              "rail-faq-v1": -0.5846383114877616,
+              "status-faq-v1": 0.22455263130736436,
+              "approval-faq-v1": 0.12376430089814953
+            },
+            "hybrid": {
+              "travel-v1": 0.03252247488101534,
+              "travel-v2": 0.03252247488101534,
+              "rail-faq-v1": 0.015873015873015872,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "synonym",
+          "query": "hotel allowance",
+          "relevant": [
+            "travel-v1",
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "hybrid": {
+              "travel-v1": 0.01639344262295082,
+              "travel-v2": 0.016129032258064516,
+              "rail-faq-v1": 0.015873015873015872,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 0.0,
+              "rr": 0.0,
+              "ndcg": 0.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 0.0,
+              "rr": 0.0,
+              "ndcg": 0.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": false,
+            "dense_authored": true,
+            "dense_nnlm": false,
+            "hybrid": true,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "historical",
+          "query": "600 Beijing",
+          "relevant": [
+            "travel-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 1.9252908618525777,
+              "travel-v2": 0.4743169206447647,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.9451810675564071,
+              "travel-v2": 0.625643703674038,
+              "rail-faq-v1": -0.2004785837250339,
+              "status-faq-v1": -0.5025358340031736,
+              "approval-faq-v1": -0.13359773692765903
+            },
+            "hybrid": {
+              "travel-v1": 0.03278688524590164,
+              "travel-v2": 0.03200204813108039,
+              "rail-faq-v1": 0.03200204813108039,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "status-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v1",
+              "rail-faq-v1",
+              "travel-v2"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": true,
+            "dense_nnlm": true,
+            "hybrid": true,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "status",
+          "query": "order processing",
+          "relevant": [
+            "status-faq-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 2.6188835877064944,
+              "approval-faq-v1": 1.0137006432518842
+            },
+            "dense_authored": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 1.0,
+              "approval-faq-v1": 1.0
+            },
+            "dense_nnlm": {
+              "travel-v1": -0.3581779731528381,
+              "travel-v2": 0.13727122017497084,
+              "rail-faq-v1": 0.17890524576706202,
+              "status-faq-v1": 1.0,
+              "approval-faq-v1": 0.7269999144579294
+            },
+            "hybrid": {
+              "travel-v1": 0,
+              "travel-v2": 0,
+              "rail-faq-v1": 0,
+              "status-faq-v1": 0.03278688524590164,
+              "approval-faq-v1": 0.03225806451612903
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "reranked": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": true,
+            "dense_nnlm": true,
+            "hybrid": true,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "approval",
+          "query": "order approval",
+          "relevant": [
+            "approval-faq-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 1.0137006432518842,
+              "approval-faq-v1": 2.6188835877064944
+            },
+            "dense_authored": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 1.0,
+              "approval-faq-v1": 1.0
+            },
+            "dense_nnlm": {
+              "travel-v1": -0.2075910655496554,
+              "travel-v2": -0.04975485265073419,
+              "rail-faq-v1": 0.17382151757662043,
+              "status-faq-v1": 0.7269999144579294,
+              "approval-faq-v1": 1.0
+            },
+            "hybrid": {
+              "travel-v1": 0,
+              "travel-v2": 0,
+              "rail-faq-v1": 0,
+              "status-faq-v1": 0.03252247488101534,
+              "approval-faq-v1": 0.03252247488101534
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "approval-faq-v1",
+              "status-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "rail-faq-v1"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "reranked": [
+              "approval-faq-v1",
+              "status-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "stale-premise",
+          "query": "Is 600 still the Beijing lodging limit?",
+          "relevant": [
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 2.8007595992064775,
+              "travel-v2": 1.5749061904610961,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 1.0000000000000002,
+              "travel-v2": 0.8331473821141718,
+              "rail-faq-v1": -0.1580885836207424,
+              "status-faq-v1": -0.358177973152838,
+              "approval-faq-v1": -0.20759106554965542
+            },
+            "hybrid": {
+              "travel-v1": 0.03278688524590164,
+              "travel-v2": 0.03225806451612903,
+              "rail-faq-v1": 0.031746031746031744,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1",
+              "status-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": false,
+            "dense_authored": false,
+            "dense_nnlm": false,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "out-of-scope",
+          "query": "passport renewal",
+          "relevant": [],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "hybrid": {
+              "travel-v1": 0,
+              "travel-v2": 0,
+              "rail-faq-v1": 0,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [],
+            "dense_authored": [],
+            "dense_nnlm": [],
+            "hybrid": [],
+            "reranked": []
+          },
+          "metrics": {
+            "bm25": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "dense_authored": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "dense_nnlm": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "hybrid": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "reranked": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": true,
+            "dense_nnlm": true,
+            "hybrid": true,
+            "reranked": true
+          }
+        }
+      ],
+      "success_counts": {
+        "bm25": 7,
+        "dense_authored": 4,
+        "dense_nnlm": 7,
+        "hybrid": 4,
+        "reranked": 8
+      },
+      "macro": {
+        "bm25": {
+          "recall": 0.875,
+          "rr": 0.8125,
+          "ndcg": 0.8288662191964322
+        },
+        "dense_authored": {
+          "recall": 0.875,
+          "rr": 0.6666666666666666,
+          "ndcg": 0.6904648767857288
+        },
+        "dense_nnlm": {
+          "recall": 0.875,
+          "rr": 0.8125,
+          "ndcg": 0.8288662191964322
+        },
+        "hybrid": {
+          "recall": 1.0,
+          "rr": 0.6875,
+          "ndcg": 0.769331095982161
+        },
+        "reranked": {
+          "recall": 1.0,
+          "rr": 0.9375,
+          "ndcg": 0.9538662191964322
+        }
+      }
+    },
+    "zh-hans": {
+      "inherited": {
+        "vocabulary": [
+          "beijing",
+          "lodging",
+          "600",
+          "750",
+          "train",
+          "order",
+          "processing",
+          "approval"
+        ],
+        "document_tokens": [
+          [
+            "beijing",
+            "lodging",
+            "600"
+          ],
+          [
+            "beijing",
+            "lodging",
+            "lodging",
+            "750"
+          ],
+          [
+            "beijing",
+            "beijing",
+            "beijing",
+            "train"
+          ],
+          [
+            "order",
+            "processing"
+          ],
+          [
+            "order",
+            "approval"
+          ]
+        ],
+        "query_tokens": [
+          [
+            "beijing",
+            "lodging"
+          ],
+          [
+            "beijing",
+            "processing"
+          ],
+          [
+            "750",
+            "lodging"
+          ],
+          [
+            "hotel",
+            "allowance"
+          ],
+          [
+            "600",
+            "beijing"
+          ],
+          [
+            "order",
+            "processing"
+          ],
+          [
+            "order",
+            "approval"
+          ],
+          [
+            "beijing",
+            "lodging",
+            "还",
+            "是",
+            "600",
+            "元",
+            "吗"
+          ],
+          [
+            "passport",
+            "renewal"
+          ]
+        ],
+        "count_matrix": [
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        ],
+        "query_count_matrix": [
+          [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "document_frequency": [
+          3,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "idf": [
+          1.4054651081081644,
+          1.6931471805599454,
+          2.09861228866811,
+          2.09861228866811,
+          2.09861228866811,
+          1.6931471805599454,
+          2.09861228866811,
+          2.09861228866811
+        ],
+        "tfidf_matrix": [
+          [
+            1.4054651081081644,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.4054651081081644,
+            3.386294361119891,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            4.216395324324493,
+            0.0,
+            0.0,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            0.0,
+            2.09861228866811
+          ]
+        ],
+        "query_tfidf_matrix": [
+          [
+            1.4054651081081644,
+            1.6931471805599454,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.4054651081081644,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.09861228866811,
+            0.0
+          ],
+          [
+            0.0,
+            1.6931471805599454,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.4054651081081644,
+            0.0,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.6931471805599454,
+            0.0,
+            2.09861228866811
+          ],
+          [
+            1.4054651081081644,
+            1.6931471805599454,
+            2.09861228866811,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "methods": {
+          "keyword": [
+            {
+              "scores": [
+                2,
+                2,
+                1,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "current-lodging",
+              "success": false
+            },
+            {
+              "scores": [
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "geographic-status",
+              "success": false
+            },
+            {
+              "scores": [
+                1,
+                2,
+                0,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "explicit-current",
+              "success": true
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "synonym",
+              "success": false
+            },
+            {
+              "scores": [
+                2,
+                1,
+                1,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "historical",
+              "success": true
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "approval-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "status",
+              "success": true
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "ranking": [
+                "approval-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "approval-faq-v1",
+              "query_id": "approval",
+              "success": true
+            },
+            {
+              "scores": [
+                3,
+                2,
+                1,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "stale-premise",
+              "success": false
+            },
+            {
+              "scores": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "out-of-scope",
+              "success": true
+            }
+          ],
+          "count": [
+            {
+              "scores": [
+                0.8164965809277261,
+                0.8660254037844387,
+                0.6708203932499369,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "current-lodging",
+              "success": true
+            },
+            {
+              "scores": [
+                0.4082482904638631,
+                0.2886751345948129,
+                0.6708203932499369,
+                0.5,
+                0.0
+              ],
+              "ranking": [
+                "rail-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "approval-faq-v1"
+              ],
+              "prediction": "rail-faq-v1",
+              "query_id": "geographic-status",
+              "success": false
+            },
+            {
+              "scores": [
+                0.4082482904638631,
+                0.8660254037844387,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "explicit-current",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "synonym",
+              "success": false
+            },
+            {
+              "scores": [
+                0.8164965809277261,
+                0.2886751345948129,
+                0.6708203932499369,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "rail-faq-v1",
+                "travel-v2",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "historical",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.5
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "approval-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "status",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.5,
+                1.0
+              ],
+              "ranking": [
+                "approval-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "approval-faq-v1",
+              "query_id": "approval",
+              "success": true
+            },
+            {
+              "scores": [
+                1.0,
+                0.7071067811865476,
+                0.5477225575051661,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "stale-premise",
+              "success": false
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "out-of-scope",
+              "success": true
+            }
+          ],
+          "tfidf": [
+            {
+              "scores": [
+                0.7236575068051737,
+                0.8292698296067984,
+                0.5717991227530961,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "current-lodging",
+              "success": true
+            },
+            {
+              "scores": [
+                0.25719571764394594,
+                0.18512716549060695,
+                0.4981566468105211,
+                0.6466602973341435,
+                0.0
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "rail-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "approval-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "geographic-status",
+              "success": true
+            },
+            {
+              "scores": [
+                0.34963252357446317,
+                0.889952641503542,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v2",
+                "travel-v1",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v2",
+              "query_id": "explicit-current",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "synonym",
+              "success": false
+            },
+            {
+              "scores": [
+                0.8306357653043197,
+                0.18512716549060695,
+                0.4981566468105211,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "rail-faq-v1",
+                "travel-v2",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "historical",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.39427569207070046
+              ],
+              "ranking": [
+                "status-faq-v1",
+                "approval-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "status-faq-v1",
+              "query_id": "status",
+              "success": true
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.39427569207070046,
+                1.0
+              ],
+              "ranking": [
+                "approval-faq-v1",
+                "status-faq-v1",
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1"
+              ],
+              "prediction": "approval-faq-v1",
+              "query_id": "approval",
+              "success": true
+            },
+            {
+              "scores": [
+                1.0,
+                0.6001073373620068,
+                0.4137867275648908,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": "travel-v1",
+              "query_id": "stale-premise",
+              "success": false
+            },
+            {
+              "scores": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ranking": [
+                "travel-v1",
+                "travel-v2",
+                "rail-faq-v1",
+                "status-faq-v1",
+                "approval-faq-v1"
+              ],
+              "prediction": null,
+              "query_id": "out-of-scope",
+              "success": true
+            }
+          ]
+        },
+        "success_counts": {
+          "keyword": 5,
+          "count": 6,
+          "tfidf": 7
+        },
+        "query_count": 9
+      },
+      "rows": [
+        {
+          "query_id": "current-lodging",
+          "query": "北京住宿",
+          "relevant": [
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 1.414465238086587,
+              "travel-v2": 1.5749061904610961,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.6420967572875588,
+              "travel-v2": 0.7347906435793955,
+              "rail-faq-v1": 0.5255670034451023,
+              "status-faq-v1": -0.03271924260438551,
+              "approval-faq-v1": -0.234353120994805
+            },
+            "hybrid": {
+              "travel-v1": 0.03252247488101534,
+              "travel-v2": 0.03252247488101534,
+              "rail-faq-v1": 0.031746031746031744,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": false
+          }
+        },
+        {
+          "query_id": "geographic-status",
+          "query": "北京 处理中",
+          "relevant": [
+            "status-faq-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.5389965007326871,
+              "travel-v2": 0.4743169206447647,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 1.6051829444546102,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 0.7071067811865475,
+              "travel-v2": 0.7071067811865476,
+              "rail-faq-v1": 0.6708203932499369,
+              "status-faq-v1": 0.7071067811865475,
+              "approval-faq-v1": 0.7071067811865475
+            },
+            "dense_nnlm": {
+              "travel-v1": -0.06362570250670847,
+              "travel-v2": 0.26511533445659835,
+              "rail-faq-v1": 0.635366983178039,
+              "status-faq-v1": 0.7964300219322062,
+              "approval-faq-v1": 0.7383516127048909
+            },
+            "hybrid": {
+              "travel-v1": 0.032266458495966696,
+              "travel-v2": 0.031754032258064516,
+              "rail-faq-v1": 0.0315136476426799,
+              "status-faq-v1": 0.032266458495966696,
+              "approval-faq-v1": 0.015625
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "status-faq-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v1",
+              "travel-v2"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "status-faq-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1"
+            ],
+            "reranked": [
+              "status-faq-v1",
+              "travel-v1",
+              "travel-v2"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 0.0,
+              "rr": 0.3333333333333333,
+              "ndcg": 0.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "explicit-current",
+          "query": "750 住宿",
+          "relevant": [
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.8754687373538999,
+              "travel-v2": 2.320528307601835,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.6623968266529098,
+              "travel-v2": 0.8249649036114206,
+              "rail-faq-v1": -0.5846383114877616,
+              "status-faq-v1": 0.22455263130736436,
+              "approval-faq-v1": 0.12376430089814953
+            },
+            "hybrid": {
+              "travel-v1": 0.03252247488101534,
+              "travel-v2": 0.03252247488101534,
+              "rail-faq-v1": 0.015873015873015872,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v2",
+              "travel-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v2",
+              "travel-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "synonym",
+          "query": "酒店补助",
+          "relevant": [
+            "travel-v1",
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "hybrid": {
+              "travel-v1": 0.01639344262295082,
+              "travel-v2": 0.016129032258064516,
+              "rail-faq-v1": 0.015873015873015872,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 0.0,
+              "rr": 0.0,
+              "ndcg": 0.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 0.0,
+              "rr": 0.0,
+              "ndcg": 0.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": false,
+            "dense_authored": true,
+            "dense_nnlm": false,
+            "hybrid": true,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "historical",
+          "query": "600 北京",
+          "relevant": [
+            "travel-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 1.9252908618525777,
+              "travel-v2": 0.4743169206447647,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.9451810675564071,
+              "travel-v2": 0.625643703674038,
+              "rail-faq-v1": -0.2004785837250339,
+              "status-faq-v1": -0.5025358340031736,
+              "approval-faq-v1": -0.13359773692765903
+            },
+            "hybrid": {
+              "travel-v1": 0.03278688524590164,
+              "travel-v2": 0.03200204813108039,
+              "rail-faq-v1": 0.03200204813108039,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "status-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v1",
+              "rail-faq-v1",
+              "travel-v2"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": true,
+            "dense_nnlm": true,
+            "hybrid": true,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "status",
+          "query": "订单 处理中",
+          "relevant": [
+            "status-faq-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 2.6188835877064944,
+              "approval-faq-v1": 1.0137006432518842
+            },
+            "dense_authored": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 1.0,
+              "approval-faq-v1": 1.0
+            },
+            "dense_nnlm": {
+              "travel-v1": -0.3581779731528381,
+              "travel-v2": 0.13727122017497084,
+              "rail-faq-v1": 0.17890524576706202,
+              "status-faq-v1": 1.0,
+              "approval-faq-v1": 0.7269999144579294
+            },
+            "hybrid": {
+              "travel-v1": 0,
+              "travel-v2": 0,
+              "rail-faq-v1": 0,
+              "status-faq-v1": 0.03278688524590164,
+              "approval-faq-v1": 0.03225806451612903
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "rail-faq-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "reranked": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": true,
+            "dense_nnlm": true,
+            "hybrid": true,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "approval",
+          "query": "订单 审批",
+          "relevant": [
+            "approval-faq-v1"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 1.0137006432518842,
+              "approval-faq-v1": 2.6188835877064944
+            },
+            "dense_authored": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 1.0,
+              "approval-faq-v1": 1.0
+            },
+            "dense_nnlm": {
+              "travel-v1": -0.2075910655496554,
+              "travel-v2": -0.04975485265073419,
+              "rail-faq-v1": 0.17382151757662043,
+              "status-faq-v1": 0.7269999144579294,
+              "approval-faq-v1": 1.0
+            },
+            "hybrid": {
+              "travel-v1": 0,
+              "travel-v2": 0,
+              "rail-faq-v1": 0,
+              "status-faq-v1": 0.03252247488101534,
+              "approval-faq-v1": 0.03252247488101534
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "rail-faq-v1",
+              "travel-v2",
+              "travel-v1"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1",
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "approval-faq-v1",
+              "status-faq-v1"
+            ],
+            "dense_authored": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "approval-faq-v1",
+              "status-faq-v1",
+              "rail-faq-v1"
+            ],
+            "hybrid": [
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "reranked": [
+              "approval-faq-v1",
+              "status-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": false,
+            "dense_nnlm": true,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "stale-premise",
+          "query": "北京住宿还是600元吗？",
+          "relevant": [
+            "travel-v2"
+          ],
+          "scores": {
+            "bm25": {
+              "travel-v1": 2.8007595992064775,
+              "travel-v2": 1.5749061904610961,
+              "rail-faq-v1": 0.7905282010746079,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 1.0,
+              "travel-v2": 1.0,
+              "rail-faq-v1": 0.9486832980505138,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 1.0000000000000002,
+              "travel-v2": 0.8331473821141718,
+              "rail-faq-v1": -0.1580885836207424,
+              "status-faq-v1": -0.358177973152838,
+              "approval-faq-v1": -0.20759106554965542
+            },
+            "hybrid": {
+              "travel-v1": 0.03278688524590164,
+              "travel-v2": 0.03225806451612903,
+              "rail-faq-v1": 0.031746031746031744,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "approval-faq-v1",
+              "status-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1"
+            ],
+            "reranked": [
+              "travel-v2",
+              "travel-v1",
+              "rail-faq-v1"
+            ]
+          },
+          "metrics": {
+            "bm25": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_authored": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "dense_nnlm": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "hybrid": {
+              "recall": 1.0,
+              "rr": 0.5,
+              "ndcg": 0.6309297535714575,
+              "correct_abstention": null
+            },
+            "reranked": {
+              "recall": 1.0,
+              "rr": 1.0,
+              "ndcg": 1.0,
+              "correct_abstention": null
+            }
+          },
+          "success": {
+            "bm25": false,
+            "dense_authored": false,
+            "dense_nnlm": false,
+            "hybrid": false,
+            "reranked": true
+          }
+        },
+        {
+          "query_id": "out-of-scope",
+          "query": "护照换发",
+          "relevant": [],
+          "scores": {
+            "bm25": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_authored": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "dense_nnlm": {
+              "travel-v1": 0.0,
+              "travel-v2": 0.0,
+              "rail-faq-v1": 0.0,
+              "status-faq-v1": 0.0,
+              "approval-faq-v1": 0.0
+            },
+            "hybrid": {
+              "travel-v1": 0,
+              "travel-v2": 0,
+              "rail-faq-v1": 0,
+              "status-faq-v1": 0,
+              "approval-faq-v1": 0
+            }
+          },
+          "full_order": {
+            "bm25": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_authored": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "dense_nnlm": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ],
+            "hybrid": [
+              "travel-v1",
+              "travel-v2",
+              "rail-faq-v1",
+              "status-faq-v1",
+              "approval-faq-v1"
+            ]
+          },
+          "returned": {
+            "bm25": [],
+            "dense_authored": [],
+            "dense_nnlm": [],
+            "hybrid": [],
+            "reranked": []
+          },
+          "metrics": {
+            "bm25": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "dense_authored": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "dense_nnlm": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "hybrid": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            },
+            "reranked": {
+              "recall": null,
+              "rr": null,
+              "ndcg": null,
+              "correct_abstention": true
+            }
+          },
+          "success": {
+            "bm25": true,
+            "dense_authored": true,
+            "dense_nnlm": true,
+            "hybrid": true,
+            "reranked": true
+          }
+        }
+      ],
+      "success_counts": {
+        "bm25": 7,
+        "dense_authored": 4,
+        "dense_nnlm": 7,
+        "hybrid": 4,
+        "reranked": 8
+      },
+      "macro": {
+        "bm25": {
+          "recall": 0.875,
+          "rr": 0.8125,
+          "ndcg": 0.8288662191964322
+        },
+        "dense_authored": {
+          "recall": 0.875,
+          "rr": 0.6666666666666666,
+          "ndcg": 0.6904648767857288
+        },
+        "dense_nnlm": {
+          "recall": 0.875,
+          "rr": 0.8125,
+          "ndcg": 0.8288662191964322
+        },
+        "hybrid": {
+          "recall": 1.0,
+          "rr": 0.6875,
+          "ndcg": 0.769331095982161
+        },
+        "reranked": {
+          "recall": 1.0,
+          "rr": 0.9375,
+          "ndcg": 0.9538662191964322
+        }
+      }
+    }
+  }
+}

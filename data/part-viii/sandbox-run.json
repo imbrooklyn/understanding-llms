@@ -1,0 +1,36 @@
+{
+  "recorded_at": "2026-09-14T01:38:10.623425+00:00",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.10 (main, Apr  8 2025, 11:35:47) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "profile": "(version 1)\n(allow default)\n(deny network*)\n(deny file-read* (subpath \"<protected-fixture-directory>\"))\n(deny file-write*)\n(allow file-write* (subpath \"<temporary-work>\") (literal \"/dev/null\"))",
+  "results": {
+    "unconfined": {
+      "returncode": 0,
+      "stdout": "{\"allowed\": \"public-fixture\", \"outside\": \"DEMO-SECRET-ORCHID\", \"network\": \"connected\"}\n",
+      "stderr": "",
+      "observation": {
+        "allowed": "public-fixture",
+        "outside": "DEMO-SECRET-ORCHID",
+        "network": "connected"
+      }
+    },
+    "confined": {
+      "returncode": 0,
+      "stdout": "{\"allowed\": \"public-fixture\", \"outside\": {\"error\": \"PermissionError\", \"errno\": 1}, \"network\": {\"error\": \"PermissionError\", \"errno\": 1}}\n",
+      "stderr": "",
+      "observation": {
+        "allowed": "public-fixture",
+        "outside": {
+          "error": "PermissionError",
+          "errno": 1
+        },
+        "network": {
+          "error": "PermissionError",
+          "errno": 1
+        }
+      }
+    }
+  },
+  "conditions": "Actual subprocesses, temporary fake secret, loopback listener. No third-party network endpoint.",
+  "limits": "macOS-specific diagnostic profile; general runtime reads remain allowed; only the designated fake-secret directory is denied, all network is denied and file writes are restricted; not a production sandbox, authorization system or escape-resistance proof."
+}

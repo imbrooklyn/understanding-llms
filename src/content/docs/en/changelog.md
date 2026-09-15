@@ -5,6 +5,13 @@ sidebar:
   order: 2
 ---
 
+## 2026-09-15 — Part IX
+
+- Published Chapters 54–57 in English and Chinese: eight new reading pages on the service, versions, operations and capstone evidence.
+- Included the CPU service, executed notebooks, static figures, evaluation gates and actual failure/recovery records. The companion service remains a local demonstration.
+- Added the prerequisite project sources while preserving Chapters 40–53 and the HTTP primer as web drafts. Their publication boundary is explicit in the reading pages and roadmap.
+- Updated home, roadmap, search and chapter feeds; earlier publication dates and historical experiment records remain unchanged.
+
 ## 2026-09-13 — Parts II–VI and the Python primer
 
 - Published all completed draft chapters: Chapters 5–39 and Primer-PY in English and Chinese, adding 72 reading pages.

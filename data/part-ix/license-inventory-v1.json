@@ -1,0 +1,101 @@
+{
+  "version": "part-ix-licenses-v1",
+  "as_of": "2026-09-15",
+  "original_assets": [
+    {
+      "paths": [
+        "src/content/docs/en/ch-54.md",
+        "src/content/docs/en/ch-55.md",
+        "src/content/docs/en/ch-56.md",
+        "src/content/docs/en/ch-57.md",
+        "src/content/docs/zh-hans/ch-54.md",
+        "src/content/docs/zh-hans/ch-55.md",
+        "src/content/docs/zh-hans/ch-56.md",
+        "src/content/docs/zh-hans/ch-57.md"
+      ],
+      "license": "CC-BY-SA-4.0",
+      "origin": "Original bilingual textbook prose."
+    },
+    {
+      "paths": [
+        "src/assets/ch-54/lifecycle.json",
+        "src/assets/ch-55/versions.json",
+        "src/assets/ch-56/recovery.json",
+        "src/assets/ch-57/acceptance.json"
+      ],
+      "license": "CC-BY-SA-4.0",
+      "origin": "Original shared bilingual diagrams; no external artwork."
+    },
+    {
+      "paths": [
+        "code/knowledge-assistant/service.py",
+        "code/knowledge-assistant/service_worker.py",
+        "code/knowledge-assistant/service_ops.py",
+        "code/knowledge-assistant/service-ui/",
+        "code/part-ix/"
+      ],
+      "license": "Apache-2.0 for code; CC-BY-SA-4.0 for documentation",
+      "origin": "Original service increment, clients, tests and run instructions."
+    },
+    {
+      "paths": [
+        "data/part-ix/",
+        "data/knowledge-assistant/service-content-v1.json"
+      ],
+      "license": "CC-BY-SA-4.0",
+      "origin": "Original fictional fixtures, measured local observations, localized UI text and first-party screenshots."
+    },
+    {
+      "paths": [
+        "notebooks/part-ix/"
+      ],
+      "license": "CC-BY-SA-4.0 prose; Apache-2.0 code cells",
+      "origin": "Original executed notebooks."
+    }
+  ],
+  "inherited_exceptions": [
+    {
+      "path": "data/part-viii/human-calibration-v1.json",
+      "license": "CC-BY-4.0",
+      "origin": "LMSYS MT-Bench human judgments, pinned revision f7d2896d2cc5d80f8b55c2bbc722613555233c25; not recopied into Part IX.",
+      "attribution": "data/part-viii/README.md"
+    },
+    {
+      "path": "data/part-viii/model-provenance.json",
+      "license": "See pinned model provenance and upstream terms; weights are not redistributed by Part IX.",
+      "origin": "Historical optional Qwen3/Ollama observations, referenced by hash."
+    }
+  ],
+  "dependencies": "data/part-ix/dependency-inventory.json and code/part-ix/requirements-tested.txt record all installed versions and metadata. Website dependencies remain in package.json/pnpm-lock.yaml; no new site package was added.",
+  "license_metadata_gap_review": [
+    {
+      "package": "ipython_pygments_lexers",
+      "version": "1.1.1",
+      "installed_license_file": "ipython_pygments_lexers-1.1.1.dist-info/LICENSE",
+      "sha256": "b1d0dbc0fa79774d34b8e2d0aec91d50d8caf05f7b40fc22c3010a4bd9ad2bf9",
+      "reviewed_terms": "BSD-3-Clause"
+    },
+    {
+      "package": "prompt_toolkit",
+      "version": "3.0.53",
+      "installed_license_file": "prompt_toolkit-3.0.53.dist-info/licenses/LICENSE",
+      "sha256": "303574d9bdd85c757d6025017942bf17baeedf2778f62bd7f425d07d880f4c4a",
+      "reviewed_terms": "BSD-3-Clause"
+    },
+    {
+      "package": "ptyprocess",
+      "version": "0.7.0",
+      "installed_license_file": "ptyprocess-0.7.0.dist-info/LICENSE",
+      "sha256": "c822d385b1a73329846241799becf18690b5d44764c1bed69300b536a405030a",
+      "reviewed_terms": "ISC"
+    },
+    {
+      "package": "python-dateutil",
+      "version": "2.9.0.post0",
+      "installed_license_file": "python_dateutil-2.9.0.post0.dist-info/LICENSE",
+      "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e",
+      "reviewed_terms": "Apache-2.0 and BSD-3-Clause; see scope in package LICENSE"
+    }
+  ],
+  "review_boundary": "Missing/generic package metadata was supplemented by reading installed distribution LICENSE files. Preserve original license notices when redistributing dependencies. A hash is neither a license grant nor a security certification."
+}

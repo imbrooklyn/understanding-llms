@@ -1,0 +1,288 @@
+$ pnpm validate:content && pnpm validate:language && pnpm validate:part-i && pnpm validate:part-ii && pnpm validate:part-iii && pnpm validate:part-iv && pnpm validate:part-v && pnpm validate:part-vi && pnpm validate:part-vii && pnpm test:part-vii:cpu && pnpm validate:part-viii && pnpm test:part-viii:cpu && pnpm validate:part-ix && pnpm test:part-ix:cpu && pnpm test && pnpm check && pnpm build && node scripts/check-draft-output.mjs
+$ node scripts/validate-content.mjs
+Validated 57 bilingual chapter pairs and supporting pages.
+$ node scripts/validate-language.mjs
+Validated English public documentation and source comments; localized textbook content is preserved.
+$ node scripts/validate-part-i.mjs
+Validated Part I bilingual structure, equations, sources, figures, visible exercises/solutions, static content and fixture provenance.
+$ node scripts/validate-part-ii.mjs
+test_cosine_scale_order_units_and_zero (test_core.ArithmeticTests.test_cosine_scale_order_units_and_zero) ... ok
+test_kl_direction_support_and_entropy_decomposition (test_core.ArithmeticTests.test_kl_direction_support_and_entropy_decomposition) ... ok
+test_matrix_cells_and_equal_shape_semantic_failure (test_core.ArithmeticTests.test_matrix_cells_and_equal_shape_semantic_failure) ... ok
+test_softmax_loss_units_padding_and_stability (test_core.ArithmeticTests.test_softmax_loss_units_padding_and_stability) ... ok
+test_measured_records_name_the_exact_sources_and_inputs (test_core.EvidenceTests.test_measured_records_name_the_exact_sources_and_inputs) ... ok
+test_all_six_part_i_settings_and_exact_generation (test_core.NgramBridgeTests.test_all_six_part_i_settings_and_exact_generation) ... ok
+test_transfer_data_change_unseen_and_zero_are_distinct (test_core.NgramBridgeTests.test_transfer_data_change_unseen_and_zero_are_distinct) ... ok
+test_corpus_change_updates_idf_without_changing_document_frequency (test_core.RetrievalTests.test_corpus_change_updates_idf_without_changing_document_frequency) ... ok
+test_full_same_set_bilingual_outputs_against_independent_evidence (test_core.RetrievalTests.test_full_same_set_bilingual_outputs_against_independent_evidence) ... ok
+test_ties_abstention_oov_and_failure_labels_remain_visible (test_core.RetrievalTests.test_ties_abstention_oov_and_failure_labels_remain_visible) ... ok
+test_word_order_collision_is_not_a_language_model (test_core.RetrievalTests.test_word_order_collision_is_not_a_language_model) ... ok
+test_bytes_collisions_offsets_and_compatibility (test_core.TextTests.test_bytes_collisions_offsets_and_compatibility) ... ok
+test_contract_outputs_idempotence_and_raw_retention (test_core.TextTests.test_contract_outputs_idempotence_and_raw_retention) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.005s
+
+OK
+Validated Part II bilingual manuscripts, structural anchors, equations, captions, sources, visible answers, rendered figures, fresh notebook evidence and independent numerical/behavior checks.
+$ node scripts/validate-part-iii.mjs
+test_attention_exact_oracles_and_interventions (test_core.SequenceEvidence.test_attention_exact_oracles_and_interventions) ... ok
+test_attention_invariants_and_invalid_memory (test_core.SequenceEvidence.test_attention_invariants_and_invalid_memory) ... ok
+test_bptt_against_closed_polynomial_and_difference (test_core.SequenceEvidence.test_bptt_against_closed_polynomial_and_difference) ... ok
+test_computed_encoder_collision (test_core.SequenceEvidence.test_computed_encoder_collision) ... ok
+test_products_and_gate_arithmetic (test_core.SequenceEvidence.test_products_and_gate_arithmetic) ... ok
+test_same_task_two_different_failures (test_core.SequenceEvidence.test_same_task_two_different_failures) ... ok
+test_teacher_generation_divergence_and_eos (test_core.SequenceEvidence.test_teacher_generation_divergence_and_eos) ... ok
+test_three_steps_and_input_independence (test_core.SequenceEvidence.test_three_steps_and_input_independence) ... ok
+test_tie_boundary_and_retention_change (test_core.SequenceEvidence.test_tie_boundary_and_retention_change) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK
+Validated Part III chapter pairs, anchors, math, numerical tables, visible answers, figures, provenance, fresh notebook evidence and independent sequence behavior.
+$ node scripts/validate-part-iv.mjs
+Validated all seven Part IV chapter pairs, bilingual math/anchors/answers, rendered figures, independent numeric evidence, actual MG records/checkpoints and fresh notebook provenance.
+$ node scripts/validate-part-v.mjs
+Validated all twelve Part V chapter pairs, bilingual math/anchors/answers, twelve rendered figure sources, independent numeric evidence, 180 measured generation attempts and fresh notebook provenance.
+$ node scripts/validate-part-vi.mjs
+Part VI: 12 manuscripts, six shared figures, numeric/behavior records, table bindings and executed notebooks verified.
+$ node scripts/validate-part-vii.mjs
+Validated Part VII bilingual structure, evidence, independent arithmetic, immutable baselines, source/run hashes and executed notebooks.
+$ node scripts/test-part-vii-cpu.mjs
+test_dates_and_budget_edges (test_pipeline.Contracts.test_dates_and_budget_edges) ... ok
+test_evidence_cannot_change_serialization_structure (test_pipeline.Contracts.test_evidence_cannot_change_serialization_structure) ... ok
+test_parse_failures_and_envelopes (test_pipeline.Contracts.test_parse_failures_and_envelopes) ... ok
+test_schema_branches_and_false_fact (test_pipeline.Contracts.test_schema_branches_and_false_fact) ... ok
+test_actual_http_success_errors_stream_timeout_and_no_write (test_pipeline.ReadBoundaries.test_actual_http_success_errors_stream_timeout_and_no_write) ... ok
+test_actual_mcp_and_result_agreement (test_pipeline.ReadBoundaries.test_actual_mcp_and_result_agreement) ... ok
+test_bounded_retry_without_wall_clock_sleep (test_pipeline.ReadBoundaries.test_bounded_retry_without_wall_clock_sleep) ... ok
+test_denial_and_arguments_never_execute_backend (test_pipeline.ReadBoundaries.test_denial_and_arguments_never_execute_backend) ... ok
+test_mcp_metadata_and_version_do_not_authorize (test_pipeline.ReadBoundaries.test_mcp_metadata_and_version_do_not_authorize) ... ok
+test_success_poison_and_timeout (test_pipeline.ReadBoundaries.test_success_poison_and_timeout) ... ok
+test_bm25_against_independent_decimal_calculation (test_pipeline.RetrievalAndRAG.test_bm25_against_independent_decimal_calculation) ... ok
+test_conflict_budget_and_corruption (test_pipeline.RetrievalAndRAG.test_conflict_budget_and_corruption) ... ok
+test_inherited_artifacts_unchanged (test_pipeline.RetrievalAndRAG.test_inherited_artifacts_unchanged) ... ok
+test_paired_eval_repeat_equivalence_and_bootstrap_independent_binomial (test_pipeline.RetrievalAndRAG.test_paired_eval_repeat_equivalence_and_bootstrap_independent_binomial) ... ok
+test_parser_roundtrip_and_cited_answers (test_pipeline.RetrievalAndRAG.test_parser_roundtrip_and_cited_answers) ... ok
+test_rank_metrics_from_finite_rankings (test_pipeline.RetrievalAndRAG.test_rank_metrics_from_finite_rankings) ... ok
+test_retained_retrieval_and_missing_candidate_boundary (test_pipeline.RetrievalAndRAG.test_retained_retrieval_and_missing_candidate_boundary) ... ok
+test_rewrite_and_compression_are_separate_probes (test_pipeline.RetrievalAndRAG.test_rewrite_and_compression_are_separate_probes) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.702s
+
+OK
+$ node scripts/validate-part-viii.mjs
+Validated Part VIII bilingual chapters, independent expectations, raw/derived Judge evidence, control outcomes, reviewed inputs and executed notebooks.
+$ node scripts/test-part-viii-cpu.mjs
+test_approval_denial_expiry_mismatch_and_reviewer (test_controls.Controls.test_approval_denial_expiry_mismatch_and_reviewer) ... ok
+test_duplicate_keys_cannot_change_arguments (test_controls.Controls.test_duplicate_keys_cannot_change_arguments) ... ok
+test_failure_before_commit_has_no_receipt_and_is_retried (test_controls.Controls.test_failure_before_commit_has_no_receipt_and_is_retried) ... ok
+test_identical_attack_fixtures_before_after (test_controls.Controls.test_identical_attack_fixtures_before_after) ... ok
+test_integrity_catches_bytes_and_symlink (test_controls.Controls.test_integrity_catches_bytes_and_symlink) ... ok
+test_minimization_deletion_and_group_invariance (test_controls.Controls.test_minimization_deletion_and_group_invariance) ... ok
+test_model_call_limit_and_timeout (test_controls.Controls.test_model_call_limit_and_timeout) ... ok
+test_permission_matrix_retains_legitimate_use (test_controls.Controls.test_permission_matrix_retains_legitimate_use) ... ok
+test_persisted_budget_deadline_and_attempt_limit (test_controls.Controls.test_persisted_budget_deadline_and_attempt_limit) ... ok
+test_retention_and_model_digest_boundaries (test_controls.Controls.test_retention_and_model_digest_boundaries) ... ok
+test_source_skill_rejects_old_and_tampered_evidence (test_controls.Controls.test_source_skill_rejects_old_and_tampered_evidence) ... ok
+test_tenant_scope_and_credentials (test_controls.Controls.test_tenant_scope_and_credentials) ... ok
+test_timeout_after_commit_recovery_and_replay (test_controls.Controls.test_timeout_after_commit_recovery_and_replay) ... ok
+test_workflow_guards_and_two_locales (test_controls.Controls.test_workflow_guards_and_two_locales) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.145s
+
+OK
+$ node scripts/validate-part-ix.mjs
+Validated Part IX bilingual mechanisms, static figures, independent arithmetic, HTTP/fault/release evidence, inherited comparisons, provenance and executed notebooks.
+$ node scripts/test-part-ix-cpu.mjs
+test_cancel_running_process_no_late_answer_or_cache (test_service.HTTPBehavior.test_cancel_running_process_no_late_answer_or_cache) ... ok
+test_concurrency_admission_rate_limit_and_order_isolation (test_service.HTTPBehavior.test_concurrency_admission_rate_limit_and_order_isolation) ... ok
+test_deadline_retry_breaker_fallback_and_recovery (test_service.HTTPBehavior.test_deadline_retry_breaker_fallback_and_recovery) ... ok
+test_feedback_route_minimization_and_static_ui_labels (test_service.HTTPBehavior.test_feedback_route_minimization_and_static_ui_labels) ... ok
+test_real_success_stream_resume_and_ownership (test_service.HTTPBehavior.test_real_success_stream_resume_and_ownership) ... ok
+test_bucket_and_breaker_boundary_and_single_probe (test_service.NumericPolicies.test_bucket_and_breaker_boundary_and_single_probe) ... ok
+test_cache_expiry_scope_version_and_copy (test_service.NumericPolicies.test_cache_expiry_scope_version_and_copy) ... ok
+test_deadline_and_semantic_false_match (test_service.NumericPolicies.test_deadline_and_semantic_false_match) ... ok
+test_feedback_requires_review_and_expires_without_training (test_service.NumericPolicies.test_feedback_requires_review_and_expires_without_training) ... ok
+test_release_gate_and_inflight_snapshot (test_service.NumericPolicies.test_release_gate_and_inflight_snapshot) ... ok
+test_retained_lexical_baseline_same_set (test_service.NumericPolicies.test_retained_lexical_baseline_same_set) ... ok
+test_slo_eligibility_window_and_empty (test_service.NumericPolicies.test_slo_eligibility_window_and_empty) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 7.453s
+
+OK
+$ node --experimental-strip-types --test tests/*.test.mjs
+(node:96064) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ bilingual tokenization, round trip, version change and unknown failure match independent fixtures (0.920791ms)
+✔ cosine distinguishes geometry, opposite direction and undefined zero vector (0.114541ms)
+✔ all six scenarios preserve parameters/context/external/state distinctions (0.176291ms)
+✔ Bigram counts include EOS, exclude predicted BOS, and never cross sequence boundaries (0.254167ms)
+✔ normalization, add-one denominators, zero transitions, and unseen context are distinct (0.289333ms)
+✔ all six held-out comparisons and complete-sequence calculations match hand fractions (0.451625ms)
+✔ generation matches frozen PRNG trace and cannot train on its output (0.312375ms)
+✔ changing unseen earlier prefixes cannot change identical selected context distributions (0.052833ms)
+✔ heading numbers and anchors agree across languages, reset subsections, and skip nonchapters (0.506125ms)
+✔ all diagrams render localized descriptions, licensed captions and worked evidence (1.633834ms)
+✔ textbook transfer exercises agree with independent fractions and preserve fitting boundaries (0.225708ms)
+✔ removed learning-control syntax fails authoring instead of silently hiding content (0.05625ms)
+✔ Mini GPT curve plots the actual measurements with both line and marker distinctions (2.507625ms)
+✔ Part V independent calculations, complete paired records and evidence provenance (17.176542ms)
+✔ Part VI arithmetic, stop/cost invariants and immutable paired evidence (28.117125ms)
+✔ Both languages render through Markdown, math and figure plugins without literal delimiters (296.681333ms)
+✔ Every manuscript fence passes the actual Markdown figure transformation (1.502583ms)
+✔ Budget plot uses the declared quota axis and preserves all series points (0.358708ms)
+✔ All Part VI parameter nodes retain the shared neutral double-border role (0.259333ms)
+✔ HTTP primer renders localized static figures without acquiring chapter numbers (1.208042ms)
+✔ chapter numbering and unsupported teaching controls retain their boundaries (0.217ms)
+✔ en: Part VIII figures preserve evidence and accessible static structure (1.915708ms)
+✔ zh-hans: Part VIII figures preserve evidence and accessible static structure (1.079542ms)
+✔ Drafts and published lessons have distinct valid metadata (1.521584ms)
+✔ Publication metadata rejects missing, contradictory and invalid dates (0.780209ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 520.837333
+$ astro sync --force && astro check
+00:44:03 [WARN] [content] data store cleared (force)
+00:44:03 [vite] Re-optimizing dependencies because vite config has changed
+00:44:03 [content] Syncing content
+00:44:06 [content] Synced content
+00:44:06 [types] Generated 3.19s
+00:44:07 [content] Syncing content
+00:44:07 [content] Synced content
+00:44:07 [types] Generated 365ms
+00:44:07 [check] Getting diagnostics for Astro files in $WORKSPACE/understanding-llms...
+Result (68 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+$ astro build
+00:44:11 [content] Syncing content
+00:44:11 [content] Synced content
+00:44:11 [types] Generated 375ms
+00:44:11 [build] output: "static"
+00:44:11 [build] mode: "static"
+00:44:11 [build] directory: $WORKSPACE/understanding-llms/dist/
+00:44:11 [build] Collecting build info...
+00:44:11 [build] ✓ Completed in 554ms.
+00:44:11 [build] Building static entrypoints...
+00:44:11 [vite] ✓ built in 441ms
+00:44:11 [vite] ✓ built in 21ms
+00:44:11 [build] Rearranging server assets...
+
+ generating static routes 
+00:44:11   ├─ /en/rss.xml (+18ms) 
+00:44:11   ├─ /zh-hans/rss.xml (+2ms) 
+00:44:11   ├─ /index.html (+2ms) 
+00:44:11   ├─ /en/index.html (+7ms) 
+00:44:11   ├─ /en/about/index.html (+3ms) 
+00:44:11   ├─ /en/ch-01/index.html (+2ms) 
+00:44:11   ├─ /en/ch-02/index.html (+3ms) 
+00:44:11   ├─ /en/ch-03/index.html (+3ms) 
+00:44:11   ├─ /en/ch-04/index.html (+2ms) 
+00:44:11   ├─ /en/ch-05/index.html (+2ms) 
+00:44:12   ├─ /en/ch-06/index.html (+2ms) 
+00:44:12   ├─ /en/ch-07/index.html (+2ms) 
+00:44:12   ├─ /en/ch-08/index.html (+1ms) 
+00:44:12   ├─ /en/ch-09/index.html (+3ms) 
+00:44:12   ├─ /en/ch-10/index.html (+1ms) 
+00:44:12   ├─ /en/ch-11/index.html (+1ms) 
+00:44:12   ├─ /en/ch-12/index.html (+1ms) 
+00:44:12   ├─ /en/ch-13/index.html (+1ms) 
+00:44:12   ├─ /en/ch-14/index.html (+1ms) 
+00:44:12   ├─ /en/ch-15/index.html (+1ms) 
+00:44:12   ├─ /en/ch-16/index.html (+1ms) 
+00:44:12   ├─ /en/ch-17/index.html (+3ms) 
+00:44:12   ├─ /en/ch-18/index.html (+1ms) 
+00:44:12   ├─ /en/ch-19/index.html (+1ms) 
+00:44:12   ├─ /en/ch-20/index.html (+1ms) 
+00:44:12   ├─ /en/ch-21/index.html (+1ms) 
+00:44:12   ├─ /en/ch-22/index.html (+1ms) 
+00:44:12   ├─ /en/ch-23/index.html (+1ms) 
+00:44:12   ├─ /en/ch-24/index.html (+1ms) 
+00:44:12   ├─ /en/ch-25/index.html (+2ms) 
+00:44:12   ├─ /en/ch-26/index.html (+1ms) 
+00:44:12   ├─ /en/ch-27/index.html (+1ms) 
+00:44:12   ├─ /en/ch-28/index.html (+1ms) 
+00:44:12   ├─ /en/ch-29/index.html (+1ms) 
+00:44:12   ├─ /en/ch-30/index.html (+1ms) 
+00:44:12   ├─ /en/ch-31/index.html (+1ms) 
+00:44:12   ├─ /en/ch-32/index.html (+1ms) 
+00:44:12   ├─ /en/ch-33/index.html (+2ms) 
+00:44:12   ├─ /en/ch-34/index.html (+1ms) 
+00:44:12   ├─ /en/ch-35/index.html (+1ms) 
+00:44:12   ├─ /en/ch-36/index.html (+1ms) 
+00:44:12   ├─ /en/ch-37/index.html (+1ms) 
+00:44:12   ├─ /en/ch-38/index.html (+1ms) 
+00:44:12   ├─ /en/ch-39/index.html (+1ms) 
+00:44:12   ├─ /en/changelog/index.html (+1ms) 
+00:44:12   ├─ /en/errata/index.html (+2ms) 
+00:44:12   ├─ /en/glossary/index.html (+1ms) 
+00:44:12   ├─ /en/primer-py/index.html (+1ms) 
+00:44:12   ├─ /en/roadmap/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/about/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-01/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-02/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-03/index.html (+2ms) 
+00:44:12   ├─ /zh-hans/ch-04/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-05/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-06/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-07/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-08/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-09/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-10/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-11/index.html (+2ms) 
+00:44:12   ├─ /zh-hans/ch-12/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-13/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-14/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-15/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-16/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-17/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-18/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-19/index.html (+2ms) 
+00:44:12   ├─ /zh-hans/ch-20/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-21/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-22/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-23/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-24/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-25/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-26/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-27/index.html (+2ms) 
+00:44:12   ├─ /zh-hans/ch-28/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-29/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-30/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-31/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-32/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-33/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-34/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-35/index.html (+2ms) 
+00:44:12   ├─ /zh-hans/ch-36/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-37/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-38/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/ch-39/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/changelog/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/errata/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/glossary/index.html (+1ms) 
+00:44:12   ├─ /zh-hans/primer-py/index.html (+2ms) 
+00:44:12   ├─ /zh-hans/roadmap/index.html (+1ms) 
+00:44:12 ✓ Completed in 263ms.
+
+00:44:12 [build] ✓ Completed in 759ms.
+00:44:12 [starlight:pagefind] Building search index with Pagefind...
+00:44:12 [starlight:pagefind] Found 93 HTML files.
+00:44:12 [starlight:pagefind] Finished building search index in 364ms.
+00:44:12 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+00:44:12 [build] 93 page(s) built in 1.71s
+00:44:12 [build] Complete!
+Verified 40 draft routes and links are excluded; all 92 public language pages are built, indexed and in the sitemap; both chapter feeds and roadmaps are complete.

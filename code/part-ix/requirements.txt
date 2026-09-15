@@ -1,0 +1,3 @@
+# SPDX-License-Identifier: Apache-2.0
+# CPU service and fresh-kernel notebook dependencies; no model weights required.
+-r ../part-vii/requirements.txt

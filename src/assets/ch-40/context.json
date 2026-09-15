@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 40.1 — Availability, delivery and use are three different checks.",
+    "zh-hans": "图 40.1：资料存在、送入输入和正确使用，是三项不同检查。"
+  },
+  "alt": {
+    "en": "The archived 600 and current 750 sources are filtered by requested date. The whole 750 passage is packed, but model use remains separately evaluated.",
+    "zh-hans": "按问题日期筛选旧版 600 和现行 750；完整的 750 段落进入上下文，但模型是否用对仍须单独评测。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Source selection",
+        "zh-hans": "来源选择"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Archive: 600; current: 750",
+            "zh-hans": "档案：600；现行：750"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Date 2026-09-14 → v2",
+            "zh-hans": "日期 2026-09-14 → v2"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "750 + date + unit",
+            "zh-hans": "750 + 日期 + 单位"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Changing to a 2025 question selects 600 instead.",
+        "zh-hans": "改问 2025 年，便应选择 600。"
+      }
+    },
+    {
+      "label": {
+        "en": "Input boundary",
+        "zh-hans": "输入边界"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Whole source + address",
+            "zh-hans": "完整来源 + 地址"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Count input; reserve output",
+            "zh-hans": "统计输入，预留输出"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Present ≠ used correctly",
+            "zh-hans": "在场 ≠ 正确使用"
+          }
+        }
+      ],
+      "flow": {
+        "en": "An oversized required block stops packing; it is not silently cut.",
+        "zh-hans": "必要证据超限就停止装配，不静默截断。"
+      }
+    }
+  ]
+}

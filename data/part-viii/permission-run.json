@@ -1,0 +1,180 @@
+{
+  "provenance": "Actual local matrix; fresh SQLite database per row; host principals and approvals are synthetic, not production credentials.",
+  "rows": [
+    {
+      "case": "own_read",
+      "allowed": true,
+      "result": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "processing",
+        "version": 1,
+        "effects": 0
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "south_own_read",
+      "allowed": true,
+      "result": {
+        "tenant": "south",
+        "id": "A-104",
+        "owner": "leo",
+        "status": "shipped",
+        "version": 1,
+        "effects": 0
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "wrong_owner",
+      "allowed": false,
+      "result": {
+        "reason": "not_found_or_forbidden"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "wrong_tenant",
+      "allowed": false,
+      "result": {
+        "reason": "not_found_or_forbidden"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "wrong_audience",
+      "allowed": false,
+      "result": {
+        "reason": "credential_invalid"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "expired_credential",
+      "allowed": false,
+      "result": {
+        "reason": "credential_invalid"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "missing_scope",
+      "allowed": false,
+      "result": {
+        "reason": "scope_denied"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "reader_cancel",
+      "allowed": false,
+      "result": {
+        "reason": "scope_denied"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "approved_cancel",
+      "allowed": true,
+      "result": {
+        "status": "cancelled",
+        "order_id": "A-104",
+        "version": 2,
+        "receipt_reused": false
+      },
+      "north_effects": 1
+    },
+    {
+      "case": "missing_approval",
+      "allowed": false,
+      "result": {
+        "reason": "approval_missing_or_mismatch"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "denied_approval",
+      "allowed": false,
+      "result": {
+        "reason": "approval_denied"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "expired_approval",
+      "allowed": false,
+      "result": {
+        "reason": "approval_expired"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "changed_object",
+      "allowed": false,
+      "result": {
+        "reason": "approval_missing_or_mismatch"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "changed_version",
+      "allowed": false,
+      "result": {
+        "reason": "version_conflict"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "reviewer_read",
+      "allowed": false,
+      "result": {
+        "reason": "scope_denied"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "reviewer_cancel",
+      "allowed": false,
+      "result": {
+        "reason": "scope_denied"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "tenant_argument",
+      "allowed": false,
+      "result": {
+        "allowed": false,
+        "control": "schema"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "network_tool",
+      "allowed": false,
+      "result": {
+        "allowed": false,
+        "control": "allowlist"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "unprivileged_approve",
+      "allowed": false,
+      "result": {
+        "reason": "scope_denied"
+      },
+      "north_effects": 0
+    },
+    {
+      "case": "cross_tenant_approve",
+      "allowed": false,
+      "result": {
+        "reason": "reviewer_denied"
+      },
+      "north_effects": 0
+    }
+  ]
+}

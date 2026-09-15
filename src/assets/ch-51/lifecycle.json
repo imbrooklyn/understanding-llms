@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 51.1 — A deletion request follows every retained copy.",
+    "zh-hans": "图 51.1：删除请求要追到每一份留存副本。"
+  },
+  "alt": {
+    "en": "Purpose-limited input reaches the model; credentials stay outside. Logs, memory, cache and feedback each remove the selected synthetic subject. A count-only receipt remains.",
+    "zh-hans": "模型只收到符合用途的输入，凭据留在外部。日志、记忆、缓存和反馈分别删除指定虚构用户的数据，只留下计数回执。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Before model input",
+        "zh-hans": "进入模型之前"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Question + date + topic",
+            "zh-hans": "问题＋日期＋主题"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Select necessary fields",
+            "zh-hans": "选择必要字段"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "No credential or hotel address",
+            "zh-hans": "不含凭据或酒店地址"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Field selection is a data-minimization control, not semantic detection of every secret.",
+        "zh-hans": "字段筛选用于减少数据，不能识别任意文本中的所有秘密。"
+      }
+    },
+    {
+      "label": {
+        "en": "Four retained stores",
+        "zh-hans": "四处留存"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Logs 2 → 1; memory 2 → 1",
+            "zh-hans": "日志 2 → 1；记忆 2 → 1"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Cache 2 → 1; feedback 2 → 1",
+            "zh-hans": "缓存 2 → 1；反馈 2 → 1"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Receipt: counts, no content",
+            "zh-hans": "回执：计数，不留正文"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Deleting these copies does not erase model weights or an unlisted backup.",
+        "zh-hans": "删掉这些副本，不代表清除了模型参数或未列出的备份。"
+      }
+    }
+  ]
+}

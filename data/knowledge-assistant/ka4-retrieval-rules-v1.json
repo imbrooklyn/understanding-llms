@@ -1,0 +1,38 @@
+{
+  "version": "ka4-retrieval-rules-v1",
+  "as_of": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "idf": "ln(1+(N-df+0.5)/(df+0.5))",
+    "query_tf": "distinct query terms"
+  },
+  "dense": "cosine of mean vectors; zero query returns nothing; only scores > 0 returned",
+  "hybrid": "RRF offset 60 over positive BM25 and authored dense lists; omitted candidates contribute zero",
+  "reranker": "Rule, not neural: stable partition top-three hybrid candidates by inferred topic/date eligibility; no relevance-label access",
+  "scope_words": {
+    "en": {
+      "current": [
+        "still",
+        "current"
+      ]
+    },
+    "zh-hans": {
+      "current": [
+        "还是",
+        "现行"
+      ]
+    }
+  },
+  "ties": "Round score to 12 decimals for comparison, then KA-0 A–E order; full float64 used otherwise",
+  "metrics": "Recall@2 and nDCG@2; full returned-list reciprocal rank; macro excludes eight-answerable denominator empty gold; empty-gold abstention separately",
+  "rewrites": {
+    "en": {
+      "hotel allowance": "lodging"
+    },
+    "zh-hans": {
+      "酒店补助": "住宿"
+    }
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "provenance": "Actual distribution metadata from the fresh tested Python 3.12.10 CPU environment; installed through the configured Aliyun PyPI mirror using the inherited exact-version requirements. Metadata is supplier-asserted, not a signature or vulnerability assessment.",
+  "requirements": "code/part-vii/requirements-tested.txt",
+  "requirements_sha256": "5af9cea6be185b7a6742d6be0af94adca3955676b0b8c5d516635c5d27526171",
+  "distributions": [
+    {
+      "name": "appnope",
+      "version": "1.0.0",
+      "license_expression": "BSD-2-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Source, https://github.com/minrk/appnope"
+      ]
+    },
+    {
+      "name": "asttokens",
+      "version": "3.0.2",
+      "license_expression": null,
+      "license": "Apache 2.0",
+      "home_page": "https://github.com/gristlabs/asttokens",
+      "project_urls": [
+        "Documentation, https://asttokens.readthedocs.io/en/latest/index.html",
+        "Issue Tracker, https://github.com/gristlabs/asttokens/issues"
+      ]
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Documentation, https://www.attrs.org/",
+        "Changelog, https://www.attrs.org/en/stable/changelog.html",
+        "GitHub, https://github.com/python-attrs/attrs",
+        "Funding, https://github.com/sponsors/hynek",
+        "Tidelift, https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi"
+      ]
+    },
+    {
+      "name": "comm",
+      "version": "0.2.3",
+      "license_expression": null,
+      "license": "BSD 3-Clause License\n\nCopyright (c) 2022, Jupyter\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://github.com/ipython/comm"
+      ]
+    },
+    {
+      "name": "debugpy",
+      "version": "1.8.21",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "https://aka.ms/debugpy",
+      "project_urls": [
+        "Source, https://github.com/microsoft/debugpy"
+      ]
+    },
+    {
+      "name": "executing",
+      "version": "2.2.1",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "https://github.com/alexmojaki/executing",
+      "project_urls": []
+    },
+    {
+      "name": "fastjsonschema",
+      "version": "2.22.2",
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "home_page": "https://github.com/horejsek/python-fastjsonschema",
+      "project_urls": []
+    },
+    {
+      "name": "ipykernel",
+      "version": "6.30.1",
+      "license_expression": null,
+      "license": "BSD 3-Clause License\n\nCopyright (c) 2015, IPython Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://ipython.org",
+        "Documentation, https://ipykernel.readthedocs.io",
+        "Source, https://github.com/ipython/ipykernel",
+        "Tracker, https://github.com/ipython/ipykernel/issues"
+      ]
+    },
+    {
+      "name": "ipython",
+      "version": "9.17.1",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://ipython.org",
+        "Documentation, https://ipython.readthedocs.io/",
+        "Funding, https://jupyter.org/about#donate",
+        "Source, https://github.com/ipython/ipython",
+        "Tracker, https://github.com/ipython/ipython/issues"
+      ]
+    },
+    {
+      "name": "ipython_pygments_lexers",
+      "version": "1.1.1",
+      "license_expression": null,
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Source, https://github.com/ipython/ipython-pygments-lexers"
+      ]
+    },
+    {
+      "name": "jedi",
+      "version": "0.20.0",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "https://github.com/davidhalter/jedi",
+      "project_urls": [
+        "Documentation, https://jedi.readthedocs.io/en/latest/"
+      ]
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.25.1",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://github.com/python-jsonschema/jsonschema",
+        "Documentation, https://python-jsonschema.readthedocs.io/",
+        "Issues, https://github.com/python-jsonschema/jsonschema/issues/",
+        "Funding, https://github.com/sponsors/Julian",
+        "Tidelift, https://tidelift.com/subscription/pkg/pypi-jsonschema?utm_source=pypi-jsonschema&utm_medium=referral&utm_campaign=pypi-link",
+        "Changelog, https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+        "Source, https://github.com/python-jsonschema/jsonschema"
+      ]
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Documentation, https://jsonschema-specifications.readthedocs.io/",
+        "Homepage, https://github.com/python-jsonschema/jsonschema-specifications",
+        "Issues, https://github.com/python-jsonschema/jsonschema-specifications/issues/",
+        "Funding, https://github.com/sponsors/Julian",
+        "Tidelift, https://tidelift.com/subscription/pkg/pypi-jsonschema-specifications?utm_source=pypi-jsonschema-specifications&utm_medium=referral&utm_campaign=pypi-link",
+        "Source, https://github.com/python-jsonschema/jsonschema-specifications"
+      ]
+    },
+    {
+      "name": "jupyter_client",
+      "version": "8.10.0",
+      "license_expression": null,
+      "license": "BSD 3-Clause License\n\n- Copyright (c) 2001-2015, IPython Development Team\n- Copyright (c) 2015-, Jupyter Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://jupyter.org",
+        "Documentation, https://jupyter-client.readthedocs.io/",
+        "Source, https://github.com/jupyter/jupyter_client"
+      ]
+    },
+    {
+      "name": "jupyter_core",
+      "version": "5.9.1",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://jupyter.org",
+        "Documentation, https://jupyter-core.readthedocs.io/",
+        "Source, https://github.com/jupyter/jupyter_core",
+        "Tracker, https://github.com/jupyter/jupyter_core/issues"
+      ]
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.2.2",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://github.com/ipython/matplotlib-inline"
+      ]
+    },
+    {
+      "name": "nbclient",
+      "version": "0.10.2",
+      "license_expression": null,
+      "license": "BSD 3-Clause License\n\nCopyright (c) 2020-, Jupyter Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "home_page": null,
+      "project_urls": [
+        "Documentation, https://nbclient.readthedocs.io",
+        "Funding, https://numfocus.org/",
+        "Homepage, https://jupyter.org",
+        "Source, https://github.com/jupyter/nbclient",
+        "Tracker, https://github.com/jupyter/nbclient/issues"
+      ]
+    },
+    {
+      "name": "nbformat",
+      "version": "5.10.4",
+      "license_expression": null,
+      "license": "BSD 3-Clause License\n\n- Copyright (c) 2001-2015, IPython Development Team\n- Copyright (c) 2015-, Jupyter Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://jupyter.org",
+        "Changelog, https://github.com/jupyter/nbformat/blob/main/CHANGELOG.md",
+        "Documentation, https://nbformat.readthedocs.io/",
+        "Repository, https://github.com/jupyter/nbformat.git"
+      ]
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.6.0",
+      "license_expression": null,
+      "license": "BSD",
+      "home_page": "https://github.com/erdewit/nest_asyncio",
+      "project_urls": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Documentation, https://packaging.pypa.io/",
+        "Source, https://github.com/pypa/packaging"
+      ]
+    },
+    {
+      "name": "parso",
+      "version": "0.8.7",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "https://github.com/davidhalter/parso",
+      "project_urls": []
+    },
+    {
+      "name": "pexpect",
+      "version": "4.9.0",
+      "license_expression": null,
+      "license": "ISC license",
+      "home_page": "https://pexpect.readthedocs.io/",
+      "project_urls": [
+        "Bug Tracker, https://github.com/pexpect/pexpect/issues",
+        "Documentation, https://pexpect.readthedocs.io/",
+        "Source Code, https://github.com/pexpect/pexpect",
+        "History, https://pexpect.readthedocs.io/en/stable/history.html"
+      ]
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://pip.pypa.io/",
+        "Documentation, https://pip.pypa.io",
+        "Source, https://github.com/pypa/pip",
+        "Changelog, https://pip.pypa.io/en/stable/news/"
+      ]
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.11.8",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Changelog, https://platformdirs.readthedocs.io/en/latest/changelog.html",
+        "Documentation, https://platformdirs.readthedocs.io",
+        "Homepage, https://github.com/tox-dev/platformdirs",
+        "Source, https://github.com/tox-dev/platformdirs",
+        "Tracker, https://github.com/tox-dev/platformdirs/issues"
+      ]
+    },
+    {
+      "name": "prompt_toolkit",
+      "version": "3.0.53",
+      "license_expression": null,
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://github.com/prompt-toolkit/python-prompt-toolkit",
+        "Documentation, https://python-prompt-toolkit.readthedocs.io/en/stable/"
+      ]
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "home_page": "https://github.com/giampaolo/psutil",
+      "project_urls": []
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.7.0",
+      "license_expression": null,
+      "license": "UNKNOWN",
+      "home_page": "https://github.com/pexpect/ptyprocess",
+      "project_urls": []
+    },
+    {
+      "name": "pure_eval",
+      "version": "0.2.4",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "http://github.com/alexmojaki/pure_eval",
+      "project_urls": []
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "license_expression": "BSD-2-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://pygments.org",
+        "Documentation, https://pygments.org/docs",
+        "Source, https://github.com/pygments/pygments",
+        "Bug Tracker, https://github.com/pygments/pygments/issues",
+        "Changelog, https://github.com/pygments/pygments/blob/master/CHANGES"
+      ]
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "license_expression": null,
+      "license": "Dual License",
+      "home_page": "https://github.com/dateutil/dateutil",
+      "project_urls": [
+        "Documentation, https://dateutil.readthedocs.io/en/stable/",
+        "Source, https://github.com/dateutil/dateutil"
+      ]
+    },
+    {
+      "name": "pyzmq",
+      "version": "27.2.0",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://pyzmq.readthedocs.org",
+        "Documentation, https://pyzmq.readthedocs.org",
+        "Source, https://github.com/zeromq/pyzmq",
+        "Tracker, https://github.com/zeromq/pyzmq/issues"
+      ]
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Documentation, https://referencing.readthedocs.io/",
+        "Homepage, https://github.com/python-jsonschema/referencing",
+        "Issues, https://github.com/python-jsonschema/referencing/issues/",
+        "Funding, https://github.com/sponsors/Julian",
+        "Tidelift, https://tidelift.com/subscription/pkg/pypi-referencing?utm_source=pypi-referencing&utm_medium=referral&utm_campaign=pypi-link",
+        "Changelog, https://referencing.readthedocs.io/en/stable/changes/",
+        "Source, https://github.com/python-jsonschema/referencing"
+      ]
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.6.3",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Documentation, https://rpds.readthedocs.io/",
+        "Funding, https://github.com/sponsors/Julian",
+        "Homepage, https://github.com/crate-py/rpds",
+        "Issues, https://github.com/crate-py/rpds/issues/",
+        "Source, https://github.com/crate-py/rpds",
+        "Tidelift, https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link",
+        "Upstream, https://github.com/orium/rpds"
+      ]
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "https://github.com/benjaminp/six",
+      "project_urls": []
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.3",
+      "license_expression": null,
+      "license": "MIT",
+      "home_page": "http://github.com/alexmojaki/stack_data",
+      "project_urls": []
+    },
+    {
+      "name": "tornado",
+      "version": "6.5.8",
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "home_page": "http://www.tornadoweb.org/",
+      "project_urls": [
+        "Source, https://github.com/tornadoweb/tornado"
+      ]
+    },
+    {
+      "name": "traitlets",
+      "version": "5.16.1",
+      "license_expression": null,
+      "license": "BSD 3-Clause License\n\n- Copyright (c) 2001-, IPython Development Team\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://github.com/ipython/traitlets",
+        "Documentation, https://traitlets.readthedocs.io",
+        "Source, https://github.com/ipython/traitlets",
+        "Tracker, https://github.com/ipython/traitlets/issues"
+      ]
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "license_expression": "PSF-2.0",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Bug Tracker, https://github.com/python/typing_extensions/issues",
+        "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+        "Documentation, https://typing-extensions.readthedocs.io/",
+        "Home, https://github.com/python/typing_extensions",
+        "Q & A, https://github.com/python/typing/discussions",
+        "Repository, https://github.com/python/typing_extensions"
+      ]
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.8.3",
+      "license_expression": "MIT",
+      "license": null,
+      "home_page": null,
+      "project_urls": [
+        "Homepage, https://github.com/jquast/wcwidth"
+      ]
+    }
+  ],
+  "limitations": "No lock of downloaded wheel hashes, no signed builder attestations, no production dependency approval. Optional author-only pyarrow 20.0.0 used to extract the pinned public dataset and is not a core dependency."
+}

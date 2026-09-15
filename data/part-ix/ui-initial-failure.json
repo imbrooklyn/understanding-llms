@@ -1,0 +1,7 @@
+{
+  "provenance": "Actual first desktop/mobile Playwright execution, 4 failed and 2 passed. The order UI expected order_id while Store.read returned id. A boundary projection and assertion were added.",
+  "observed": "undefined: processing / localized status",
+  "expected": "A-104 with the owned order status",
+  "screenshot": "ui-initial-failure.png",
+  "license": "CC-BY-SA-4.0"
+}

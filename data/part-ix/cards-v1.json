@@ -1,0 +1,74 @@
+{
+  "version": "part-ix-cards-v1",
+  "as_of": "2026-09-15",
+  "license": "CC-BY-SA-4.0",
+  "supplements": [
+    "data/knowledge-assistant/data-card-v3.json",
+    "data/knowledge-assistant/system-card-v1.json"
+  ],
+  "data_card": {
+    "purpose": "Local teaching of dated policy answers, own-order reads and observable service operations.",
+    "sources": [
+      "data/knowledge-assistant/ka0-v1.json",
+      "data/knowledge-assistant/ka4-documents-v1.json",
+      "data/knowledge-assistant/ka6-orders-v1.json",
+      "data/part-ix/expected-v1.json"
+    ],
+    "people_and_credentials": "Fictional principals and public placeholder keys only. No personal data or real merchant orders.",
+    "versions": "Retain original five cards/nine queries and both 600/750 source intervals; never overwrite old evaluation data to remove a miss.",
+    "localization": "Textbook pages, bilingual diagram JSON and data/knowledge-assistant/service-content-v1.json are explicit content resources.",
+    "feedback": "At most 100 categorical reports, no free text; quarantine before trusted local maintainer review; separate minimized regression and source rationale.",
+    "retention": {
+      "jobs": "At most 100 in memory; completed eviction, shutdown clears; not durable request history.",
+      "cache": "At most 64 in memory; scoped TTL boundary plus periodic cleanup; subject deletion supported.",
+      "feedback": "Logical expiry at seven days; physical sweep approximately once per second; subject deletion and shutdown clear.",
+      "monitor": "At most 1000 rows; truncated window marked incomplete; shutdown clears.",
+      "diagnostics": "No question/result/token/principal; approximate 1 MB rotation with one previous file; no time-based deletion; operator owns retained state directory.",
+      "public_evidence": "Separate intentionally synthetic immutable artifacts; not a sample of real user traffic."
+    },
+    "deletion_limit": "Cache and feedback subject deletion is not a complete production erasure workflow across jobs, diagnostics, exports and backups.",
+    "representativeness": "Small authored cases; no population, adaptive attacker or independent annotator diversity estimate.",
+    "owner": "policy_owner"
+  },
+  "system_card": {
+    "default_backend": "local-extractive-v1, no neural model calls; dated BM25 evidence plus schema/support/Skill verification.",
+    "neural_model": {
+      "weights": null,
+      "tokenizer": null,
+      "seed": null,
+      "reason": "Not used on default service path; lexical tokenization and floating-point recipe are versioned separately."
+    },
+    "selection": "Retained failed Mini GPT candidates; historical optional Qwen3 adapter and rejected automatic judge do not become service quality claims.",
+    "authority": "Host fixture credentials determine tenant/user/scopes. Input cannot choose tenant. Web service and separate MCP teaching transport are read-only.",
+    "state": "Service jobs and release pointers are in memory. Tenant order store is local SQLite. Earlier approved-write CLI has durable intent/approval/receipt recovery and is not exposed over HTTP.",
+    "limits": {
+      "active_jobs": 2,
+      "deadline_seconds": 3,
+      "attempts": 2,
+      "backoff_seconds": 0.05,
+      "demo_work_delay_seconds": 0.05,
+      "bucket_capacity": 4,
+      "bucket_rate_per_second": 2,
+      "body_bytes": 4096,
+      "question_characters": 500,
+      "semantic_cache": false
+    },
+    "operations": "Manifest-bound gate, configuration-only local canary/rollback, traces, assigned 95% SLO and explicitly bounded monitor.",
+    "ux": "Visible associated labels, focus, concise polite statuses, final checked source quotation, local clear/undo and unsent handoff. No full WCAG conformance claim.",
+    "known_failures": [
+      "Supported-information synonym query abstains.",
+      "Stale-date candidate fails six of ten release presentations.",
+      "An in-flight stale snapshot survives rollback."
+    ],
+    "not_accepted": [
+      "Production hosting",
+      "Real identity administration",
+      "General private-document ingestion",
+      "Broad paraphrase quality",
+      "Autonomous order changes",
+      "Executable or database-migration rollback",
+      "Production SLO estimate"
+    ],
+    "owner": "release_owner"
+  }
+}

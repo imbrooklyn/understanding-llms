@@ -1,0 +1,145 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "version": "ka-risk-register-v3",
+  "continuity": "Extends the Part I risk categories and KA Data Card v2; earlier fixtures unchanged.",
+  "entries": [
+    {
+      "id": "stale_fact",
+      "scenario": "A current answer says 600",
+      "owner": "policy_owner",
+      "control": "date and exact support checks",
+      "evidence": "workflow/source negatives",
+      "residual": "Source owner can publish a wrong but authentic policy.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "policy source/index/cache",
+      "evidence_paths": [
+        "data/part-viii/workflow-run.json",
+        "data/part-viii/governance-run.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "group_treatment",
+      "scenario": "An irrelevant fictional group changes the limit",
+      "owner": "service_owner",
+      "control": "exclude group from this task; paired test",
+      "evidence": "two groups receive 750",
+      "residual": "Two synthetic group values do not measure societal fairness or unequal access.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "question fields and answer outcomes",
+      "evidence_paths": [
+        "data/part-viii/governance-run.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "privacy_copies",
+      "scenario": "A deletion leaves a cached or logged personal detail",
+      "owner": "privacy_owner",
+      "control": "field minimization; four-store deletion",
+      "evidence": "deletion counts 2 to 1 in each store",
+      "residual": "Backups, provider retention and model training are outside this simulation.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "model input/logs/memory/cache/feedback",
+      "evidence_paths": [
+        "data/part-viii/governance-run.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "copyright",
+      "scenario": "An accessible source has no reuse permission",
+      "owner": "policy_owner",
+      "control": "license inventory and refusal",
+      "evidence": "all redistributed asset licenses recorded",
+      "residual": "A license may not cover all rights or every intended use.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "corpus and redistributed reference slice",
+      "evidence_paths": [
+        "data/part-viii/README.md",
+        "data/part-viii/human-calibration-v1.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "injection",
+      "scenario": "Retrieved instructions redirect a model",
+      "owner": "security_owner",
+      "control": "source labels plus independent support and capability gates",
+      "evidence": "same local payloads before/after; actual model label failure retained",
+      "residual": "Adversarial language and unknown semantic failures remain possible.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "retrieved/tool/Skill text and model output",
+      "evidence_paths": [
+        "data/part-viii/model-run.json",
+        "data/part-viii/attack-run.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "duplicate_effect",
+      "scenario": "A lost reply causes a second cancellation effect",
+      "owner": "service_owner",
+      "control": "transactional receipt and stable key",
+      "evidence": "effect remains 1 after reopening",
+      "residual": "Remote side effects need the remote service contract; single-worker scope only.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "orders/receipts/checkpoints",
+      "evidence_paths": [
+        "data/part-viii/recovery-run.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "tenant_leak",
+      "scenario": "An order ID resolves to another tenant",
+      "owner": "security_owner",
+      "control": "host principal and tenant/owner predicate",
+      "evidence": "same ID, separate rows and denied spoofing",
+      "residual": "Compromised host identity is outside this fixture.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "order rows and host principal",
+      "evidence_paths": [
+        "data/part-viii/permission-run.json",
+        "data/part-viii/attack-run.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    },
+    {
+      "id": "supply_chain",
+      "scenario": "A Skill, MCP helper or model changes unnoticed",
+      "owner": "security_owner",
+      "control": "reviewed hash inventory, scoped process, explicit update review",
+      "evidence": "tamper regressions and sandbox observations",
+      "residual": "Matching bytes do not prove a benign original or secure conversion provenance.",
+      "status": "residual_open",
+      "review_trigger": "source/model/permission change or user incident",
+      "review_interval_days": 30,
+      "affected_data": "Skill/MCP/model/dependency bytes",
+      "evidence_paths": [
+        "data/part-viii/reviewed-inventory-v1.json",
+        "data/part-viii/supply-chain-run.json",
+        "data/part-viii/sandbox-run.json",
+        "data/part-viii/model-provenance.json",
+        "data/part-viii/dependency-inventory.json"
+      ],
+      "lifecycle_policy": "data/knowledge-assistant/governance-v1.json"
+    }
+  ]
+}

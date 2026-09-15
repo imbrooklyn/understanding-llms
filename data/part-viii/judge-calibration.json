@@ -1,0 +1,228 @@
+{
+  "travel_human_calibration": {
+    "rows": [
+      {
+        "locale": "en",
+        "id": "current",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true,
+        "human": "pass",
+        "human_match": true
+      },
+      {
+        "locale": "en",
+        "id": "old",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true,
+        "human": "fail",
+        "human_match": true
+      },
+      {
+        "locale": "en",
+        "id": "both",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true,
+        "human": "pass",
+        "human_match": true
+      },
+      {
+        "locale": "en",
+        "id": "false_action",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true,
+        "human": "fail",
+        "human_match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "current",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true,
+        "human": "pass",
+        "human_match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "old",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true,
+        "human": "fail",
+        "human_match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "both",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true,
+        "human": "pass",
+        "human_match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "false_action",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true,
+        "human": "fail",
+        "human_match": true
+      }
+    ],
+    "matched": 8,
+    "model_decisions": 8,
+    "unique_human_cases": 4,
+    "annotators": 1,
+    "decision": "retain_narrow_in_domain_evidence_only"
+  },
+  "authored_oracle": {
+    "rows": [
+      {
+        "locale": "en",
+        "id": "current",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true
+      },
+      {
+        "locale": "en",
+        "id": "old",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true
+      },
+      {
+        "locale": "en",
+        "id": "both",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true
+      },
+      {
+        "locale": "en",
+        "id": "false_action",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "current",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "old",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "both",
+        "expected": "pass",
+        "actual": "pass",
+        "match": true
+      },
+      {
+        "locale": "zh-hans",
+        "id": "false_action",
+        "expected": "fail",
+        "actual": "fail",
+        "match": true
+      }
+    ],
+    "matched": 8,
+    "total": 8
+  },
+  "human_calibration": {
+    "rows": [
+      {
+        "question_id": 100,
+        "source_row": 785,
+        "human": "A",
+        "forward": "B",
+        "swapped_mapped": "B",
+        "consistent": true,
+        "conservative": "B",
+        "agrees": false
+      },
+      {
+        "question_id": 101,
+        "source_row": 842,
+        "human": "B",
+        "forward": "A",
+        "swapped_mapped": "tie",
+        "consistent": false,
+        "conservative": "tie",
+        "agrees": false
+      },
+      {
+        "question_id": 102,
+        "source_row": 882,
+        "human": "B",
+        "forward": "tie",
+        "swapped_mapped": "tie",
+        "consistent": true,
+        "conservative": "tie",
+        "agrees": false
+      },
+      {
+        "question_id": 103,
+        "source_row": 914,
+        "human": "B",
+        "forward": "A",
+        "swapped_mapped": "A",
+        "consistent": true,
+        "conservative": "A",
+        "agrees": false
+      }
+    ],
+    "agreed": 0,
+    "total": 4,
+    "position_consistent": 3,
+    "decision": "reject_as_automatic_release_judge"
+  },
+  "self_comparison": {
+    "rows": [
+      {
+        "question_id": 100,
+        "forward": "A",
+        "swapped": "B",
+        "own_wins_both": true,
+        "independent_human_quality_label": null
+      },
+      {
+        "question_id": 101,
+        "forward": "tie",
+        "swapped": "A",
+        "own_wins_both": false,
+        "independent_human_quality_label": null
+      },
+      {
+        "question_id": 102,
+        "forward": "B",
+        "swapped": "tie",
+        "own_wins_both": false,
+        "independent_human_quality_label": null
+      },
+      {
+        "question_id": 103,
+        "forward": "A",
+        "swapped": "B",
+        "own_wins_both": true,
+        "independent_human_quality_label": null
+      }
+    ],
+    "own_wins_both": 2,
+    "total": 4,
+    "boundary": "Exploratory own-answer preference only; new pairs lack independent human quality labels, so no causal self-bias conclusion."
+  }
+}

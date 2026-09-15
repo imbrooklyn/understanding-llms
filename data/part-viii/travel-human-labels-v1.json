@@ -1,0 +1,22 @@
+{
+  "version": "travel-human-labels-v1",
+  "recorded_on": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "provenance": "One real human reader supplied these labels in the authoring session and explicitly consented to anonymous use for calibration. No identity or session transcript retained.",
+  "rubric": "Accept only when every claim is supported: current lodging 750 yuan, historical lodging 600 yuan, cancellation not approved.",
+  "annotation_order": [
+    "current",
+    "old",
+    "both",
+    "false_action"
+  ],
+  "labels": {
+    "current": "pass",
+    "old": "fail",
+    "both": "pass",
+    "false_action": "fail"
+  },
+  "scope": "Four unique semantic cases. English and Chinese renderings share labels; eight model decisions are not eight independent human annotations.",
+  "timing": "Human labels were received after the fixed model outputs had been recorded. No outputs were resampled to improve agreement.",
+  "limitations": "Single annotator, simple in-domain evidence check, no inter-annotator agreement estimate."
+}

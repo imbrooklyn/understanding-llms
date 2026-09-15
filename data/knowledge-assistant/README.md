@@ -28,3 +28,15 @@ Success is a top-one relevant document, or abstention for an empty relevant set.
 `ka-static-v1.json` is a hand-authored three-coordinate map. It intentionally adds synonym sharing while collapsing policy numbers and order-status/approval distinctions. It is not trained Word2Vec. Chapter 10 records its 4/9 retrieval result and the 7/9 result from averaged four-dimensional NNLM input embeddings in `data/part-ii/nnlm-run.json`. NNLM training never uses KA-0 relevance labels. Its language prediction evaluation is separate from retrieval.
 
 All fixture content, original expectations, output tables and parameter arrays are CC BY-SA 4.0. There are no third-party datasets or downloaded model weights. See [the implementation](../../code/knowledge-assistant/README.md) and [Part II validation](../../docs/part-ii-validation.md).
+
+## KA-2 through KA-4 extension
+
+The `ka2-*` files define one bilingual context template, a versioned Draft 2020-12 answer schema and localized content. The local counter is Unicode code points, explicitly not model tokens. `ka3-orders-v1.json` is a new original fictional read snapshot: A-104 belongs to mira; B-205 belongs to leo. It does not replace KA-1's distinct A104 assignment.
+
+`ka4-documents-v1.json` adds exact bilingual source lines, validity intervals, authority/license and authored support spans while preserving KA-0 card meanings. The search card is an authored child summary, not a quotable source; its parent supplies original lines. `ka4-retrieval-rules-v1.json` freezes BM25, dense pooling, RRF, positive-score return, ties and a narrow rule reranker. `ka4-eval-v1.json` is a separate RAG development contract with explicit topic/date inputs. In particular, its current synonym question does not overwrite KA-0's version-neutral synonym relevance.
+
+New original content uses CC BY-SA 4.0. [Part VII records](../part-vii/README.md) state producer, parameters, source hashes, complete rankings, failure injections, confidence assumptions and limitations. Neither the authored three-axis map nor the local extractive answer composer is reported as a new learned model experiment.
+
+## Part VIII additions
+
+`ka5-content-v1.json` centralizes bilingual decision and answer strings; `ka5-workflow-v1.json` fixes candidates, transitions and limits. `ka6-orders-v1.json` adds two fictional tenants with intentionally repeated order IDs without replacing KA-3 data. `data-card-v3.json`, `system-card-v1.json`, `risk-register-v3.json` and `governance-v1.json` document intended use, responsibilities, retention/deletion and refusal policy. Previous corpus versions and baseline outcomes remain unchanged. Actual KA-5–KA-8 observations and their separate human-reference licensing are in `../part-viii/README.md`.

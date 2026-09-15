@@ -1,0 +1,779 @@
+{
+  "provenance": "Actual SQLite execution/reopen; fault exceptions deliberately placed; event time 1000 is a fixed logical clock, not measured latency.",
+  "cases": {
+    "success": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DONE",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "status": "cancelled",
+          "order_id": "A-104",
+          "version": 2,
+          "receipt_reused": false
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DONE",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "status": "cancelled",
+          "order_id": "A-104",
+          "version": 2,
+          "receipt_reused": false
+        }
+      },
+      "first_effects": 1,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "cancelled",
+        "version": 2,
+        "effects": 1
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "DONE",
+          "detail": {
+            "status": "cancelled",
+            "order_id": "A-104",
+            "version": 2,
+            "receipt_reused": false
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "DONE",
+          "detail": {
+            "status": "cancelled",
+            "order_id": "A-104",
+            "version": 2,
+            "receipt_reused": false
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    },
+    "before_commit": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "UNCERTAIN",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "before_commit"
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DONE",
+        "remaining": 1,
+        "attempts": 2,
+        "deadline": 1001.0,
+        "result": {
+          "status": "cancelled",
+          "order_id": "A-104",
+          "version": 2,
+          "receipt_reused": false
+        }
+      },
+      "first_effects": 0,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "cancelled",
+        "version": 2,
+        "effects": 1
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "UNCERTAIN",
+          "detail": {
+            "reason": "before_commit"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "UNCERTAIN",
+          "detail": {
+            "reason": "before_commit"
+          }
+        },
+        {
+          "sequence": 4,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 2,
+            "remaining": 1
+          }
+        },
+        {
+          "sequence": 5,
+          "at": 1000.0,
+          "state": "DONE",
+          "detail": {
+            "status": "cancelled",
+            "order_id": "A-104",
+            "version": 2,
+            "receipt_reused": false
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    },
+    "after_commit": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "UNCERTAIN",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "response_lost_after_commit"
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DONE",
+        "remaining": 1,
+        "attempts": 2,
+        "deadline": 1001.0,
+        "result": {
+          "status": "cancelled",
+          "order_id": "A-104",
+          "version": 2,
+          "receipt_reused": true
+        }
+      },
+      "first_effects": 1,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "cancelled",
+        "version": 2,
+        "effects": 1
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "UNCERTAIN",
+          "detail": {
+            "reason": "response_lost_after_commit"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "UNCERTAIN",
+          "detail": {
+            "reason": "response_lost_after_commit"
+          }
+        },
+        {
+          "sequence": 4,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 2,
+            "remaining": 1
+          }
+        },
+        {
+          "sequence": 5,
+          "at": 1000.0,
+          "state": "DONE",
+          "detail": {
+            "status": "cancelled",
+            "order_id": "A-104",
+            "version": 2,
+            "receipt_reused": true
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    },
+    "denied": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DENIED",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "approval_denied"
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DENIED",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "approval_denied"
+        }
+      },
+      "first_effects": 0,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "processing",
+        "version": 1,
+        "effects": 0
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "DENIED",
+          "detail": {
+            "reason": "approval_denied"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "DENIED",
+          "detail": {
+            "reason": "approval_denied"
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    },
+    "expired": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DENIED",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "approval_expired"
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "DENIED",
+        "remaining": 2,
+        "attempts": 1,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "approval_expired"
+        }
+      },
+      "first_effects": 0,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "processing",
+        "version": 1,
+        "effects": 0
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "DENIED",
+          "detail": {
+            "reason": "approval_expired"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "CALLING",
+          "detail": {
+            "attempt": 1,
+            "remaining": 2
+          }
+        },
+        {
+          "sequence": 3,
+          "at": 1000.0,
+          "state": "DENIED",
+          "detail": {
+            "reason": "approval_expired"
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    },
+    "budget": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "STOPPED",
+        "remaining": 0,
+        "attempts": 0,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "call_budget"
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "STOPPED",
+        "remaining": 0,
+        "attempts": 0,
+        "deadline": 1001.0,
+        "result": {
+          "reason": "call_budget"
+        }
+      },
+      "first_effects": 0,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "processing",
+        "version": 1,
+        "effects": 0
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 0
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "STOPPED",
+          "detail": {
+            "reason": "call_budget"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 0
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "STOPPED",
+          "detail": {
+            "reason": "call_budget"
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    },
+    "deadline": {
+      "first": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "STOPPED",
+        "remaining": 3,
+        "attempts": 0,
+        "deadline": 999.0,
+        "result": {
+          "reason": "deadline"
+        }
+      },
+      "after_reopen": {
+        "tenant": "north",
+        "id": "request-1",
+        "user": "mira",
+        "action": "{\"name\":\"cancel_order\",\"arguments\":{\"order_id\":\"A-104\",\"expected_version\":1}}",
+        "approval": "approval-1",
+        "key": "north-intent-1",
+        "state": "STOPPED",
+        "remaining": 3,
+        "attempts": 0,
+        "deadline": 999.0,
+        "result": {
+          "reason": "deadline"
+        }
+      },
+      "first_effects": 0,
+      "final_order": {
+        "tenant": "north",
+        "id": "A-104",
+        "owner": "mira",
+        "status": "processing",
+        "version": 1,
+        "effects": 0
+      },
+      "replay_mutations": 0,
+      "replay": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "STOPPED",
+          "detail": {
+            "reason": "deadline"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "sequence": 1,
+          "at": 1000.0,
+          "state": "PENDING",
+          "detail": {
+            "action_hash": "f7117e2dc7d252ebc11251f2468aba742be3edd99efecc605aec0c3434dc1c50",
+            "budget": 3
+          }
+        },
+        {
+          "sequence": 2,
+          "at": 1000.0,
+          "state": "STOPPED",
+          "detail": {
+            "reason": "deadline"
+          }
+        }
+      ],
+      "compensation": {
+        "status": "manual_review",
+        "business_writes": 0,
+        "reason": "no_automatic_inverse"
+      }
+    }
+  },
+  "unsafe_duplicate_effects": 2,
+  "logical_schedule": {
+    "events": [
+      {
+        "attempt": 1,
+        "budget": 2,
+        "elapsed_seconds": 0.2,
+        "status": "timeout"
+      },
+      {
+        "attempt": 2,
+        "budget": 1,
+        "elapsed_seconds": 0.35,
+        "status": "ok"
+      }
+    ],
+    "remaining": 1,
+    "elapsed_seconds": 0.35
+  },
+  "short_deadline_schedule": {
+    "events": [
+      {
+        "attempt": 1,
+        "budget": 2,
+        "elapsed_seconds": 0.2,
+        "status": "timeout"
+      }
+    ],
+    "remaining": 2,
+    "elapsed_seconds": 0.2
+  }
+}

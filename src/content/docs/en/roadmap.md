@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-The book contains nine progressive parts, 57 core chapters, two foundation primers, and one online multimodal extension. Chapters 1–39 and the Python primer are available in both languages. Chapters 5–39 and the primer were released on September 13, 2026; Part I retains its September 10 first-edition date. Chapters 40–57, the HTTP primer and the multimodal extension are planned and not yet open for reading.
+The book contains nine progressive parts, 57 core chapters, two foundation primers and one online multimodal extension. Chapters 1–39, Chapters 54–57 and the Python primer are available in both languages. Chapters 54–57 were released on September 15, 2026; the earlier publication dates are unchanged. Chapters 40–53 and the HTTP primer remain web drafts, with their text and prerequisite project in the source repository. Part IX continues that project. The multimodal extension remains planned and unpublished.
 
 ## Part I: Opening the Black Box
 
@@ -86,10 +86,10 @@ The book contains nine progressive parts, 57 core chapters, two foundation prime
 
 ## Part IX: From Prototype to Maintainable Systems
 
-- **Chapter 54** From Notebook to Usable Service and Trustworthy UX
-- **Chapter 55** LLMOps I: Versions, Traces, Releases, and Rollbacks
-- **Chapter 56** LLMOps II: Caching, Resilience, SLOs, and Feedback
-- **Chapter 57** Capstone: An Evaluable Personal Knowledge Assistant
+- [**Chapter 54** From Notebook to Usable Service and Trustworthy UX](../ch-54/)
+- [**Chapter 55** LLMOps I: Versions, Traces, Releases, and Rollbacks](../ch-55/)
+- [**Chapter 56** LLMOps II: Caching, Resilience, SLOs, and Feedback](../ch-56/)
+- [**Chapter 57** Capstone: An Evaluable Personal Knowledge Assistant](../ch-57/)
 
 ## Foundation primers
 

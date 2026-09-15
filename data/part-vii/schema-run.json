@@ -1,0 +1,51 @@
+{
+  "provenance": "Authored fault inputs passed to actual local validator; not LLM samples.",
+  "cases": [
+    {
+      "name": "valid",
+      "raw": "{\"schema_version\":\"ka-answer-v1\",\"status\":\"answered\",\"answer\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan. [travel-v2:1-3]\",\"amount_yuan\":750,\"citations\":[{\"source_id\":\"travel-v2\",\"version\":\"v2\",\"line_start\":1,\"line_end\":3,\"quote\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan.\"}],\"reason_code\":null}",
+      "expected_stage": "accepted_structure",
+      "actual_stage": "accepted_structure"
+    },
+    {
+      "name": "parse",
+      "raw": "{\"amount_yuan\":",
+      "expected_stage": "parse",
+      "actual_stage": "parse"
+    },
+    {
+      "name": "wrong_type",
+      "raw": "{\"schema_version\":\"ka-answer-v1\",\"status\":\"answered\",\"answer\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan. [travel-v2:1-3]\",\"amount_yuan\":\"750\",\"citations\":[{\"source_id\":\"travel-v2\",\"version\":\"v2\",\"line_start\":1,\"line_end\":3,\"quote\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan.\"}],\"reason_code\":null}",
+      "expected_stage": "schema",
+      "actual_stage": "schema"
+    },
+    {
+      "name": "missing",
+      "raw": "{\"schema_version\":\"ka-answer-v1\",\"status\":\"answered\",\"answer\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan. [travel-v2:1-3]\",\"citations\":[{\"source_id\":\"travel-v2\",\"version\":\"v2\",\"line_start\":1,\"line_end\":3,\"quote\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan.\"}],\"reason_code\":null}",
+      "expected_stage": "schema",
+      "actual_stage": "schema"
+    },
+    {
+      "name": "false_amount",
+      "raw": "{\"schema_version\":\"ka-answer-v1\",\"status\":\"answered\",\"answer\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan. [travel-v2:1-3]\",\"amount_yuan\":600,\"citations\":[{\"source_id\":\"travel-v2\",\"version\":\"v2\",\"line_start\":1,\"line_end\":3,\"quote\":\"Fictional Beijing lodging policy; amounts are per room per night.\\nEffective from 2026-01-01; replaces travel-v1.\\nThe lodging limit is 750 yuan.\"}],\"reason_code\":null}",
+      "expected_stage": "accepted_structure",
+      "actual_stage": "accepted_structure"
+    }
+  ],
+  "refusal": {
+    "schema_version": "ka-answer-v1",
+    "status": "refused",
+    "answer": null,
+    "amount_yuan": null,
+    "citations": [],
+    "reason_code": "provider_refusal"
+  },
+  "truncation": {
+    "schema_version": "ka-answer-v1",
+    "status": "error",
+    "answer": null,
+    "amount_yuan": null,
+    "citations": [],
+    "reason_code": "incomplete_response"
+  }
+}

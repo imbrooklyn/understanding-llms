@@ -1,0 +1,91 @@
+{
+  "version": "part-ix-v1",
+  "structure": "breaker-recovery",
+  "alt": {
+    "en": "At assigned times zero and one, two requests fail and open the breaker. Time two gets fallback without an attempt. At time six a successful probe closes it. The actual HTTP drill uses a shorter cooldown and retains earlier errors in its SLO window.",
+    "zh-hans": "给定时间线中，0、1 秒的两个请求失败，使熔断器断开；2 秒直接降级，不再尝试；6 秒探测成功后闭合。实际 HTTP 演练使用更短的冷却，但统计窗口仍保留早先错误。"
+  },
+  "caption": {
+    "en": "Figure 56.1 — Recovery changes future calls; it does not erase earlier failures.",
+    "zh-hans": "图 56.1——恢复改变后续调用，不会抹掉先前失败。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Assigned clock: two failed requests, five-second cooldown",
+        "zh-hans": "给定时钟：两次请求失败，冷却五秒"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "0 s: failure count 1",
+            "zh-hans": "0 秒：失败计数 1"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "1 s: count 2 → open",
+            "zh-hans": "1 秒：计数 2 → 断开"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "2 s: fallback; zero attempts",
+            "zh-hans": "2 秒：降级；零次尝试"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "6 s: one probe succeeds → closed",
+            "zh-hans": "6 秒：一次探测成功 → 闭合"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Time since opening is 6 − 1 = 5 s. A second half-open probe is blocked while the first is active.",
+        "zh-hans": "距断开已过 6 − 1 = 5 秒。半开时，第一次探测尚未结束，不能再放入第二次。"
+      }
+    },
+    {
+      "label": {
+        "en": "Actual local HTTP drill: cooldown 0.25 s",
+        "zh-hans": "实际本地 HTTP 演练：冷却 0.25 秒"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Retry recovers: good",
+            "zh-hans": "重试成功：好结果"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Two failed jobs + open rejection: 3 bad",
+            "zh-hans": "两个失败任务与一次断开拒绝：3 个坏结果"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Probe recovers: good",
+            "zh-hans": "探测恢复：好结果"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Five eligible jobs: 2 good / 5 = 40%. Earlier errors remain after recovery; this is injected smoke traffic, not production availability.",
+        "zh-hans": "五个符合条件的任务：2 个好结果 / 5 = 40%。恢复后仍保留先前错误；这是注入故障的演练流量，不是生产可用性。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 49.1 — A lost response does not undo a commit.",
+    "zh-hans": "图 49.1：响应丢失，不会撤销已经提交的操作。"
+  },
+  "alt": {
+    "en": "Cancellation and receipt commit together in the local database. A lost reply leaves the caller uncertain. Recovery reads the receipt; replay only displays events.",
+    "zh-hans": "本地数据库同时提交取消与回执。响应丢失使调用方无法确定结果；恢复时读取回执，回放则只展示事件。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "First attempt",
+        "zh-hans": "第一次尝试"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "PENDING → CALLING; budget 3 → 2",
+            "zh-hans": "PENDING → CALLING；预算 3 → 2"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Approval + version checked",
+            "zh-hans": "检查审批与版本"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Commit cancellation + receipt",
+            "zh-hans": "提交取消＋回执"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Reply lost → UNCERTAIN",
+            "zh-hans": "响应丢失 → UNCERTAIN"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Business effect count is already 1.",
+        "zh-hans": "业务副作用计数已经是 1。"
+      }
+    },
+    {
+      "label": {
+        "en": "Recovery after reopening",
+        "zh-hans": "重新打开后的恢复"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Load UNCERTAIN + same key",
+            "zh-hans": "读回 UNCERTAIN＋原键"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "CALLING; budget 2 → 1",
+            "zh-hans": "CALLING；预算 2 → 1"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Receipt found → DONE",
+            "zh-hans": "找到回执 → DONE"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Effect count stays 1. Replay has no CALLING edge and changes no database row.",
+        "zh-hans": "副作用计数仍为 1。回放不会进入 CALLING，也不修改数据库行。"
+      }
+    }
+  ]
+}

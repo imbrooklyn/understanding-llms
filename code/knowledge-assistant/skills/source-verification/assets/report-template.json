@@ -1,0 +1,8 @@
+{
+  "schema_version": "source-verification-report-v1",
+  "supported": false,
+  "authority_ok": false,
+  "context_matches": false,
+  "reason": "not_checked",
+  "checks": null
+}

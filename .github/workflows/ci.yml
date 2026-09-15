@@ -31,5 +31,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Set up Python for book behavior checks
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12.10'
+
+      - name: Install book validation dependencies
+        run: python -m pip install -r code/part-vii/requirements-ci.txt
+
       - name: Validate and build
         run: pnpm ci:build

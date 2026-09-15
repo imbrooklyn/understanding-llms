@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "check": "astro sync --force && astro check",
     "validate:content": "node scripts/validate-content.mjs",
-    "ci:build": "pnpm validate:content && pnpm validate:language && pnpm validate:part-i && pnpm validate:part-ii && pnpm validate:part-iii && pnpm validate:part-iv && pnpm validate:part-v && pnpm validate:part-vi && pnpm test && pnpm check && pnpm build && node scripts/check-draft-output.mjs",
+    "ci:build": "pnpm validate:content && pnpm validate:language && pnpm validate:part-i && pnpm validate:part-ii && pnpm validate:part-iii && pnpm validate:part-iv && pnpm validate:part-v && pnpm validate:part-vi && pnpm validate:part-vii && pnpm test:part-vii:cpu && pnpm validate:part-viii && pnpm test:part-viii:cpu && pnpm validate:part-ix && pnpm test:part-ix:cpu && pnpm test && pnpm check && pnpm build && node scripts/check-draft-output.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "test:browser": "playwright test",
     "validate:part-i": "node scripts/validate-part-i.mjs",
@@ -31,7 +31,17 @@
     "notebooks:part-v": "node scripts/run-part-v-notebooks.mjs",
     "validate:part-vi": "node scripts/validate-part-vi.mjs",
     "test:part-vi:cpu": "node scripts/test-part-vi-cpu.mjs",
-    "notebooks:part-vi": "node scripts/run-part-vi-notebooks.mjs"
+    "notebooks:part-vi": "node scripts/run-part-vi-notebooks.mjs",
+    "validate:part-vii": "node scripts/validate-part-vii.mjs",
+    "test:part-vii:cpu": "node scripts/test-part-vii-cpu.mjs",
+    "notebooks:part-vii": "node scripts/run-part-vii-notebooks.mjs",
+    "validate:part-viii": "node scripts/validate-part-viii.mjs",
+    "test:part-viii:cpu": "node scripts/test-part-viii-cpu.mjs",
+    "notebooks:part-viii": "node scripts/run-part-viii-notebooks.mjs",
+    "validate:part-ix": "node scripts/validate-part-ix.mjs",
+    "test:part-ix:cpu": "node scripts/test-part-ix-cpu.mjs",
+    "notebooks:part-ix": "node scripts/run-part-ix-notebooks.mjs",
+    "records:part-ix": "node scripts/run-part-ix-records.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.0",

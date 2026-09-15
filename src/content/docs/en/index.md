@@ -1,6 +1,6 @@
 ---
 title: "Understanding Large Language Models from the Ground Up"
-description: "A bilingual open textbook. Chapters 1–39 explain language models, Transformers, evaluation and adaptation through complete worked examples."
+description: "A bilingual open textbook. Chapters 1–39 cover model foundations; Chapters 54–57 develop an evaluable, maintainable knowledge-assistant service."
 template: splash
 hero:
   title: "Understanding Large Language Models from the Ground Up"
@@ -18,9 +18,9 @@ hero:
 
 This bilingual open textbook explains how language models work, from observable responses to the calculations behind them. Part I assumes no programming background. Later practical chapters introduce the Python, mathematics, and engineering needed to build models and applications.
 
-## Chapters 1–39 are available
+## Chapters 1–39 and 54–57 are available
 
-Chapters 1–39 and the Python primer are available in English and Chinese. Chapters 5–39 and the primer were released on September 13, 2026; Chapters 1–4 retain their September 10 first-edition date. The examples, diagrams, calculations, and exercise solutions are all available directly on the page.
+Chapters 1–39, Chapters 54–57 and the Python primer are available in English and Chinese. Chapters 54–57 were released on September 15, 2026; Chapters 5–39 and the primer retain September 13, and Chapters 1–4 retain their September 10 first-edition date. Examples, diagrams, calculations and exercise solutions are directly readable on the page.
 
 - [Chapter 1](./ch-01/): judge a response against the task and its evidence, and distinguish a model from the complete assistant.
 - [Chapter 2](./ch-02/): follow how a response is generated and how training changes the model.
@@ -35,7 +35,9 @@ Continue through the published parts:
 - [Part V, Chapters 22–33](./ch-22/): connect model design and operation to measured evaluation and model selection.
 - [Part VI, Chapters 34–39](./ch-34/): distinguish training objectives, runtime computation and parameter adaptation, then choose changes from failure evidence.
 
-Chapters 40–57 will examine context, retrieval, tools, agents and maintainable applications. See the [full roadmap](./roadmap/) for the published and planned sequence.
+- [Part IX, Chapters 54–57](./ch-54/): turn the knowledge assistant into a local service, examine versions and failures, and evaluate a capstone evidence package.
+
+Chapters 40–53 and the HTTP primer remain unpublished web chapters. Part IX builds on their project; their draft sources and prerequisite code are available in the [source repository](https://github.com/imbrooklyn/understanding-llms). This release does not replace that earlier learning path. See the [full roadmap](./roadmap/) for the available sequence.
 
 ## Help improve the next edition
 

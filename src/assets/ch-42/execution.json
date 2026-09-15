@@ -1,0 +1,90 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 42.1 — The application owns execution and the return path.",
+    "zh-hans": "图 42.1：应用掌握执行权，并负责回填结果。"
+  },
+  "alt": {
+    "en": "A proposed A-104 read passes validation and mira ownership before lookup. B-205 is stopped before execution. Results are validated and returned as data.",
+    "zh-hans": "A-104 查询提议通过参数和 mira 归属检查才进入读取；B-205 在执行前停止；结果经校验后作为数据回填。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Permitted read",
+        "zh-hans": "获准读取"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Propose A-104",
+            "zh-hans": "提议查 A-104"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Validate → authorize mira",
+            "zh-hans": "校验 → 核对 mira 权限"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Lookup snapshot",
+            "zh-hans": "读取快照"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Check result → return data",
+            "zh-hans": "检查结果 → 回填数据"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Only the executor reads the record; the proposal is not completion.",
+        "zh-hans": "只有执行器实际读记录，提出请求不等于完成。"
+      }
+    },
+    {
+      "label": {
+        "en": "Denied read",
+        "zh-hans": "拒绝读取"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Propose B-205",
+            "zh-hans": "提议查 B-205"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Owner is leo → deny",
+            "zh-hans": "属于 leo → 拒绝"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Backend calls: 0",
+            "zh-hans": "后端调用次数：0"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A well-typed order ID does not grant access.",
+        "zh-hans": "订单号类型正确，不代表有访问权限。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "version": "part-ix-v1",
+  "structure": "service-lifecycle",
+  "alt": {
+    "en": "The user asks for the dated lodging rule. Authentication precedes job creation; retrieval selects v2; source checks precede final visibility. Cancellation and completion contend for one terminal state, and cancelled work cannot later publish an answer.",
+    "zh-hans": "用户查询指定日期的住宿制度。先鉴权，再创建任务；检索选中 v2，核验来源后才能显示最终答案。取消与完成争用同一个终止状态，取消成功后不能再发布答案。"
+  },
+  "caption": {
+    "en": "Figure 54.1 — A request has a data path and a separate stopping boundary.",
+    "zh-hans": "图 54.1——请求既有数据传递路径，也有独立的停止边界。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "From question to checked answer",
+        "zh-hans": "从问题到经过核验的答案"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "UI: question + 2026 date",
+            "zh-hans": "界面：问题与 2026 年日期"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Business: identify caller; accept job",
+            "zh-hans": "业务：确认调用者，接纳任务"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Retrieval: v2, lines 1–3",
+            "zh-hans": "检索：v2 第 1—3 行"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Answer adapter + Skill: validate 750",
+            "zh-hans": "回答适配器与 Skill：核验 750"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Question → authorized job → dated evidence → checked result → UI. Progress can arrive earlier; the amount cannot.",
+        "zh-hans": "问题 → 获授权的任务 → 适用资料 → 核验结果 → 界面。进度可以先到，金额必须等核验完成。"
+      }
+    },
+    {
+      "label": {
+        "en": "When stopping races with completion",
+        "zh-hans": "停止与完成同时发生时"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Stop received: cancelling",
+            "zh-hans": "收到停止请求：cancelling"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Signal process group; wait for exit",
+            "zh-hans": "通知进程组停止，并等待退出"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "One terminal state: cancelled or answered",
+            "zh-hans": "只能有一个终止状态：cancelled 或 answered"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Stop wins → no answer or cache write. Completion wins first → cancellation returns 409; the view can still be cleared.",
+        "zh-hans": "停止先成功 → 不显示答案，也不写缓存。完成先成功 → 取消返回 409；用户仍可清空页面内容。"
+      }
+    }
+  ]
+}

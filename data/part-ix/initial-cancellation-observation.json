@@ -1,0 +1,78 @@
+{
+  "provenance": "Actual first local HTTP run; retained before correction. InterruptedError was caught by the broader OSError retry clause. Final cancellation was correct, but dependency telemetry was wrong.",
+  "trace": {
+    "trace_id": "f536b7463fa74305bafee1beaaccbd3b",
+    "manifest": "7336d4be6618194f1d7658872ff0b363dd315b7f4c60e539d5ebb495a7e28a7b",
+    "release_name": "rc-a",
+    "request": {
+      "question": "Beijing lodging policy",
+      "on_date": "2026-09-14",
+      "topic": "travel",
+      "locale": "en"
+    },
+    "state": "cancelled",
+    "result": {
+      "reason": "cancelled"
+    },
+    "events": [
+      {
+        "id": 1,
+        "stage": "accepted",
+        "elapsed_ms": 0.005
+      },
+      {
+        "id": 2,
+        "stage": "running",
+        "elapsed_ms": 4.113
+      },
+      {
+        "id": 3,
+        "stage": "cache_miss",
+        "elapsed_ms": 56.023
+      },
+      {
+        "id": 4,
+        "stage": "attempt",
+        "elapsed_ms": 56.031,
+        "number": 1
+      },
+      {
+        "id": 5,
+        "stage": "cancel_requested",
+        "elapsed_ms": 60.147
+      },
+      {
+        "id": 6,
+        "stage": "worker_stopped",
+        "elapsed_ms": 79.899
+      },
+      {
+        "id": 7,
+        "stage": "dependency_failure",
+        "elapsed_ms": 79.905,
+        "attempt": 1
+      },
+      {
+        "id": 8,
+        "stage": "cancelled",
+        "elapsed_ms": 79.91
+      }
+    ],
+    "spans": [
+      {
+        "trace_id": "f536b7463fa74305bafee1beaaccbd3b",
+        "span_id": "9353f532300f4acf",
+        "parent_span_id": null,
+        "name": "request",
+        "start_ms": 0,
+        "end_ms": 79.909,
+        "status": "cancelled"
+      }
+    ],
+    "model_calls": 0,
+    "backend": "extractive",
+    "fault": {}
+  },
+  "service_source_sha256": "db99e31f55c17d05ea094f061f6d674515ddc47c013703a7546e1ce001c810c3",
+  "expected_invariant": "Cancellation must not be counted as a failed dependency attempt."
+}

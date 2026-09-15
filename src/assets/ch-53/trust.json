@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 53.1 — Check four different conditions before execution.",
+    "zh-hans": "图 53.1：执行前分别检查四种条件。"
+  },
+  "alt": {
+    "en": "Host-bound identity selects the north tenant; authorization limits own-order access; confinement limits process reach; a reviewed hash inventory detects changed dependencies. None implies the others.",
+    "zh-hans": "宿主身份绑定 north 租户；授权限定本人订单；执行隔离约束进程访问范围；已审查的哈希清单检测依赖变化。四者不能相互替代。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Request → data",
+        "zh-hans": "请求 → 数据"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Host: north / mira",
+            "zh-hans": "宿主：north／mira"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "WHERE tenant=north AND owner=mira",
+            "zh-hans": "查询条件：租户 north 且所有者 mira"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "A-104: processing",
+            "zh-hans": "A-104：处理中"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The same ID in south belongs to leo and is shipped; an order ID alone is insufficient.",
+        "zh-hans": "south 中同名订单属于 leo，状态为已发货；只有订单 ID 不够。"
+      }
+    },
+    {
+      "label": {
+        "en": "Code → effect",
+        "zh-hans": "代码 → 副作用"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Reviewed source + expected digest",
+            "zh-hans": "已审查来源＋预期摘要"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Allowlist + sandbox + approval",
+            "zh-hans": "允许清单＋沙箱＋审批"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Scoped effect + audit receipt",
+            "zh-hans": "范围内的副作用＋审计回执"
+          }
+        }
+      ],
+      "flow": {
+        "en": "An unchanged malicious package can pass a hash check. An isolated process can still misuse an authorized credential.",
+        "zh-hans": "恶意包若未改动，也能通过哈希检查。隔离进程仍可能滥用已经拿到的凭据。"
+      }
+    }
+  ]
+}

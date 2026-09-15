@@ -1,0 +1,24 @@
+{
+  "version": "judge-cases-v1",
+  "label_provenance": "Author-defined technical oracle. Not human annotation. Human annotation, if supplied, is stored separately.",
+  "context": "The current lodging limit is 750 yuan per room per night. The old limit was 600 yuan. Order cancellation has not been approved.",
+  "rubric": "Accept only an answer whose every factual claim is supported by the context. Extra unsupported claims fail. Extra length alone is not better.",
+  "cases": [
+    {
+      "id": "current",
+      "oracle": "pass"
+    },
+    {
+      "id": "old",
+      "oracle": "fail"
+    },
+    {
+      "id": "both",
+      "oracle": "pass"
+    },
+    {
+      "id": "false_action",
+      "oracle": "fail"
+    }
+  ]
+}

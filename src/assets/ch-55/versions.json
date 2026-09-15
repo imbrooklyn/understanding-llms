@@ -1,0 +1,84 @@
+{
+  "version": "part-ix-v1",
+  "structure": "release-dependencies",
+  "alt": {
+    "en": "Documents and tokenizer feed the index; request date and retrieved evidence form context; producer and source Skill jointly determine the answer. After rollback new requests use A, while admitted requests keep the faulty snapshot.",
+    "zh-hans": "文档与切分规则形成索引；问题日期与检索资料组成上下文；回答程序和来源 Skill 共同决定答案。回滚后新请求使用 A，已经接纳的请求仍保留错误快照。"
+  },
+  "caption": {
+    "en": "Figure 55.1 — Restore compatible dependencies and preserve each request’s version.",
+    "zh-hans": "图 55.1——恢复兼容的依赖，同时保留每次请求的版本归属。"
+  },
+  "credit": {
+    "en": "Original book diagram · CC BY-SA 4.0.",
+    "zh-hans": "本书原创图示 · CC BY-SA 4.0。"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Dependencies of the 750 answer",
+        "zh-hans": "750 元答案的依赖关系"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Corpus + lexical tokenizer → index",
+            "zh-hans": "资料库与词法切分 → 索引"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Original date + v2 → context",
+            "zh-hans": "原问题日期与 v2 → 上下文"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Producer + schema + Skill → answer",
+            "zh-hans": "回答程序、结构与 Skill → 答案"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Changing the date changes context even when the corpus, model field and schema do not change. The manifest identifies the whole combination.",
+        "zh-hans": "即使资料库、模型字段和结构不变，改日期仍会改上下文。清单标识整组选择。"
+      }
+    },
+    {
+      "label": {
+        "en": "Admission across the rollback boundary",
+        "zh-hans": "回滚前后的请求接纳"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "Before: faulty date → 600",
+            "zh-hans": "回滚前：错误日期 → 600"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Switch active candidate back to A",
+            "zh-hans": "把活动候选恢复为 A"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "New job: A → 750; old job keeps 600",
+            "zh-hans": "新任务：A → 750；旧任务仍为 600"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Rollback affects new admission. Cancel or drain old work separately; restoring a configuration does not reverse an order effect.",
+        "zh-hans": "回滚影响新任务。旧任务要另外取消或等待完成；恢复配置不会反转订单副作用。"
+      }
+    }
+  ]
+}

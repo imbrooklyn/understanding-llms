@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+jsonschema==4.25.1
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.30.1

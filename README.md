@@ -49,7 +49,7 @@ Original prose is CC BY-SA 4.0. Code is Apache-2.0. See [LICENSE.md](LICENSE.md)
 
 ## Part I: first public edition
 
-Chapters 1–4 form the first public edition, dated September 10, 2026, with numbered worked examples, complete static data comparisons, six shared figures, summaries, and 35 exercises with visible solutions per language. Read the [English edition](https://imbrooklyn.dev/books/understanding-llms/en/ch-01/) or [Chinese edition](https://imbrooklyn.dev/books/understanding-llms/zh-hans/ch-01/). Chapters 5–39 and Primer-PY were subsequently released on September 13, 2026. Chapters 40–57, Primer-HTTP and the online extension remain drafts.
+Chapters 1–4 form the first public edition, dated September 10, 2026, with numbered worked examples, complete static data comparisons, six shared figures, summaries, and 35 exercises with visible solutions per language. Read the [English edition](https://imbrooklyn.dev/books/understanding-llms/en/ch-01/) or [Chinese edition](https://imbrooklyn.dev/books/understanding-llms/zh-hans/ch-01/). Chapters 5–39 and Primer-PY were subsequently released on September 13, 2026. Chapters 54–57 were released on September 15, 2026. Chapters 40–53, Primer-HTTP and the online extension remain web drafts. The prerequisite project sources are included; the companion service runs locally. See the [Part IX publication record](docs/releases/2026-09-15-part-ix.md).
 
 For a passage that needs a clearer explanation, submit [reader feedback](https://github.com/imbrooklyn/understanding-llms/issues/new?template=reader-feedback.yml). Use the separate erratum template for specific corrections.
 

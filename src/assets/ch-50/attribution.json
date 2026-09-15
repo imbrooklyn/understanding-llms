@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 50.1 — Follow a failure upstream.",
+    "zh-hans": "图 50.1：沿证据向前追查失败。"
+  },
+  "alt": {
+    "en": "A current-policy request should retrieve v2, pack its full scope, choose use_evidence and emit a supported answer. Failure location remains visible even when the final output abstains.",
+    "zh-hans": "现行制度问题应检索到 v2、装入完整范围、选择 use_evidence，再输出有依据的回答。即使最后暂不作答，失败位置仍可见。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Evidence path",
+        "zh-hans": "证据路径"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Target: current = 750",
+            "zh-hans": "目标：现行＝750"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Retrieve v2 → retain lines 1–3",
+            "zh-hans": "检索 v2 → 保留第 1—3 行"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Choose → compose → check",
+            "zh-hans": "选择 → 组织回答 → 检查"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Save each intermediate artifact before assigning a failure layer.",
+        "zh-hans": "先保存每一步产物，再判断失败层。"
+      }
+    },
+    {
+      "label": {
+        "en": "Equal final score, different repair",
+        "zh-hans": "总分相同，修复位置不同"
+      },
+      "nodes": [
+        {
+          "kind": "state",
+          "text": {
+            "en": "System R: retrieval misses one case",
+            "zh-hans": "系统 R：一题检索漏掉"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "System G: historical answer says 750",
+            "zh-hans": "系统 G：历史问题回答成 750"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Both succeed on 3 of 4",
+            "zh-hans": "两者均答对 4 题中的 3 题"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Fix candidate selection in R; inspect generation/support in G. A total cannot choose the repair.",
+        "zh-hans": "R 要查候选选择，G 要查生成与支持检查。总分无法代替这个判断。"
+      }
+    }
+  ]
+}

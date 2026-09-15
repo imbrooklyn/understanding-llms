@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 52.1 — Text can propose an action; the host must authorize it.",
+    "zh-hans": "图 52.1：文本可以提出操作，宿主必须另行授权。"
+  },
+  "alt": {
+    "en": "An injected document tries to change 750 into 600; the model does so even with a data label in the local probe. The support gate rejects it. A separate tool gate rejects exfiltration.",
+    "zh-hans": "注入文档试图把 750 改成 600。本地测试中，即使标明资料属性，模型仍照做；支持检查将其拦下。另一个工具关口拒绝外传。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Answer boundary",
+        "zh-hans": "回答边界"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Policy 750 + hostile instruction 600",
+            "zh-hans": "制度 750＋恶意指令 600"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Model outputs 600",
+            "zh-hans": "模型输出 600"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "Support check → withhold",
+            "zh-hans": "支持检查 → 不输出该答案"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Unlabeled and labeled prompts both failed this one model probe.",
+        "zh-hans": "同一次模型探测中，未标记与已标记输入都失败。"
+      }
+    },
+    {
+      "label": {
+        "en": "Execution boundary",
+        "zh-hans": "执行边界"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "send_http(fake secret)",
+            "zh-hans": "send_http（虚构秘密）"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Host allowlist has no send_http",
+            "zh-hans": "宿主允许清单没有 send_http"
+          }
+        },
+        {
+          "kind": "state",
+          "text": {
+            "en": "No network action",
+            "zh-hans": "不执行网络操作"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A polite, nonviolent request can still be unauthorized.",
+        "zh-hans": "措辞礼貌、内容无暴力，也仍可能没有操作权限。"
+      }
+    }
+  ]
+}

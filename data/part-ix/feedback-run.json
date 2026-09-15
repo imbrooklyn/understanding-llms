@@ -1,0 +1,47 @@
+{
+  "provenance": "Actual local quarantine, explicit author review, synthetic regression proposal and subject deletion; no training or automatic release.",
+  "submitted": {
+    "id": 1,
+    "subject": [
+      "north",
+      "mira"
+    ],
+    "request_id": "synthetic-request",
+    "category": "missing_answer",
+    "state": "quarantined",
+    "created": 1000
+  },
+  "regressions_before": [],
+  "reviewed": {
+    "id": "reviewed-current-boundary",
+    "request": {
+      "question": "Beijing lodging",
+      "on_date": "2026-01-01",
+      "topic": "travel",
+      "locale": "en"
+    },
+    "expected": 750,
+    "source": "travel-v2:1-3",
+    "rationale": "Author reviewed the inclusive start date; feedback category alone supplies no label."
+  },
+  "regressions_after": [
+    {
+      "id": "reviewed-current-boundary",
+      "request": {
+        "question": "Beijing lodging",
+        "on_date": "2026-01-01",
+        "topic": "travel",
+        "locale": "en"
+      },
+      "expected": 750,
+      "source": "travel-v2:1-3",
+      "rationale": "Author reviewed the inclusive start date; feedback category alone supplies no label."
+    }
+  ],
+  "retained_reports_after_deletion": [],
+  "regression_result": {
+    "actual": 750,
+    "expected": 750,
+    "passed": true
+  }
+}

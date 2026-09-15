@@ -1,0 +1,218 @@
+{
+  "protocol_version": "2026-07-28",
+  "transport": "actual subprocess stdio; no initialize handshake",
+  "exchanges": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "server/discover",
+        "params": {
+          "_meta": {
+            "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+            "io.modelcontextprotocol/clientCapabilities": {},
+            "io.modelcontextprotocol/clientInfo": {
+              "name": "book-host",
+              "version": "1.0.0"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "resultType": "complete",
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "book-orders",
+              "version": "1.0.0"
+            }
+          },
+          "supportedVersions": [
+            "2026-07-28"
+          ],
+          "capabilities": {
+            "tools": {}
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/list",
+        "params": {
+          "_meta": {
+            "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+            "io.modelcontextprotocol/clientCapabilities": {},
+            "io.modelcontextprotocol/clientInfo": {
+              "name": "book-host",
+              "version": "1.0.0"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "resultType": "complete",
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "book-orders",
+              "version": "1.0.0"
+            }
+          },
+          "tools": [
+            {
+              "name": "get_order",
+              "description": "Read an owned fictional order snapshot; no mutation.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "order_id": {
+                    "type": "string",
+                    "pattern": "^A-[0-9]{3}$|^B-[0-9]{3}$"
+                  }
+                },
+                "required": [
+                  "order_id"
+                ],
+                "additionalProperties": false
+              },
+              "annotations": {
+                "readOnlyHint": true,
+                "destructiveHint": false,
+                "idempotentHint": true,
+                "openWorldHint": false
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "tools/call",
+        "params": {
+          "name": "get_order",
+          "arguments": {
+            "order_id": "A-104"
+          },
+          "_meta": {
+            "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+            "io.modelcontextprotocol/clientCapabilities": {},
+            "io.modelcontextprotocol/clientInfo": {
+              "name": "book-host",
+              "version": "1.0.0"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "resultType": "complete",
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "book-orders",
+              "version": "1.0.0"
+            }
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"order_id\":\"A-104\",\"status\":\"processing\",\"as_of\":\"2026-09-14T00:00:00Z\",\"source_version\":\"ka3-orders-v1\"}"
+            }
+          ],
+          "structuredContent": {
+            "order_id": "A-104",
+            "status": "processing",
+            "as_of": "2026-09-14T00:00:00Z",
+            "source_version": "ka3-orders-v1"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "tools/call",
+        "params": {
+          "name": "get_order",
+          "arguments": {
+            "order_id": "B-205"
+          },
+          "_meta": {
+            "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+            "io.modelcontextprotocol/clientCapabilities": {},
+            "io.modelcontextprotocol/clientInfo": {
+              "name": "book-host",
+              "version": "1.0.0"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": {
+          "resultType": "complete",
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "book-orders",
+              "version": "1.0.0"
+            }
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"error\":\"forbidden\"}"
+            }
+          ],
+          "structuredContent": {
+            "error": "forbidden"
+          },
+          "isError": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "method": "tools/call",
+        "params": {
+          "name": "cancel_order",
+          "arguments": {
+            "order_id": "A-104"
+          },
+          "_meta": {
+            "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+            "io.modelcontextprotocol/clientCapabilities": {},
+            "io.modelcontextprotocol/clientInfo": {
+              "name": "book-host",
+              "version": "1.0.0"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "error": {
+          "code": -32602,
+          "message": "Unknown tool"
+        }
+      }
+    }
+  ],
+  "stderr": ""
+}

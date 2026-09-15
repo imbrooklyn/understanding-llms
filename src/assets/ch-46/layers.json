@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 46.1 — Keep the target fixed and locate where evidence breaks.",
+    "zh-hans": "图 46.1：固定目标，定位证据在哪一层断开。"
+  },
+  "alt": {
+    "en": "Four failures: v2 absent from retrieval, v2 dropped from context, 600 proposed despite v2, and 750 citing v1. Each has a different repair point.",
+    "zh-hans": "四种失败分别是未检索到 v2、上下文丢掉 v2、收到 v2 却提出 600，以及 750 引用 v1；修复位置各不相同。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Retrieval / context",
+        "zh-hans": "检索 / 上下文"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Need v2",
+            "zh-hans": "需要 v2"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Retrieve v1 → retrieval failure",
+            "zh-hans": "取到 v1 → 检索失败"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Retrieve v2, pack none → context failure",
+            "zh-hans": "取到 v2、装配为空 → 上下文失败"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A source can be found without reaching usable input.",
+        "zh-hans": "找到来源，不代表它进入可用输入。"
+      }
+    },
+    {
+      "label": {
+        "en": "Generation / citation",
+        "zh-hans": "生成 / 引用"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Full v2 is present",
+            "zh-hans": "完整 v2 已进入"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "600 [v2] → wrong amount",
+            "zh-hans": "600 [v2] → 金额错误"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "750 [v1] → wrong citation",
+            "zh-hans": "750 [v1] → 引用错误"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The final support gate withholds both; the diagnostic labels remain distinct.",
+        "zh-hans": "最终支持关口拦下两者，但诊断分类仍然不同。"
+      }
+    }
+  ]
+}

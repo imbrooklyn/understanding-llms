@@ -64,4 +64,16 @@ The reference for pedagogical organization is [OSTEP](https://pages.cs.wisc.edu/
 
 `pnpm ci:build` checks bilingual contracts, numerical fixtures, Astro types, production output, and draft exclusion. Start a development server and run `BOOK_PREVIEW_URL=http://127.0.0.1:<actual-port> pnpm test:browser` for both languages on desktop/mobile, including disabled JavaScript. Browser checks verify static content, equations, figures, and navigation. They cannot certify pedagogical quality. No commit, push, publish, or deployment is authorized by these checks.
 
+The Part VII behavior checks require Python 3.12 and the pinned runtime dependencies in `code/part-vii/requirements-ci.txt`. Install them in an isolated environment and pass its interpreter as `BOOK_PYTHON` when running `pnpm ci:build`. The book CI and main-site build workflow install this subset explicitly. Notebook execution uses the fuller environment documented in `code/part-vii/README.md`; a build pass does not substitute for executing every notebook cell.
+
 After changing Markdown renderers or figure source assets, inspect the actual generated diagram. Astro's development content cache (`.astro/data-store.json`) can retain old rendered HTML even after the build cache is cleared by `astro sync --force`. Stop your own preview process, remove that generated development cache, then restart and verify the new diagram. Do not stop other users' preview processes.
+
+### Part VIII evidence
+
+For changes affecting Chapters 47–53, run `pnpm validate:part-viii` and `BOOK_PYTHON=/path/to/python pnpm test:part-viii:cpu`. Execute both notebooks with `pnpm notebooks:part-viii` after relevant implementation changes. The validator checks independently reviewed inputs, raw/derived outcomes and bilingual contracts; update a reviewed inventory only after deliberately reviewing the change. Browser coverage lives in `tests/part-viii.browser.ts` and requires an explicitly managed `BOOK_PREVIEW_URL`. All new pages remain draft; author records do not authorize publication. Preserve unfavorable Judge results and distinguish consented human labels from authored oracles.
+
+### Part IX service and capstone evidence
+
+Use `BOOK_PYTHON=<Python-3.12-environment> pnpm test:part-ix:cpu`, `pnpm records:part-ix`, `pnpm notebooks:part-ix` and `pnpm validate:part-ix`; all wrappers honor `BOOK_PYTHON`. Record regeneration is an explicit author action and must retain prior failed observations. `ci:build` checks the current recorded inputs and behavioral invariants; its existing Python runtime requirements cover this increment. The service and notebook runs need local sockets and POSIX child-process control, with no neural weights or paid service.
+
+The standard `pnpm test:browser` entry includes all Chapter 54–57 language pages, both viewports/themes, no-JavaScript reading and a separately owned live service UI. Set `BOOK_PREVIEW_URL` to the preview actually started for the task. The textbook stays static; only the companion service has task controls. Do not equate that UI suite with full accessibility conformance or short fault drills with production SLO evidence. Follow the Part IX runbook and preserve the existing publication boundary.

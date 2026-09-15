@@ -1,0 +1,90 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 43.1 — A common protocol preserves the business boundary.",
+    "zh-hans": "图 43.1：统一协议仍保留业务权限边界。"
+  },
+  "alt": {
+    "en": "The host client exchanges requests with an MCP server which delegates to the same authorized read executor. Self-reported client names do not change the trusted principal.",
+    "zh-hans": "宿主中的客户端与 MCP 服务器交换请求，服务器转交同一个需授权的读取执行器；客户端自报名称不能改变可信用户身份。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Request path",
+        "zh-hans": "请求路径"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Host: permission policy",
+            "zh-hans": "宿主：权限规则"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Client: protocol request",
+            "zh-hans": "客户端：协议请求"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Server: decode + dispatch",
+            "zh-hans": "服务器：解码与分发"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Same read executor",
+            "zh-hans": "同一个读取执行器"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Protocol compatibility does not add a cancellation operation.",
+        "zh-hans": "协议兼容不会增加取消操作。"
+      }
+    },
+    {
+      "label": {
+        "en": "Return path",
+        "zh-hans": "返回路径"
+      },
+      "nodes": [
+        {
+          "kind": "external",
+          "text": {
+            "en": "Record or forbidden",
+            "zh-hans": "记录或 forbidden"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "Correlated protocol result",
+            "zh-hans": "对应请求的协议结果"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Host validates and packs",
+            "zh-hans": "宿主校验并装配"
+          }
+        }
+      ],
+      "flow": {
+        "en": "A complete protocol result can carry a business failure.",
+        "zh-hans": "完成的协议结果可以携带业务失败。"
+      }
+    }
+  ]
+}

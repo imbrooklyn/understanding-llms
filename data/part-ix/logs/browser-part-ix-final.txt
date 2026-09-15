@@ -1,0 +1,36 @@
+$ playwright test tests/part-ix.browser.ts tests/part-ix-service.browser.ts --output test-results/part-ix-final --reporter=list
+
+Running 26 tests using 1 worker
+
+(node:96406) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/part-ix-service.browser.ts:19:38 › KA service en: actual query, source, keyboard, undo, handoff and feedback (1.1s)
+  ✓   2 [desktop] › tests/part-ix-service.browser.ts:19:38 › KA service zh-hans: actual query, source, keyboard, undo, handoff and feedback (1.1s)
+  ✓   3 [desktop] › tests/part-ix-service.browser.ts:49:1 › KA service: Stop waits for acknowledgement and does not show a late answer (1.7s)
+  ✓   4 [desktop] › tests/part-ix.browser.ts:15:2 › en/ch-54: Part IX complete static evidence and localized figures (3.0s)
+  ✓   5 [desktop] › tests/part-ix.browser.ts:15:2 › en/ch-55: Part IX complete static evidence and localized figures (2.1s)
+  ✓   6 [desktop] › tests/part-ix.browser.ts:15:2 › en/ch-56: Part IX complete static evidence and localized figures (2.3s)
+  ✓   7 [desktop] › tests/part-ix.browser.ts:15:2 › en/ch-57: Part IX complete static evidence and localized figures (2.2s)
+  ✓   8 [desktop] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-54: Part IX complete static evidence and localized figures (2.2s)
+  ✓   9 [desktop] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-55: Part IX complete static evidence and localized figures (2.0s)
+  ✓  10 [desktop] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-56: Part IX complete static evidence and localized figures (2.3s)
+  ✓  11 [desktop] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-57: Part IX complete static evidence and localized figures (2.2s)
+  ✓  12 [desktop] › tests/part-ix.browser.ts:76:39 › en: all Part IX evidence without JavaScript (1.4s)
+  ✓  13 [desktop] › tests/part-ix.browser.ts:76:39 › zh-hans: all Part IX evidence without JavaScript (1.4s)
+(node:97240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 [mobile] › tests/part-ix-service.browser.ts:19:38 › KA service en: actual query, source, keyboard, undo, handoff and feedback (1.1s)
+  ✓  15 [mobile] › tests/part-ix-service.browser.ts:19:38 › KA service zh-hans: actual query, source, keyboard, undo, handoff and feedback (1.1s)
+  ✓  16 [mobile] › tests/part-ix-service.browser.ts:49:1 › KA service: Stop waits for acknowledgement and does not show a late answer (1.7s)
+  ✓  17 [mobile] › tests/part-ix.browser.ts:15:2 › en/ch-54: Part IX complete static evidence and localized figures (2.2s)
+  ✓  18 [mobile] › tests/part-ix.browser.ts:15:2 › en/ch-55: Part IX complete static evidence and localized figures (2.0s)
+  ✓  19 [mobile] › tests/part-ix.browser.ts:15:2 › en/ch-56: Part IX complete static evidence and localized figures (2.2s)
+  ✓  20 [mobile] › tests/part-ix.browser.ts:15:2 › en/ch-57: Part IX complete static evidence and localized figures (2.2s)
+  ✓  21 [mobile] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-54: Part IX complete static evidence and localized figures (2.1s)
+  ✓  22 [mobile] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-55: Part IX complete static evidence and localized figures (2.0s)
+  ✓  23 [mobile] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-56: Part IX complete static evidence and localized figures (2.2s)
+  ✓  24 [mobile] › tests/part-ix.browser.ts:15:2 › zh-hans/ch-57: Part IX complete static evidence and localized figures (2.1s)
+  ✓  25 [mobile] › tests/part-ix.browser.ts:76:39 › en: all Part IX evidence without JavaScript (1.4s)
+  ✓  26 [mobile] › tests/part-ix.browser.ts:76:39 › zh-hans: all Part IX evidence without JavaScript (1.4s)
+
+  26 passed (51.3s)

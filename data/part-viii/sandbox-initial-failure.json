@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-09-14T01:26:17.983979+00:00",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.10 (main, Apr  8 2025, 11:35:47) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "profile": "(version 1)\n(deny default)\n(allow process*)\n(allow sysctl-read)\n(allow mach-lookup)\n(allow signal)\n(allow file-read* (subpath \"/private/tmp/llm-book-part-viii-venv\") (subpath \"/System\") (subpath \"/usr\") (subpath \"/opt/homebrew\") (subpath \"/private/var/db\") (subpath \"/dev\") (subpath \"<temporary-work>\"))\n(allow file-write* (subpath \"<temporary-work>\") (literal \"/dev/null\"))",
+  "results": {
+    "unconfined": {
+      "returncode": 0,
+      "stdout": "{\"allowed\": \"public-fixture\", \"outside\": \"DEMO-SECRET-ORCHID\", \"network\": \"connected\"}\n",
+      "stderr": "",
+      "observation": {
+        "allowed": "public-fixture",
+        "outside": "DEMO-SECRET-ORCHID",
+        "network": "connected"
+      }
+    },
+    "confined": {
+      "returncode": -6,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "conditions": "Actual subprocesses, temporary fake secret, loopback listener. No third-party network endpoint.",
+  "limits": "macOS-specific diagnostic profile; system/runtime read roots and Mach lookup remain allowed; not a production sandbox, authorization system or escape-resistance proof."
+}

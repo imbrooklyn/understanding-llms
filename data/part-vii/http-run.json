@@ -1,0 +1,75 @@
+{
+  "transport": "actual loopback HTTP on OS-assigned port",
+  "records": [
+    {
+      "path": "/orders/A-104",
+      "credential": "redacted",
+      "status": 200,
+      "body": {
+        "order_id": "A-104",
+        "status": "processing",
+        "as_of": "2026-09-14T00:00:00Z",
+        "source_version": "ka3-orders-v1"
+      },
+      "retry_after": null
+    },
+    {
+      "path": "/orders/A-104",
+      "credential": "redacted",
+      "status": 401,
+      "body": {
+        "error": "unauthenticated"
+      },
+      "retry_after": null
+    },
+    {
+      "path": "/orders/B-205",
+      "credential": "redacted",
+      "status": 403,
+      "body": {
+        "error": "forbidden"
+      },
+      "retry_after": null
+    },
+    {
+      "path": "/orders/A-999",
+      "credential": "redacted",
+      "status": 404,
+      "body": {
+        "error": "not_found"
+      },
+      "retry_after": null
+    },
+    {
+      "path": "/rate-limit",
+      "credential": "redacted",
+      "status": 429,
+      "body": {
+        "error": "rate_limited"
+      },
+      "retry_after": "1"
+    },
+    {
+      "path": "/stream",
+      "credential": "redacted",
+      "status": 200,
+      "body": "data: {\"order_id\": \"A-104\"}\n\ndata: {\"status\": \"processing\"}\n\ndata: {\"complete\": true}\n\n",
+      "retry_after": null
+    },
+    {
+      "path": "/orders/A-104",
+      "method": "POST",
+      "status": 405,
+      "body": {
+        "error": "method_not_allowed"
+      }
+    },
+    {
+      "path": "/slow",
+      "status": "client_timeout",
+      "timeout_seconds": 0.02,
+      "server_delay_seconds": 0.15,
+      "completion": "not_proven_by_timeout"
+    }
+  ]
+}

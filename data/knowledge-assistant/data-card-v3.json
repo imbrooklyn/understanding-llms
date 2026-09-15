@@ -1,0 +1,31 @@
+{
+  "as_of": "2026-09-14",
+  "last_verified": "2026-09-14",
+  "license": "CC-BY-SA-4.0",
+  "version": "ka-data-card-v3",
+  "supersedes": "data-card-v2.json",
+  "unchanged_baseline": "ka0-v1.json",
+  "added_sources": [
+    "ka4-documents-v1.json",
+    "ka5-content-v1.json",
+    "ka6-orders-v1.json"
+  ],
+  "origin": "Original fictional bilingual policy and order fixtures; no real accounts or operational personal data.",
+  "third_party_exception": {
+    "path": "data/part-viii/human-calibration-v1.json",
+    "origin": "LMSYS/MT-Bench public human preferences, pinned four-row first-turn slice",
+    "license": "CC-BY-4.0",
+    "purpose": "Optional actual local Judge calibration, not model training"
+  },
+  "collection": "No live user orders; fictional secrets have DEMO prefixes. No model weights redistributed.",
+  "processing": "Retain original v1/v2 policy meaning, line spans, candidate order and all nine KA-0 cases. Exact-source verification is limited to authored corpus.",
+  "splits": "KA-0 diagnostics, KA-4 development cases and KA-7 fault diagnostics stay separate. Four human-labeled English cases are a convenience slice, not a random evaluation sample.",
+  "retention": "Synthetic published fixtures remain versioned teaching artifacts. Operational lifecycle values are simulated policy, not real deletion from Git history.",
+  "limitation": "No real-world population fairness, privacy compliance or broad model quality claim. Deleting application data does not unlearn a model.",
+  "consented_annotation": {
+    "path": "data/part-viii/travel-human-labels-v1.json",
+    "source": "One real reader, anonymous-use consent recorded on 2026-09-14",
+    "purpose": "Four fixed in-domain support labels; not training data",
+    "limitations": "One annotator; bilingual outputs share four semantic labels, not eight independent votes"
+  }
+}

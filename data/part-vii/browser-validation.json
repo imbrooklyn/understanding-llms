@@ -1,0 +1,107 @@
+{
+  "recorded_at": "2026-09-13T18:10:03.495Z",
+  "browser": "Chrome 153.0.8010.36",
+  "draft_preview_url": "http://127.0.0.1:4337",
+  "production_preview_url": "http://127.0.0.1:4338",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "full_browser": {
+    "passed": 220,
+    "skipped": 8,
+    "note": "Production-only cases run separately. All final Part VII edits are covered by the final page rerun."
+  },
+  "final_part_vii_browser": {
+    "passed": 36,
+    "failed": 0,
+    "includes": "Both languages, both viewports, light/dark figures, navigation, wide-table ends and all pages without JavaScript"
+  },
+  "production_browser": {
+    "passed": 8,
+    "failed": 0
+  },
+  "builds": {
+    "book": "passed: 23 Node tests, 18 Part VII CPU tests, inherited validations, zero Astro diagnostics, 93 HTML pages",
+    "main": "passed: zero Astro diagnostics",
+    "composed": "passed: 40 excluded draft routes, 92 public language pages indexed and in sitemap, RSS/roadmap coverage"
+  },
+  "manual_review": {
+    "page_viewport_combinations": 32,
+    "figure_theme_captures": 64,
+    "additional_checks": "All mobile captions, long probability formula, both ends of ranking/evaluation tables, final table layout repairs",
+    "artifacts_directory": "/tmp/part-vii-visual"
+  },
+  "logs_sha256": {
+    "full": {
+      "path": "/tmp/part-vii-browser-final.log",
+      "sha256": "c9054779c62f70c867684571bf7e11be8749eeb69ca1655853c300c3dd82c81e"
+    },
+    "pages": {
+      "path": "/tmp/part-vii-browser-pages-final.log",
+      "sha256": "8648b0cceb7c32455f6c8b725e970e64cab52469f8bc26b3b9eefc4dbd03f9b0"
+    },
+    "release": {
+      "path": "/tmp/part-vii-release-browser-final.log",
+      "sha256": "51378192ff55937b75d694f3102c6517d1c1306773c8388471b70272563e9bbc"
+    },
+    "book": {
+      "path": "/tmp/part-vii-ci-build-final.log",
+      "sha256": "a81201a81ba894defdebf7b2b6f27c727db574fc05e5afe4179e0c5586d0fd8c"
+    },
+    "main": {
+      "path": "/tmp/part-vii-main-build-final.log",
+      "sha256": "d1b58a92c61cb3c20fc27c94d60fe7c7b1c2550cc48dd1fe2e2ac0fa6bbe807a"
+    },
+    "composed": {
+      "path": "/tmp/part-vii-compose-final.log",
+      "sha256": "585eaebc11cedd654280fb54946e6dc3903c7b12dabb48e35f463857d9d2797f"
+    }
+  },
+  "verified_sources_sha256": {
+    "src/config/book.mjs": "85ca50570feb1431c1c7925654fb9c2d39194a1a397cc898b57740eee72f0282",
+    "src/plugins/remark-book.mjs": "449fe746ca7535d1d1ccd38f18e58aba94992ba4b44935f7682b823cb5199387",
+    "src/styles/custom.css": "3086da1fdb49d0a2a6ba84bb58d5820496b0d500a29b8bc3910207ffdf24ad87",
+    "tests/part-vii.browser.ts": "6ee1af50461a6f28a52f340dfc5f726846cd6e38edde1a1b1b80f3ec70f7d9c1",
+    "tests/part-vii-rendering.test.mjs": "7cf98289105f10f30e58426b240a81467f68efc6d469032167b7642f3dd806d4",
+    "scripts/validate-part-vii.mjs": "7de0407fb7e1460ab370aa0e2b39c1c436a0841368e49e8f54730b9b61873eac",
+    ".github/workflows/ci.yml": "49807290602e610a19717647d2071e1f4006f9baf5fff5e077217ce656fb352c",
+    "code/part-vii/requirements-ci.txt": "26a07d8cd1674744f957d5f88934be3d58e37f72ce1bf5afed163764f3030870",
+    "../imbrooklyn.github.io/.github/workflows/deploy.yml": "8dffd7c1b33d3e94b536afdf6866ec1c91850a872e79a20cea850aa74728af9e",
+    "src/content/docs/en/ch-40.md": "e7580bafbfba7bd064dd65eb6320011951d92dc0e8341a780a6a605f66c59fb9",
+    "src/content/docs/en/ch-41.md": "1f46b319b63e32490418efa498e9ad4d0f5322e41152e2c014e76d66ebc87954",
+    "src/content/docs/en/ch-42.md": "a18c1821b2ce6ccc635d0a5a94b54cc6f494cdf8930f9cdc8d5921534736b814",
+    "src/content/docs/en/ch-43.md": "fadeb0f5a14562ad94832a5fc9484e62b48a689529ebb8d75570c0da76a4a34a",
+    "src/content/docs/en/ch-44.md": "a7efdb25d47a5f9fb8a88879ebb4228c3e9bd3791fd0e848745308162ba62db3",
+    "src/content/docs/en/ch-45.md": "3e4b0e62335e5889b3a7858c0e228dbd87a4ae22078b752d16dd9110d2cedaf6",
+    "src/content/docs/en/ch-46.md": "c7b7128f624074c42590ebba335b9df9c232ca9c8558f01649d09b2eb087a666",
+    "src/content/docs/en/primer-http.md": "02cb8928d7f355d2ade2dde21ebb9950f00110d66a91871a599a177a998f5e5a",
+    "src/content/docs/zh-hans/ch-40.md": "b8fdec6e3c0c3009a6fed4de9b73a4dd1d4d5ec5c2801ba0e0b417bc6c89c296",
+    "src/content/docs/zh-hans/ch-41.md": "a076557b52884f46b2f2edca7edc7c6a15bd06c276e95ca007b04bb50d6f7307",
+    "src/content/docs/zh-hans/ch-42.md": "2f843fe98ec518a939c36e606476e10326a7740331f9955805f6c66eb38b3dc5",
+    "src/content/docs/zh-hans/ch-43.md": "544b9cb01e5f47fa0ea5a7d37ce5b2e54e2dca33b91e9964bc4f60c6286715fd",
+    "src/content/docs/zh-hans/ch-44.md": "aa5cf3e18fc051d038a45f667e84842869225ab7c91b90503b3f6d2ad1dce300",
+    "src/content/docs/zh-hans/ch-45.md": "74080240f5e764dcd0315fcd407ff7c8e39283954071dc44331d3db250e082e2",
+    "src/content/docs/zh-hans/ch-46.md": "da245132580c5f1935d080eb052aeec28b8d4416ddc611d53f451e70cc3fb67f",
+    "src/content/docs/zh-hans/primer-http.md": "74cd60b74ea7ba52502119c51660432316222b9a0d3e64503b3a1e1e89f9d60b",
+    "src/assets/ch-40/context.json": "3a578d40cbbbb2d8fb83317d54269684941961a122fa9a4548bed4f23d5dc0b8",
+    "src/assets/ch-41/gates.json": "e281677262ee228429e4b5aae1c0ca3d9c1cf7a88d8057f225c1c6cbab056205",
+    "src/assets/ch-42/execution.json": "48eff7fd4f53291375dbb52dd9d34cea9f582d63d3edc5c9ce1a9a6567e1dd9b",
+    "src/assets/ch-42/http.json": "664d987d181f8031dca212bb13bc2d3eadf844db97466d75fa9c0db0bc6086dd",
+    "src/assets/ch-43/boundaries.json": "28178e118e73da7351bc30d6e80d6dee06f7a6c5172a30f0001e175040c70372",
+    "src/assets/ch-44/ranking.json": "2aaef5b7d815191ed497ebabf14f5d4695508b1bcb93fa27e7a8b7d3cac2ba6b",
+    "src/assets/ch-45/evidence.json": "3c5b14553a6c7664f0c6614598eaeb2152bd88f36e284adcf57bd5e036232b1d",
+    "src/assets/ch-46/layers.json": "2b714d3a06b9c0155cd75e9f6529be857a98a8861594a85698fdc50c378b3e45"
+  },
+  "limitations": [
+    "No GitHub-hosted workflow run or deployment",
+    "No external model generation experiment",
+    "Local exact-source composer and illustrative input-only packing budget"
+  ]
+}

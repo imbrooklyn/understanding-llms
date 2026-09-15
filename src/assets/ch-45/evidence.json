@@ -1,0 +1,83 @@
+{
+  "structure": "lanes",
+  "caption": {
+    "en": "Figure 45.1 — A citation preserves the source conditions with the number.",
+    "zh-hans": "图 45.1：引用让来源限定条件与金额一起保留。"
+  },
+  "alt": {
+    "en": "The B search card identifies travel-v2. Parent expansion retrieves unit, date and amount lines. The context and extractive answer retain the same source address. An amount-only span fails support.",
+    "zh-hans": "B 检索卡指向 travel-v2；父文档扩展取回单位、日期和金额行；上下文与抽取式答案保留同一来源地址；只有金额的片段不能通过支持检查。"
+  },
+  "credit": {
+    "en": "Original teaching diagram · CC BY-SA 4.0",
+    "zh-hans": "原创教学图示 · CC BY-SA 4.0"
+  },
+  "lanes": [
+    {
+      "label": {
+        "en": "Supported path",
+        "zh-hans": "有支持的路径"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "B card → travel-v2",
+            "zh-hans": "B 卡 → travel-v2"
+          }
+        },
+        {
+          "kind": "external",
+          "text": {
+            "en": "Lines 1–3: unit, date, 750",
+            "zh-hans": "第 1—3 行：单位、日期、750"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Pack → copy → check",
+            "zh-hans": "装配 → 抽取 → 检查"
+          }
+        },
+        {
+          "kind": "token",
+          "text": {
+            "en": "750 [travel-v2:1-3]",
+            "zh-hans": "750 [travel-v2:1-3]"
+          }
+        }
+      ],
+      "flow": {
+        "en": "The card is a search summary; the citation quotes the original.",
+        "zh-hans": "卡片用于搜索，引用取自原文。"
+      }
+    },
+    {
+      "label": {
+        "en": "Lost scope",
+        "zh-hans": "范围丢失"
+      },
+      "nodes": [
+        {
+          "kind": "token",
+          "text": {
+            "en": "Keep line 3 only: 750",
+            "zh-hans": "只留第 3 行：750"
+          }
+        },
+        {
+          "kind": "computation",
+          "text": {
+            "en": "Missing unit/date → abstain",
+            "zh-hans": "缺少单位、日期 → 拒答"
+          }
+        }
+      ],
+      "flow": {
+        "en": "Correct digits are insufficient evidence for the complete claim.",
+        "zh-hans": "数字正确，不足以支持完整主张。"
+      }
+    }
+  ]
+}
